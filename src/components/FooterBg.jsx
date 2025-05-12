@@ -1,6 +1,6 @@
 import './FooterBg.css'
 
-export default function Footer() {
+export default function FooterBg() {
   return (
     <footer className="footer">
       <div className="footer-content">

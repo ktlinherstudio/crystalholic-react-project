@@ -1,7 +1,9 @@
 /* footer 區塊背景與排版 */
 .footer {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
   border-radius: 40px 40px 0 0;
   background-color: #5348AA; /* 深紫色背景 */
   padding: 60px 20px 30px;

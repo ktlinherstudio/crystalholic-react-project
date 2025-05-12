@@ -1,6 +1,6 @@
 import './FooterPlain.css'
 
-export default function Footer() {
+export default function FooterPlain() {
   return (
     <footer className="footer">
       <div className="footer-content">

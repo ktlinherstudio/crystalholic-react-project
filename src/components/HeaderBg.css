@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-image: url('/images/navbar_background.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 999;
+  pointer-events: none;
+}
+
+/* Logo */
+.logo img {
+  width: 180px;
+}
+
+/* 導覽 */
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .nav ul {
+    gap: 16px;
+  }
+
+  /* 隱藏搜尋 icon（第一個 li） */
+  .nav ul li:first-child {
+    display: none;
+  }
+
+  .nav ul li img {
+    width: 48px;
+    height: 48px;
+  }
+}

@@ -1,11 +1,254 @@
-/* 包住整個 About 頁面 */
-.about-page {
-  min-height: 100vh;
+/* --------- Hero --------- */
+.hero {
+  position: relative;
+  background-color: #5348AA;
+  min-height: 800px;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  left: 0;
+  right: 0;
 }
 
-/* 主內容撐滿空間，footer 才能貼底 */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 700px;
+  padding-bottom: 100px;
+}
+
+.hero-arc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 240px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-arc svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-title {
+  font-family: 'Lora', 'Georgia', serif;
+  font-size: 60px;
+  margin-bottom: 30px;
+  font-weight: SemiBold;
+  letter-spacing: 2px;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.hero-description {
+  font-family: 'Noto Sans TC';
+  font-weight: 300;
+  font-size: 18px;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* --------- Section 左右排版 --------- */
 .main-content {
-  flex: 1;
+  margin-top: -80px;
+}
+
+.beauty-spirituality .content,
+.quality-guarantee .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 120px;
+}
+
+.life-crystal .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  padding: 80px 120px;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.text {
+  flex: 1 1 450px;
+}
+
+/*flex-grow flex-shrink flex-basis*/
+
+.text-content {
+  text-align: center;
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.text .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #8750BF;
+}
+
+.text-content p,
+.text-content ul {
+  font-family: 'Noto Sans TC';
+  font-weight: 400;
+  line-height: 1.2;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 16px;
+  color: #585858;
+}
+
+.text-content .line {
+  width: 650px;
+  margin: 20px auto;
+}
+
+.image {
+  flex: 1 1 400px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 476px;
+  height: auto;
+  object-fit: cover;
+}
+
+.text img.divider {
+  width: 120px;
+  margin: 20px 0;
+}
+
+
+/* --------- RWD --------- */
+/* ========== 平板（1024px 以下） ========== */
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    padding: 0 24px;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 60px 40px;
+  }
+
+  .text-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .text-content p,
+  .text-content ul {
+    font-size: 16px;
+    line-height: 1.6rem;
+    font-weight: 360;
+  }
+
+  .image {
+    flex: 1 1 250px;
+  }
+}
+
+
+/* ==========大手機或平板橫向（820px 以下） ========== */
+@media screen and (max-width: 820px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    padding: 0 20px;
+    max-width: 650px;
+  }
+
+  .nav ul {
+    gap: 12px;
+  }
+
+  .content {
+    padding: 40px 20px;
+  }
+
+  .image img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+/* ========== 手機直向（640px 以下） ========== */
+@media screen and (max-width: 640px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+    max-width: 440px;
+  }
+
+  .header {
+    padding: 12px 20px;
+  }
+
+  .text-content .line {
+    max-width: 410px;
+  }
+
+  .text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .text-content {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
