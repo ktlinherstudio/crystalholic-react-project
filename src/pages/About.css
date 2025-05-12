@@ -1,0 +1,11 @@
+/* 包住整個 About 頁面 */
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 主內容撐滿空間，footer 才能貼底 */
+.main-content {
+  flex: 1;
+}

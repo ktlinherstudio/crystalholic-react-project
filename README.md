@@ -10,8 +10,9 @@ Crystalholic 是一個以 React + Vite 建立的水晶主題網站，主打簡�
 # 安裝依賴套件
 npm install
 
-# 啟動開發伺服器（預設網址 http://localhost:5173）
+# 啟動開發伺服器
 npm run dev
+預設網址 http://localhost:5173
 
 # 每次開發前執行 
 git pull 確保版本最新
