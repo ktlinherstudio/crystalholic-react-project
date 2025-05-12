@@ -1,4 +1,4 @@
-# Logs
+# Log 檔案
 logs
 *.log
 npm-debug.log*
@@ -7,16 +7,19 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# 編譯產物
+node_modules/
+dist/
+dist-ssr/
 *.local
 
-# Editor directories and files
-.vscode/*
+# 編輯器設定檔
+.vscode/
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+
+# Visual Studio 專案檔案（很少用，但保留保險）
 *.suo
 *.ntvs*
 *.njsproj

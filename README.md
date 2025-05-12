@@ -1,12 +1,56 @@
-# React + Vite
+# Crystalholic React Project 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Crystalholic 是一個以 React + Vite 建立的水晶主題網站，主打簡潔結構與模組化元件管理。專案支援頁面路由與多種 Footer 風格切換，便於維護與視覺風格管理。
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 快速開始
 
-## Expanding the ESLint configuration
+```bash
+# 安裝依賴套件
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 啟動開發伺服器（預設網址 http://localhost:5173）
+npm run dev
+
+# 每次開發前執行 
+git pull 確保版本最新
+
+##專案結構說明
+crystalholic-react-project/
+├── public/                # 靜態圖像資源（圖片、icon 等）
+│   └── images/
+├── src/
+│   ├── components/        # 共用元件（Header, Footer 等）
+│   │   ├── FooterBg.jsx   # 深色背景 Footer
+│   │   ├── FooterPlain.jsx# 無背景 Footer
+│   │   └── ...            
+│   ├── pages/             # 各頁面（Home, About 等）
+│   │   ├── Home.jsx
+│   │   ├── Home.css
+│   │   └── ...
+│   ├── css/               # 全站樣式、reset 與字型設定
+│   ├── App.jsx            # 路由總控制
+│   └── main.jsx           # 專案進入點（掛載 React）
+├── package.json
+├── vite.config.js
+├── .gitignore
+└── README.md
+
+
+# 使用技術
+React 19
+React Router DOM 7
+Vite 6
+JavaScript / CSS Modules
+ESLint 開發規範
+
+# 修改內容後請使用統一格式、結構清晰的命名
+
+# 檔名請用大駝峰式命名
+
+# 若有共用元件
+請放入 components/ 並依元件建立獨立 CSS 檔
+
+# 圖片請放在 
+public/images/ 
