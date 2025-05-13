@@ -13,6 +13,7 @@ npm install
 # 啟動開發伺服器
 npm run dev
 預設網址 http://localhost:5173
+查看該頁面請加索引 例如/About
 
 # 每次開發前執行 
 git pull 確保版本最新
