@@ -156,10 +156,10 @@ body {
 
 /*全文底色*/
 body {
-    // background-image: url(../images/menu-bg.jpg);
+    background-image: url(../images/menu-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: fill;
+    background-size: cover;
     color: #fff;
 }
 
@@ -297,7 +297,7 @@ body {
 
 
 body {
-    background-color: #484351;
+    // background-color: #484351;
     border: #fff 5px solid;
 
     margin: 0;
