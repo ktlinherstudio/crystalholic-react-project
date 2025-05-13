@@ -51,8 +51,12 @@
     display: none;
   }
 
-  .nav ul li img {
-    width: 48px;
-    height: 48px;
+  /* 擴大點擊區但不影響圖片大小 */
+  .nav ul li {
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
