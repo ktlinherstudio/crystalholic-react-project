@@ -58,8 +58,8 @@ export default function About() {
                             <h3>FOLLOW US</h3>
                             <span className="scicon-box">
                                 <div className="scicon"><img src="../images/icon_line.svg" alt=""/></div>
-                                <div className="scicon"><img src="./images/sns-ig-state-default.svg" alt=""/></div>
-                                <div className="scicon"><img src="./images/sns-fb-state-default.svg" alt=""/></div>
+                                <div className="scicon"><img src="../images/icon_ig.svg" alt=""/></div>
+                                <div className="scicon"><img src="../images/icon_fb.svg" alt=""/></div>
                             </span>
                         </div>
                     </div>
