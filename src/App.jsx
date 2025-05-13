@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
-import KnowledgeCrystal from './pages/KnowledgeCrystal'
+import Menu from './pages/Menu'
 
 export default function App() {
   return (
@@ -10,7 +10,7 @@ export default function App() {
         <main className="main-content">
           <Routes>
             <Route path="/about" element={<About />} />
-            <Route path='/KnowledgeCrystal' element={<KnowledgeCrystal />} />
+            <Route path="/menu" element={<Menu />} />
           </Routes>
         </main>
       </BrowserRouter>
