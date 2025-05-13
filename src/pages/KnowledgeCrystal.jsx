@@ -23,11 +23,9 @@ export default function CrystalPage() {
                                 <h1>Kyanite</h1>
 
                                 <div className="crystal-img">
-                                    <img src="/images/icon_btn_left.svg" alt="Left" />
-                                    <div className="crystal">
-                                        <img src="/images/knowledge2_單顆水晶_藍晶石.png" alt="藍晶石" />
-                                    </div>
-                                    <img src="/images/icon_btn_right.svg" alt="Right" />
+                                    <img src="/images/btn_left.svg" alt="Left" className="crystal-arrow"/>
+                                        <img src="/images/crystal-kyanite.png" alt="藍晶石" className="crystal-center"/>
+                                    <img src="/images/btn_right.svg" alt="Right" className="crystal-arrow"/>
                                 </div>
                             </div>
                         </div>
@@ -74,15 +72,16 @@ export default function CrystalPage() {
                             <div className="recommended-crystals">
                                 <h2>推薦搭配水晶</h2>
                                 <div className="rc-img">
-                                    <img src="/images/knowledge2_單顆水晶_天使石.png" alt="天使石" className="crystal1" />
-                                    <img src="/images/knowledge2_單顆水晶_紫水晶.png" alt="紫水晶" className="crystal2" />
-                                    <img src="/images/knowledge2_單顆水晶_太陽石.png" alt="太陽石" className="crystal3" />
+                                    <img src="/images/crystal-angelite.png" alt="天使石" className="crystal1" />
+                                    <img src="/images/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
+                                    <img src="/images/crystal-sunstone.png" alt="太陽石" className="crystal3" />
                                 </div>
                             </div>
                         </section>
+                    <FooterPlain />
                     </div>
-                </main>
-                <FooterPlain />
+                 </main>
+              
             </div>
         </>
     );
