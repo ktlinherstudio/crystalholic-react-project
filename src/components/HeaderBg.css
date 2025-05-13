@@ -16,8 +16,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background-image: url('/images/navbar_background.png');
-  background-size: cover;
+  background-color: #5348AA;
   background-position: center;
   z-index: 999;
   pointer-events: none;
