@@ -101,6 +101,12 @@
   content: url('/images/icon_fb_h.svg');
 }
 
+hr {
+  border: none;
+  border-top: 1px solid white;
+  margin: 20px 0;
+}
+
 /* 版權欄 */
 .copyright {
   font-family: 'Noto Sans TC';
