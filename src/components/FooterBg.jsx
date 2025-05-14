@@ -2,8 +2,8 @@ import './FooterBg.css'
 
 export default function FooterBg() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
+    <footer className="footer-bg">
+      <div className="footer-bg-content">
         <div className="company">
           <h3>COMPANY</h3>
           <ul>

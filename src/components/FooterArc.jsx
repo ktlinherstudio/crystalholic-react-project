@@ -2,14 +2,14 @@ import './FooterArc.css'
 
 export default function FooterArc() {
   return (
-    <footer className="footer">
-      <div className="footer-curve">
+    <footer className="footer-arc">
+      <div className="footer-arc-curve">
         <svg viewBox="0 0 1440 146" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <path d="M719.684.6c264.492 0 511.196 53.197 719.384 145.108H.298C208.486 53.797 455.192.6 719.684.6Z" fill="#5348AA" />
         </svg>
       </div>
 
-      <div className="footer-content">
+      <div className="footer-arc-content">
         <div className="company">
           <h3>COMPANY</h3>
           <ul>

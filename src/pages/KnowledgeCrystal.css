@@ -12,6 +12,17 @@ body {
   z-index: 0;
 }
 
+body::before {
+  content: '';
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: -1;
+}
+
 /* 內容 */
 .arc-outer-content {
   margin-top: 120px; /* 額外保險的空間 */
@@ -27,6 +38,7 @@ body {
 
 .category li {
   font-size: 16px;
+   font-family: 'Noto Sans TC';
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 6px 14px;
@@ -142,6 +154,10 @@ body {
   margin-bottom: 20px;
 }
 
+  .part1 p, .p2p3 p{
+    font-family: 'Noto Sans TC';
+    line-height: 2rem;
+  }
 .arc-inner-content {
   position: relative;
   z-index: 3;
@@ -252,6 +268,7 @@ body {
     font-size: 22px;
     width: 100%;
   }
+
 
   .recommended-crystals img {
     width: 42px;
