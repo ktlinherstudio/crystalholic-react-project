@@ -4,10 +4,10 @@ import '../App.scss/css/Style.min.css'
 
 export default function About() {
     return (
-        <div className="menu">
+        <div id="menu">
             {/* <HeaderPlain/> */}
 
-            <div>
+            <div className='menu'>
                 <nav className="navigation">
                     <span className="closebtn"><img src="./images/icon_closebgrbtn.svg" alt=""/></span>
                     <span className="closebtn"><img src="../public/image/icon/" alt=""/></span>

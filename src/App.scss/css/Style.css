@@ -139,8 +139,9 @@ body {
   letter-spacing: 2px;
 }
 
+/*menu*/
 /*全文底色*/
-body {
+#menu {
   background-image: url(../images/menu-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -148,7 +149,6 @@ body {
   color: #fff;
 }
 
-/*menu*/
 .navigation {
   display: flex;
   flex-direction: row;
@@ -252,8 +252,10 @@ body {
   height: 30px;
 }
 
-body {
+#cover {
+  background-color: #484351;
   border: #fff 5px solid;
+  z-index: -1;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
