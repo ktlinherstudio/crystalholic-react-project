@@ -2,7 +2,7 @@ import '../App.scss/css/Style.min.css'
 // import HeaderPlain from '../components/HeaderPlain'
 // import FooterBg from '../components/FooterBg'
 
-export default function About() {
+export default function Menu() {
     return (
         <div id="menu">
             {/* <HeaderPlain/> */}

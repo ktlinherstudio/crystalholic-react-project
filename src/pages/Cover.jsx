@@ -1,13 +1,13 @@
 import '../App.scss/css/Style.min.css'
 
-export default function About() {
+export default function Cover() {
     return (
-        
+        <>
+            {/* 背景 */}
             <div id='cover'>
-                {/* 背景 */}
                 <div className="bgdark1"></div>
                 <div className="bgdark2"></div>
-
+             {/* </div> */}
 
                 {/* menu bar */}
                 <header id="header"></header>
@@ -246,7 +246,8 @@ export default function About() {
                 </section>
 
                 <footer id="footer"></footer>
-        </div>
+            </div>
+        </>
     )
 }
 
