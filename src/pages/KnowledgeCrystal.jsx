@@ -7,7 +7,7 @@ export default function CrystalPage() {
         <>
             <div className='knowledge-crystal-page'>
                 <HeaderBg />
-                <main className="main">
+                <main className="knowledge-crystal-main">
                     {/* 上半區：文字與水晶簡介 */}
                     <section className="arc-outer-content">
                         <div className="space">
