@@ -1,20 +1,18 @@
-html,
-body {
+.background-layer {
+  background-color: white;
   position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
   z-index: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background-color: white;
 }
 
 body::before {
   content: '';
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -24,11 +22,13 @@ body::before {
 }
 
 /* 內容 */
-.arc-outer-content {
-  margin-top: 120px; /* 額外保險的空間 */
+.arc-k-outer-content {
+  margin-top: 50px;
+  /* 額外保險的空間 */
   padding-top: 100px;
 }
-.category {
+
+.category-k {
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -36,27 +36,27 @@ body::before {
   color: #A78DBB;
 }
 
-.category li {
+.category-k li {
   font-size: 16px;
-   font-family: 'Noto Sans TC';
+  font-family: 'Noto Sans TC';
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 6px 14px;
   border-radius: 20px;
 }
 
-.category li:hover {
+.category-k li:hover {
   border: 2px solid #A78DBB;
   background-color: rgba(167, 141, 187, 0.1);
 }
 
-.category li.active {
+.category-k li.active {
   border: 2px solid #A78DBB;
   background-color: rgba(167, 141, 187, 0.1);
   color: #8750BF;
 }
 
-.crystal {
+.crystal-k {
   position: relative;
   height: 300px;
   display: flex;
@@ -65,7 +65,7 @@ body::before {
   margin-bottom: -80px;
 }
 
-.crystal h1 {
+.crystal-k h1 {
   position: absolute;
   z-index: 1;
   font-family: 'Lora', 'Georgia', serif;
@@ -78,7 +78,7 @@ body::before {
   width: 100%;
 }
 
-.crystal-img {
+.crystal-k-img {
   position: relative;
   z-index: 2;
   display: flex;
@@ -88,19 +88,19 @@ body::before {
   margin-top: 176px;
 }
 
-.crystal-arrow {
+.crystal-k-arrow {
   width: 50px;
   height: 50px;
 }
 
-.crystal-center {
+.crystal-k-center {
   width: 150px;
   height: 150px;
 }
 
 
 
-.arc-inner-content {
+.arc-k-inner-content {
   position: relative;
   z-index: 3;
   padding: 60px 20px;
@@ -154,18 +154,20 @@ body::before {
   margin-bottom: 20px;
 }
 
-  .part1 p, .p2p3 p{
-    font-family: 'Noto Sans TC';
-    line-height: 2rem;
-  }
-.arc-inner-content {
+.part1 p,
+.p2p3 p {
+  font-family: 'Noto Sans TC';
+  line-height: 2rem;
+}
+
+.arc-k-inner-content {
   position: relative;
   z-index: 3;
   padding: 0px 20px;
   color: white;
 }
 
-.recommended-crystals {
+.recommended-crystals-k {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,14 +188,14 @@ body::before {
   margin-top: 20px;
 }
 
-.recommended-crystals img {
+.recommended-crystals-k img {
   width: 50px;
 }
 
 
 
 /* 背景 */
-.arc-wrapper {
+.arc-k-wrapper {
   margin-top: 50px;
   position: relative;
   width: 100vw;
@@ -205,7 +207,7 @@ body::before {
   background-color: #5348AA;
 }
 
-.arc-svg-bg {
+.arc-k-svg-bg {
   width: 100%;
   height: 280px;
   overflow: hidden;
@@ -215,7 +217,7 @@ body::before {
   border: none;
 }
 
-.arc-svg-bg svg {
+.arc-k-svg-bg svg {
   display: block;
   width: 100%;
   height: 100%;
@@ -225,24 +227,23 @@ body::before {
 /* --------- RWD --------- */
 /* ========== 平板（1024px 以下） ========== */
 @media screen and (max-width: 1024px) {
-  .arc-outer-content {
-  margin-top: 100px;
-  padding-top:20px;
-}
+  .arc-k-outer-content {
+    margin-top: 130px;
+    padding-top: 20px;
+  }
 
-  .category {
+  .category-k {
     flex-wrap: wrap;
     gap: 60px;
     font-size: 14px;
-    margin-top: 100px;
     padding: 0 20px;
   }
 
-  .crystal h1 {
+  .crystal-k h1 {
     font-size: 120px;
   }
 
-  .crystal-img {
+  .crystal-k-img {
     gap: 180px;
     margin-top: 160px;
   }
@@ -254,7 +255,7 @@ body::before {
 
   .part1,
   .p2p3,
-  .recommended-crystals {
+  .recommended-crystals-k {
     padding: 32px 20px;
   }
 
@@ -270,10 +271,11 @@ body::before {
   }
 
 
-  .recommended-crystals img {
+  .recommended-crystals-k img {
     width: 42px;
   }
 }
+
 hr {
   border: none;
   border-top: 1px solid white;
@@ -286,19 +288,18 @@ hr {
     overflow: hidden;
   }
 
-  .category {
+  .category-k {
     flex-wrap: wrap;
     gap: 36px;
     font-size: 13px;
-    margin-top: 100px;
     padding: 0 16px;
   }
 
-  .crystal h1 {
+  .crystal-k h1 {
     font-size: 96px;
   }
 
-  .crystal-img {
+  .crystal-k-img {
     gap: 100px;
     margin-top: 140px;
   }
@@ -317,12 +318,12 @@ hr {
     font-size: 20px;
   }
 
-  .recommended-crystals {
+  .recommended-crystals-k {
     margin: 32px auto 80px;
     font-size: 20px;
   }
 
-  .recommended-crystals img {
+  .recommended-crystals-k img {
     width: 36px;
   }
 
@@ -334,27 +335,27 @@ hr {
 
 /* ========== 手機直向（640px 以下） ========== */
 @media screen and (max-width: 640px) {
-  .category {
+  .category-k {
     flex-wrap: wrap;
     gap: 20px;
     font-size: 14px;
-    margin-top: 100px;
+
   }
 
-  .crystal{
+  .crystal-k {
     margin-bottom: -150px;
   }
 
-  .crystal h1 {
+  .crystal-k h1 {
     font-size: 72px;
   }
 
-  .crystal-img {
+  .crystal-k-img {
     gap: 48px;
     margin-top: 120px;
   }
 
-  .crystal-center{
+  .crystal-k-center {
     width: 100px;
     height: 100px;
   }
@@ -375,7 +376,7 @@ hr {
     gap: 32px;
   }
 
-  .recommended-crystals {
+  .recommended-crystals-k {
     margin: 24px auto 60px;
     font-size: 18px;
   }

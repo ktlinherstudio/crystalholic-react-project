@@ -5,13 +5,14 @@ import FooterPlain from '../components/FooterPlain'
 export default function CrystalPage() {
     return (
         <>
+        <div className="background-layer">
             <div className='knowledge-crystal-page'>
                 <HeaderBg />
                 <main className="knowledge-crystal-main">
                     {/* 上半區：文字與水晶簡介 */}
-                    <section className="arc-outer-content">
+                    <section className="arc-k-outer-content">
                         <div className="space">
-                            <ul className="category">
+                            <ul className="category-k">
                                 <li>放鬆冥想</li>
                                 <li>專注工作</li>
                                 <li>愛與人際</li>
@@ -19,27 +20,27 @@ export default function CrystalPage() {
                                 <li>靈性直覺</li>
                             </ul>
 
-                            <div className="crystal">
+                            <div className="crystal-k">
                                 <h1>Kyanite</h1>
 
-                                <div className="crystal-img">
-                                    <img src="/images/btn_left.svg" alt="Left" className="crystal-arrow"/>
-                                        <img src="/images/crystal-kyanite.png" alt="藍晶石" className="crystal-center"/>
-                                    <img src="/images/btn_right.svg" alt="Right" className="crystal-arrow"/>
+                                <div className="crystal-k-img">
+                                    <img src="/images/S-Btn/btn_left.svg" alt="Left" className="crystal-k-arrow"/>
+                                        <img src="/images/S-CrystalSingle/crystal-kyanite.png" alt="藍晶石" className="crystal-k-center"/>
+                                    <img src="/images/S-Btn/btn_right.svg" alt="Right" className="crystal-k-arrow"/>
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     {/* 下半區：弧形背景包裹內容 */}
-                    <div className="arc-wrapper">
-                        <div className="arc-svg-bg">
+                    <div className="arc-k-wrapper">
+                        <div className="arc-k-svg-bg">
                             <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
                                 <path d="M0,320 C480,90 960,90 1440,320 L1440,0 L0,0 Z" fill="#fff" />
                             </svg>
                         </div>
 
-                        <section className="arc-inner-content">
+                        <section className="arc-k-inner-content">
                             <div className="part1">
                                 <h2>藍晶石</h2>
                                 <p>
@@ -69,19 +70,19 @@ export default function CrystalPage() {
                                 </div>
                             </div>
 
-                            <div className="recommended-crystals">
+                            <div className="recommended-crystals-k">
                                 <h2>推薦搭配水晶</h2>
                                 <div className="rc-img">
-                                    <img src="/images/crystal-angelite.png" alt="天使石" className="crystal1" />
-                                    <img src="/images/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
-                                    <img src="/images/crystal-sunstone.png" alt="太陽石" className="crystal3" />
+                                    <img src="/images/S-CrystalSingle/crystal-angelite.png" alt="天使石" className="crystal1" />
+                                    <img src="/images/S-CrystalSingle/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
+                                    <img src="/images/S-CrystalSingle/crystal-sunstone.png" alt="太陽石" className="crystal3" />
                                 </div>
                             </div>
                         </section>
                     <FooterPlain />
                     </div>
                  </main>
-              
+              </div>
             </div>
         </>
     );
