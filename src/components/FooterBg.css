@@ -115,7 +115,7 @@
 }
 
 .social-icons a:nth-child(3):hover img {
-    content: url('/public/S-Footer/images/icon_fb_h.svg');
+    content: url('/images/S-Footer/icon_fb_h.svg');
 }
 
 hr {

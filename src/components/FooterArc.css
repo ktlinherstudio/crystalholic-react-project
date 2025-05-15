@@ -1,29 +1,36 @@
+footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+footer li {
+    list-style-type: none;
+}
+
 .footer-arc-curve {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 146px;
-    overflow: hidden;
-    pointer-events: none;
-    transform: translateY(-99%);
-    z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 146px;
+  pointer-events: none;
+  transform: translateY(-99.5%);
+  z-index: 0;
 }
 
 .footer-arc-curve svg {
     width: 100%;
     height: 100%;
     display: block;
-    fill: linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
-    url(/public/images/S-Background/noise-background.jpg);
 }
 
 .footer-arc {
     position: relative;
     /* 背景材質 */
-  background-image:
-    linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
-    url(/public/images/S-Background/noise-background.jpg);
+    background-image:
+        linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
+        url(/public/images/S-Background/noise-background.jpg);
     width: 100%;
     padding-top: 146px;
     padding-bottom: 60px;
@@ -146,9 +153,9 @@
 }
 
 hr {
-  border: none;
-  border-top: 1px solid white;
-  margin: 20px 0;
+    border: none;
+    border-top: 1px solid white;
+    margin: 20px 0;
 }
 
 /* 版權欄 */
