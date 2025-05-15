@@ -136,12 +136,12 @@
 }
 
 /* ==========2560px寬螢幕月亮位置修正 ========== */
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2000px) {
     .moon-bg {
-        width: 1500px;
-        height: 1500px;
+        width: 1400px;
+        height: 1400px;
         top: -500px;
-        right: -100px;
+        right: -80px;
         background-size: contain;
     }
 }
