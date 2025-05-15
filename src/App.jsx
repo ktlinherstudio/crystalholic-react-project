@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import About from './pages/About'
 import Menu from './pages/Menu'
 import KnowledgeCrystal from './pages/KnowledgeCrystal'
+import KnowledgeCleanse from './pages/KnowledgeCleanse'
 import Cover from './pages/Cover'
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
+            <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
             <Route path="/cover" element={<Cover />} />
 
           </Routes>
