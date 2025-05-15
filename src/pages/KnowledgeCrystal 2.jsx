@@ -167,7 +167,6 @@ body::before {
 .p2p3 p {
   font-family: 'Noto Sans TC';
   line-height: 2rem;
-  font-weight: 320;
 }
 
 .arc-k-inner-content {
@@ -286,6 +285,7 @@ body::before {
     flex-direction: column;
     align-items: center;
     gap: 60px; 
+    font-weight: 500;
   }
 
   .p2p3 h2 {

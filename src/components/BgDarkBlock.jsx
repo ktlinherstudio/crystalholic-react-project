@@ -1,10 +1,11 @@
 import './BgDarkBlock.css'
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useId } from 'react';
 import { createStarsBackground } from '../../public/background-star';
 
 export default function BgDarkBlock() {
 
     const bgRef = useRef(null);
+    const filterId = useId(); // 自動生成唯一 ID
 
     useEffect(() => {
         if (bgRef.current) {
@@ -20,7 +21,7 @@ export default function BgDarkBlock() {
                 {/* 星星特效背景 */}
                 <div id="bgb-container" ref={bgRef} aria-hidden="true"></div>
                 {/* 紫色動畫背景 */}
-                <div className="gradient-bgb">
+                <div className="gradient-bgb" style={{ filter: `url(#${filterId})`}} >
                     <svg xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <filter id="goo">
