@@ -1,7 +1,18 @@
+#bg-container,
+.gradient-bg {
+  position: absolute;  
+  left: 0;
+  width: 100%;
+  height: 100%;         
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
 .background-layer {
   background-color: white;
   position: relative;
-  z-index: 0;
+  z-index: 2;
   width: 100%;
   min-height: 100vh;
 }
@@ -97,8 +108,6 @@ body::before {
   width: 150px;
   height: 150px;
 }
-
-
 
 .arc-k-inner-content {
   position: relative;
@@ -198,14 +207,26 @@ body::before {
 .arc-k-wrapper {
   margin-top: 50px;
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: auto;
   overflow: hidden;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color: #5348AA;
+  background-color: transparent;
 }
+.bgdark-inside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+
 
 .arc-k-svg-bg {
   width: 100%;

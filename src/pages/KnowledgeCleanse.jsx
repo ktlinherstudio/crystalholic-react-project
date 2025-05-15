@@ -1,11 +1,12 @@
 import './KnowledgeCleanse.css';
 import HeaderBg from '../components/HeaderBg'
 import FooterPlain from '../components/FooterPlain'
+import BgDark from '../components/BgDark'
 
 export default function KnowledgeCleanse() {
   return (
     <div className="nc-page">
-      <div className="nc-background"></div>
+      <div className="nc-background"><BgDark /></div>
       <HeaderBg />
       <section className="content-nc" id='content-nc'>
         <div className="left-title">
