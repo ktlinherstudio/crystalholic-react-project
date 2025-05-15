@@ -9,15 +9,15 @@ export default function HeaderBg() {
       <header className="header">
         <div className="logo">
           <a href="#">
-            <img src="/images/logotext_nav.svg" alt="Logo" />
+            <img src="/images/S-NavBar/logotext_nav.svg" alt="Logo" />
           </a>
         </div>
         <nav className="nav">
           <ul>
-            <li><a href="#"><img src="/images/navicon_search.svg" alt="Search" /></a></li>
-            <li><a href="#"><img src="/images/navicon_cart.svg" alt="Cart" /></a></li>
-            <li><a href="#"><img src="/images/navicon_member.svg" alt="Member" /></a></li>
-            <li><a href="#"><img src="/images/navicon_bgrbtn.svg" alt="Menu" /></a></li>
+            <li><a href="#"><img src="/images/S-NavBar/navicon_search.svg" alt="Search" /></a></li>
+            <li><a href="#"><img src="/images/S-NavBar/navicon_cart.svg" alt="Cart" /></a></li>
+            <li><a href="#"><img src="/images/S-NavBar/navicon_member.svg" alt="Member" /></a></li>
+            <li><a href="#"><img src="/images/S-NavBar/navicon_bgrbtn.svg" alt="Menu" /></a></li>
           </ul>
         </nav>
       </header>

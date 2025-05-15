@@ -1,11 +1,11 @@
 import './About.css'
-import HeaderLight2 from '../components/HeaderLight2'
+import HeaderPlain from '../components/HeaderPlain'
 import FooterBg from '../components/FooterBg'
 
 export default function About() {
   return (
     <div className="about-page">
-      <HeaderLight2 />
+      <HeaderPlain/>
 
       <main className="about-main">
         <section className="about-hero">
