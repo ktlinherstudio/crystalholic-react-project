@@ -23,7 +23,7 @@ body::before {
 
 /* 內容 */
 .arc-k-outer-content {
-  margin-top: 50px;
+  margin-top: 20px;
   /* 額外保險的空間 */
   padding-top: 100px;
 }
@@ -228,7 +228,7 @@ body::before {
 /* ========== 平板（1024px 以下） ========== */
 @media screen and (max-width: 1024px) {
   .arc-k-outer-content {
-    margin-top: 130px;
+    margin-top: 100px;
     padding-top: 20px;
   }
 
