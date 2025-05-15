@@ -37,9 +37,12 @@ export default function FooterArc() {
       <div className="footer-arc-content">
         <div className="company">
           <h3>COMPANY</h3>
-          <li>
-            <Link to="/about#about-hero">關於我們 About Us</Link>
-          </li>
+          <ul>
+            <li>
+              <Link to="/about#about-hero">關於我們 About Us</Link>
+            </li>
+          </ul>
+
         </div>
         <div className="service">
           <h3>SERVICE</h3>
@@ -66,6 +69,8 @@ export default function FooterArc() {
           </div>
         </div>
       </div>
+
+      <hr />
 
       <div className="copyright">
         <p>2025 © Crystalholic All Rights Reserved.</p>

@@ -33,7 +33,7 @@ footer li {
         url(/public/images/S-Background/noise-background.jpg);
     width: 100%;
     padding-top: 146px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     overflow: visible;
 }
 
@@ -54,6 +54,7 @@ footer li {
     gap: 120px;
     flex-wrap: wrap;
     background-color: transparent;
+    padding-bottom: 30px;
 }
 
 .footer-arc-content>div {

@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import './About.css'
 import HeaderPlain from '../components/HeaderPlain'
 import FooterBg from '../components/FooterBg'
-import FooterArc from '../components/FooterArc'
+// import FooterArc from '../components/FooterArc'
 
 export default function About() {
 
@@ -126,7 +126,7 @@ export default function About() {
           </div>
         </section>
       </main>
-      <FooterArc />
+      {/* <FooterArc /> */}
       <FooterBg />
     </div>
   )
