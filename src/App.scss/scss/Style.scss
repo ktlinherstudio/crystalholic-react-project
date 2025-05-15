@@ -1,156 +1,156 @@
 @use "./variable" as *;
-
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
+@import "../../index.css";
+// @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
 // google font，就算瀏覽者電腦中沒有安裝也能套到
 
-/* reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    // box-sizing: border-box;
-    /* 不累加邊框及內距 */
-}
+// /* reset CSS */
+// * {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     // box-sizing: border-box;
+//     /* 不累加邊框及內距 */
+// }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+// html,
+// body,
+// div,
+// span,
+// applet,
+// object,
+// iframe,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p,
+// blockquote,
+// pre,
+// a,
+// abbr,
+// acronym,
+// address,
+// big,
+// cite,
+// code,
+// del,
+// dfn,
+// em,
+// img,
+// ins,
+// kbd,
+// q,
+// s,
+// samp,
+// small,
+// strike,
+// strong,
+// sub,
+// sup,
+// tt,
+// var,
+// b,
+// u,
+// i,
+// center,
+// dl,
+// dt,
+// dd,
+// ol,
+// ul,
+// li,
+// fieldset,
+// form,
+// label,
+// legend,
+// table,
+// caption,
+// tbody,
+// tfoot,
+// thead,
+// tr,
+// th,
+// td,
+// article,
+// aside,
+// canvas,
+// details,
+// embed,
+// figure,
+// figcaption,
+// footer,
+// header,
+// hgroup,
+// menu,
+// nav,
+// output,
+// ruby,
+// section,
+// summary,
+// time,
+// mark,
+// audio,
+// video {
+//     margin: 0;
+//     padding: 0;
+//     border: 0;
+//     font-size: 100%;
+//     font: inherit;
+//     vertical-align: baseline;
+// }
 
-/* 重置字體 */
-body {
-    font-family:
-        /*西文*/
-        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
-        /*中文*/
-        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
-}
+// /* 重置字體 */
+// body {
+//     font-family:
+//         /*西文*/
+//         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+//         /*中文*/
+//         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+// }
 
-/* 重置標題 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: normal;
-}
+// /* 重置標題 */
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     font-weight: normal;
+// }
 
-/* 重置列表 */
-ul,
-ol {
-    list-style: none;
-}
+// /* 重置列表 */
+// ul,
+// ol {
+//     list-style: none;
+// }
 
-/* 重置圖片 */
-img {
-    display: block;
-    width: 100%;
-}
+// /* 重置圖片 */
+// img {
+//     display: block;
+//     width: 100%;
+// }
 
-/* 重置連接 */
-a {
-    display: block; // a預設的行內元素，不支援約寬高及上下間距，通常會改為區塊，方便設定
-    // color: $color-deep;
-    text-decoration: none;
-}
+// /* 重置連接 */
+// a {
+//     display: block; // a預設的行內元素，不支援約寬高及上下間距，通常會改為區塊，方便設定
+//     // color: $color-deep;
+//     text-decoration: none;
+// }
 
 
-/* ------字體------ */
+// /* ------字體------ */
 
-body {
-    font-family: 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif; //serif 套系統有襯線字
-    font-weight: 100;
-    line-height: 1.5;
-    letter-spacing: 2px;
-}
+// body {
+//     font-family: 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif; //serif 套系統有襯線字
+//     font-weight: 100;
+//     line-height: 1.5;
+//     letter-spacing: 2px;
+// }
 
-/*menu展開頁*/
-/*全文底色*/
+// /*menu展開頁*/
+// /*全文底色*/
 #menu {
     background-image: url(../images/menu-bg.jpg);
     background-repeat: no-repeat;
@@ -290,11 +290,11 @@ body {
     }
 
 }
-
+ 
 #cover {
     background-color: #484351; //做RWD用
     border: #fff 5px solid; //做RWD用
-    z-index: -1;
+    // z-index: -1;
 
     margin: 0;
     padding: 0;
