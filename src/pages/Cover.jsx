@@ -1,4 +1,7 @@
 import '../App.scss/css/Style.min.css'
+import HeaderPlain from '../components/HeaderPlain'
+import FooterBg from '../components/FooterBg'
+
 
 export default function Cover() {
     return (
@@ -7,11 +10,9 @@ export default function Cover() {
             <div id='cover'>
                 <div className="bgdark1"></div>
                 <div className="bgdark2"></div>
-             {/* </div> */}
 
-                {/* menu bar */}
-                <header id="header"></header>
-
+                {/* menu bar*/}
+                <HeaderPlain />
                 {/* 封面1  */}
                 <section className="ch-cover">
                     <div className="cover-box">
@@ -246,6 +247,8 @@ export default function Cover() {
                 </section>
 
                 <footer id="footer"></footer>
+
+                <FooterBg />
             </div>
         </>
     )
