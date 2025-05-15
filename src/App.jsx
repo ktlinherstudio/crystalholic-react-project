@@ -1,5 +1,6 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import Menu from './pages/Menu'
 import KnowledgeCrystal from './pages/KnowledgeCrystal'
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <div className="page-layout">
       <BrowserRouter>
+      <ScrollToTop /> 
         <main className="main-content">
           <Routes>
             <Route path="/about" element={<About />} />

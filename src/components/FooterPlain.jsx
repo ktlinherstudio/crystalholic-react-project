@@ -1,4 +1,5 @@
 import './FooterPlain.css'
+import { Link } from 'react-router-dom'
 
 export default function FooterPlain() {
   return (
@@ -7,7 +8,9 @@ export default function FooterPlain() {
         <div className="company">
           <h3>COMPANY</h3>
           <ul>
-            <li><a href="#">關於我們 About Us</a></li>
+             <li>
+              <Link to="/about">關於我們 About Us</Link> 
+            </li>
           </ul>
         </div>
         <div className="service">
@@ -17,7 +20,7 @@ export default function FooterPlain() {
             <li><a href="#">商品包裝 Packaging</a></li>
             <li><a href="#">售後服務 After-sales service</a></li>
             <li><a href="#">常見問題 FAQ</a></li>
-            <li><a href="#">保養維護 Maintenance</a></li>
+            <li><Link to="/knowledgecleanse">保養維護 Maintenance</Link></li>
             <li><a href="#">隱私權政策 Privacy</a></li>
           </ul>
         </div>
