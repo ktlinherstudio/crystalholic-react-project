@@ -35,9 +35,9 @@ export default function FooterArc() {
         <div className="followus">
           <h3>FOLLOW US</h3>
           <div className="social-icons">
-            <a href="#"><img src="/images/icon_line.svg" alt="Line" /></a>
-            <a href="#"><img src="/images/icon_ig.svg" alt="Instagram" /></a>
-            <a href="#"><img src="/images/icon_fb.svg" alt="Facebook" /></a>
+            <a href="#"><img src="" alt="Line" /></a>
+            <a href="#"><img src="" alt="Instagram" /></a>
+            <a href="#"><img src="" alt="Facebook" /></a>
           </div>
         </div>
       </div>

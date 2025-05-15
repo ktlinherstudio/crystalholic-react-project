@@ -118,28 +118,28 @@
 
 /* 預設圖 */
 .social-icons a:nth-child(1) img {
-    content: url('/images/icon_line.svg');
+    content: url('/images/S-Footer/icon_line.svg');
 }
 
 .social-icons a:nth-child(2) img {
-    content: url('/images/icon_ig.svg');
+    content: url('/images/S-Footer/icon_ig.svg');
 }
 
 .social-icons a:nth-child(3) img {
-    content: url('/images/icon_fb.svg');
+    content: url('/images/S-Footer/icon_fb.svg');
 }
 
 /* hover 圖 */
 .social-icons a:nth-child(1):hover img {
-    content: url('/images/icon_line_h.svg');
+    content: url('/images/S-Footer/icon_line_h.svg');
 }
 
 .social-icons a:nth-child(2):hover img {
-    content: url('/images/icon_ig_h.svg');
+    content: url('/images/S-Footer/icon_ig_h.svg');
 }
 
 .social-icons a:nth-child(3):hover img {
-    content: url('/public/images/icon_fb_h.svg');
+    content: url('/images/S-Footer/icon_fb_h.svg');
 }
 
 hr {
