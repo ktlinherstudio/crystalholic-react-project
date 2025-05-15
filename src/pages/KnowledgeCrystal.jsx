@@ -8,7 +8,7 @@ export default function CrystalPage() {
             <div className="background-layer">
                 <div className='knowledge-crystal-page'>
                     <HeaderBg />
-                    <main className="knowledge-crystal-main">
+                    <main className="knowledge-crystal-main" id="crystal-main">
                         {/* 上半區：文字與水晶簡介 */}
                         <section className="arc-k-outer-content">
                             <div className="space">

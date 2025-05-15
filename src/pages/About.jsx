@@ -1,14 +1,32 @@
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import './About.css'
 import HeaderPlain from '../components/HeaderPlain'
 import FooterBg from '../components/FooterBg'
 
 export default function About() {
+
+  // 滾動到頁面最上方
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.hash === '#about-hero') {
+      const target = document.querySelector(location.hash)
+      if (target) {
+        // 等待頁面渲染完成，然後立即滾動
+        requestAnimationFrame(() => {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        })
+      }
+    }
+  }, [location])
+
   return (
     <div className="about-page">
       <HeaderPlain />
 
       <main className="about-main">
-        <section className="about-hero">
+        <section className="about-hero" id='about-hero'>
           <div className="about-hero-arc">
             <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
               <path
