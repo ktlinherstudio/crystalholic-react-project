@@ -1,4 +1,4 @@
-.header {
+.header2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,6 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  margin-top: 10px;
   z-index: 1000;
 }
 
@@ -15,7 +16,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 100px;
+  height: 70px;
   background-color: #5348AA;
   background-position: center;
   z-index: 999;
@@ -23,7 +24,7 @@
 }
 
 /* Logo */
-.logo img {
+.logo-header img {
   width: 180px;
 }
 

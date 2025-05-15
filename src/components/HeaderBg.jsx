@@ -6,10 +6,10 @@ export default function HeaderBg() {
     <div className="header-wrapper">
       <div className="header-background"></div>
 
-      <header className="header">
-        <div className="logo">
+      <header className="header2">
+        <div className="logo-header">
           <a href="#">
-            <img src="/images/S-NavBar/logotext_nav.svg" alt="Logo" />
+            <img src="/images/S-NavBar/logotext_nav2.svg" alt="Logo" />
           </a>
         </div>
         <nav className="nav">
