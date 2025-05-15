@@ -1,11 +1,13 @@
 @charset "UTF-8";
 @import "../../index.css";
 #menu {
-  background-image: url(../images/menu-bg.jpg);
+  background-color: #e22121;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: #fff;
+  width: 100%;
+  height: 100vh;
 }
 #menu .navigation {
   display: flex;
@@ -56,7 +58,7 @@
   width: 10.61px;
   height: 18.28px;
   margin-right: 16px;
-  background-image: url("../../../public/images/deco-menu-diamond.svg");
+  background-image: url("../../../public/images/HomePage/deco-menu-diamond.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -67,7 +69,7 @@
   width: 10.61px;
   height: 18.28px;
   margin-left: 16px;
-  background-image: url("../../../public/images/deco-menu-diamond.svg");
+  background-image: url("../../../public/images/HomePage/deco-menu-diamond.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -105,11 +107,18 @@
   align-items: center;
   gap: 16px;
 }
-#menu .navigation .menu-last .menu-last2 img {
+#menu .navigation .menu-last .menu-last2 .scicon-box img {
   width: 30px;
   height: 30px;
 }
-
+#menu .navigation .menu-last .menu-last2 .scicon-box .line {
+  width: 30px;
+  height: 30px;
+  background-image: url(../../../public/images/S-Footer/icon_line.svg);
+}
+#menu .navigation .menu-last .menu-last2 .scicon-box .line:hover {
+  background-image: url(../../../public/images/S-Footer/icon_line_h.svg);
+}
 #cover {
   background-color: #484351;
   border: #fff 5px solid;
@@ -438,7 +447,7 @@
 .section-starttest .bling {
   width: 445.82px;
   height: 402.37px;
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   left: 34%;
   top: 27.8%;
@@ -464,7 +473,7 @@
 .section-starttest .numbg {
   width: 78.3%;
   height: 88.4;
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   left: 11.3%;
   top: 8.7%;
@@ -551,48 +560,48 @@
   justify-content: center;
   align-items: center;
 }
-#section-tarotcard .tarotcard #tarotcard-box .cardchild-1 {
+#section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
   width: 280px;
   height: 455px;
   margin-left: 0;
 }
 @media ((max-width:1024px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .cardchild-1 {
+  #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
     width: 225px;
     height: 455px;
   }
 }
 @media ((max-width:820px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .cardchild-1 {
+  #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
     width: 220px;
     height: 455px;
   }
 }
 @media ((max-width:640px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .cardchild-1 {
+  #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
     width: 280px;
     height: 455px;
   }
 }
-#section-tarotcard .tarotcard #tarotcard-box .card {
+#section-tarotcard .tarotcard #tarotcard-box .trcard {
   width: 280px;
   height: 455px;
   margin-left: -110px;
 }
 @media ((max-width:1024px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .card {
+  #section-tarotcard .tarotcard #tarotcard-box .trcard {
     width: 225px;
     height: 455px;
   }
 }
 @media ((max-width:820px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .card {
+  #section-tarotcard .tarotcard #tarotcard-box .trcard {
     width: 220px;
     height: 455px;
   }
 }
 @media ((max-width:640px)) {
-  #section-tarotcard .tarotcard #tarotcard-box .card {
+  #section-tarotcard .tarotcard #tarotcard-box .trcard {
     width: 280px;
     height: 455px;
   }
@@ -860,18 +869,17 @@
   width: 82.94px;
   height: 11.31px;
   margin-right: 16px;
-  background-image: url("../../public/image/icon/裝飾-紫.svg");
+  background-image: url("../../../public/images/HomePage/deco-left-purple.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .section-crystaldiscovery header::after {
   content: "";
   display: block;
-  transform: rotate(180deg);
   width: 82.94px;
   height: 11.31px;
   margin-right: 16px;
-  background-image: url("../../public/image/icon/裝飾-紫.svg");
+  background-image: url("../../../public/images/HomePage/deco-right-purple.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1078,6 +1086,7 @@
   width: 113px;
   height: 90px;
   border-radius: 10px;
+  margin-top: -20px;
   /* position: absolute; */
 }
 #section-feedback .feedback .feedback-left {
@@ -1100,7 +1109,13 @@
 #section-feedback .feedback .feedback-left p {
   width: 135px;
   height: 72px;
+  font-family: "Noto Sans TC", sans-serif;
   font-size: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* 顯示 3 行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* footer */

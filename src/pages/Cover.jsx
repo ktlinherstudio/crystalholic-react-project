@@ -16,48 +16,48 @@ export default function Cover() {
                 {/* 封面1  */}
                 <section className="ch-cover">
                     <div className="cover-box">
-                        <span><img src="./images/deco-diamond.svg" className="deco1" alt="" /></span>
+                        <span><img src="./images/HomePage/deco-diamond.svg" className="deco1" alt="" /></span>
                         <h2>
                             <span className="cover1">匠心嚴選 靈韻手作</span>
                             <span className="cover2">打造專屬你的能量水晶</span>
                         </h2>
-                        <span><img src="./images/deco-diamond.svg" className="deco2" alt="" /></span>
-                        <span><img src="./images/deco-diamond.svg" className="deco3" alt="" /></span>
-                        <span><img src="./images/scroll.svg" className="scroll" alt="" /></span>
+                        <span><img src="./images/HomePage/deco-diamond.svg" className="deco2" alt="" /></span>
+                        <span><img src="./images/HomePage/deco-diamond.svg" className="deco3" alt="" /></span>
+                        <span><img src="./images/HomePage/scroll.svg" className="scroll" alt="" /></span>
                     </div>
                 </section>
 
                 {/* 封面2 */}
                 <section className="section-starttest">
-                    <div className="startbtn"><a href="#"><img src="./images/start-test-btn.svg" alt="" /></a>
+                    <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a>
                     </div>
                     <div className="startbox1">
-                        <img src="./images/hand-left-gradient.svg" className="left" alt="" />
-                        <img src="./images/hand-right-gradient.svg" className="right" alt="" />
+                        <img src="./images/HomePage/L.svg" className="left" alt="" />
+                        <img src="./images/HomePage/R.svg" className="right" alt="" />
                     </div>
                     <div className="startbox2">
                         <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
-                        <div><img src="./images/scroll.svg" alt="" /></div>
+                        <div><img src="./images/HomePage/scroll.svg" alt="" /></div>
                     </div>
-                    <span className="bling"><img src="./images/deco-bling2.svg" alt="" /></span>
-                    <span className="numbg"><img src="./images/deco-num-bg.svg" alt="" /></span>
+                    <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
+                    <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
                 </section>
 
                 {/* 憑直覺抽一張吧 */}
                 <section id="section-tarotcard">
                     <div className="tarotcard">
                         <h2 id="tarotcard-title">
-                            <span className="dimond-left"><img src="./images/deco-diamond-left.svg" alt="" /></span>
+                            <span className="dimond-left"><img src="./images/HomePage/deco-diamond-left.svg" alt="" /></span>
                             <div id="tarot-title">憑直覺抽一張吧</div>
-                            <span className="dimond-right"><img src="./images/deco-diamond-right.svg" alt="" /></span>
+                            <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
                         </h2>
                         <div id="tarotcard-box">
-                            <img src="./images/tarot-back.svg" className="cardchild-1" alt="" />
-                            <img src="./images/tarot-back.svg" className="card" alt="" />
-                            <img src="./images/tarot-back.svg" className="card" alt="" />
-                            <img src="./images/tarot-back.svg" className="card" alt="" />
-                            <img src="./images/tarot-back.svg" className="card" alt="" />
-                            <img src="./images/tarot-back.svg" className="card" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcardchild-1" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                            <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
                         </div>
                         <button id="tarotcard-btn"><a href="#">所有商品</a></button>
                     </div>
@@ -67,13 +67,13 @@ export default function Cover() {
                 <section id="custom">
                     <div id="title-all">
                         <header className="custom-title">
-                            <span><img src="./images/鑽石左.svg" className="dimond-left" /></span>
+                            <span><img src="./images/HomePage/deco-diamond-left.svg" className="dimond-left" /></span>
                             <div id="custom-titlebox">
                                 <h2>Customized 訂製你的專屬水晶</h2>
                                 <br />
                                 <h3>精選天然水晶，打造獨一無二的手鍊。</h3>
                             </div>
-                            <span><img src="./images/鑽石右.svg" className="dimond-right" alt="" /></span>
+                            <span><img src="./images/HomePage/deco-diamond-right.svg" className="dimond-right" alt="" /></span>
                         </header>
                         <button><a href="../阿啾/html/customization-1.html">立即訂製</a></button>
                     </div>
@@ -82,20 +82,20 @@ export default function Cover() {
                 {/* 水晶小百科  */}
                 <section id="section-crystaldiscovery">
                     <div className="crystal-display">
-                        <img src="./images/黃髮晶.svg" className="circle" alt="" />
-                        <img src="./images/crystal-kyanite.png" className="circle" alt="" />
-                        <img src="./images/天使石.svg" className="circle" alt="" />
-                        <img src="./images/太陽石.svg" className="circle" alt="" />
-                        <img src="./images/月光石.svg" className="circle" alt="" />
-                        <img src="./images/綠幽靈1-02.svg" className="circle" alt="" />
-                        <img src="./images/月光石.svg" className="circle" alt="" />
-                        <img src="./images/粉水晶.svg" className="circle" alt="" />
-                        <img src="./images/天使石.svg" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-golden-rutilated-quartz.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-kyanite.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-angelite.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-sunstone.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-moonstone.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-green-phantom-quartz.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-moonstone.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-rose-quartz.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-angelite.png" className="circle" alt="" />
 
-                        <div className="circle"><img src="./images/crystal-kyanite.png" alt="" /> </div>
+                        <div className="circle"><img src="./images/S-CrystalSingle/crystal-kyanite.png" alt="" /> </div>
 
-                        <img src="./images/紫水晶.svg" className="circle" alt="" />
-                        <img src="./images/太陽石.svg" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-amethyst.png" className="circle" alt="" />
+                        <img src="./images/S-CrystalSingle/crystal-sunstone.png" className="circle" alt="" />
                     </div>
                     <div className="section-crystaldiscovery">
                         <header>
@@ -132,9 +132,9 @@ export default function Cover() {
                             <article className="discovery-p3">
                                 <h2>建議搭配水晶</h2>
                                 <div className="discovery-imgbox">
-                                    <img src="./images/天使石.svg" className="discovery-img" alt="" />
-                                    <img src="./images/紫水晶.svg" className="discovery-img" alt="" />
-                                    <img src="./images/太陽石.svg" className="discovery-img" alt="" />
+                                    <img src="./images/S-CrystalSingle/crystal-angelite.png" className="discovery-img" alt="" />
+                                    <img src="./images/S-CrystalSingle/crystal-amethyst.png" className="discovery-img" alt="" />
+                                    <img src="./images/S-CrystalSingle/crystal-sunstone.png" className="discovery-img" alt="" />
                                 </div>
                             </article>
                         </div>
@@ -144,110 +144,101 @@ export default function Cover() {
                 {/* 礦迷回饋 */}
                 <section id="section-feedback">
                     <header className="feedback-displaytitle">
-                        <span><img src="./images/裝飾-左.svg" alt="" /></span>
+                        <span><img src="./images/HomePage/deco-left.svg" alt="" /></span>
                         <div id="title">
                             <span>Feedback</span>
                             <span>礦迷回饋</span>
                         </div>
-                        <span><img src="./images/裝飾-右.svg" alt="" /></span>
+                        <span><img src="./images/HomePage/deco-right.svg" alt="" /></span>
                         {/* span.image裝飾要設定長寬嗎  */}
                     </header>
                     <div className="feedback-box">
-                        <span className="feedback-arrowleft"><img src="./images/icon_arrow_left.ico.svg" alt="" /></span>
+                        <span className="feedback-arrowleft"><img src="./images/HomePage/icon_arrow_left.ico.svg" alt="" /></span>
                         <div className="feedback">
                             <div className="review-pic">
 
-                                <span><img src="./images/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+                                <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-                                <span><img src="./images/img-feedback.jpg" className="review-img" alt="" /></span>
+                                <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
                             </div>
                             <div className="feedback-left">
                                 {/* 水晶5星評價 */}
                                 <div className="star-box">
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
                                 </div>
                                 {/* 回饋內文 */}
-                                <div className="content">
                                     <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                                </div>
                             </div>
                         </div>
                         <div className="feedback">
                             <div className="review-pic">
 
-                                <span><img src="./images/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-                                <span><img src="./images/img-feedback.jpg" className="review-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
                             </div>
                             <div className="feedback-left">
                                 {/* 水晶5星評價 */}
                                 <div className="star-box">
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
                                 </div>
                                 {/* 回饋內文  */}
-                                <div className="content">
                                     <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                                </div>
                             </div>
                         </div>
                         <div className="feedback">
                             <div className="review-pic">
 
-                                <span><img src="./images/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-                                <span><img src="./images/img-feedback.jpg" className="review-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
                             </div>
                             <div className="feedback-left">
                                 {/* 水晶5星評價  */}
                                 <div className="star-box">
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
                                 </div>
                                 {/* 回饋內文  */}
-                                <div className="content">
                                     <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                                </div>
                             </div>
                         </div>
                         <div className="feedback">
                             <div className="review-pic">
 
-                                <span><img src="./images/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-                                <span><img src="./images/img-feedback.jpg" className="review-img" alt="" /></span>
+                                <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
                             </div>
                             <div className="feedback-left">
                                 {/* 水晶5星評價  */}
                                 <div className="star-box">
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
-                                    <img src="./images/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
+                                    <img src="./images/HomePage/star.svg" className="star" alt="" />
                                 </div>
                                 {/* 回饋內文  */}
-                                <div className="content">
                                     <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                                </div>
                             </div>
                         </div>
-                        <span className="feedback-arrowright"><img src="./images/icon_arrow_right.ico.svg" alt="" /></span>
+                        <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
                     </div>
                 </section>
 
                 <footer id="footer"></footer>
-
                 <FooterBg />
             </div>
         </>

@@ -9,7 +9,7 @@ export default function Menu() {
 
             <div className='menu'>
                 <nav className="navigation">
-                    <span className="closebtn"><img src="./images/icon_closebgrbtn.svg" alt=""/></span>
+                    <span className="closebtn"><img src="./images/S-NavBar/icon_closebgrbtn.svg" alt=""/></span>
                     <span className="closebtn"><img src="../public/image/icon/" alt=""/></span>
                     <div className="menu">
                         <h2>About us</h2>
@@ -57,9 +57,9 @@ export default function Menu() {
                         <div className="menu-last2">
                             <h3>FOLLOW US</h3>
                             <span className="scicon-box">
-                                <div className="scicon"><img src="../images/icon_line.svg" alt=""/></div>
-                                <div className="scicon"><img src="../images/icon_ig.svg" alt=""/></div>
-                                <div className="scicon"><img src="../images/icon_fb.svg" alt=""/></div>
+                                <div className="line"></div>
+                                <div className="ig"><img src="../images/S-Footer/icon_ig.svg" alt=""/></div>
+                                <div className="fb"><img src="../images/S-Footer/icon_fb.svg" alt=""/></div>
                             </span>
                         </div>
                     </div>
