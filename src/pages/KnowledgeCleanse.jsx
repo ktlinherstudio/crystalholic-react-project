@@ -7,7 +7,7 @@ export default function KnowledgeCleanse() {
   return (
     <div className="nc-page">
       <div className="nc-background"><BgDark /></div>
-      <HeaderBg />
+      <HeaderBg/>
       <section className="content-nc" id='content-nc'>
         <div className="left-title">
           <img src="/images/HomePage/deco-diamond.png" alt="" className="dimand1" />

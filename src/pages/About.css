@@ -1,7 +1,10 @@
 /* --------- Hero --------- */
+.about-page {
+  overflow-x: hidden;
+}
 .about-hero {
   position: relative;
-  background-color: #5348AA;
+  background-color: transparent;
   min-height: 800px;
   display: flex;
   width: 100%;
@@ -97,6 +100,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .text {
@@ -176,11 +180,12 @@
   .text-content {
     text-align: center;
     margin: 0 auto;
+    max-width: 400px;
   }
 
   .text-content p,
   .text-content ul {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.6rem;
     font-weight: 360;
   }

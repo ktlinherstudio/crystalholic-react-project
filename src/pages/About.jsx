@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import './About.css'
-import HeaderPlain from '../components/HeaderPlain'
+import NavBarLight from '../components/NavBarLight'
 import FooterBg from '../components/FooterBg'
+import BgDarkBlock from '../components/BgDarkBlock'
 // import FooterArc from '../components/FooterArc'
 
 export default function About() {
@@ -24,11 +25,13 @@ export default function About() {
 
   return (
     <div className="about-page">
-      <HeaderPlain />
+      <NavBarLight />
 
       <main className="about-main">
         <section className="about-hero" id='about-hero'>
+          <div className="bgdark-inside"> <BgDarkBlock /></div>
           <div className="about-hero-arc">
+            
             <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
               <path
                 fill="#ffffff"
