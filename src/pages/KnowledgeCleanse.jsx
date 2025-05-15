@@ -9,9 +9,9 @@ export default function KnowledgeCleanse() {
       <HeaderBg />
       <section className="content-nc">
         <div className="left-title">
-          <img src="/image/鑽石小裝飾.png" alt="" className="dimand1" />
+          <img src="/images/HomePage/deco-diamond.png" alt="" className="dimand1" />
           <h1 className="title">使用與淨化指南</h1>
-          <img src="/image/鑽石小裝飾.png" alt="" className="dimand2" />
+          <img src="/images/HomePage/deco-diamond.png" alt="" className="dimand2" />
         </div>
 
         {/* 背景月亮圖 */}

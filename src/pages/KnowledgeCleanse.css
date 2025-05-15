@@ -68,12 +68,13 @@
     right: -200px;
     width: 1100px;
     height: 1100px;
-    background-image: url('./public/image/knowledge1-moon.png');
+    background-image: url('/images/Knowledge/knowledge1-moon.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     z-index: 1;
     pointer-events: none;
+    overflow: hidden;
 }
 
 .moon-content {
