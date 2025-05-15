@@ -1,0 +1,36 @@
+/* 導覽列 */
+#navbar {
+    display: flex;
+    /* flex:橫排 */
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    /* 背景材質 */
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0.22) 23.56%, rgba(0, 0, 0, 0.06) 64.9%, rgba(0, 0, 0, 0.00) 100%);
+}
+
+.logo img {
+    width: 181px;
+    margin-left: 25px;
+}
+
+header ul {
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon {
+    display: flex;
+    margin-right: 25px;
+}
+
+.icon a {
+    width: 34px;
+    height: 34px;
+    margin: 0 10px;
+    background-size: contain;
+}
