@@ -5,7 +5,7 @@ import FooterBg from '../components/FooterBg'
 export default function About() {
   return (
     <div className="about-page">
-      <HeaderPlain/>
+      <HeaderPlain />
 
       <main className="about-main">
         <section className="about-hero">
