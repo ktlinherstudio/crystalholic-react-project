@@ -5,6 +5,7 @@ import FooterPlain from '../components/FooterPlain'
 export default function KnowledgeCleanse() {
   return (
     <div className="nc-page">
+      <div className="nc-background"></div>
       <HeaderBg />
       <section className="content-nc">
         <div className="left-title">

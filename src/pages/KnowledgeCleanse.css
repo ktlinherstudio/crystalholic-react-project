@@ -1,5 +1,5 @@
 /* 背景 */
-.background {
+.nc-background {
     position: fixed;
     top: 0;
     left: 0;
@@ -275,7 +275,7 @@
 /* ========== 手機直向（640px 以下） ========== */
 
 @media screen and (max-width: 640px) {
-    .content-nc {
+    .content {
         padding: 32px 16px;
         gap: 24px;
     }

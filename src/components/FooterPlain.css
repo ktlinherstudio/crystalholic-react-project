@@ -5,6 +5,8 @@
   padding: 60px 20px 30px;
   margin-top: 60px;
   background-color: transparent; /* ✅ 外層決定背景 */
+  position: relative;
+  z-index: 2;
 }
 
 .footer-content {

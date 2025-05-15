@@ -4,7 +4,6 @@ export default function HeaderBg() {
   return (
 
     <div className="header-wrapper">
-      <div className="header-background"></div>
 
       <header className="header2">
         <div className="logo-header">
