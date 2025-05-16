@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModel';
 import './NavBarLight.css'
 
@@ -17,9 +16,15 @@ export default function NavBarLight() {
             <li><a href="#"><img src="/images/S-NavBar/navicon_search.svg" alt="Search" /></a></li>
             <li><a href="#"><img src="/images/S-NavBar/navicon_cart.svg" alt="Cart" /></a></li>
             <li>
-              {/* 按下會員 icon 彈出視窗 */}
-              <button onClick={() => setShowAuthModal(true)} className="member-btn">
-                <img src="/images/S-NavBar/navicon_member.svg" alt="Member" />
+              {/* 點擊button彈跳視窗 */}
+             <button className="member-button" onClick={() => setShowAuthModal(true)}>
+                <img
+                  src="/images/S-NavBar/navicon_member.svg"
+                  alt="Member"
+                  width="30"
+                  height="30"
+                  style={{ display: 'block' }}
+                />
               </button>
             </li>
             <li><a href="#"><img src="/images/S-NavBar/navicon_bgrbtn.svg" alt="Menu" /></a></li>
