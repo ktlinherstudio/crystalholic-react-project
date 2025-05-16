@@ -1,7 +1,7 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .auth-form input,
@@ -17,8 +17,7 @@
 .auth-form .social-login {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 10px;
+  gap: 30px;
 }
 
 .divider {
