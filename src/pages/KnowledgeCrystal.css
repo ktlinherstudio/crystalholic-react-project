@@ -21,17 +21,6 @@ body {
   background-color: white;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
-  z-index: -1;
-}
-
 /* 內容 */
 .arc-k-outer-content {
   margin-top: 20px;
