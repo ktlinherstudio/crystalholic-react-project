@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import LoginRegisterModal from './LoginRegisterModal';
+import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModel';
 import './NavBarLight.css'
 
 export default function NavBarLight() {

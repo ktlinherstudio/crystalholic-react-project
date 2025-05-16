@@ -1,30 +1,76 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  gap: 16px;
 }
 
-.auth-form h2 {
+.auth-form input,
+.auth-form select {
+  padding: 12px;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+}
+
+.auth-form .social-login {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 16px 0;
 }
 
-.auth-form input {
-  padding: 10px;
-  margin-bottom: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;
 }
 
-.auth-form button {
-  padding: 10px;
-  background-color: #a46be5;
+.divider span {
+  padding: 0 12px;
+  color: #8750bf;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-group .hint {
+  font-size: 12px;
+  color: #999;
+  margin-top: -10px;
+}
+
+.forgot {
+  font-size: 12px;
+  float: right;
+  color: #8750bf;
+  text-decoration: none;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-button {
+  background: #8750bf;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 999px;
+  padding: 12px;
+  font-size: 16px;
   cursor: pointer;
-}
-
-.auth-form button:hover {
-  background-color: #8e59cd;
+  margin-top: 10px;
 }

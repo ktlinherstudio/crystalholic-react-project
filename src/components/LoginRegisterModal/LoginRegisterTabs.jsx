@@ -1,18 +1,17 @@
 import { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
-import './LoginRegisterTabs.css';
 
 export default function LoginRegisterTabs() {
   const [activeTab, setActiveTab] = useState('login');
 
   return (
-    <div className="auth-tabs">
-      <div className="tab-header">
-        <button onClick={() => setActiveTab('login')} className={activeTab === 'login' ? 'active' : ''}>登入</button>
-        <button onClick={() => setActiveTab('register')} className={activeTab === 'register' ? 'active' : ''}>註冊</button>
+    <div className="tabs-container">
+      <div className="tabs">
+        <button className={activeTab === 'register' ? 'active' : ''} onClick={() => setActiveTab('register')}>註冊</button>
+        <button className={activeTab === 'login' ? 'active' : ''} onClick={() => setActiveTab('login')}>登入</button>
       </div>
-      <div className="tab-content">
+      <div className="form-area">
         {activeTab === 'login' ? <LoginForm /> : <RegisterForm />}
       </div>
     </div>
