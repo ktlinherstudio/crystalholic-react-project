@@ -212,10 +212,6 @@
     max-width: 650px;
   }
 
-  .nav ul {
-    gap: 12px;
-  }
-
   .content {
     padding: 40px 20px;
   }
@@ -240,10 +236,6 @@
   .about-hero-description {
     font-size: 16px;
     max-width: 440px;
-  }
-
-  .header {
-    padding: 12px 20px;
   }
 
   .text-content .line {

@@ -1,5 +1,5 @@
 import './KnowledgeCrystal.css';
-import HeaderBg from '../components/HeaderBg'
+import NavBarDark from '../components/NavBarDark'
 import FooterPlain from '../components/FooterPlain'
 import BgDarkBlock from '../components/BgDarkBlock'
 
@@ -7,7 +7,7 @@ export default function CrystalPage() {
     return (
         <>
             <div className='knowledge-crystal-page'>
-                <HeaderBg />
+                <NavBarDark />
                 <main className="knowledge-crystal-main" id="crystal-main">
                     {/* 上半區：文字與水晶簡介 */}
                     <section className="arc-k-outer-content">

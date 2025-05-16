@@ -1,5 +1,5 @@
 import './KnowledgeCleanse.css';
-import HeaderBg from '../components/HeaderBg'
+import NavBarDark from '../components/NavBarDark'
 import FooterPlain from '../components/FooterPlain'
 import BgDark from '../components/BgDark'
 
@@ -7,7 +7,7 @@ export default function KnowledgeCleanse() {
   return (
     <div className="nc-page">
       <div className="nc-background"><BgDark /></div>
-      <HeaderBg/>
+      <NavBarDark/>
       <section className="content-nc" id='content-nc'>
         <div className="left-title">
           <img src="/images/HomePage/deco-diamond.png" alt="" className="dimand1" />

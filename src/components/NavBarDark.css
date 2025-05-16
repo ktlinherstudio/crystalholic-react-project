@@ -1,12 +1,12 @@
   /* 導覽列 */
-  #navbar {
+  #navbar2 {
     display: flex;
     /* flex:橫排 */
     justify-content: space-between;
     align-items: center;
     height: 70px;
     width: 100%;
-    position: relative;
+    position: fixed;
     z-index: 99;
     /* 背景材質 */
     background-image:
@@ -14,24 +14,82 @@
       url(/public/images/S-Background/noise-background.jpg);
   }
 
-  .logo img {
-    width: 181px;
-    margin-left: 25px;
+  .logo2 img {
+  width: 181px;
+  margin-left: 25px;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+}
+
+.icon2 {
+  display: flex;
+  margin-right: 25px;
+}
+
+.icon2 li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.icon2 li img {
+  width: 34px;
+  height: 34px;
+}
+
+/*  member icon 按鈕樣式 */
+.member-button2 {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+}
+
+.member-button2 img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.member-button2:focus {
+  outline: none;
+}
+
+
+@media screen and (max-width: 1024px) {
+  /* 隱藏搜尋 icon */
+  .icon2 li:first-child {
+    display: none;
   }
 
-  header ul {
+  /*  icon 區塊放大但不影響 icon 大小 */
+  .icon2 li {
+    min-width: 48px;
+    min-height: 48px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    margin: 0 8px; /* 稍微縮小間距 */
   }
 
-  .icon {
-    display: flex;
-    margin-right: 25px;
+  /*  圖片大小固定不變 */
+  .icon2 li img,
+  .member-button2 img {
+    width: 30px;
+    height: 30px;
   }
 
-  .icon a {
+  /*  member icon 的 button 也確保大小一致 */
+  .member-button2 {
     width: 34px;
     height: 34px;
-    margin: 0 10px;
-    background-size: contain;
+    padding: 0;
   }
+}

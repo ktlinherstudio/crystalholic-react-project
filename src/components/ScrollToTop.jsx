@@ -19,7 +19,7 @@ export default function ScrollToTop() {
       setTimeout(scrollToElement, 50);
     } else {
       // 沒有 hash 就直接回頂部（強制滾動）
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
   }, [pathname, hash]);
 
