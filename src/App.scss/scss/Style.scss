@@ -199,10 +199,6 @@
             align-items: center;
         }
 
-        ul {
-            // list-style: none;
-        }
-
         li {
             font-size: 16px;
             height: 26px;
@@ -720,13 +716,20 @@
     }
 
     .bling {
-        width: 445.82px;
-        height: 402.37px;
+        // width: 445.82px;
+        // height: 402.37px;
+        width: 30.9%;
+        height: 50.2%;
         z-index: 0;
 
         position: absolute;
         left: 34%;
         top: 27.8%;
+
+        @media ($media-xlg-up) {
+            left: 16%;
+            top: 22%;
+        }
 
         @media ($media-lg) {
             left: 27%;
@@ -748,13 +751,17 @@
 
     .numbg {
         width: 78.3%;
-        height: 88.4;
+        height: 88.4%;
         z-index: 0;
 
         position: absolute;
         left: 11.3%;
         top: 8.7%;
 
+        @media ($media-xlg-up) {
+            left: 16%;
+            top: 22%;
+        }
 
         @media ($media-lg) {
             left: 11%;
@@ -880,7 +887,7 @@
                 }
 
                 @media ($media-sm) {
-                    width: 280px;
+                    width: 190px;
                     height: 455px;
                 }
             }
@@ -902,7 +909,7 @@
                 }
 
                 @media ($media-sm) {
-                    width: 280px;
+                    width: 190px;
                     height: 455px;
                 }
 
