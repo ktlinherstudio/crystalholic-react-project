@@ -1,7 +1,7 @@
 @import '../../components/NumTestBg.css';
 
 /* 主要內容區 */
-.numtest{
+.num1-numtest{
     width: 100%;
     height: 100vh;
     /* height: calc(100vh - 70px); */
@@ -17,18 +17,20 @@
 }
 
 /* 第一個標題 */
-#title-1{
+#num1-title-1{
     display: flex;
     /* justify-content: center; */
     align-items: center; 
     gap: 32px;
     margin-bottom: 34px; 
 }
-.decorate-left,.decorate-right{
+/* 左右裝飾 */
+.num1-decorate-left,.num1-decorate-right{
     width: 82.94px;
     height: 11.31px;
 }
-.decorate-title{
+/* 標題 */
+.num1-decorate-title{
     color: #8750BF;
     text-align: center;
     font-family: "LXGW WenKai Mono TC";
@@ -37,7 +39,7 @@
 }
 
 /* 第二個標題 */
-#title-2{
+#num1-title-2{
     font-family: "LXGW WenKai Mono TC";
     font-size: 36px;
     letter-spacing: 3.6px;
@@ -46,7 +48,7 @@
 }
 
 /* 按鈕 */
-#button{
+#num1-button{
     display: flex;
     width: 300px;
     padding: 10px 83px;
