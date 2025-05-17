@@ -27,12 +27,13 @@ header ul {
 .icon2 {
   display: flex;
   margin-right: 50px;
+  gap: 10px;
 }
 
 .icon2 a {
   width: 34px;
   height: 34px;
-  margin: 0 10px;
+  margin: 0px;
   background-size: contain;
 }
 
