@@ -1,7 +1,7 @@
 import './NumTest1.css'; 
 import NavBarDark from '../../components/NavBarDark';
 
-function App(){
+export default function NumTest1(){
     return(
         <>
             <NavBarDark />
@@ -23,4 +23,4 @@ function App(){
             </main>
         </>
     )
-}export default App
+} 
