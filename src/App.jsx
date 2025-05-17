@@ -8,6 +8,8 @@ import KnowledgeCleanse from './pages/KnowledgeCleanse'
 import Cover from './pages/Cover'
 import NumTest1 from './pages/NumTest/NumTest1'
 import NumTest2 from './pages/NumTest/NumTest2'
+import Customize1 from './pages/Customize/Customize1'
+
 
 export default function App() {
   return (
@@ -22,7 +24,7 @@ export default function App() {
             <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
             <Route path="/cover" element={<Cover />} />
             <Route path="/NumTest1" element={<NumTest1 />} />
-            <Route path="/NumTest2" element={<NumTest2 />} />
+            <Route path="/customize1" element={<Customize1 />} />
           </Routes>
         </main>
       </BrowserRouter>

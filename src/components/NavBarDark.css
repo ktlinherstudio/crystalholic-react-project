@@ -6,7 +6,7 @@
     align-items: center;
     height: 70px;
     width: 100%;
-    position: fixed;
+    position: relative;
     z-index: 99;
     /* 背景材質 */
     background-image:
@@ -14,14 +14,14 @@
       url(/public/images/S-Background/noise-background.jpg);
   }
 
-  .logo2 img {
+.logo2 img {
   width: 181px;
   margin-left: 25px;
 }
 
 header ul {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .icon2 {
@@ -29,45 +29,47 @@ header ul {
   margin-right: 25px;
 }
 
-.icon2 li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-}
-
-.icon2 li img {
+.icon2 a {
   width: 34px;
   height: 34px;
+  margin: 0 10px;
+  background-size: contain;
 }
 
-/*  member icon 按鈕樣式 */
+/* icon */
+.icon-search {
+  background-image: url(/public/images/S-NavBar/navicon_search.svg);
+}
+.icon-cart {
+  background-image: url(/public/images/S-NavBar/navicon_cart.svg);
+}
+.icon-member {
+  background-image: url(/public/images/S-NavBar/navicon_member.svg);
+  display: block;
+  width: 34px;
+  height: 34px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon-menu {
+  background-image: url(/public/images/S-NavBar/navicon_bgrbtn.svg);
+}
+
+/* 按鈕樣式 */
 .member-button2 {
   all: unset;
-  cursor: pointer;
+  border: none;
+  padding: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-}
-
-.member-button2 img {
-  width: 30px;
-  height: 30px;
-  display: block;
-}
-
-.member-button2:focus {
-  outline: none;
-}
+  justify-content: center;}
 
 
 @media screen and (max-width: 1024px) {
   /* 隱藏搜尋 icon */
-  .icon2 li:first-child {
+  /* .icon2 li:first-child {
     display: none;
-  }
+  } */
 
   /*  icon 區塊放大但不影響 icon 大小 */
   .icon2 li {
@@ -76,20 +78,6 @@ header ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 8px; /* 稍微縮小間距 */
-  }
-
-  /*  圖片大小固定不變 */
-  .icon2 li img,
-  .member-button2 img {
-    width: 30px;
-    height: 30px;
-  }
-
-  /*  member icon 的 button 也確保大小一致 */
-  .member-button2 {
-    width: 34px;
-    height: 34px;
-    padding: 0;
+    margin: 0; 
   }
 }

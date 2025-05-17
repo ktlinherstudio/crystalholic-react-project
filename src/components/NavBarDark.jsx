@@ -13,21 +13,15 @@ export default function NavBarDark() {
         <nav className="navigation2">
           {/* icon btn */}
           <ul className="icon2">
-            <li><a href="#"><img src="/images/S-NavBar/navicon_search.svg" alt="Search" /></a></li>
-            <li><a href="#"><img src="/images/S-NavBar/navicon_cart.svg" alt="Cart" /></a></li>
+            <li><a href="#" className='icon-search'></a></li>
+            <li><a href="#" className='icon-cart'></a></li>
             <li>
               {/* 點擊button彈跳視窗 */}
-             <button className="member-button2" onClick={() => setShowAuthModal(true)}>
-                <img
-                  src="/images/S-NavBar/navicon_member.svg"
-                  alt="Member"
-                  width="30"
-                  height="30"
-                  style={{ display: 'block' }}
-                />
+              <button className="member-button2" onClick={() => setShowAuthModal(true)}>
+                <a className='icon-member' href='#' />
               </button>
             </li>
-            <li><a href="#"><img src="/images/S-NavBar/navicon_bgrbtn.svg" alt="Menu" /></a></li>
+            <li><a href="#" className='icon-menu'></a></li>
           </ul>
         </nav>
       </header>
