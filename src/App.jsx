@@ -26,6 +26,7 @@ export default function App() {
             <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
             <Route path="/cover" element={<Cover />} />
             <Route path="/NumTest1" element={<NumTest1 />} />
+            <Route path="/NumTest2" element={<NumTest2 />} />
             <Route path="/customize1" element={<Customize1 />} />
             <Route path="/customize2" element={<Customize2 />} />
             <Route path="/customize3" element={<Customize3 />} />
