@@ -1,71 +1,292 @@
 import './ShoppingCart.css';
 import NavBarDark from '../../components/NavBarDark';
+import FooterArc from '../../components/FooterArc';
+
 
 export default function ShoppingCart() {
     return (
         <>
             <NavBarDark />
             <main className="cart_page">
-            {/* 標題 */}
-            <div id="title">
-                <img className="decorate-left" src="../images/shoppingcart_decorate-left.svg" alt="左裝飾" />
-                <h3 className="decorate-title">購物車</h3>
-                <img className="decorate-right" src="../images/shoppingcart_decorate-right.svg" alt="右裝飾" />
-            </div>
+                {/* 標題 */}
+                <div id="title">
+                    <img
+                        className="decorate-left"
+                        src="/images/ShoppingCart/shoppingcart_deco-left.svg"
+                        alt="左裝飾"
+                    />
+                    <h3 className="decorate-title">購物車</h3>
+                    <img
+                        className="decorate-right"
+                        src="/images/ShoppingCart/shoppingcart_deco-right.svg"
+                        alt="右裝飾"
+                    />
+                </div>
 
-            {/* 重點區 */}
-            <section className="cart_point">
-                {/* 左邊區域 */}
-                <section className="left">
-                    {/* 購物車明細區 */}
-                    <section className="purchase_items">
-                        {/* 列表 */}
-                        <div className="cart_card">
-                            <div className="table_head">
-                                <span>商品</span>
-                                <span>尺寸</span>
-                                <span>價格</span>
-                                <span>數量</span>
-                                <span>小計</span>
+                {/* 重點區 */}
+                <section className="cart_point">
+                    {/* 左邊區域 */}
+                    <section className="left">
+                        {/* 購物車明細區 */}
+                        <section className="purchase_items">
+                            {/* 列表 */}
+                            <div className="cart_card">
+                                <div className="table_head">
+                                    <span>商品</span>
+                                    <span>尺寸</span>
+                                    <span>價格</span>
+                                    <span>數量</span>
+                                    <span>小計</span>
+                                </div>
                             </div>
+
+                            {/* 單一商品列 (1) */}
+                            <div className="table_row">
+                                {/* 商品資訊（縮圖＋名稱） */}
+                                <div className="product_info">
+                                    <img src="/images/S-CrystalBracelet/product_blue_river.jpg" alt="沁藍之澗商品照" />
+                                    <p>沁藍之澗</p>
+                                </div>
+                                {/* 尺寸 */}
+                                <div className="product_size">
+                                    <p>
+                                        串珠 6mm
+                                        <br />
+                                        手圍 14cm
+                                    </p>
+                                </div>
+                                {/* 價格 */}
+                                <div className="product_price">
+                                    <p>NT$ 2,590</p>
+                                </div>
+                                {/* 數量 */}
+                                <select className="qty_select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                {/* 小計 */}
+                                <div className="subtotal">
+                                    <p>NT$ 2,590</p>
+                                </div>
+                                {/* 刪除按鈕 */}
+                                <div className="cross_btn">
+                                    <button>
+                                        <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* 單一商品列 (2) */}
+                            <div className="table_row">
+                                {/* 商品資訊（縮圖＋名稱） */}
+                                <div className="product_info">
+                                    <img src="/images/S-CrystalBracelet/product_blue_goldfish.jpg" alt="金魚泡泡商品照" />
+                                    <p>金魚泡泡</p>
+                                </div>
+                                {/* 尺寸 */}
+                                <div className="product_size">
+                                    <p>
+                                        串珠 6mm
+                                        <br />
+                                        手圍 14cm
+                                    </p>
+                                </div>
+                                {/* 價格 */}
+                                <div className="product_price">
+                                    <p>NT$ 2,590</p>
+                                </div>
+                                {/* 數量 */}
+                                <select className="qty_select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                                {/* 小計 */}
+                                <div className="subtotal">
+                                    <p>NT$ 2,590</p>
+                                </div>
+                                {/* 刪除按鈕 */}
+                                <div className="cross_btn">
+                                    <button>
+                                        <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
+                                    </button>
+                                </div>
+                            </div>
+
+                            {/* 繼續購物 */}
+                            <div className="shopping_tip">
+                                <button className="continue_shopping">繼續購物</button>
+                                <button className="num_items">
+                                    <span>(共2件)</span>
+                                    <img
+                                        src="/images/ShoppingCart/shoppingcart-btn_accordion-grey.svg"
+                                        alt="收合"
+                                    />
+                                </button>
+                            </div>
+                        </section>
+
+                        {/* 下方資訊區 */}
+                        <section className="info_area">
+                            {/* 送貨及付款方式 */}
+                            <form className="info_card">
+                                {/* 標題列 */}
+                                <div className="table_head">
+                                    <div className="diamond">
+                                        <img
+                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            alt="送貨及付款方式"
+                                        />
+                                    </div>
+                                    <h2>送貨及付款方式</h2>
+                                </div>
+
+                                {/* 選項 */}
+                                <div className="options_area">
+                                    <label>
+                                        *送貨地點
+                                        <select required>
+                                            <option>台灣</option>
+                                            <option>海外</option>
+                                        </select>
+                                    </label>
+
+                                    <label>
+                                        *送貨方式
+                                        <select required>
+                                            <option>7-11 取貨付款</option>
+                                            <option>7-11 取貨不付款</option>
+                                            <option>黑貓宅配</option>
+                                        </select>
+                                    </label>
+
+                                    <label>
+                                        *取貨門市
+                                        <select required>
+                                            <option>華山門市</option>
+                                            <option>北車門市</option>
+                                            <option>詳細地址</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </form>
+
+                            {/* 收件人資料 */}
+                            <form className="info_card">
+                                {/* 標題列 */}
+                                <div className="table_head">
+                                    <div className="diamond">
+                                        <img
+                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            alt="收件人資料"
+                                        />
+                                        <img
+                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            alt="收件人資料"
+                                        />
+                                    </div>
+                                    <h2>收件人資料</h2>
+                                </div>
+
+                                {/* 選項 */}
+                                <div className="options_area">
+                                    <label htmlFor="username">
+                                        *姓名
+                                        <input
+                                            type="text"
+                                            name="username"
+                                            id="username"
+                                            title="姓名欄位"
+                                            placeholder="請輸入姓名"
+                                            required
+                                        />
+                                    </label>
+
+                                    <label htmlFor="tel">
+                                        *聯絡電話
+                                        <input
+                                            type="tel"
+                                            name="tel"
+                                            id="tel"
+                                            title="電話欄位"
+                                            placeholder="請輸入電話，例如:0912345678"
+                                            required
+                                        />
+                                    </label>
+
+                                    <label>
+                                        *發票資訊
+                                        <select required>
+                                            <option>手機載具</option>
+                                            <option>(公司)統一編號</option>
+                                            <option>捐贈發票</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </form>
+                        </section>
+                    </section>
+
+                    {/* 右邊區域：訂單資訊 */}
+                    <section className="right">
+                        <div className="table_head">
+                            <div className="diamond">
+                                <img
+                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    alt="訂單資訊"
+                                />
+                                <img
+                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    alt="訂單資訊"
+                                />
+                                <img
+                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    alt="訂單資訊"
+                                />
+                            </div>
+                            <h2>訂單資訊</h2>
                         </div>
 
-                        {/* 單一商品列 (1) */}
-                        <div className="table_row">
-                            <div className="product_info">
-                                <img src="../images/pc_wd_blue.jpg" alt="沁藍之澗商品照" />
-                                <p>沁藍之澗</p>
-                            </div>
-                            <div className="product_size">
-                                <p>串珠 6mm<br />手圍 14cm</p>
-                            </div>
-                            <div className="product_price">
-                                <p>NT$ 2,590</p>
-                            </div>
-                            <select className="qty_select">
-                                {[1, 2, 3, 4, 5].map(num => <option key={num}>{num}</option>)}
-                            </select>
-                            <div className="subtotal">
-                                <p>NT$ 2,590</p>
-                            </div>
-                            <div className="cross_btn">
-                                <button><img src="../images/shoppingcart-btn_cross.svg" alt="刪除" /></button>
-                            </div>
-                        </div>
-
-                        {/* 繼續購物 */}
-                        <div className="shopping_tip">
-                            <button className="continue_shopping">繼續購物</button>
-                            <button className="num_items">
-                                <span>(共2件)</span>
-                                <img src="../images/shoppingcart-btn_accordion-grey.svg" alt="展開" />
-                            </button>
+                        {/* 明細區 */}
+                        <div className="detail_area">
+                            <ul>
+                                <li className="subtotal">
+                                    <span>小計：</span>
+                                    <span>NT$5,180</span>
+                                </li>
+                                <li className="fee">
+                                    <span>運費：</span>
+                                    <span>NT$70</span>
+                                </li>
+                                <li>
+                                    <label htmlFor="coupon">
+                                        優惠券代碼：
+                                        <input
+                                            type="text"
+                                            name="coupon"
+                                            id="coupon"
+                                            title="優惠券代碼"
+                                            placeholder="請輸入代碼"
+                                        />
+                                    </label>
+                                </li>
+                                <hr />
+                                <li className="total">
+                                    <span>合計：</span>
+                                    <span>NT$ 5,250</span>
+                                </li>
+                            </ul>
+                            <button className="btn_checkout">確認結帳</button>
                         </div>
                     </section>
                 </section>
-            </section>
-        </main>
-            
+            </main>
+
         </>
-    )
-} 
+    );
+}
