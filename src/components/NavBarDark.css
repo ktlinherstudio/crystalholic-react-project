@@ -81,4 +81,7 @@ header ul {
     justify-content: center;
     margin: 0; 
   }
+  .icon2 {
+    gap: 6px;
+  }
 }

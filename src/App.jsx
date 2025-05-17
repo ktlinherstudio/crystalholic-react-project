@@ -10,6 +10,7 @@ import NumTest1 from './pages/NumTest/NumTest1'
 import NumTest2 from './pages/NumTest/NumTest2'
 import Customize1 from './pages/Customize/Customize1'
 import Customize2 from './pages/Customize/Customize2'
+import Customize3 from './pages/Customize/Customize3'
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/NumTest1" element={<NumTest1 />} />
             <Route path="/customize1" element={<Customize1 />} />
             <Route path="/customize2" element={<Customize2 />} />
+            <Route path="/customize3" element={<Customize3 />} />
           </Routes>
         </main>
       </BrowserRouter>
