@@ -1,11 +1,13 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Form } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import Menu from './pages/Menu'
 import KnowledgeCrystal from './pages/KnowledgeCrystal'
 import KnowledgeCleanse from './pages/KnowledgeCleanse'
 import Cover from './pages/Cover'
+import NumTest1 from './pages/NumTest/NumTest1'
+import NumTest2 from './pages/NumTest/NumTest2'
 
 export default function App() {
   return (
@@ -19,7 +21,8 @@ export default function App() {
             <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
             <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
             <Route path="/cover" element={<Cover />} />
-
+            <Route path="/NumTest1" element={<NumTest1 />} />
+            <Route path="/NumTest2" element={<NumTest2 />} />
           </Routes>
         </main>
       </BrowserRouter>

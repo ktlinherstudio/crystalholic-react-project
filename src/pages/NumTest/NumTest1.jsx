@@ -1,19 +1,17 @@
-import './Step1.css'; 
-import HeaderBg from '../../components/HeaderBg'
-// import NumTestBg from '../../components/NumTestBg.css'
+import './NumTest1.css'; 
+import NavBarDark from '../../components/NavBarDark';
 
 function App(){
     return(
         <>
-            <HeaderBg />
-                {/* <NumTestBg/> */}
+            <NavBarDark />
             <main>
                 <section className="numtest">
                     {/* 第一個標題 */}
                     <div id="title-1">
-                        <img className="decorate-left" src="/images/deco-left-purple.svg" alt="左裝飾" />
+                        <img className="decorate-left" src="/images/Numtest/decorate-left.svg" alt="左裝飾" />
                         <h3 className="decorate-title">探索適合的水晶</h3>
-                        <img className="decorate-right" src="/images/deco-right-purple.svg" alt="右裝飾" />
+                        <img className="decorate-right" src="/images/Numtest/decorate-right.svg" alt="右裝飾" />
                     </div>
 
                     {/* 第二個標題 */}
