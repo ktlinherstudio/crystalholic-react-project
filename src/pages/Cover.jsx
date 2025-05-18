@@ -12,7 +12,7 @@ export default function Cover() {
                 <div className="bgdark2"></div>
 
                 {/* menu bar*/}
-                <NavBarLight />
+                {/* <NavBarLight /> */}
                 {/* 封面1  */}
                 <section className="ch-cover">
                     <div className="cover-box">
@@ -32,8 +32,8 @@ export default function Cover() {
                     <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a>
                     </div>
                     <div className="startbox1">
-                        <img src="./images/HomePage/L.svg" className="left" alt="" />
-                        <img src="./images/HomePage/R.svg" className="right" alt="" />
+                        <img src="./images/HomePage/L.svg" className="lefth" alt="" />
+                        <img src="./images/HomePage/R.svg" className="righth" alt="" />
                     </div>
                     <div className="startbox2">
                         <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
@@ -82,20 +82,20 @@ export default function Cover() {
                 {/* 水晶小百科  */}
                 <section id="section-crystaldiscovery">
                     <div className="crystal-display">
-                        <img src="./images/S-CrystalSingle/crystal-golden-rutilated-quartz.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-kyanite.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-angelite.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-sunstone.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-moonstone.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-green-phantom-quartz.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-moonstone.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-rose-quartz.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-angelite.png" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-golden-rutilated-quartz.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-kyanite.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-angelite.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-sunstone.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-moonstone.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-green-phantom-quartz.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-moonstone.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-rose-quartz.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-angelite.svg" className="circle" alt="" />
 
-                        <div className="circle"><img src="./images/S-CrystalSingle/crystal-kyanite.png" alt="" /> </div>
+                        <div className="circle"><img src="./images/HomePage/covercrystal/crystal-kyanite.svg" alt="" /> </div>
 
-                        <img src="./images/S-CrystalSingle/crystal-amethyst.png" className="circle" alt="" />
-                        <img src="./images/S-CrystalSingle/crystal-sunstone.png" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-amethyst.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-sunstone.svg" className="circle" alt="" />
                     </div>
                     <div className="section-crystaldiscovery">
                         <header>
@@ -145,7 +145,7 @@ export default function Cover() {
                 <section id="section-feedback">
                     <header className="feedback-displaytitle">
                         <span><img src="./images/HomePage/deco-left.svg" alt="" /></span>
-                        <div id="title">
+                        <div id="fbtitle">
                             <span>Feedback</span>
                             <span>礦迷回饋</span>
                         </div>
@@ -238,8 +238,8 @@ export default function Cover() {
                     </div>
                 </section>
 
-                <footer id="footer"></footer>
-                <FooterBg />
+                {/* <footer id="footer"></footer> */}
+                {/* <FooterBg /> */}
             </div>
         </>
     )

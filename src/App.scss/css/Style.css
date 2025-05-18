@@ -1,5 +1,143 @@
 @charset "UTF-8";
 @import "../../index.css";
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap");
+google font，就算瀏覽者電腦中沒有安裝也能套到 * {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* 不累加邊框及內距 */
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* 重置字體 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial, "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
+
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* 重置列表 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 重置圖片 */
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 重置連接 */
+a {
+  display: block;
+  text-decoration: none;
+}
+
+/* ------字體------ */
+body {
+  font-family: "Lora-Italic", "Georgia", "LXGW WenKai Mono TC", serif;
+  font-weight: 100;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
 #menu {
   background-color: #e22121;
   background-repeat: no-repeat;
@@ -121,7 +259,6 @@
 }
 #cover {
   background-color: #484351;
-  border: #fff 5px solid;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -322,6 +459,11 @@
   align-items: center;
   position: relative;
 }
+@media (min-width:1680px) {
+  .section-starttest {
+    gap: 0%;
+  }
+}
 @media (max-width:1024px) {
   .section-starttest {
     justify-content: center;
@@ -343,47 +485,71 @@
   align-content: start;
   gap: 35%;
 }
-.section-starttest .startbox1 .left {
+.section-starttest .startbox1 .lefth {
   width: 299px;
   height: 587px;
 }
+@media (min-width:1680px) {
+  .section-starttest .startbox1 .lefth {
+    width: 350px;
+    height: 710px;
+  }
+}
+@media (max-width:1366px) {
+  .section-starttest .startbox1 .lefth {
+    width: 245px;
+    height: 587px;
+  }
+}
 @media (max-width:1024px) {
-  .section-starttest .startbox1 .left {
-    width: 299px;
+  .section-starttest .startbox1 .lefth {
+    width: 200px;
     height: 587px;
   }
 }
 @media (max-width:820px) {
-  .section-starttest .startbox1 .left {
-    width: 230px;
+  .section-starttest .startbox1 .lefth {
+    width: 200px;
     height: 587px;
   }
 }
 @media (max-width:640px) {
-  .section-starttest .startbox1 .left {
-    width: 299px;
+  .section-starttest .startbox1 .lefth {
+    width: 120px;
     height: 587px;
   }
 }
-.section-starttest .startbox1 .right {
+.section-starttest .startbox1 .righth {
   width: 299px;
   height: 587px;
 }
+@media (min-width:1680px) {
+  .section-starttest .startbox1 .righth {
+    width: 350px;
+    height: 710px;
+  }
+}
+@media (max-width:1366px) {
+  .section-starttest .startbox1 .righth {
+    width: 245px;
+    height: 587px;
+  }
+}
 @media (max-width:1024px) {
-  .section-starttest .startbox1 .right {
-    width: 299px;
+  .section-starttest .startbox1 .righth {
+    width: 200px;
     height: 587px;
   }
 }
 @media (max-width:820px) {
-  .section-starttest .startbox1 .right {
-    width: 230px;
+  .section-starttest .startbox1 .righth {
+    width: 200px;
     height: 587px;
   }
 }
 @media (max-width:640px) {
-  .section-starttest .startbox1 .right {
-    width: 299px;
+  .section-starttest .startbox1 .righth {
+    width: 120px;
     height: 587px;
   }
 }
@@ -394,9 +560,14 @@
   align-items: center;
   gap: 22.2px;
 }
-@media (max-width:1024px) {
+@media (min-width:1680px) {
   .section-starttest .startbox2 {
     gap: 22.2px;
+  }
+}
+@media (max-width:1024px) {
+  .section-starttest .startbox2 {
+    gap: 30px;
   }
 }
 @media (max-width:820px) {
@@ -414,6 +585,11 @@
   font-size: 24px;
   padding-top: 50.2px;
 }
+@media (max-width:1366px) {
+  .section-starttest .startbox2 p {
+    padding-top: 20px;
+  }
+}
 .section-starttest .startbox2 img {
   width: 28.5px;
   height: 97.1px;
@@ -426,16 +602,32 @@
   top: 25.6%;
   z-index: 1;
 }
+@media (min-width:1680px) {
+  .section-starttest .startbtn a {
+    left: 45%;
+    top: 27%;
+  }
+}
+@media (max-width:1366px) {
+  .section-starttest .startbtn a {
+    width: 129px;
+    height: 346px;
+    left: 43.5%;
+    top: 29.5%;
+  }
+}
 @media (max-width:1024px) {
   .section-starttest .startbtn a {
-    left: 42%;
+    width: 100.49px;
+    height: 346.82px;
+    left: 43.5%;
     top: 36%;
   }
 }
 @media (max-width:820px) {
   .section-starttest .startbtn a {
-    left: 40.5%;
-    top: 32.5%;
+    left: 43.5%;
+    top: 35.5%;
   }
 }
 @media (max-width:640px) {
@@ -454,20 +646,28 @@
 }
 @media (min-width:1680px) {
   .section-starttest .bling {
-    left: 16%;
-    top: 22%;
+    left: 35%;
+    top: 28%;
+  }
+}
+@media (max-width:1366px) {
+  .section-starttest .bling {
+    left: 34.5%;
+    top: 32.5%;
   }
 }
 @media (max-width:1024px) {
   .section-starttest .bling {
-    left: 27%;
-    top: 38%;
+    width: 36.9%;
+    height: 50.2%;
+    left: 31.5%;
+    top: 37%;
   }
 }
 @media (max-width:820px) {
   .section-starttest .bling {
-    left: 23%;
-    top: 28%;
+    left: 32%;
+    top: 37%;
   }
 }
 @media (max-width:640px) {
@@ -486,20 +686,23 @@
 }
 @media (min-width:1680px) {
   .section-starttest .numbg {
+    height: 88.4%;
     left: 16%;
-    top: 22%;
+    top: 17%;
   }
 }
 @media (max-width:1024px) {
   .section-starttest .numbg {
-    left: 11%;
-    top: 34%;
+    width: 95.3%;
+    height: 88.4%;
+    left: 3%;
+    top: 27%;
   }
 }
 @media (max-width:820px) {
   .section-starttest .numbg {
-    left: 10%;
-    top: 31%;
+    left: 2.5%;
+    top: 27%;
   }
 }
 @media (max-width:640px) {
@@ -516,6 +719,8 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width:1024px) {
   #section-tarotcard {
@@ -535,7 +740,7 @@
 #section-tarotcard .tarotcard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-items: center;
   align-items: center;
   gap: 7.5%;
 }
@@ -577,6 +782,11 @@
   height: 455px;
   margin-left: 0;
 }
+@media (max-width:1366px) {
+  #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
+    width: 265px;
+  }
+}
 @media (max-width:1024px) {
   #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
     width: 225px;
@@ -585,7 +795,7 @@
 }
 @media (max-width:820px) {
   #section-tarotcard .tarotcard #tarotcard-box .trcardchild-1 {
-    width: 220px;
+    width: 210px;
     height: 455px;
   }
 }
@@ -600,6 +810,11 @@
   height: 455px;
   margin-left: -110px;
 }
+@media (max-width:1366px) {
+  #section-tarotcard .tarotcard #tarotcard-box .trcard {
+    width: 265px;
+  }
+}
 @media (max-width:1024px) {
   #section-tarotcard .tarotcard #tarotcard-box .trcard {
     width: 225px;
@@ -608,7 +823,7 @@
 }
 @media (max-width:820px) {
   #section-tarotcard .tarotcard #tarotcard-box .trcard {
-    width: 220px;
+    width: 210px;
     height: 455px;
   }
 }
@@ -645,7 +860,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/客製化BN.jpg");
+  background-image: url("../../../public/images/HomePage/custom-banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -759,19 +974,38 @@
 
 /*水晶小百科*/
 #section-crystaldiscovery {
+  width: 100%;
   height: 100vh;
   border: #e9df70 5px solid;
   color: #8750BF;
   display: flex;
   justify-content: start;
   align-items: center;
-  /* margin: none; */
+}
+@media (max-width:1024px) {
+  #section-crystaldiscovery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 #section-crystaldiscovery .crystal-display {
   position: relative;
   margin: auto;
   width: 40%;
   height: 691px;
+}
+@media (max-width:1024px) {
+  #section-crystaldiscovery .crystal-display {
+    width: 100%;
+    height: 691px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0%;
+  }
 }
 #section-crystaldiscovery .crystal-display .circle {
   position: absolute;
@@ -782,6 +1016,25 @@
   object-fit: cover;
   transform-origin: center -230px;
   /* 半徑可調整 */
+}
+@media (max-width:1366px) {
+  #section-crystaldiscovery .crystal-display .circle {
+    top: 84%;
+    left: -40%;
+  }
+}
+@media (max-width:1024px) {
+  #section-crystaldiscovery .crystal-display .circle {
+    position: static;
+    top: 80%;
+    left: 13%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    transform-origin: unset;
+    overflow: hidden;
+    /* 半徑可調整 */
+  }
 }
 #section-crystaldiscovery .crystal-display .circle:nth-child(1) {
   transform: rotate(0deg);
@@ -816,29 +1069,37 @@
   height: 150px;
   position: relative;
 }
+@media (max-width:1024px) {
+  #section-crystaldiscovery .crystal-display .circle:nth-child(10) {
+    position: static;
+    transform: unset;
+    width: 150px;
+    height: 150px;
+  }
+}
 #section-crystaldiscovery .crystal-display .circle:nth-child(10)::before {
   content: "";
   width: 60px;
   height: 60px;
-  background-image: url(../images/icon_btn_up.ico.svg);
+  background-image: url(../../../public/images/HomePage/icon_btn_up.ico.svg);
   display: block;
   position: absolute;
   top: -74px;
-  right: 61px;
+  right: 57px;
 }
 #section-crystaldiscovery .crystal-display .circle:nth-child(10)::after {
   content: "";
   width: 60px;
   height: 60px;
-  background-image: url(../images/icon_btn_down.ico.svg);
+  background-image: url(../../../public/images/HomePage/icon_btn_down.ico.svg);
   display: flex;
   flex-direction: row;
   justify-items: center;
   align-items: center;
   display: block;
   position: absolute;
-  top: 164px;
-  right: 61px;
+  top: 158px;
+  right: 57px;
 }
 #section-crystaldiscovery .crystal-display .circle:nth-child(11) {
   transform: rotate(300deg);
@@ -854,6 +1115,21 @@
   align-items: center;
   justify-items: center;
   gap: 35px;
+}
+@media (max-width:1366px) {
+  .section-crystaldiscovery {
+    margin: 6.7% 8.5% 9.7% 7.91%;
+  }
+}
+@media (max-width:1024px) {
+  .section-crystaldiscovery {
+    margin: 6.7% 0% 9.7% 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 35px;
+  }
 }
 .section-crystaldiscovery header {
   width: 498px;
@@ -871,9 +1147,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.section-crystaldiscovery header #titlediscovery .en {
-  font-style: italic;
 }
 .section-crystaldiscovery header::before {
   content: "";
@@ -1030,14 +1303,23 @@
 }
 
 /*礦迷回饋*/
+#section-feedback {
+  width: 100%;
+  height: 68.75vh;
+  border: 2px white solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #section-feedback .feedback-displaytitle {
   width: 438px;
   height: 78px;
-  margin: 100px auto 90px;
+  margin: 0 auto 90px;
   display: flex;
   align-items: center;
 }
-#section-feedback .feedback-displaytitle #title {
+#section-feedback .feedback-displaytitle #fbtitle {
   color: #FFF;
   font-size: 28px;
   width: 438px;
@@ -1048,7 +1330,6 @@
   align-items: center;
 }
 #section-feedback .feedback-box {
-  margin: 0 0 142px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1059,10 +1340,33 @@
   height: 48px;
   margin: 0 23px 0 0;
 }
+@media (max-width:1366px) {
+  #section-feedback .feedback-box .feedback-arrowleft {
+    margin: 0;
+  }
+}
 #section-feedback .feedback-box .feedback-arrowright {
   width: 48px;
   height: 48px;
   margin: 0 0 0 23px;
+}
+@media (max-width:1366px) {
+  #section-feedback .feedback-box .feedback-arrowright {
+    margin: 0;
+  }
+}
+@media (max-width:1366px) {
+  #section-feedback .feedback-box .feedback:nth-of-type(3) {
+    display: none;
+  }
+}
+@media (max-width:1024px) {
+  #section-feedback .feedback-box .feedback:nth-of-type(3) {
+    display: none;
+  }
+  #section-feedback .feedback-box .feedback:nth-of-type(4) {
+    display: none;
+  }
 }
 #section-feedback .feedback {
   color: #FFF;
@@ -1082,24 +1386,35 @@
   box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.3);
   backdrop-filter: blur(2.5px);
 }
+@media (max-width:1366px) {
+  #section-feedback .feedback {
+    width: 240px;
+    padding: 10px;
+    gap: 15px;
+  }
+}
 #section-feedback .feedback .review-pic {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* position: relative; */
 }
 #section-feedback .feedback .review-pic .member-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  /* position: absolute; */
 }
 #section-feedback .feedback .review-pic .review-img {
   width: 113px;
   height: 90px;
   border-radius: 10px;
   margin-top: -20px;
-  /* position: absolute; */
+}
+@media (max-width:1366px) {
+  #section-feedback .feedback .review-pic .review-img {
+    width: 100px;
+    height: 80px;
+    margin-top: -10px;
+  }
 }
 #section-feedback .feedback .feedback-left {
   width: 135px;
@@ -1128,6 +1443,13 @@
   /* 顯示 3 行 */
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+@media (max-width:1366px) {
+  #section-feedback .feedback .feedback-left p {
+    width: 104px;
+    height: 75px;
+    font-size: 10px;
+  }
 }
 
 /* footer */

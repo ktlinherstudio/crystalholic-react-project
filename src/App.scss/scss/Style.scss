@@ -1,153 +1,153 @@
 @use "./variable" as *;
 @import "../../index.css";
-// @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
-// google font，就算瀏覽者電腦中沒有安裝也能套到
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
+google font，就算瀏覽者電腦中沒有安裝也能套到
 
-// /* reset CSS */
-// * {
-//     margin: 0;
-//     padding: 0;
-//     border: 0;
-//     // box-sizing: border-box;
-//     /* 不累加邊框及內距 */
-// }
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    // box-sizing: border-box;
+    /* 不累加邊框及內距 */
+}
 
-// html,
-// body,
-// div,
-// span,
-// applet,
-// object,
-// iframe,
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p,
-// blockquote,
-// pre,
-// a,
-// abbr,
-// acronym,
-// address,
-// big,
-// cite,
-// code,
-// del,
-// dfn,
-// em,
-// img,
-// ins,
-// kbd,
-// q,
-// s,
-// samp,
-// small,
-// strike,
-// strong,
-// sub,
-// sup,
-// tt,
-// var,
-// b,
-// u,
-// i,
-// center,
-// dl,
-// dt,
-// dd,
-// ol,
-// ul,
-// li,
-// fieldset,
-// form,
-// label,
-// legend,
-// table,
-// caption,
-// tbody,
-// tfoot,
-// thead,
-// tr,
-// th,
-// td,
-// article,
-// aside,
-// canvas,
-// details,
-// embed,
-// figure,
-// figcaption,
-// footer,
-// header,
-// hgroup,
-// menu,
-// nav,
-// output,
-// ruby,
-// section,
-// summary,
-// time,
-// mark,
-// audio,
-// video {
-//     margin: 0;
-//     padding: 0;
-//     border: 0;
-//     font-size: 100%;
-//     font: inherit;
-//     vertical-align: baseline;
-// }
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
-// /* 重置字體 */
-// body {
-//     font-family:
-//         /*西文*/
-//         -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
-//         /*中文*/
-//         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
-// }
+/* 重置字體 */
+body {
+    font-family:
+        /*西文*/
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+        /*中文*/
+        "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+}
 
-// /* 重置標題 */
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-weight: normal;
-// }
+/* 重置標題 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
 
-// /* 重置列表 */
-// ul,
-// ol {
-//     list-style: none;
-// }
+/* 重置列表 */
+ul,
+ol {
+    list-style: none;
+}
 
-// /* 重置圖片 */
-// img {
-//     display: block;
-//     width: 100%;
-// }
+/* 重置圖片 */
+img {
+    display: block;
+    width: 100%;
+}
 
-// /* 重置連接 */
-// a {
-//     display: block; // a預設的行內元素，不支援約寬高及上下間距，通常會改為區塊，方便設定
-//     // color: $color-deep;
-//     text-decoration: none;
-// }
+/* 重置連接 */
+a {
+    display: block; // a預設的行內元素，不支援約寬高及上下間距，通常會改為區塊，方便設定
+    // color: $color-deep;
+    text-decoration: none;
+}
 
 
-// /* ------字體------ */
+/* ------字體------ */
 
-// body {
-//     font-family: 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif; //serif 套系統有襯線字
-//     font-weight: 100;
-//     line-height: 1.5;
-//     letter-spacing: 2px;
-// }
+body {
+    font-family: 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif; //serif 套系統有襯線字
+    font-weight: 100;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
 
 // /*menu展開頁*/
 // /*全文底色*/
@@ -312,7 +312,7 @@
 
 #cover {
     background-color: #484351; //做RWD用
-    border: #fff 5px solid; //做RWD用
+    // border: #fff 5px solid; //做RWD用
     // z-index: -1;
 
     margin: 0;
@@ -588,10 +588,16 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    // justify-content: center;
     align-items: center;
 
     position: relative;
     // gap: 0;
+
+    @media ($media-xxlg-up) {
+        // justify-content: center;
+        gap: 0%;
+    }
 
     @media ($media-lg) {
         justify-content: center;
@@ -611,46 +617,68 @@
         align-content: start;
         gap: 35%;
 
-        .left {
+        .lefth {
             width: 299px;
             height: 587px;
 
+
+            @media ($media-xxlg-up) {
+                width: 350px;
+                height: 710px;
+            }
+
+            @media ($media-xlg) {
+                width: 245px;
+                height: 587px;
+            }
+
+
             @media ($media-lg) {
-                width: 299px;
+                width: 200px;
                 height: 587px;
                 // ipad Pro 1024*1366沒套到
             }
 
 
             @media ($media-md) {
-                width: 230px;
+                width: 200px;
                 height: 587px;
             }
 
             @media ($media-sm) {
-                width: 299px;
+                width: 120px;
                 height: 587px;
             }
 
         }
 
-        .right {
+        .righth {
             width: 299px;
             height: 587px;
 
-            @media ($media-lg) {
-                width: 299px;
+            @media ($media-xxlg-up) {
+                width: 350px;
+                height: 710px;
+            }
+
+            @media ($media-xlg) {
+                width: 245px;
                 height: 587px;
             }
 
+            @media ($media-lg) {
+                width: 200px;
+                height: 587px;
+                // ipad Pro 1024*1366沒套到
+            }
 
             @media ($media-md) {
-                width: 230px;
+                width: 200px;
                 height: 587px;
             }
 
             @media ($media-sm) {
-                width: 299px;
+                width: 120px;
                 height: 587px;
             }
         }
@@ -663,8 +691,19 @@
         align-items: center;
         gap: 22.2px;
 
-        @media ($media-lg) {
+        @media ($media-xxlg-up) {
             gap: 22.2px;
+        }
+
+        @media ($media-xlg) {
+            // width: 129px;
+            // height: 346px;
+            // left: 43.5%;
+            // top: 29.5%;
+        }
+
+        @media ($media-lg) {
+            gap: 30px;
         }
 
 
@@ -680,6 +719,10 @@
             color: #FFF;
             font-size: 24px;
             padding-top: 50.2px;
+
+            @media ($media-xlg) {
+                padding-top: 20px;
+            }
         }
 
         img {
@@ -696,15 +739,28 @@
         top: 25.6%;
         z-index: 1;
 
+        @media ($media-xxlg-up) {
+            left: 45%;
+            top: 27%;
+        }
+
+        @media ($media-xlg) {
+            width: 129px;
+            height: 346px;
+            left: 43.5%;
+            top: 29.5%;
+        }
+
         @media ($media-lg) {
-            left: 42%;
+            width: 100.49px;
+            height: 346.82px;
+            left: 43.5%;
             top: 36%;
         }
 
-
         @media ($media-md) {
-            left: 40.5%;
-            top: 32.5%;
+            left: 43.5%;
+            top: 35.5%;
         }
 
         @media ($media-sm) {
@@ -726,20 +782,29 @@
         left: 34%;
         top: 27.8%;
 
-        @media ($media-xlg-up) {
-            left: 16%;
-            top: 22%;
+        @media ($media-xxlg-up) {
+            left: 35%;
+            top: 28%;
+        }
+
+        @media ($media-xlg) {
+            // width: ;
+            // height: ;
+            left: 34.5%;
+            top: 32.5%;
         }
 
         @media ($media-lg) {
-            left: 27%;
-            top: 38%;
+            width: 36.9%;
+            height: 50.2%;
+            left: 31.5%;
+            top: 37%;
         }
 
 
         @media ($media-md) {
-            left: 23%;
-            top: 28%;
+            left: 32%;
+            top: 37%;
         }
 
         @media ($media-sm) {
@@ -758,20 +823,23 @@
         left: 11.3%;
         top: 8.7%;
 
-        @media ($media-xlg-up) {
+        @media ($media-xxlg-up) {
+            height: 88.4%;
             left: 16%;
-            top: 22%;
+            top: 17%;
         }
 
         @media ($media-lg) {
-            left: 11%;
-            top: 34%;
+            width: 95.3%;
+            height: 88.4%;
+            left: 3%;
+            top: 27%;
         }
 
 
         @media ($media-md) {
-            left: 10%;
-            top: 31%;
+            left: 2.5%;
+            top: 27%;
         }
 
         @media ($media-sm) {
@@ -784,7 +852,7 @@
 
 }
 
-/*憑直覺抽一張吧*/
+/*憑直覺抽一張吧*/   ////ipad pro 套不到
 #section-tarotcard {
     border: #e22121 2px solid;
 
@@ -792,6 +860,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @media ($media-lg) {
         justify-content: center;
@@ -811,7 +881,7 @@
 
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-items: center;
         align-items: center;
 
         gap: 7.5%; ////////////////////////////////
@@ -876,13 +946,18 @@
                 height: 455px;
                 margin-left: 0;
 
+                @media ($media-xlg) {
+                    width: 265px;
+                }
+
+
                 @media ($media-lg) {
                     width: 225px;
                     height: 455px;
                 }
 
                 @media ($media-md) {
-                    width: 220px;
+                    width: 210px;
                     height: 455px;
                 }
 
@@ -897,6 +972,10 @@
                 height: 455px;
                 margin-left: -110px;
 
+                @media ($media-xlg) {
+                    width: 265px;
+                }
+
                 @media ($media-lg) {
                     width: 225px;
                     height: 455px;
@@ -904,7 +983,7 @@
 
                 @media ($media-md) {
                     //ipad mini 1024*768 抓不到
-                    width: 220px;
+                    width: 210px;
                     height: 455px;
                 }
 
@@ -950,7 +1029,7 @@
     justify-content: center;
     align-items: center;
     // 背景
-    background-image: url("../images/客製化BN.jpg");
+    background-image: url("../../../public/images/HomePage/custom-banner.jpg");
     background-size: cover; //讓圖片填滿容器
     background-position: center; //圖片置中
     background-repeat: no-repeat; //不重複
@@ -1078,19 +1157,21 @@
 }
 
 /*水晶小百科*/
-///* 水晶小百科----字體、裝飾顏色要改 */
 #section-crystaldiscovery {
-    // width: 100vw;
+    width: 100%;
     height: 100vh;
     border: #e9df70 5px solid;
     color: #8750BF;
-    // margin: 6.7% 11.5% 3.1% 0;
     display: flex;
     justify-content: start;
     align-items: center;
 
-    // position: relative;。。
-    /* margin: none; */
+    @media ($media-lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /////
+        align-items: center;
+    }
 
     .crystal-display {
         // display: flex;
@@ -1101,8 +1182,19 @@
         ////////////////////////////////////////////////////
         width: 40%;
         height: 691px;
+
         ////////////////////////////////////////////////////
         // border: 1px #FFF solid;
+
+        @media ($media-lg) {
+            width: 100%;
+            height: 691px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0%;
+        }
 
         .circle {
             position: absolute;
@@ -1113,6 +1205,24 @@
             object-fit: cover;
             transform-origin: center -230px;
             /* 半徑可調整 */
+
+            @media ($media-xlg) {
+                top: 84%;
+                left: -40%;
+            }
+
+            @media ($media-lg) {
+                position: static;
+                top: 80%;
+                left: 13%;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                transform-origin: unset;
+                overflow: hidden;
+                /* 半徑可調整 */
+            }
+
         }
 
         .circle:nth-child(1) {
@@ -1157,30 +1267,37 @@
             height: 150px;
             position: relative;
 
+            @media ($media-lg) {
+                position: static;
+                transform: unset;
+                width: 150px;
+                height: 150px;
+            }
+
             &::before {
                 content: "";
                 width: 60px;
                 height: 60px;
-                background-image: url(../images/icon_btn_up.ico.svg);
+                background-image: url(../../../public/images/HomePage/icon_btn_up.ico.svg);
                 display: block;
                 position: absolute;
                 top: -74px;
-                right: 61px;
+                right: 57px;
             }
 
             &::after {
                 content: "";
                 width: 60px;
                 height: 60px;
-                background-image: url(../images/icon_btn_down.ico.svg);
+                background-image: url(../../../public/images/HomePage/icon_btn_down.ico.svg);
                 display: flex;
                 flex-direction: row;
                 justify-items: center;
                 align-items: center;
                 display: block;
                 position: absolute;
-                top: 164px;
-                right: 61px;
+                top: 158px;
+                right: 57px;
             }
         }
 
@@ -1203,6 +1320,20 @@
     justify-items: center;
     gap: 35px;
 
+    @media ($media-xlg) {  //ipad mini爆
+        margin: 6.7% 8.5% 9.7% 7.91%;
+    }
+
+    @media ($media-lg) {
+        // ipad air 直向 & ipad mini直向 共用
+        margin: 6.7% 0% 9.7% 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        gap: 35px;
+    }
+
     header {
         width: 498px;
         height: 78px;
@@ -1220,10 +1351,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
-            .en {
-                font-style: italic;
-            }
         }
 
         &::before {
@@ -1414,14 +1541,23 @@
 
 /*礦迷回饋*/
 #section-feedback {
+    width: 100%;
+    height: 68.75vh;
+    border: 2px white solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .feedback-displaytitle {
         width: 438px;
         height: 78px;
-        margin: 100px auto 90px;
+        margin: 0 auto 90px;
         display: flex;
         align-items: center;
 
-        #title {
+
+        #fbtitle {
             color: #FFF;
             font-size: 28px;
             width: 438px;
@@ -1434,24 +1570,53 @@
     }
 
     .feedback-box {
-        margin: 0 0 142px 0;
+        // margin: 0 0 142px 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
 
-        @media ($media-lg) {}
+
 
         .feedback-arrowleft {
             width: 48px;
             height: 48px;
             margin: 0 23px 0 0;
+
+            @media ($media-xlg) {
+                margin: 0;
+            }
         }
 
         .feedback-arrowright {
             width: 48px;
             height: 48px;
             margin: 0 0 0 23px;
+
+            @media ($media-xlg) {
+                margin: 0;
+            }
+        }
+
+        // @media ($media-xlg) {
+        //     .feedback:nth-of-type(4) {
+        //         display: none;
+        //     }
+        // }
+        @media ($media-xlg) {
+            .feedback:nth-of-type(3) {
+                display: none;
+            }
+        }
+
+        @media ($media-lg) {
+            .feedback:nth-of-type(3) {
+                display: none;
+            }
+
+            .feedback:nth-of-type(4) {
+                display: none;
+            }
         }
     }
 
@@ -1474,19 +1639,25 @@
         box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.30);
         backdrop-filter: blur(2.5px);
 
+        @media ($media-xlg) {
+            width: 240px;
+            padding: 10px;
+            gap: 15px;
+        }
+
+
 
         .review-pic {
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* position: relative; */
+
 
             .member-img {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                // margin-bottom: -20px;
-                /* position: absolute; */
+
             }
 
             .review-img {
@@ -1495,7 +1666,11 @@
                 border-radius: 10px;
                 margin-top: -20px;
 
-                /* position: absolute; */
+                @media ($media-xlg) {
+                    width: 100px;
+                    height: 80px;
+                    margin-top: -10px;
+                }
             }
         }
 
@@ -1535,6 +1710,11 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
 
+                @media ($media-xlg) {
+                    width: 104px;
+                    height: 75px;
+                    font-size: 10px;
+                }
             }
         }
     }
