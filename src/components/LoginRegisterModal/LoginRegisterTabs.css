@@ -1,24 +1,49 @@
+/* 外層讓 tab 跟 modal 切齊 */
+.login-modal-outer {
+  width: 100%;
+}
+
+/* 這層包住 tabs + form 的區塊 */
+.tabs-wrapper {
+  border-radius: 40px;
+  overflow: hidden;
+  background: #f4f0fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs 上面按鈕 */
 .tabs {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 24px;
+  width: 100%;
 }
 
 .tabs button {
-  background: none;
+  flex: 1;
+  padding: 30px 0;
+  font-size: 24px;
   border: none;
-  font-size: 20px;
-  color: #aaa;
-  padding: 10px 20px;
+  background: transparent;
+  color: #8750bf;
+  font-family: 'Noto Sans TC', sans-serif;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.tabs button:not(.active) {
+  background: #E9E3F2;
+  font-weight: 400;
+  color: #bfa9c8;
 }
 
 .tabs button.active {
+  background: #F4F3FB;
   color: #8750bf;
-  font-weight: bold;
-  border-bottom: 2px solid #8750bf;
+  font-weight: normal;
 }
-
+/* 內部 form padding 控制 */
 .form-area {
-  margin-top: 20px;
+  background: #F4F3FB;
+  padding: 0 45px 30px;
+  height: 660px;
 }

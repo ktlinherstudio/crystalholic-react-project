@@ -29,8 +29,10 @@ export default function RegisterForm() {
                 <input type="checkbox" id="agree" />
                 <label htmlFor="agree">我同意網站服務條款及隱私權政策</label>
             </div>
+            <div className="form-footer1">
+                <button className="submit-button">立即加入</button>
+            </div>
 
-            <button className="submit-button">立即加入</button>
         </form>
     );
 }

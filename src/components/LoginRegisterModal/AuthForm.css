@@ -1,30 +1,63 @@
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
+  font-family: 'Noto Sans TC';
 }
 
 .auth-form input,
 .auth-form select {
-  padding: 12px;
+  padding: 12px 16px;
   border: none;
   border-radius: 999px;
   background: #fff;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.4);
+  width: 390px;
+  height: 42px;
+}
+
+.auth-form select {
+  width: 100%;
+  max-width: 390px;
+  height: 42px;
+  padding: 0 12px;
   font-size: 14px;
-  color: #333;
+  border: none;
+  border-radius: 999px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+
+.auth-form input:focus,
+.auth-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #8750bf;
+}
+
+.auth-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .auth-form .social-login {
   display: flex;
   justify-content: center;
   gap: 30px;
+  margin-top: 20px;
+}
+
+.social-login img {
+  width: 48px;
+  height: 48px;
 }
 
 .divider {
   display: flex;
   align-items: center;
   text-align: center;
-  margin: 16px 0;
+  margin: 5px 0;
 }
 
 .divider::before,
@@ -33,6 +66,7 @@
   flex: 1;
   height: 1px;
   background: #ccc;
+  background: #A67CEB;
 }
 
 .divider span {
@@ -43,24 +77,45 @@
 .password-group {
   position: relative;
 }
-
-.password-group .hint {
-  font-size: 12px;
-  color: #999;
+.hint {
+  font-size: 14px;
+  font-weight: 400;
   margin-top: -10px;
+  margin-left: 0;
+  padding-left: 16px;
+  color: #684581;
+}
+.hint-row{
+  margin-top: 10px;
 }
 
 .forgot {
-  font-size: 12px;
+  margin-top: 4px;
+  margin-right: 16px;
+  font-size: 14px;
+  font-weight: 400;
   float: right;
-  color: #8750bf;
+  color: #684581;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.forgot:hover {
+  border-bottom: 1px solid #684581;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-left: 10px;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #8750bf;
+  cursor: pointer;
 }
 
 .submit-button {
@@ -72,4 +127,51 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+.checkbox label {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.45);
+  font-weight: 400;
+}
+
+.login-form {
+  position: relative;
+  height: 100%;
+}
+
+.form-footer {
+  position: absolute;
+  bottom: 10px;
+  left: 45px;
+  right: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.form-footer1 {
+  position: absolute;
+  bottom: 320px;
+  left: 45px;
+  right: 45px;
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  width: 200px;
+  height: 44px;
+  background: #A67CEB;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.birthday {
+  display: flex;
+  gap: 12px; /* 元素之間的間距 */
+  margin-top: 4px;
 }
