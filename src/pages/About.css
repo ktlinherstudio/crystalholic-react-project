@@ -1,11 +1,26 @@
 /* --------- Hero --------- */
 .about-page {
+  min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
 }
+
+.about-main {
+  flex: 1;
+}
+
+.footer-bg {
+  margin-top: auto;
+}
+
 .about-hero {
   position: relative;
-  background-color: transparent;
-  min-height: 800px;
+  background: linear-gradient(180deg, rgba(96, 77, 172, 1) 0%, rgba(130, 104, 210, 1) 100%);
+  clip-path: ellipse(80% 100% at 50% 0%); /* 正圓弧裁切 */
+  padding: 120px 20px 160px; 
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -14,12 +29,10 @@
   text-align: center;
   z-index: 1;
   overflow: hidden;
-  left: 0;
-  right: 0;
 }
 
 #about-hero {
-  scroll-margin-top: 80px; /* 與 header 高度相等或略多 */
+  scroll-margin-top: 80px;
 }
 
 .about-hero-content {
@@ -27,30 +40,17 @@
   z-index: 1;
   color: white;
   max-width: 700px;
-  padding-bottom: 100px;
 }
 
 .about-hero-arc {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 240px;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.about-hero-arc svg {
-  width: 100%;
-  height: 100%;
-  display: block;
+  display: none; /* 已移除 SVG 弧形 */
 }
 
 .about-hero-title {
   font-family: 'Lora', 'Georgia', serif;
   font-size: 60px;
   margin-bottom: 30px;
-  font-weight: SemiBold;
+  font-weight: 600;
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -69,11 +69,11 @@
   line-height: 1.8;
 }
 
-/* --------- Section 左右排版 --------- */
 .about-main {
-  margin-top: -80px;
+  margin-top: 0 !important;
 }
 
+/* --------- Section Layout --------- */
 .beauty-spirituality .content,
 .quality-guarantee .content {
   display: flex;
@@ -105,14 +105,15 @@
 
 .text {
   flex: 1 1 450px;
+  display: flex;
+  justify-content: center;
 }
-
-/*flex-grow flex-shrink flex-basis*/
 
 .text-content {
   text-align: center;
   max-width: 460px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .text .title {
@@ -125,11 +126,9 @@
 .text-content ul {
   font-family: 'Noto Sans TC';
   font-weight: 400;
-  line-height: 1.2;
-  text-align: left;
-  margin-top: 20px;
   font-size: 16px;
   line-height: 1.8;
+  text-align: left;
   margin-top: 16px;
   color: #585858;
 }
@@ -137,6 +136,7 @@
 .text-content .line {
   width: 650px;
   margin: 20px auto;
+  display: block;
 }
 
 .image {
@@ -148,6 +148,8 @@
   max-width: 476px;
   height: auto;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .text img.divider {
@@ -155,9 +157,7 @@
   margin: 20px 0;
 }
 
-
 /* --------- RWD --------- */
-/* ========== 平板（1024px 以下） ========== */
 @media screen and (max-width: 1024px) {
   .about-hero-title {
     font-size: 48px;
@@ -195,8 +195,6 @@
   }
 }
 
-
-/* ==========大手機或平板橫向（820px 以下） ========== */
 @media screen and (max-width: 820px) {
   .about-hero-title {
     font-size: 40px;
@@ -222,8 +220,6 @@
   }
 }
 
-
-/* ========== 手機直向（640px 以下） ========== */
 @media screen and (max-width: 640px) {
   .about-hero-title {
     font-size: 32px;

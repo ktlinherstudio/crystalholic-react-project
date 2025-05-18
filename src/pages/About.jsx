@@ -31,13 +31,6 @@ export default function About() {
         <section className="about-hero" id='about-hero'>
           <div className="bgdark-inside"> <BgDarkBlock /></div>
           <div className="about-hero-arc">
-            
-            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-              <path
-                fill="#ffffff"
-                d="M0,0 C360,200 980,200 1440,0 L1440,320 L0,320 Z"
-              />
-            </svg>
           </div>
 
           <div className="about-hero-content">

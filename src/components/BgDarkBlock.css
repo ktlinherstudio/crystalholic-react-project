@@ -183,7 +183,7 @@
   left: 0;
   inset: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   z-index: 2;
   /* 放在 gradient-bg 下面 */
   pointer-events: none;

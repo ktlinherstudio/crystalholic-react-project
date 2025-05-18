@@ -3,9 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 
 /* 全站字體設定 */
-/* body {
+body {
   font-family: 'Noto Sans TC', 'Lora', 'LXGW WenKai Mono TC', sans-serif;
-} */
+}
 
 
 /* 全站reset css */
@@ -113,7 +113,7 @@ body {
   line-height: 1.5;
 }
 
-/* body *:lang(en) {
+body *:lang(en) {
   font-family: 'Lora', 'Georgia', serif;
   letter-spacing: 2px;
 } 
@@ -196,3 +196,4 @@ body {
 .main-content {
   flex: 1;
 } */
+

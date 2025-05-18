@@ -10,8 +10,10 @@
         linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
         url(/public/images/S-Background/noise-background.jpg);
     padding: 60px 20px 40px;
-    margin-top: 60px;
+    margin-top: auto;
     z-index: 1000;
+     /* min-height: 480px;
+     max-height: 670px; */
 }
 
 .footer-bg-content {
