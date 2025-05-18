@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModel';
+import { Link } from 'react-router-dom';
 import './NavBarDark.css'
 
 export default function NavBarDark() {
@@ -7,9 +8,9 @@ export default function NavBarDark() {
   return (
     <>
       <header id="navbar2">
-        <a className="logo2" href="#">
-          <img src="/images/S-NavBar/logotext_nav2.svg" alt="" />
-        </a>
+        <Link className="logo" to="/cover">
+          <img src="/images/S-NavBar/logotext_nav2.svg" alt="首頁" />
+        </Link>
         <nav className="navigation2">
           {/* icon btn */}
           <ul className="icon2">
