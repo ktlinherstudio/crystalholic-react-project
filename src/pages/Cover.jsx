@@ -1,5 +1,5 @@
 import '../App.scss/css/Style.min.css'
-import HeaderPlain from '../components/HeaderPlain'
+import NavBarLight from '../components/NavBarLight'
 import FooterBg from '../components/FooterBg'
 
 
@@ -12,7 +12,7 @@ export default function Cover() {
                 <div className="bgdark2"></div>
 
                 {/* menu bar*/}
-                <HeaderPlain />
+                <NavBarLight />
                 {/* 封面1  */}
                 <section className="ch-cover">
                     <div className="cover-box">
