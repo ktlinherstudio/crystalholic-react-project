@@ -36,11 +36,6 @@ export default function CrystalPage() {
 
                     <div className="arc-k-wrapper">
                         <div className="bgdark-inside"> <BgDarkBlock /></div>
-                        <div className="arc-k-svg-bg">
-                            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
-                                <path d="M0,320 C480,90 960,90 1440,320 L1440,0 L0,0 Z" fill="#fff" />
-                            </svg>
-                        </div>
 
                         <section className="arc-k-inner-content">
                             <div className="part1">

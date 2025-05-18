@@ -35,6 +35,7 @@ header ul {
   height: 34px;
   margin: 0px;
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* icon */
@@ -68,20 +69,25 @@ header ul {
 
 @media screen and (max-width: 1024px) {
   /* 隱藏搜尋 icon */
-  /* .icon2 li:first-child {
+  .icon2 li:first-child {
     display: none;
-  } */
+  }
 
   /*  icon 區塊放大但不影響 icon 大小 */
   .icon2 li {
-    min-width: 48px;
-    min-height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0; 
+    margin: 0 8px; /* 稍微縮小間距 */
+    width: 30px;
+    height: 30px;
   }
-  .icon2 {
-    gap: 6px;
+
+
+  /*  member icon 的 button 也確保大小一致 */
+  .member-button2 {
+    width: 30px;
+    height: 30px;
+    padding: 0;
   }
 }
