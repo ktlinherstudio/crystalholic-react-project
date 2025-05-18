@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, Form } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
+
 import About from './pages/About'
 import Menu from './pages/Menu'
 import KnowledgeCrystal from './pages/KnowledgeCrystal'
@@ -13,6 +14,8 @@ import Customize2 from './pages/Customize/Customize2'
 import Customize3 from './pages/Customize/Customize3'
 import ShoppingCart from './pages/Shopping/ShoppingCart'
 import FooterCurve from './components/FooterCurve'
+
+
 
 
 export default function App() {
