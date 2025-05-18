@@ -14,7 +14,7 @@
     z-index: 1000;
     background-size: contain;
     background-repeat: repeat;
-    min-height: 480px;
+    min-height: 440px;
 }
 
 .footer-bg-content {
@@ -125,7 +125,6 @@
 hr {
     border: none;
     border-top: 1px solid white;
-    margin: 20px 0;
 }
 
 /* 版權欄 */
@@ -139,6 +138,7 @@ hr {
     font-size: 14px;
     color: white;
     margin-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* --------- RWD --------- */
@@ -155,7 +155,7 @@ hr {
         width: 200px;
     }
     .footer-bg{
-        min-height: 670px;;
+        min-height: 630px;;
     }
 }
 
