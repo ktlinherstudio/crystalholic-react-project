@@ -4,12 +4,14 @@
   overflow-x: hidden;
   overflow-y: auto;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: block;
+  width: 100vw;
 }
 
 .about-main {
-  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 0 !important;
 }
 
 .footer-bg {
@@ -19,8 +21,9 @@
 .about-hero {
   position: relative;
   background: linear-gradient(180deg, rgba(96, 77, 172, 1) 0%, rgba(130, 104, 210, 1) 100%);
-  clip-path: ellipse(80% 100% at 50% 0%); /* 正圓弧裁切 */
-  padding: 120px 20px 160px; 
+  clip-path: ellipse(80% 100% at 50% 0%);
+  /* 正圓弧裁切 */
+  padding: 120px 20px 160px;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -42,15 +45,11 @@
   max-width: 700px;
 }
 
-.about-hero-arc {
-  display: none; /* 已移除 SVG 弧形 */
-}
-
 .about-hero-title {
   font-family: 'Lora', 'Georgia', serif;
   font-size: 60px;
   margin-bottom: 30px;
-  font-weight: 600;
+  font-weight: 360;
   letter-spacing: 2px;
   font-style: italic;
 }
@@ -134,7 +133,7 @@
 }
 
 .text-content .line {
-  width: 650px;
+  max-width: 550px;
   margin: 20px auto;
   display: block;
 }

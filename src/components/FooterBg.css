@@ -12,8 +12,9 @@
     padding: 60px 20px 40px;
     margin-top: auto;
     z-index: 1000;
-     /* min-height: 480px;
-     max-height: 670px; */
+    background-size: contain;
+    background-repeat: repeat;
+    min-height: 480px;
 }
 
 .footer-bg-content {
@@ -152,6 +153,9 @@ hr {
         display: flex;
         flex-direction: column;
         width: 200px;
+    }
+    .footer-bg{
+        min-height: 670px;;
     }
 }
 

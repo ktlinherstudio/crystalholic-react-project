@@ -4,7 +4,7 @@ import './About.css'
 import NavBarLight from '../components/NavBarLight'
 import FooterBg from '../components/FooterBg'
 import BgDarkBlock from '../components/BgDarkBlock'
-// import FooterArc from '../components/FooterArc'
+import FooterArc from '../components/FooterArc'
 
 export default function About() {
 
@@ -30,8 +30,6 @@ export default function About() {
       <main className="about-main">
         <section className="about-hero" id='about-hero'>
           <div className="bgdark-inside"> <BgDarkBlock /></div>
-          <div className="about-hero-arc">
-          </div>
 
           <div className="about-hero-content">
             <h1 className="about-hero-title">Crystalholic</h1>
@@ -122,8 +120,8 @@ export default function About() {
           </div>
         </section>
       </main>
-      {/* <FooterArc /> */}
-      <FooterBg />
+      <FooterArc />
+      {/* <FooterBg /> */}
     </div>
   )
 }
