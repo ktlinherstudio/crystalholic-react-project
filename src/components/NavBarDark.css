@@ -78,7 +78,7 @@ header ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 8px; /* 稍微縮小間距 */
+    margin: 0 9px; /* 稍微縮小間距 */
     width: 30px;
     height: 30px;
   }

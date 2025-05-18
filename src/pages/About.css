@@ -1,11 +1,11 @@
 /* --------- Hero --------- */
 .about-page {
   min-height: 100vh;
-  overflow-x: hidden;
   overflow-y: auto;
   position: relative;
   display: block;
   width: 100vw;
+  overflow-x: clip;
 }
 
 .about-main {
@@ -49,7 +49,7 @@
   font-family: 'Lora', 'Georgia', serif;
   font-size: 60px;
   margin-bottom: 30px;
-  font-weight: 360;
+  font-weight: 400;
   letter-spacing: 2px;
   font-style: italic;
 }
