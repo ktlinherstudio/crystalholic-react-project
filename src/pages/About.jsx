@@ -8,21 +8,6 @@ import BgDarkBlock from '../components/BgDarkBlock'
 
 export default function About() {
 
-  // 滾動到頁面最上方
-  const location = useLocation()
-
-  useEffect(() => {
-    if (location.hash === '#about-hero') {
-      const target = document.querySelector(location.hash)
-      if (target) {
-        // 等待頁面渲染完成，然後立即滾動
-        requestAnimationFrame(() => {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        })
-      }
-    }
-  }, [location])
-
   return (
     <div className="about-page">
       <NavBarLight />

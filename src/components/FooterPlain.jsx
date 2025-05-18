@@ -9,15 +9,15 @@ export default function FooterPlain() {
           <h3>COMPANY</h3>
           <ul>
              <li>
-              <Link to="/about#about-hero">關於我們 About Us</Link> 
+              <Link to="/about">關於我們 About Us</Link> 
             </li>
           </ul>
         </div>
         <div className="service">
           <h3>SERVICE</h3>
           <ul>
-            <li><Link to="/KnowledgeCrystal#crystal-main">水晶小百科 Crystal Discoveries</Link></li>
-            <li><Link to="/knowledgecleanse#content-nc">保養維護 Maintenance</Link></li>
+            <li><Link to="/KnowledgeCrystal">水晶小百科 Crystal Discoveries</Link></li>
+            <li><Link to="/knowledgecleanse">保養維護 Maintenance</Link></li>
             <li><Link to="#">商品包裝 Packaging</Link></li>
             <li><Link to="#">售後服務 After-sales service</Link></li>
             <li><Link to="#">常見問題 FAQ</Link></li>

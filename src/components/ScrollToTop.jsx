@@ -1,4 +1,3 @@
-// components/ScrollToTop.jsx
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -6,21 +5,48 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // 若 hash 存在（像 /about#hero），等待該元素存在再滾動
-    if (hash) {
-      const targetId = hash.replace('#', '');
-      const scrollToElement = () => {
-        const el = document.getElementById(targetId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const id = hash?.replace('#', '');
+
+    const smoothScrollTo = (targetY, duration = 500) => {
+      const startY = window.scrollY;
+      const diff = targetY - startY;
+      const startTime = performance.now();
+
+      const easeInOutCubic = t =>
+        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+      const animate = now => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = easeInOutCubic(progress);
+        window.scrollTo(0, startY + diff * eased);
+        if (elapsed < duration) {
+          requestAnimationFrame(animate);
         }
       };
-      // 延遲一下再嘗試滾動，避免 DOM 還沒渲染完
-      setTimeout(scrollToElement, 50);
-    } else {
-      // 沒有 hash 就直接回頂部（強制滾動）
-      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
+      requestAnimationFrame(animate);
+    };
+
+    // 第一步：立刻先滾到頂部（smooth）
+    smoothScrollTo(0, 400);
+
+    // 第二步：如有 hash，延遲補滾一次（讓畫面已經開始滑動了）
+    if (id) {
+      let attempts = 0;
+      const interval = setInterval(() => {
+        const el = document.getElementById(id) || document.querySelector(hash);
+        if (el) {
+          const top = el.getBoundingClientRect().top + window.scrollY;
+          smoothScrollTo(top, 500);
+          clearInterval(interval);
+        } else if (attempts > 20) {
+          clearInterval(interval);
+        }
+        attempts++;
+      }, 100);
     }
+
   }, [pathname, hash]);
 
   return null;
