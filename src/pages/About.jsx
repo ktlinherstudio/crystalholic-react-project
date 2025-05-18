@@ -5,7 +5,7 @@ import './About.css'
 import NavBarLight from '../components/NavBarLight'
 import FooterBg from '../components/FooterBg'
 import BgDarkBlock from '../components/BgDarkBlock'
-import BackToTopBtn from './components/BackToTopBtn'
+import BackToTopBtn from '../components/BackToTopBtn'
 // import FooterArc from '../components/FooterArc'
 
 export default function About() {
@@ -108,6 +108,7 @@ export default function About() {
             </div>
           </section>
         </main>
+         <BackToTopBtn /> 
         {/* <FooterArc /> */}
         <FooterBg />
       </div>
