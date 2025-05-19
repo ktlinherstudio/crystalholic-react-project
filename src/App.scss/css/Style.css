@@ -501,6 +501,12 @@ body {
     height: 587px;
   }
 }
+@media (min-width:1025px) {
+  .section-starttest .startbox1 .lefth {
+    width: 200px;
+    height: 587px;
+  }
+}
 @media (max-width:1024px) {
   .section-starttest .startbox1 .lefth {
     width: 200px;
@@ -532,6 +538,12 @@ body {
 @media (max-width:1366px) {
   .section-starttest .startbox1 .righth {
     width: 245px;
+    height: 587px;
+  }
+}
+@media (min-width:1025px) {
+  .section-starttest .startbox1 .righth {
+    width: 200px;
     height: 587px;
   }
 }
@@ -687,8 +699,8 @@ body {
 @media (min-width:1680px) {
   .section-starttest .numbg {
     height: 88.4%;
-    left: 16%;
-    top: 17%;
+    left: 10%;
+    top: 10%;
   }
 }
 @media (max-width:1024px) {
