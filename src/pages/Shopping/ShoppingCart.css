@@ -1,12 +1,14 @@
 /* 主要內容區 */
 .cart_page{
     width: 100%;
-    height: 1255px;
+    /* height: calc(100vh - 70px); */
+    /* height: 1255px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding-top: 80px;
+    padding-top: 150px;  /* 80px+70px(navbar高度) */
+    margin-bottom: 140px;
     gap: 50px;
 }
 /* 標題 */
