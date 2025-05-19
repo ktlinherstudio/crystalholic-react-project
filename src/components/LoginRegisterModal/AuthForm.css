@@ -37,6 +37,10 @@
   box-shadow: 0 0 0 2px #8750bf;
 }
 
+.auth-form input{
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .auth-form input::placeholder {
   color: rgba(0, 0, 0, 0.4);
 }
@@ -72,6 +76,7 @@
 .divider span {
   padding: 0 12px;
   color: #8750bf;
+  font-weight: 300;
 }
 
 .password-group {
@@ -142,7 +147,7 @@
 
 .form-footer {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 45px;
   right: 45px;
   display: flex;
@@ -151,7 +156,7 @@
 
 .form-footer1 {
   position: absolute;
-  bottom: 320px;
+  bottom: 85px;
   left: 45px;
   right: 45px;
   display: flex;
@@ -168,6 +173,10 @@
   padding: 12px;
   font-size: 16px;
   cursor: pointer;
+  line-height: 22px;
+}
+.submit-button:hover{
+   background: #684581;
 }
 
 .birthday {
