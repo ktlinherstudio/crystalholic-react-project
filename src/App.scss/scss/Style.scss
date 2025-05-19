@@ -632,6 +632,10 @@ body {
                 height: 587px;
             }
 
+            @media ($media-lg-up) {
+                width: 200px;
+                height: 587px;
+            }
 
             @media ($media-lg) {
                 width: 200px;
@@ -663,6 +667,11 @@ body {
 
             @media ($media-xlg) {
                 width: 245px;
+                height: 587px;
+            }
+
+            @media ($media-lg-up) {
+                width: 200px;
                 height: 587px;
             }
 
@@ -825,8 +834,8 @@ body {
 
         @media ($media-xxlg-up) {
             height: 88.4%;
-            left: 16%;
-            top: 17%;
+            left: 10%;
+            top: 10%;
         }
 
         @media ($media-lg) {
@@ -852,7 +861,8 @@ body {
 
 }
 
-/*憑直覺抽一張吧*/   ////ipad pro 套不到
+/*憑直覺抽一張吧*/
+////ipad pro 套不到
 #section-tarotcard {
     border: #e22121 2px solid;
 
@@ -1320,7 +1330,8 @@ body {
     justify-items: center;
     gap: 35px;
 
-    @media ($media-xlg) {  //ipad mini爆
+    @media ($media-xlg) {
+        //ipad mini爆
         margin: 6.7% 8.5% 9.7% 7.91%;
     }
 
