@@ -82,6 +82,7 @@ export default function Cover() {
                 {/* 水晶小百科  */}
                 <section id="section-crystaldiscovery">
                     <div className="crystal-display">
+                        <div className="circlebox">
                         <img src="./images/HomePage/covercrystal/crystal-golden-rutilated-quartz.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-kyanite.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-angelite.svg" className="circle" alt="" />
@@ -96,6 +97,7 @@ export default function Cover() {
 
                         <img src="./images/HomePage/covercrystal/crystal-amethyst.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-sunstone.svg" className="circle" alt="" />
+                    </div>
                     </div>
                     <div className="section-crystaldiscovery">
                         <header>

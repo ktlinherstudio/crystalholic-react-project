@@ -58,8 +58,8 @@ export default function Menu() {
                             <h3>FOLLOW US</h3>
                             <span className="scicon-box">
                                 <div className="line"></div>
-                                <div className="ig"><img src="../images/S-Footer/icon_ig.svg" alt=""/></div>
-                                <div className="fb"><img src="../images/S-Footer/icon_fb.svg" alt=""/></div>
+                                <div className="ig"></div>
+                                <div className="fb"></div>
                             </span>
                         </div>
                     </div>

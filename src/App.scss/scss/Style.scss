@@ -139,7 +139,6 @@ a {
     text-decoration: none;
 }
 
-
 /* ------字體------ */
 
 body {
@@ -153,7 +152,7 @@ body {
 // /*全文底色*/
 #menu {
     // background-image: url(../../../public/images/);
-    background-color: #e22121;
+    background-color: #a541be;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -177,15 +176,16 @@ body {
         }
 
         .menu {
-            width: 225px;
-            height: 730px;
+            width: 15.7%;
+            height: 91.25vh;
             border: 1px solid #fff;
             border-top: none;
-
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
+
+
         }
 
         h2 {
@@ -197,6 +197,10 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+
+            @media ($media-xlg) {
+                font-size: 24px;
+            }
         }
 
         li {
@@ -209,7 +213,11 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 1;
+            // z-index: 1;
+
+            @media ($media-xlg) {
+                font-size: 12px;
+            }
 
             &::before {
                 content: "";
@@ -247,8 +255,8 @@ body {
         }
 
         .menu-last {
-            width: 225px;
-            height: 727px;
+            width: 15.7%;
+            height: 91.25vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -256,8 +264,8 @@ body {
             gap: 27px;
 
             .menu-last1 {
-                width: 225px;
-                height: 640px;
+                width: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -285,29 +293,47 @@ body {
                     }
 
                     .line {
-                        // content: '';
+                        content: '';
                         width: 30px;
                         height: 30px;
                         background-image: url(../../../public/images/S-Footer/icon_line.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
 
                         &:hover {
                             background-image: url(../../../public/images/S-Footer/icon_line_h.svg);
                         }
                     }
 
-                    .line {
-                        &:hover {}
+                    .ig {
+                        content: '';
+                        width: 30px;
+                        height: 30px;
+                        background-image: url(../../../public/images/S-Footer/icon_ig.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                        &:hover {
+                            background-image: url(../../../public/images/S-Footer/icon_ig_h.svg);
+                        }
                     }
 
-                    .line {
-                        &:hover {}
+                    .fb {
+                        content: '';
+                        width: 30px;
+                        height: 30px;
+                        background-image: url(../../../public/images/S-Footer/icon_fb.svg);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                        &:hover {
+                            background-image: url(../../../public/images/S-Footer/icon_fb_h.svg);
+                        }
                     }
                 }
             }
         }
-
     }
-
 }
 
 #cover {
@@ -342,7 +368,6 @@ body {
     //         // height: 587px;
     //     }
 
-
     //     @media ($media-md) {
     //         // width: 299px;
     //         // height: 587px;
@@ -373,7 +398,6 @@ body {
     //         // height: 587px;
     //     }
 
-
     //     @media ($media-md) {
     //         // width: 299px;
     //         // height: 587px;
@@ -384,8 +408,6 @@ body {
     //         // height: 587px;
     //     }
     // }
-
-
 }
 
 /*封面1*/
@@ -407,6 +429,7 @@ body {
         .deco1 {
             width: 53px;
             height: 94px;
+            transform: rotate(-29deg);
 
             // 定位
             position: absolute;
@@ -500,7 +523,7 @@ body {
         .deco2 {
             width: 22px;
             height: 38px;
-            transform: rotate(36deg);
+            transform: rotate(10deg);
             // 定位
             position: absolute;
             left: 62.8%;
@@ -526,7 +549,7 @@ body {
         .deco3 {
             width: 34px;
             height: 60px;
-            transform: rotate(54deg);
+            transform: rotate(24deg);
 
             // 定位
             position: absolute;
@@ -594,10 +617,10 @@ body {
     position: relative;
     // gap: 0;
 
-    @media ($media-xxlg-up) {
-        // justify-content: center;
-        gap: 0%;
-    }
+    // @media ($media-xxlg-up) {
+    //     // justify-content: center;
+    //     gap: 0%;
+    // }
 
     @media ($media-lg) {
         justify-content: center;
@@ -621,28 +644,27 @@ body {
             width: 299px;
             height: 587px;
 
-
             @media ($media-xxlg-up) {
                 width: 350px;
                 height: 710px;
             }
 
             @media ($media-xlg) {
+                //ipad air橫 &ipad pro直 共用(爆)
                 width: 245px;
                 height: 587px;
             }
 
-            @media ($media-lg-up) {
-                width: 200px;
-                height: 587px;
-            }
+            // @media ($media-lg-up) {
+            //     width: 200px;
+            //     height: 587px;
+            // }
 
             @media ($media-lg) {
                 width: 200px;
                 height: 587px;
                 // ipad Pro 1024*1366沒套到
             }
-
 
             @media ($media-md) {
                 width: 200px;
@@ -670,10 +692,10 @@ body {
                 height: 587px;
             }
 
-            @media ($media-lg-up) {
-                width: 200px;
-                height: 587px;
-            }
+            // @media ($media-lg-up) {
+            //     width: 200px;
+            //     height: 587px;
+            // }
 
             @media ($media-lg) {
                 width: 200px;
@@ -715,7 +737,6 @@ body {
             gap: 30px;
         }
 
-
         @media ($media-md) {
             gap: 22.2px;
         }
@@ -756,7 +777,7 @@ body {
         @media ($media-xlg) {
             width: 129px;
             height: 346px;
-            left: 43.5%;
+            left: 44.5%;
             top: 29.5%;
         }
 
@@ -810,7 +831,6 @@ body {
             top: 37%;
         }
 
-
         @media ($media-md) {
             left: 32%;
             top: 37%;
@@ -845,7 +865,6 @@ body {
             top: 27%;
         }
 
-
         @media ($media-md) {
             left: 2.5%;
             top: 27%;
@@ -855,10 +874,7 @@ body {
             left: 12%;
             top: 35%;
         }
-
     }
-
-
 }
 
 /*憑直覺抽一張吧*/
@@ -943,9 +959,9 @@ body {
         }
 
         #tarotcard-box {
-            width: 1279px;
-            height: 427px;
-            // border: 1px solid white;
+            // width: 1279;
+            // height: 427px;
+            // border: 1px solid white; 
 
             display: flex;
             justify-content: center;
@@ -1175,8 +1191,23 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    overflow: hidden;
+
+    @media ($media-xlg-up) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /////
+        align-items: center;
+    }
 
     @media ($media-lg) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /////
+        align-items: center;
+    }
+
+    @media ($media-md) {
         display: flex;
         flex-direction: column;
         justify-content: center; /////
@@ -1195,10 +1226,20 @@ body {
 
         ////////////////////////////////////////////////////
         // border: 1px #FFF solid;
+        @media ($media-xlg-up) {
+            width: 100%;
+            height: 58.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0%;
+
+        }
 
         @media ($media-lg) {
             width: 100%;
-            height: 691px;
+            height: 58.5%;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -1206,118 +1247,235 @@ body {
             gap: 0%;
         }
 
-        .circle {
-            position: absolute;
-            top: 80%;
-            left: 13%;
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            transform-origin: center -230px;
-            /* 半徑可調整 */
+        @media ($media-md) {
+            width: 100%;
+            height: 58.5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0%;
+        }
 
-            @media ($media-xlg) {
-                top: 84%;
-                left: -40%;
+
+        .circlebox {
+            @media ($media-xlg-up) {
+                position: absolute;
+                top: 23%;
+                left: 15%;
+                transform: rotate(270deg);
             }
 
             @media ($media-lg) {
-                position: static;
+                position: absolute;
+                top: 27%;
+                left: 12%;
+                transform: rotate(270deg);
+            }
+
+            @media ($media-md) {
+                position: absolute;
+                top: 20%;
+                left: 18%;
+                transform: rotate(270deg);
+            }
+
+            .circle {
+                position: absolute;
                 top: 80%;
                 left: 13%;
                 width: 100px;
                 height: 100px;
                 object-fit: cover;
-                transform-origin: unset;
-                overflow: hidden;
+                transform-origin: center -230px;
                 /* 半徑可調整 */
+
+                @media ($media-xlg-up) {
+                    top: 80%;
+                    left: 13%;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    transform-origin: center 350px;
+                }
+
+                @media ($media-lg) {
+                    // position: static;
+                    // top: 80%;
+                    // left: 13%;
+                    // width: 100px;
+                    // height: 100px;
+                    // object-fit: cover;
+                    // transform-origin: unset;
+                    // overflow: hidden;
+                    // position: absolute;
+                    top: 80%;
+                    left: 13%;
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    transform-origin: center 303px;
+                    // transform:rotate(90deg) ;
+                }
+
+                @media ($media-md) {
+                    top: 80%;
+                    left: 13%;
+                    width: 75px;
+                    height: 75px;
+                    object-fit: cover;
+                    transform-origin: center 235px;
+                }
+
             }
 
-        }
+            .circle:nth-child(1) {
+                transform: rotate(0deg);
+            }
 
-        .circle:nth-child(1) {
-            transform: rotate(0deg);
-        }
+            .circle:nth-child(2) {
+                transform: rotate(30deg);
+            }
 
-        .circle:nth-child(2) {
-            transform: rotate(30deg);
-        }
+            .circle:nth-child(3) {
+                transform: rotate(60deg);
+            }
 
-        .circle:nth-child(3) {
-            transform: rotate(60deg);
-        }
+            .circle:nth-child(4) {
+                transform: rotate(90deg);
+            }
 
-        .circle:nth-child(4) {
-            transform: rotate(90deg);
-        }
+            .circle:nth-child(5) {
+                transform: rotate(120deg);
+            }
 
-        .circle:nth-child(5) {
-            transform: rotate(120deg);
-        }
+            .circle:nth-child(6) {
+                transform: rotate(150deg);
+            }
 
-        .circle:nth-child(6) {
-            transform: rotate(150deg);
-        }
+            .circle:nth-child(7) {
+                transform: rotate(180deg);
+            }
 
-        .circle:nth-child(7) {
-            transform: rotate(180deg);
-        }
+            .circle:nth-child(8) {
+                transform: rotate(210deg);
+            }
 
-        .circle:nth-child(8) {
-            transform: rotate(210deg);
-        }
+            .circle:nth-child(9) {
+                transform: rotate(240deg);
+            }
 
-        .circle:nth-child(9) {
-            transform: rotate(240deg);
-        }
-
-        .circle:nth-child(10) {
-            transform: rotate(270deg);
-            width: 150px;
-            height: 150px;
-            position: relative;
-
-            @media ($media-lg) {
-                position: static;
-                transform: unset;
+            .circle:nth-child(10) {
+                transform: rotate(270deg);
                 width: 150px;
                 height: 150px;
+
+                // position: relative;
+                @media ($media-xlg-up) {
+                    width: 125px;
+                    height: 125px;
+                }
+
+                @media ($media-lg) {
+                    // position: static;
+                    // transform: unset;
+                    width: 125px;
+                    height: 125px;
+                }
+
+                @media ($media-md) {
+                    // position: static;
+                    // transform: unset;
+                    width: 95px;
+                    height: 95px;
+                }
+
+                &::before {
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    background-image: url(../../../public/images/HomePage/icon_btn_up.ico.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    position: fixed;
+                    top: -49%;
+                    right: 36%;
+
+                    @media ($media-xlg-up) {
+                        width: 48px;
+                        height: 48px;
+                        top: -41%;
+                        right: 30%;
+                        transform: rotate(90deg);
+                    }
+
+                    @media ($media-lg) {
+                        width: 48px;
+                        height: 48px;
+                        top: -41%;
+                        right: 30%;
+                        transform: rotate(90deg);
+                    }
+
+                    @media ($media-md) {
+                        background-size: 75%;
+                        width: 48px;
+                        height: 48px;
+                        top: -41%;
+                        right: 30%;
+                        transform: rotate(90deg);
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    width: 60px;
+                    height: 60px;
+                    background-image: url(../../../public/images/HomePage/icon_btn_down.ico.svg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    position: absolute;
+                    top: 108%;
+                    right: 36%;
+
+                    @media ($media-xlg-up) {
+                        width: 48px;
+                        height: 48px;
+                        top: 102%;
+                        right: 31%;
+                        transform: rotate(90deg);
+                    }
+
+                    @media ($media-lg) {
+                        width: 48px;
+                        height: 48px;
+                        top: 102%;
+                        right: 31%;
+                        transform: rotate(90deg);
+                    }
+
+                    @media ($media-md) {
+                        background-size: 75%;
+                        width: 48px;
+                        height: 48px;
+                        top: 102%;
+                        right: 31%;
+                        transform: rotate(90deg);
+                    }
+                }
             }
 
-            &::before {
-                content: "";
-                width: 60px;
-                height: 60px;
-                background-image: url(../../../public/images/HomePage/icon_btn_up.ico.svg);
-                display: block;
-                position: absolute;
-                top: -74px;
-                right: 57px;
+            .circle:nth-child(11) {
+                transform: rotate(300deg);
             }
 
-            &::after {
-                content: "";
-                width: 60px;
-                height: 60px;
-                background-image: url(../../../public/images/HomePage/icon_btn_down.ico.svg);
-                display: flex;
-                flex-direction: row;
-                justify-items: center;
-                align-items: center;
-                display: block;
-                position: absolute;
-                top: 158px;
-                right: 57px;
+            .circle:nth-child(12) {
+                transform: rotate(330deg);
             }
         }
 
-        .circle:nth-child(11) {
-            transform: rotate(300deg);
-        }
-
-        .circle:nth-child(12) {
-            transform: rotate(330deg);
-        }
     }
 }
 
@@ -1567,6 +1725,9 @@ body {
         display: flex;
         align-items: center;
 
+        @media ($media-lg) {
+            // margin: 30px auto;
+        }
 
         #fbtitle {
             color: #FFF;
@@ -1597,6 +1758,10 @@ body {
             @media ($media-xlg) {
                 margin: 0;
             }
+
+            @media ($media-lg) {
+                // transform: rotate(90deg);
+            }
         }
 
         .feedback-arrowright {
@@ -1607,20 +1772,28 @@ body {
             @media ($media-xlg) {
                 margin: 0;
             }
+
+            @media ($media-lg) {
+                // transform: rotate(90deg);
+            }
         }
 
-        // @media ($media-xlg) {
-        //     .feedback:nth-of-type(4) {
-        //         display: none;
-        //     }
-        // }
         @media ($media-xlg) {
-            .feedback:nth-of-type(3) {
+            .feedback:nth-of-type(4) {
                 display: none;
             }
         }
 
+        // @media ($media-xlg) {
+        //     .feedback:nth-of-type(3) {
+        //         display: none;
+        //     }
+        // }  
+
         @media ($media-lg) {
+            // display: flex;
+            // flex-direction: column;
+
             .feedback:nth-of-type(3) {
                 display: none;
             }
@@ -1629,6 +1802,7 @@ body {
                 display: none;
             }
         }
+
     }
 
     .feedback {
@@ -1641,7 +1815,7 @@ body {
         margin: 10px;
         display: flex;
         flex-direction: row;
-        // justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         gap: 12px;
         /* 玻璃擬態 */
@@ -1650,10 +1824,18 @@ body {
         box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.30);
         backdrop-filter: blur(2.5px);
 
+        // @media ($media-xlg) {
+        //     width: 270px;
+        //     height: 140px;
+        //     padding: 15px;
+        //     gap: 10px;
+        // }
+
         @media ($media-xlg) {
-            width: 240px;
+            width: 220px;
+            height: 120px;
             padding: 10px;
-            gap: 15px;
+            gap: 10px;
         }
 
 
@@ -1668,6 +1850,7 @@ body {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+                margin-bottom: -5px;
 
             }
 
@@ -1675,7 +1858,6 @@ body {
                 width: 113px;
                 height: 90px;
                 border-radius: 10px;
-                margin-top: -20px;
 
                 @media ($media-xlg) {
                     width: 100px;
@@ -1722,9 +1904,10 @@ body {
                 overflow: hidden;
 
                 @media ($media-xlg) {
-                    width: 104px;
+                    width: 90px;
                     height: 75px;
                     font-size: 10px;
+                    -webkit-line-clamp: 5;
                 }
             }
         }
