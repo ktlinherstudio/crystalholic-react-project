@@ -159,6 +159,7 @@ body {
     color: #fff;
     width: 100%;
     height: 100vh;
+    position: relative;
 
     .navigation {
         display: flex;
@@ -169,10 +170,20 @@ body {
 
         position: relative;
 
+        @media ($media-lg) {
+            flex-direction: column;
+            gap: 0px;
+        }
+
         .closebtn {
             position: absolute;
-            right: 50px;
-            top: 30px;
+            right: 3.47%;
+            top: 3.75%;
+
+            @media ($media-lg) {
+                right: 3.47%;
+                top: 3.75%;
+            }
         }
 
         .menu {
@@ -185,7 +196,16 @@ body {
             justify-content: flex-start;
             align-items: center;
 
-
+            @media ($media-lg) {
+                width: 91.25vw;
+                height: 15.7%;
+                border-top: none;
+                border-right: none;
+                border-left: none;
+                flex-direction: row;
+                // justify-content: center;
+                align-content: center;
+            }
         }
 
         h2 {
@@ -201,6 +221,23 @@ body {
             @media ($media-xlg) {
                 font-size: 24px;
             }
+
+            @media ($media-lg) {
+                // font-size: 24px;
+                margin: 0
+            }
+        }
+
+        ul { display: flex;
+            flex-direction: column;
+            gap: 24px;
+            @media ($media-lg) {
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-content: center;
+                gap: 24px;
+            }
         }
 
         li {
@@ -208,11 +245,12 @@ body {
             height: 26px;
             // width: 137.67px;
             list-style: none;
-            margin-bottom: 24px;
+            // margin-bottom: 24px;
 
             display: flex;
             justify-content: center;
             align-items: center;
+            // gap: 24px;
             // z-index: 1;
 
             @media ($media-xlg) {
@@ -263,6 +301,15 @@ body {
             align-items: center;
             gap: 27px;
 
+            @media ($media-lg) {
+                width: 91.25vw;
+                height: 15.7%;
+
+                flex-direction: row;
+                // justify-content: center;
+                align-content: center;
+            }
+
             .menu-last1 {
                 width: 100%;
                 height: 100%;
@@ -272,6 +319,17 @@ body {
                 align-items: center;
                 border: 1px solid #fff;
                 border-top: none;
+
+                @media ($media-lg) {
+                    width: 91.25vw;
+                    height: 15.7%;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    flex-direction: row;
+                    // justify-content: center;
+                    align-content: center;
+                }
             }
 
             .menu-last2 {

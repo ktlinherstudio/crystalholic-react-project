@@ -9,8 +9,7 @@ export default function Menu() {
 
             <div className='menu'>
                 <nav className="navigation">
-                    <span className="closebtn"><img src="./images/S-NavBar/icon_closebgrbtn.svg" alt=""/></span>
-                    <span className="closebtn"><img src="../public/image/icon/" alt=""/></span>
+                    <span className="closebtn"><img src="../images/S-NavBar/navicon_closebgrbtn.svg" alt=""/></span>
                     <div className="menu">
                         <h2>About us</h2>
                         <ul>
@@ -18,7 +17,6 @@ export default function Menu() {
                             <li><a href="#">品質保證</a></li>
                         </ul>
                     </div>
-
                     <div className="menu">
                         <h2>Discoveries</h2>
                         <ul>
