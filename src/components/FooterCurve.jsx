@@ -1,10 +1,10 @@
-import './FooterCurve.css'; 
+import './FooterCurve.css';
 
 export default function FooterCurve() {
     return (
-        <footer>
+        <footer className="footercurve">
             {/* 弧形 */}
-            <div className="footercurve">
+            <div className="footercurve_area">
                 <svg
                     viewBox="0 0 1440 146"
                     xmlns="http://www.w3.org/2000/svg"
@@ -17,10 +17,10 @@ export default function FooterCurve() {
                 </svg>
             </div>
 
-            <section className="footercurve-info">
+            <section className="footercurve_info">
                 {/* COMPANY */}
-                <div className="COMPANY">
-                    <h4 className="footercurve-title">COMPANY</h4>
+                <div className="footercurve_COMPANY">
+                    <h4 className="footercurve_title">COMPANY</h4>
                     <ul>
                         <li>
                             <a href="#">關於品牌&nbsp;About&nbsp;Us</a>
@@ -29,8 +29,8 @@ export default function FooterCurve() {
                 </div>
 
                 {/* SERVICE */}
-                <div className="SERVICE">
-                    <h4 className="footercurve-title">SERVICE</h4>
+                <div className="footercurve_SERVICE">
+                    <h4 className="footercurve_title">SERVICE</h4>
                     <ul>
                         <li>
                             <a href="#">如何購買&nbsp;How&nbsp;To&nbsp;Buy</a>
@@ -54,30 +54,30 @@ export default function FooterCurve() {
                 </div>
 
                 {/* CONTACT */}
-                <div className="CONTACT">
-                    <h4 className="footercurve-title">CONTACT&nbsp;US</h4>
+                <div className="footercurve_CONTACT">
+                    <h4 className="footercurve_title">CONTACT&nbsp;US</h4>
                     <p>聯絡電話&nbsp;/&nbsp;0800&nbsp;000&nbsp;000</p>
                     <p>MON&nbsp;-&nbsp;FRI&nbsp;/&nbsp;9:00am&nbsp;-&nbsp;18:00pm</p>
                 </div>
 
                 {/* FOLLOW */}
-                <div className="FOLLOW">
-                    <h4 className="footercurve-title">FOLLOW&nbsp;US</h4>
-                    <ul className="footercurve-social-icon">
+                <div className="footercurve_FOLLOW">
+                    <h4 className="footercurve_title">FOLLOW&nbsp;US</h4>
+                    <ul className="footercurve_social_icon">
                         <li>
-                            <a className="footercurveicon-line" href="#"></a>
+                            <a className="footercurve_icon_line" href="#"></a>
                         </li>
                         <li>
-                            <a className="footercurve-icon-ig" href="#"></a>
+                            <a className="footercurve_icon_ig" href="#"></a>
                         </li>
                         <li>
-                            <a className="footercurve-icon-fb" href="#"></a>
+                            <a className="footercurve_icon_fb" href="#"></a>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section className="footercurve-bottom">
+            <section className="footercurve_bottom">
                 <hr />
                 <span>2025&nbsp;©&nbsp;xxxxxxxxx&nbsp;ALL&nbsp;RIGHTS&nbsp;RESERVED.</span>
             </section>

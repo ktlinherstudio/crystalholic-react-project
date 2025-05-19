@@ -1,6 +1,6 @@
 import './ShoppingCart.css';
 import NavBarDark from '../../components/NavBarDark';
-import FooterArc from '../../components/FooterArc';
+import FooterCurve from '../../components/FooterCurve';
 
 
 export default function ShoppingCart() {
@@ -286,7 +286,7 @@ export default function ShoppingCart() {
                     </section>
                 </section>
             </main>
-
+            <FooterCurve/>
         </>
     );
 }
