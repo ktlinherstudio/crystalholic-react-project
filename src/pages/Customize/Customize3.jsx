@@ -19,11 +19,15 @@ export default function Customize3() {
                     </div>
                 </div>
                 {/* 圖 */}
-                <div className="background-2">
-                    <img className='img1' src="/public/images/Custom/custom-bracelet-recommend-1.png" alt="" />
+                <ul className="background-2">
+                    <li><a href="#" className='img1'></a></li>
+                    <li><a href="#" className='img2'></a></li>
+                    <li><a href="#" className='img3'></a></li>
+
+                    {/* <img className='img1' src="/public/images/Custom/custom-bracelet-recommend-1.png" alt="" />
                     <img className='img2' src="/public/images/Custom/custom-bracelet-recommend-2.png" alt="" />
-                    <img className='img3' src="/public/images/Custom/custom-bracelet-recommend-3.png" alt="" />
-                </div>
+                    <img className='img3' src="/public/images/Custom/custom-bracelet-recommend-3.png" alt="" /> */}
+                </ul>
                 {/* 按鈕 */}
                 <div className="button-box3">
                     <button className="button2">開始DIY</button>
