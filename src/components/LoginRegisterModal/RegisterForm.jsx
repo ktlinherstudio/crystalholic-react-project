@@ -14,16 +14,17 @@ export default function RegisterForm() {
             <span className="hint">至少 8 個字元</span>
 
             <select>
-                <option value="">性別</option>
+                <option value="" disabled selected hidden>性別</option>
                 <option value="female">女性</option>
                 <option value="male">男性</option>
+                <option value="others">其他</option>
             </select>
 
             <div className="birthday">
-                <select><option>年</option></select>
-                <select><option>月</option></select>
-                <select><option>日</option></select>
-            </div>
+                <select><option value=""  disabled selected hidden>年</option></select>
+                <select><option value=""  disabled selected hidden>月</option></select>
+                <select><option value=""  disabled selected hidden>日</option></select>
+            </div> 
 
             <div className="checkbox">
                 <input type="checkbox" id="agree" required/>
