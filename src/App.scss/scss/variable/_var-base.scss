@@ -1,7 +1,7 @@
 //RWD斷點  @media()
 $media-xxlg: "max-width:px";
 $media-xxlg-up: "min-width:1680px"; //1680*1050 / 1920*1080
-$media-xlg-up: "min-width:1365px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
+$media-xlg-up: "max-width:1365px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
 $media-xlg: "max-width:1366px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
 $media-lg-up: "min-width:1025px"; //ipad pro 1366*1024(橫向)
 $media-lg: "max-width:1024px"; // iPad Air 820*1180(直向)

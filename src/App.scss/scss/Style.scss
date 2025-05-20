@@ -1,7 +1,7 @@
 @use "./variable" as *;
 @import "../../index.css";
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
-google font，就算瀏覽者電腦中沒有安裝也能套到
+//google font，就算瀏覽者電腦中沒有安裝也能套到
 
 /* reset CSS */
 * {
@@ -228,9 +228,11 @@ body {
             }
         }
 
-        ul { display: flex;
+        ul {
+            display: flex;
             flex-direction: column;
             gap: 24px;
+
             @media ($media-lg) {
                 display: flex;
                 flex-direction: column;
@@ -408,69 +410,101 @@ body {
     // border: 5px #FFF solid;
     position: relative;
 
-    // .bgdark1 {
-    //     background-image: url(../../../public/images/coverbg1.svg);
+    .bgdark1 {
+        position: absolute;
+        background: linear-gradient(180deg, rgba(96, 77, 172, 1) 0%, rgba(130, 104, 210, 1) 100%);
+        clip-path: ellipse(140% 100% at 50% 0%);
+        /* 正圓弧裁切 */
+        padding: 120px 20px 160px;
+        display: flex;
+        width: 100%;
+        height: 255vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 0;
+        overflow: hidden;
 
-    //     background-repeat: no-repeat;
-    //     width: 100%;
-    //     height: 300vh;
-    //     position: absolute;
-    //     top: 0%;
-    //     left: 0%;
-    //     z-index: -1;
-    //     background-size: cover;
-    //     background-position: center;
 
-    //     @media ($media-lg) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
 
-    //     @media ($media-md) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
+        //     background-image: url(../../../public/images/coverbg1.svg);
+        // border: #5c90d4 10px solid;
+        // width: 100%;
+        // height: 250vh;
+        // // border-radius-bottom: 999px;
+        // border-bottom-left-radius: 999px;
+        // border-bottom-right-radius: 999px;
 
-    //     @media ($media-sm) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
 
-    // }
+        // position: absolute;
+        // top: 0%;
+        // left: 0%;
+        // z-index: 3;
 
-    // .bgdark2 {
-    //     background-image: url(../../../public/images/coverbg2.svg);
-    //     background-repeat: no-repeat;
-    //     width: 100%;
-    //     height: 36.5%;
-    //     position: absolute;
-    //     top: 63.6%;
-    //     left: 0;
-    //     z-index: -1;
+        //     @media ($media-lg) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
 
-    //     background-position: center;
-    //     background-size: cover;
+        //     @media ($media-md) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
 
-    //     @media ($media-lg) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
+        //     @media ($media-sm) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
 
-    //     @media ($media-md) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
+    }
 
-    //     @media ($media-sm) {
-    //         // width: 299px;
-    //         // height: 587px;
-    //     }
-    // }
+    .bgdark2 {
+        margin-top: 150px;
+        clip-path: ellipse(100% 100% at 50% 100%);
+        padding: 160px 20px 40px;
+        // position: relative;
+        width: 100%;
+        overflow: hidden;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 160px;
+
+        width: 100%;
+        height: 128vh;
+        //     background-image: url(../../../public/images/coverbg2.svg);
+        //     background-repeat: no-repeat;
+        //     width: 100%;
+        //     height: 36.5%;
+        position: absolute;
+        top: 477.6vh;
+        left: 0;
+        // z-index: 1;
+
+        //     background-position: center;
+        //     background-size: cover;
+
+        //     @media ($media-lg) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
+
+        //     @media ($media-md) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
+
+        //     @media ($media-sm) {
+        //         // width: 299px;
+        //         // height: 587px;
+        //     }
+    }
 }
 
 /*封面1*/
 .ch-cover {
-    border: #e22121 2px solid;
+    border: #2fcf3d 2px solid;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -664,7 +698,7 @@ body {
 
 /*封面2*/
 .section-starttest {
-    border: #e22121 2px solid;
+    border: #e2c521 2px solid;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -938,6 +972,7 @@ body {
 /*憑直覺抽一張吧*/
 ////ipad pro 套不到
 #section-tarotcard {
+
     border: #e22121 2px solid;
 
     width: 100%;
@@ -1020,7 +1055,7 @@ body {
             // width: 1279;
             // height: 427px;
             // border: 1px solid white; 
-
+            z-index: 1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -1278,12 +1313,10 @@ body {
         // align-items:center ;
         position: relative;
         margin: auto;
-        ////////////////////////////////////////////////////
+
         width: 40%;
         height: 691px;
 
-        ////////////////////////////////////////////////////
-        // border: 1px #FFF solid;
         @media ($media-xlg-up) {
             width: 100%;
             height: 58.5%;
@@ -1768,6 +1801,7 @@ body {
 
 /*礦迷回饋*/
 #section-feedback {
+
     width: 100%;
     height: 68.75vh;
     border: 2px white solid;
@@ -1777,6 +1811,7 @@ body {
     align-items: center;
 
     .feedback-displaytitle {
+         z-index: 99;
         width: 438px;
         height: 78px;
         margin: 0 auto 90px;
@@ -1971,113 +2006,3 @@ body {
         }
     }
 }
-
-/* footer */
-// footer {
-//     // position:relative;
-//     // background:#5348AA;
-//     color: #fff;
-//     // height: 277px;
-// }
-
-// /* 弧形區 */
-// .footer-curve {
-//     position: absolute;
-//     /* 改絕對定位貼在 footer 頂端 */
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 146px;
-//     overflow: hidden;
-//     pointer-events: none;
-//     /* 避免覆蓋到往上點擊的元素 */
-//     transform: translateY(-99%);
-//     /* 往上推一整個高度，蓋住 main 底部 */
-// }
-
-// .footer-curve svg {
-//     width: 100%;
-//     height: 100%;
-//     display: block;
-//     color: #5348AA;
-//     /* 確保路徑顏色跟 footer 相同 */
-// }
-
-
-// .footer_info {
-//     display: flex;
-//     justify-content: center;
-//     gap: 120px;
-//     padding-bottom: 38px;
-// }
-
-// .footer_title {
-//     font-size: 14px;
-//     font-family: "Noto Sans TC";
-//     font-weight: 700;
-//     line-height: 150%;
-//     letter-spacing: 1.40px;
-//     margin-bottom: 14px;
-// }
-
-// footer a,
-// footer p {
-//     color: white;
-//     font-size: 14px;
-//     font-family: "Noto Sans TC";
-//     line-height: 150%;
-//     letter-spacing: 1.40px;
-// }
-
-// .social_icon {
-//     display: flex;
-//     gap: 10px;
-// }
-
-// .social_icon a {
-//     width: 40px;
-//     height: 40px;
-//     transition: 0.35s;
-//     background-size: contain;
-// }
-
-// .icon-line {
-//     background-image: url(../images/sns-line-state-default.svg);
-// }
-
-// .icon-ig {
-//     background-image: url(../images/sns-line-state-default.svg);
-// }
-
-// .icon-fb {
-//     background-image: url(../images/sns-line-state-default.svg);
-// }
-
-// .icon-line:hover {
-//     background-image: url(../images/sns-line-state-hover.svg);
-// }
-
-// .icon-ig:hover {
-//     background-image: url(../images/sns-line-state-hover.svg);
-// }
-
-// .icon-fb:hover {
-//     background-image: url(../images/sns-line-state-hover.svg);
-// }
-
-// .footer_bottom {
-//     height: 70px;
-//     text-align: center;
-
-//     font-size: 14px;
-//     font-family: "Noto Sans TC";
-//     line-height: 21px;
-//     letter-spacing: 1.40px;
-// }
-
-// .footer_bottom hr {
-//     width: 100%;
-//     color: #D9D9D9;
-//     border: 1px solid #FFFFFF;
-//     margin-bottom: 25px;
-// }
