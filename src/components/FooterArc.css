@@ -16,7 +16,7 @@
   z-index: 2;
 }
 
-.footer-arc-content {
+/* .footer-arc-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -116,18 +116,18 @@
   color: white;
   margin-top: 40px;
   padding-bottom: 40px;
-}
+} */
 
 /* RWD */
 @media screen and (max-width: 1024px) {
-  .footer-arc-content {
+  /* .footer-arc-content {
     gap: 60px;
     margin: auto 100px;
   }
 
   .footer-arc-content>div {
     width: 200px;
-  }
+  } */
 
   .footer-arc {
     min-height: 730px;

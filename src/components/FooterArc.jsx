@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function FooterArc() {
   return (
     <footer className="footer-arc">
-      <div className="footer-arc-content">
+      {/* <div className="footer-arc-content">
         <div className="company">
           <h3>COMPANY</h3>
           <ul>
@@ -46,7 +46,7 @@ export default function FooterArc() {
 
       <div className="copyright">
         <p>2025 © Crystalholic All Rights Reserved.</p>
-      </div>
+      </div> */}
     </footer>
   )
 }
