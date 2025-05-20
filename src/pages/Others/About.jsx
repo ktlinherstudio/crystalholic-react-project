@@ -23,7 +23,8 @@ export default function About() {
               <h1 className="about-hero-title">Crystalholic</h1>
               <p className="about-hero-subtitle">在忙碌世界中，找回屬於自己的寧靜</p>
               <p className="about-hero-description">
-                當日子忙碌又匆促，手腕上一串透光閃爍的水晶，讓我在慣常的焦慮中感受到難得的安定。
+                當日子忙碌又匆促，手腕上一串透光閃爍的水晶，讓我在慣常的焦慮中感受到難得的安定。<br />
+                <br />
                 經過多年探索，我不再滿足於市面上制式的設計與品質，<br />
                 開始親手挑選、設計貼近內心的水晶飾品。<br />
                 <br />
