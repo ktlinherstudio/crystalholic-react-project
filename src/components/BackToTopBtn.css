@@ -1,8 +1,9 @@
 .back-to-top-block {
   display: flex;
+  position: relative;
   justify-content: flex-end; /* 向右對齊 */
   margin: -100px 60px 40px auto;
-  z-index: 5;
+  z-index: 9999
 }
 
 .back-to-top-btn {
