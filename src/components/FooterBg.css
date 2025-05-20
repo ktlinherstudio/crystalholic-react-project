@@ -122,9 +122,15 @@
     content: url('/images/S-Footer/icon_fb_h.svg');
 }
 
-hr {
+.footer-bg hr {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     border: none;
     border-top: 1px solid white;
+    margin: 0;
+    padding: 0;
 }
 
 /* 版權欄 */
@@ -154,8 +160,10 @@ hr {
         flex-direction: column;
         width: 200px;
     }
-    .footer-bg{
-        min-height: 630px;;
+
+    .footer-bg {
+        min-height: 630px;
+        ;
     }
 }
 

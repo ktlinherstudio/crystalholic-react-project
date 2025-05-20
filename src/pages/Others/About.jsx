@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
-import '../css/fonts.css';
+import '../../css/fonts.css';
 import './About.css'
-import NavBarLight from '../components/NavBarLight'
-import FooterBg from '../components/FooterBg'
-import BgDarkBlock from '../components/BgDarkBlock'
-import BackToTopBtn from '../components/BackToTopBtn'
-// import FooterArc from '../components/FooterArc'
+import NavBarLight from '../../components/NavBarLight'
+import FooterBg from '../../components/FooterBg'
+import BgDarkBlock from '../../components/BgDarkBlock'
+import BackToTopBtn from '../../components/BackToTopBtn'
+// import FooterArc from '../../components/FooterArc'
 
 export default function About() {
 

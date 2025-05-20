@@ -1,8 +1,8 @@
 import './KnowledgeCleanse.css';
-import NavBarDark from '../components/NavBarDark'
-import FooterPlain from '../components/FooterPlain'
-import BgDark from '../components/BgDark'
-import '../css/fonts.css';
+import NavBarDark from '../../components/NavBarDark'
+import FooterPlain from '../../components/FooterPlain'
+import BgDark from '../../components/BgDark'
+import '../../css/fonts.css';
 
 export default function KnowledgeCleanse() {
   return (
