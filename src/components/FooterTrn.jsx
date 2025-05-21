@@ -28,24 +28,26 @@ export default function FooterTrn() {
           {/* CONTACT */}
           <div className="CONTACT">
             <h4 className="footertrn_title">CONTACT US</h4>
-            <p>聯絡電話 / 0800 000 000</p>
-            <p>MON – FRI / 9:00 am – 18:00 pm</p>
+            <ul>
+              <li>聯絡電話 / 0800 000 000</li>
+              <li>MON - FRI / 9:00 am - 18:00 pm</li>
+            </ul>
           </div>
   
           {/* FOLLOW */}
           <div className="FOLLOW">
             <h4 className="footertrn_title">FOLLOW US</h4>
-            <ul className="social_icon">
-              <li><a className="icon-line" href="#" aria-label="LINE"></a></li>
-              <li><a className="icon-ig" href="#" aria-label="Instagram"></a></li>
-              <li><a className="icon-fb" href="#" aria-label="Facebook"></a></li>
+            <ul className="footertrn_social_icon">
+              <li><a className="footertrn-icon-line" href="https://www.line.me/tw/" aria-label="LINE"></a></li>
+              <li><a className="footertrn-icon-ig" href="https://www.instagram.com/" aria-label="Instagram"></a></li>
+              <li><a className="footertrn-icon-fb" href="https://www.facebook.com/?locale=zh_TW" aria-label="Facebook"></a></li>
             </ul>
           </div>
         </section>
   
         <section className="footertrn_bottom">
           <hr />
-          <span>2025©xxxxxxxxx ALL RIGHTS RESERVED.</span>
+          <small>2025 &copy; Crystalholic ALL RIGHTS RESERVED.</small>
         </section>
       </footer>
     );

@@ -1,6 +1,7 @@
 import './ShoppingCart.css';
 import NavBarDark from '../../components/NavBarDark';
-import FooterArc from '../../components/FooterArc';
+import FooterTrn from '../../components/FooterTrn';
+
 
 
 export default function ShoppingCart() {
@@ -286,7 +287,7 @@ export default function ShoppingCart() {
                     </section>
                 </section>
             </main>
-            <FooterArc/>
+            <FooterTrn/>
         </>
     );
 }

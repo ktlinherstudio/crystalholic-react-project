@@ -13,7 +13,6 @@ import Customize1 from './pages/Customize/Customize1'
 import Customize2 from './pages/Customize/Customize2'
 import Customize3 from './pages/Customize/Customize3'
 import ShoppingCart from './pages/Shopping/ShoppingCart'
-import FooterCurve from './components/FooterCurve'
 
 
 
@@ -36,7 +35,6 @@ export default function App() {
             <Route path="/customize2" element={<Customize2 />} />
             <Route path="/customize3" element={<Customize3 />} />
             <Route path="/ShoppingCart" element={<ShoppingCart />} />
-            <Route prth="/FooterCurve" element={<FooterCurve/>} />
           </Routes>
         </main>
       </BrowserRouter>
