@@ -7,14 +7,16 @@ import BgDarkBlock from '../components/BgDarkBlock'
 export default function Cover() {
     return (
         <>
+        {/* <div id='color'>做RWD用 之後會拿掉 */}
+            {/* <div id='color'> */}
             {/* 背景 */}
-            <div id='cover'>
-                <div className="bgdark1"><BgDarkBlock/></div>
-                <div className="bgdark2"><BgDarkBlock/></div>
+            <div id='coverbg'>
+                <div className="bgdark1"><BgDarkBlock /></div>
+                <div className="bgdark2"><BgDarkBlock /></div>
             </div>
 
             {/* menu bar*/}
-            <NavBarLight />
+            {/* <NavBarLight /> */}
             {/* 封面1  */}
             <section className="ch-cover">
                 <div className="cover-box">
@@ -31,18 +33,17 @@ export default function Cover() {
 
             {/* 封面2 */}
             <section className="section-starttest">
-                <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a>
-                </div>
                 <div className="startbox1">
                     <img src="./images/HomePage/L.svg" className="lefth" alt="" />
+                    <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a> </div>
                     <img src="./images/HomePage/R.svg" className="righth" alt="" />
+                    <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
+                    <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
                 </div>
                 <div className="startbox2">
                     <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
                     <div><img src="./images/HomePage/scroll.svg" alt="" /></div>
                 </div>
-                <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
-                <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
             </section>
 
             {/* 憑直覺抽一張吧 */}
@@ -244,7 +245,7 @@ export default function Cover() {
 
             {/* <footer id="footer"></footer> */}
             <FooterPlain />
-
+        {/* </div > */}
         </>
     )
 }
@@ -254,7 +255,6 @@ export default function Cover() {
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script >
 {/* 自訂的js (一定放在最下面) */ }
 < script src="./js/script.js" ></script >
-
 
 
 
