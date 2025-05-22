@@ -1,12 +1,14 @@
 import '../App.scss/css/Style.min.css'
 // import NavBarLight from '../components/NavBarLight'
 // import FooterBg from '../components/FooterBg'
+import BgDarkBlock from '../components/BgDarkBlock'
+
 
 export default function Menu() {
     return (
         <div id="menu">
             {/* <NavBarLight/> */}
-
+            <BgDarkBlock />
             <div className='menu'>
                 <nav className="navigation">
                     <span className="closebtn"><img src="../images/S-NavBar/navicon_closebgrbtn.svg" alt=""/></span>
