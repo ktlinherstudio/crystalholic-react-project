@@ -1,5 +1,8 @@
 import './Product.css'; 
 import NavBarDark from '../../components/NavBarDark';
+import FooterTrn from '../../components/FooterTrn';
+import '../../components/BgLight.css';
+import BgDark from '../../components/BgDark';
 
 export default function Product(){
     return(
@@ -80,16 +83,7 @@ export default function Product(){
 
                 {/* Collection 區 */}
                 <section className="p_collection">
-                    {/* 弧形裝飾 */}
-                    <div className="p_collection_curve">
-                    <svg viewBox="0 0 1440 146" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                        <path
-                        d="M719.684.6c264.492 0 511.196 53.197 719.384 145.108H.298C208.486 53.797 455.192.6 719.684.6Z"
-                        fill="currentColor"
-                        />
-                    </svg>
-                    </div>
-
+                    <BgDark/>
                     {/* 區塊標題 */}
                     <h1 className="p_collection_title">✦ Collection ✦</h1>
 
@@ -148,6 +142,11 @@ export default function Product(){
                     </div>
                 </section>
             </main>
+
+            <footer className="p_footer">
+                <BgDark/>
+                <FooterTrn/>
+            </footer>
         </>
     )
 } 

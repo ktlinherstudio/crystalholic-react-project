@@ -7,8 +7,12 @@
     /* background-color: #585858; */
     display: flex;
     justify-content: center;
-    padding-top: 150px;
-    height: 964.27px;
+    padding-top: 220px; /* 150px+70px(navbar高度) */
+    /* height: 964.27px; */
+    height: 100%;
+    width: 100%;
+
+    margin-bottom: 150px;
 }
 
 .p_product_box{
@@ -17,8 +21,11 @@
     justify-content: center;
     align-items: center;
     gap: 60px;
-    width: 1036.57px;
-    height: 514.7px;
+    /* width: 1036.57px;
+    height: 514.7px; */
+    width: 100%;
+    height: 100%;
+    
 }
 
 /* 商品照 (左側) */
@@ -27,8 +34,10 @@
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     overflow: hidden;
     position: relative;
-    width: 476.574px;
-    height: 514.7px;
+    /* width: 476.574px;
+    height: 514.7px; */
+    height: 65vh;
+    width: 65vw;
 }
 
 .p_product_img{
@@ -181,35 +190,23 @@ hr{
 /* ────────── Collection 區 ───────────────────── */
 
 .p_collection{
-    position: relative;
-    background-color: #5348AA;
     color: #FFF;
     height: 600px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 43px;
-}
 
-/* 弧形 SVG */
-.p_collection_curve{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 146px;        /* 與 viewBox 高度一致 */
-    overflow: hidden;
-    pointer-events: none;
-    transform: translateY(-99%);
-}
 
-.p_collection_curve svg{
     width: 100%;
-    height: 100%;
-    display: block;
-    color: #5348AA;
+    position: relative;
+
+    clip-path: ellipse(77% 100% at 50% 100%);
+    /* box-sizing: border-box; */
+
+    padding-top: 145px;
+    margin-bottom: 50px;
 }
 
 /* 標題 */
@@ -289,3 +286,18 @@ hr{
     width: 18px;
     height: 18px;
 }
+
+
+/* .p_footer { */
+    /* width: 100%; */
+    /* position: relative; */
+
+    /* clip-path: ellipse(70% 100% at 50% 100%); */
+    /* box-sizing: border-box; */
+
+    /* padding-top: 145px; */
+    /* 多預留上邊空間讓弧形浮出 */
+    /* min-height: 540px; */
+    /* 原本太矮會截掉圓弧 */
+    /* z-index: 2; */
+/* } */
