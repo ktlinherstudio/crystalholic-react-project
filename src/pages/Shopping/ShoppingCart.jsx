@@ -1,7 +1,8 @@
 import './ShoppingCart.css';
 import NavBarDark from '../../components/NavBarDark';
 import FooterTrn from '../../components/FooterTrn';
-
+import '../../components/BgLight.css';
+import BgDark from '../../components/BgDark';
 
 
 export default function ShoppingCart() {
@@ -10,15 +11,14 @@ export default function ShoppingCart() {
             <NavBarDark />
             <main className="cart_page">
                 {/* 標題 */}
-                <div id="title">
+                <div className="cart_title">
                     <img
-                        className="decorate-left"
+                        className="cart_decorate-left"
                         src="/images/ShoppingCart/shoppingcart_deco-left.svg"
                         alt="左裝飾"
                     />
-                    <h3 className="decorate-title">購物車</h3>
-                    <img
-                        className="decorate-right"
+                    <h3 className="cart_decorate-title">購物車</h3>
+                    <img className="cart_decorate-right"
                         src="/images/ShoppingCart/shoppingcart_deco-right.svg"
                         alt="右裝飾"
                     />
@@ -27,12 +27,12 @@ export default function ShoppingCart() {
                 {/* 重點區 */}
                 <section className="cart_point">
                     {/* 左邊區域 */}
-                    <section className="left">
+                    <section className="cart_left">
                         {/* 購物車明細區 */}
-                        <section className="purchase_items">
+                        <section className="cart_purchase_items">
                             {/* 列表 */}
                             <div className="cart_card">
-                                <div className="table_head">
+                                <div className="cart_table_head">
                                     <span>商品</span>
                                     <span>尺寸</span>
                                     <span>價格</span>
@@ -42,14 +42,14 @@ export default function ShoppingCart() {
                             </div>
 
                             {/* 單一商品列 (1) */}
-                            <div className="table_row">
+                            <div className="cart_table_row">
                                 {/* 商品資訊（縮圖＋名稱） */}
-                                <div className="product_info">
+                                <div className="cart_product_info">
                                     <img src="/images/S-CrystalBracelet/product_blue_river.jpg" alt="沁藍之澗商品照" />
                                     <p>沁藍之澗</p>
                                 </div>
                                 {/* 尺寸 */}
-                                <div className="product_size">
+                                <div className="cart_product_size">
                                     <p>
                                         串珠 6mm
                                         <br />
@@ -57,11 +57,11 @@ export default function ShoppingCart() {
                                     </p>
                                 </div>
                                 {/* 價格 */}
-                                <div className="product_price">
+                                <div className="cart_product_price">
                                     <p>NT$ 2,590</p>
                                 </div>
                                 {/* 數量 */}
-                                <select className="qty_select">
+                                <select className="cart_qty_select">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -69,11 +69,11 @@ export default function ShoppingCart() {
                                     <option>5</option>
                                 </select>
                                 {/* 小計 */}
-                                <div className="subtotal">
+                                <div className="cart_subtotal">
                                     <p>NT$ 2,590</p>
                                 </div>
                                 {/* 刪除按鈕 */}
-                                <div className="cross_btn">
+                                <div className="cart_cross_btn">
                                     <button>
                                         <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
                                     </button>
@@ -81,14 +81,14 @@ export default function ShoppingCart() {
                             </div>
 
                             {/* 單一商品列 (2) */}
-                            <div className="table_row">
+                            <div className="cart_table_row">
                                 {/* 商品資訊（縮圖＋名稱） */}
-                                <div className="product_info">
+                                <div className="cart_product_info">
                                     <img src="/images/S-CrystalBracelet/product_blue_goldfish.jpg" alt="金魚泡泡商品照" />
                                     <p>金魚泡泡</p>
                                 </div>
                                 {/* 尺寸 */}
-                                <div className="product_size">
+                                <div className="cart_product_size">
                                     <p>
                                         串珠 6mm
                                         <br />
@@ -96,11 +96,11 @@ export default function ShoppingCart() {
                                     </p>
                                 </div>
                                 {/* 價格 */}
-                                <div className="product_price">
+                                <div className="cart_product_price">
                                     <p>NT$ 2,590</p>
                                 </div>
                                 {/* 數量 */}
-                                <select className="qty_select">
+                                <select className="cart_qty_select">
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -108,11 +108,11 @@ export default function ShoppingCart() {
                                     <option>5</option>
                                 </select>
                                 {/* 小計 */}
-                                <div className="subtotal">
+                                <div className="cart_subtotal">
                                     <p>NT$ 2,590</p>
                                 </div>
                                 {/* 刪除按鈕 */}
-                                <div className="cross_btn">
+                                <div className="cart_cross_btn">
                                     <button>
                                         <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
                                     </button>
@@ -120,9 +120,9 @@ export default function ShoppingCart() {
                             </div>
 
                             {/* 繼續購物 */}
-                            <div className="shopping_tip">
-                                <button className="continue_shopping">繼續購物</button>
-                                <button className="num_items">
+                            <div className="cart_shopping_tip">
+                                <button className="cart_continue_shopping">繼續購物</button>
+                                <button className="cart_num_items">
                                     <span>(共2件)</span>
                                     <img
                                         src="/images/ShoppingCart/shoppingcart-btn_accordion-grey.svg"
@@ -133,12 +133,12 @@ export default function ShoppingCart() {
                         </section>
 
                         {/* 下方資訊區 */}
-                        <section className="info_area">
+                        <section className="cart_info_area">
                             {/* 送貨及付款方式 */}
-                            <form className="info_card">
+                            <form className="cart_info_card">
                                 {/* 標題列 */}
-                                <div className="table_head">
-                                    <div className="diamond">
+                                <div className="cart_table_head">
+                                    <div className="cart_diamond">
                                         <img
                                             src="/images/ShoppingCart/shoppingcart_ diamond.svg"
                                             alt="送貨及付款方式"
@@ -148,7 +148,7 @@ export default function ShoppingCart() {
                                 </div>
 
                                 {/* 選項 */}
-                                <div className="options_area">
+                                <div className="cart_options_area">
                                     <label>
                                         *送貨地點
                                         <select required>
@@ -178,10 +178,10 @@ export default function ShoppingCart() {
                             </form>
 
                             {/* 收件人資料 */}
-                            <form className="info_card">
+                            <form className="cart_info_card">
                                 {/* 標題列 */}
-                                <div className="table_head">
-                                    <div className="diamond">
+                                <div className="cart_table_head">
+                                    <div className="cart_diamond">
                                         <img
                                             src="/images/ShoppingCart/shoppingcart_ diamond.svg"
                                             alt="收件人資料"
@@ -195,7 +195,7 @@ export default function ShoppingCart() {
                                 </div>
 
                                 {/* 選項 */}
-                                <div className="options_area">
+                                <div className="cart_options_area">
                                     <label htmlFor="username">
                                         *姓名
                                         <input
@@ -234,9 +234,9 @@ export default function ShoppingCart() {
                     </section>
 
                     {/* 右邊區域：訂單資訊 */}
-                    <section className="right">
-                        <div className="table_head">
-                            <div className="diamond">
+                    <section className="cart_right">
+                        <div className="cart_table_head">
+                            <div className="cart_diamond">
                                 <img
                                     src="/images/ShoppingCart/shoppingcart_ diamond.svg"
                                     alt="訂單資訊"
@@ -254,13 +254,13 @@ export default function ShoppingCart() {
                         </div>
 
                         {/* 明細區 */}
-                        <div className="detail_area">
+                        <div className="cart_detail_area">
                             <ul>
-                                <li className="subtotal">
+                                <li className="cart_subtotal">
                                     <span>小計：</span>
                                     <span>NT$5,180</span>
                                 </li>
-                                <li className="fee">
+                                <li className="cart_fee">
                                     <span>運費：</span>
                                     <span>NT$70</span>
                                 </li>
@@ -277,17 +277,21 @@ export default function ShoppingCart() {
                                     </label>
                                 </li>
                                 <hr />
-                                <li className="total">
+                                <li className="cart_total">
                                     <span>合計：</span>
-                                    <span>NT$ 5,250</span>
+                                    <span className="cart_totalnum">NT$ 5,250</span>
                                 </li>
                             </ul>
-                            <button className="btn_checkout">確認結帳</button>
+                            <button className="cart_btn_checkout">確認結帳</button>
                         </div>
                     </section>
                 </section>
             </main>
-            <FooterTrn/>
+
+            <footer className="cart_footer">
+                <BgDark/>
+                <FooterTrn/>
+            </footer>
         </>
     );
 }

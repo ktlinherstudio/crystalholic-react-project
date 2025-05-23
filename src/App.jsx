@@ -13,7 +13,8 @@ import Customize1 from './pages/Customize/Customize1'
 import Customize2 from './pages/Customize/Customize2'
 import Customize3 from './pages/Customize/Customize3'
 import ShoppingCart from './pages/Shopping/ShoppingCart'
-
+import ProductCollection from './pages/Product/ProductCollection'
+import Product from './pages/Product/Product'
 
 
 
@@ -31,10 +32,12 @@ export default function App() {
             <Route path="/cover" element={<Cover />} />
             <Route path="/NumTest1" element={<NumTest1 />} />
             <Route path="/NumTest2" element={<NumTest2 />} />
-            <Route path="/customize1" element={<Customize1 />} />
-            <Route path="/customize2" element={<Customize2 />} />
-            <Route path="/customize3" element={<Customize3 />} />
+            <Route path="/Customize1" element={<Customize1 />} />
+            <Route path="/Customize2" element={<Customize2 />} />
+            <Route path="/Customize3" element={<Customize3 />} />
             <Route path="/ShoppingCart" element={<ShoppingCart />} />
+            <Route path="/ProductCollection" element={<ProductCollection />} />
+            <Route path="/Product" element={<Product />} />
           </Routes>
         </main>
       </BrowserRouter>
