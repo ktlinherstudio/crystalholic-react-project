@@ -734,7 +734,7 @@ body {
             }
 
             @media ($media-md) {
-                width: 150px;
+                width: 180px;
             }
 
             // @media ($media-sm) {
@@ -753,7 +753,7 @@ body {
             }
 
             @media ($media-md) {
-                margin-top: 60%;
+                margin-top: 50%;
             }
 
             a {
@@ -767,7 +767,7 @@ body {
                 }
 
                 @media ($media-md) {
-                    width: 90.49px;
+                    width: 104.49px;
                     height: 346.82px;
                 }
 
@@ -792,7 +792,7 @@ body {
             }
 
             @media ($media-md) {
-                width: 225.82px;
+                width: 260.82px;
                 top: 40%;
             }
 
@@ -812,8 +812,8 @@ body {
             left: -21.7%;
             top: 8.7%;
 
-            @media ($media-xlg) {
-                //ipad air/pro 橫向
+            @media ($media-xlg) {  
+                //ipad air/pro 橫向(只有數字背景會跑版)
                 width: 1031.82px;
                 height: 707.42px;
                 left: -16.7%;
@@ -828,7 +828,7 @@ body {
             }
 
             @media ($media-md) {
-                width: 551.82px;
+                width: 646.82px;
                 height: 707.42px;
                 left: -20.7%;
                 top: 30.7%;
@@ -1896,6 +1896,7 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
 
 
             .member-img {
@@ -1903,6 +1904,8 @@ body {
                 height: 40px;
                 border-radius: 50%;
                 margin-bottom: -5px;
+                position: sticky;
+                z-index: 1;
 
             }
 

@@ -635,7 +635,7 @@ body {
 @media (max-width:820px) {
   .section-starttest .startbox1 .lefth,
   .section-starttest .startbox1 .righth {
-    width: 150px;
+    width: 180px;
   }
 }
 .section-starttest .startbox1 .startbtn {
@@ -648,7 +648,7 @@ body {
 }
 @media (max-width:820px) {
   .section-starttest .startbox1 .startbtn {
-    margin-top: 60%;
+    margin-top: 50%;
   }
 }
 .section-starttest .startbox1 .startbtn a {
@@ -663,7 +663,7 @@ body {
 }
 @media (max-width:820px) {
   .section-starttest .startbox1 .startbtn a {
-    width: 90.49px;
+    width: 104.49px;
     height: 346.82px;
   }
 }
@@ -682,7 +682,7 @@ body {
 }
 @media (max-width:820px) {
   .section-starttest .startbox1 .bling {
-    width: 225.82px;
+    width: 260.82px;
     top: 40%;
   }
 }
@@ -711,7 +711,7 @@ body {
 }
 @media (max-width:820px) {
   .section-starttest .startbox1 .numbg {
-    width: 551.82px;
+    width: 646.82px;
     height: 707.42px;
     left: -20.7%;
     top: 30.7%;
@@ -1580,12 +1580,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 #section-feedback .feedback .review-pic .member-img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-bottom: -5px;
+  position: sticky;
+  z-index: 1;
 }
 #section-feedback .feedback .review-pic .review-img {
   width: 113px;

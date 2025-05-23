@@ -2,12 +2,30 @@ import '../App.scss/css/Style.min.css'
 import NavBarLight from '../components/NavBarLight'
 import FooterPlain from '../components/FooterPlain'
 import BgDarkBlock from '../components/BgDarkBlock'
+import { useEffect, useRef } from 'react';
 
-
+// const sections = ["第一頁", "第二頁", "第三頁", "第四頁", "第五頁", "第六頁"];
 export default function Cover() {
+    // const sectionRefs = useRef([]);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         sectionRefs.current.forEach((section) => {
+    //             if (!section) return;
+    //             const rect = section.getBoundingClientRect();
+    //             const inView = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+    //             section.classList.toggle("visible", inView);
+    //         });
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+    //     handleScroll(); // 初始化檢查
+
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
+
     return (
         <>
-        {/* <div id='color'>做RWD用 之後會拿掉 */}
+            {/* <div id='color'>做RWD用 之後會拿掉 */}
             {/* <div id='color'> */}
             {/* 背景 */}
             <div id='coverbg'>
@@ -16,7 +34,7 @@ export default function Cover() {
             </div>
 
             {/* menu bar*/}
-            {/* <NavBarLight /> */}
+            <NavBarLight />
             {/* 封面1  */}
             <section className="ch-cover">
                 <div className="cover-box">
@@ -245,7 +263,7 @@ export default function Cover() {
 
             {/* <footer id="footer"></footer> */}
             <FooterPlain />
-        {/* </div > */}
+            {/* </div > */}
         </>
     )
 }
