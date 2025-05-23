@@ -1,5 +1,7 @@
+@import '../../components/BgLight.css';
+
 /* 主要內容區 */
-.cart_page{
+.cart_page {
     width: 100%;
     /* height: calc(100vh - 70px); */
     /* height: 1255px; */
@@ -7,115 +9,156 @@
     flex-direction: column;
     align-items: center;
 
-    padding-top: 150px;  /* 80px+70px(navbar高度) */
+    padding-top: 150px;/* 80px+70px(navbar高度) */
     margin-bottom: 140px;
     gap: 50px;
 }
-/* 標題 */
-#title{
+
+/* ----------- 標題 ------------  */
+.cart_title {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 32px;
-    width: 100%;
 }
-.decorate-title{
-    text-align: center;
+
+.cart_decorate-title {
+    color: #8750BF;
+
     font-family: "LXGW WenKai Mono TC";
     font-size: 28px;
-    line-height: 150%; /* 42px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
     letter-spacing: 2.8px;
-    color: #8750BF;
 }
-.decorate-left,.decorate-right{
+
+.cart_decorate-left,
+.cart_decorate-right {
     height: 11.31px;
     width: 164.94px;
 }
 
-/* ---------- 重點區 ---------- */
-.cart_point{
+/* ----------- 重點區 ------------ */
+.cart_point {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 30px;
+
+    width: 100%;
+    height: 100%;
+    padding: 0 4vw;
+    /* max-width: 1310px; */
 }
+
 /* 左邊區域 */
-.left{
+.cart_left {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    /* gap: 30px; */
 
-    width: 950px;
-    height: 800px;
-
+    width: 100%;
+    /* max-width: 950px; */
+    height: 100%;
+    /* width: 950px; */
+    /* height: 800px; */
 }
+
+/* ---------- 共用區 ----------  */
+/* 列表頭共用文字 */
+.cart_table_head,
+.cart_table_head span {
+    /* 中文/思源黑體/內文1 */
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 1.6px;
+    
+    color: #FFFFFF;
+}
+
+/* 表格共用文字 */
+.cart_table_row,.cart_qty_select,
+.cart_continue_shopping,.cart_num_items,
+.cart_options_area label,.cart_options_area select,.cart_options_area input,
+.cart_detail_area li,.cart_detail_area input{
+    /* 中文/思源黑體/內文2 */
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+}
+
 /* ---------- 購物車明細 ---------- */
-.purchase_items {
-    box-sizing: border-box;
-    width: 950px;
-    height: 447px;
+.cart_purchase_items {
+    /* box-sizing: border-box; */
+    /* width: 950px;
+    height: 447px; */
+    width: 100%;
+    /* max-width: 950px; */
+    /* height: 447px; */
+    height: 100%;
+
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(233, 166, 160, 0.25);
-  
+
     display: flex;
     flex-direction: column;
-    overflow: hidden;  /* 讓圓角不要被子元素溢出破壞 */
+    overflow: hidden; /* 讓圓角不要被子元素溢出破壞 */
 
     gap: 10px;
+    padding-bottom: 25px;
 }
-  
+
 /* 列表 */
-.cart_card .table_head {
+.cart_card .cart_table_head {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 40px;
     align-items: center;
     height: 50px;
     padding: 0 35px;
-  
-    background: #A67CEB;
 
-    color: #FFFFFF;
-    font-family: "Noto Sans TC";
-    font-size: 16px;
-    line-height: 160%; 
-    letter-spacing: 1.6px;
+    background: #A67CEB;
 }
-  
+
 /* 單一商品列(1)(2) */
-.table_row {
+.cart_table_row {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 40px;
     align-items: center;
     height: 100px;
     padding: 0 35px;
-  
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+
     color: #585858;
 }
 
 /* 商品資訊（縮圖＋名稱） */
-.product_info {
+.cart_product_info {
     display: flex;
     align-items: center;
     gap: 20px;
-} 
-.product_info img {
+}
+
+.cart_product_info img {
     width: 100px;
     height: 100px;
     object-fit: cover;
 }
-  
-/* 尺寸、價格、小計欄共用排版 */
-.product_size,.product_price,.subtotal {
-    line-height: inherit; /* 照父元素 */
-}
-  
+
+/* 尺寸、價格、小計欄共用排版 照父元素*/
+/* .cart_product_size,
+.cart_product_price,
+.cart_subtotal {
+    line-height: inherit;
+} */
+
 /* 數量下拉選單 */
-.qty_select {
+.cart_qty_select {
     width: 80px;
     height: 30px;
     padding: 0px 15px;
@@ -126,88 +169,94 @@
     appearance: none; /* 移除原生箭頭 */
     background-image: url(/images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
     background-repeat: no-repeat;
-    background-position: right 15px center; 
-  
+    background-position: right 15px center;
 
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    color: #585858;
-    line-height: 150%;
     cursor: pointer;
 }
-  
+
 /* 刪除按鈕 */
-.cross_btn{
+.cart_cross_btn {
     width: 40px;
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cross_btn button {
+
+.cart_cross_btn button {
     background: none;
     border: none;
     cursor: pointer;
 }
-.cross_btn img {
+
+.cart_cross_btn img {
     width: 100%;
     height: 100%;
 }
-  
+
 /* 繼續購物  */
-.shopping_tip {
+.cart_shopping_tip {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
-  
-    font-family: "Noto Sans TC";
-    font-size: 16px;
-    line-height: 160%;
-    letter-spacing: 1.6px;
+
     color: #585858;
-    text-align:center; 
+    text-align: center;
 }
-.continue_shopping,.num_items {
+
+.cart_continue_shopping,
+.cart_num_items {
     background: none;
     border: none;
     cursor: pointer;
 }
-.continue_shopping {
+
+.cart_continue_shopping {
     text-decoration: underline;
 }
-.num_items{
+
+.cart_num_items {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.num_items img {
+
+.cart_num_items img {
     display: flex;
     width: 20px;
     height: 20px;
 }
-  
-/* 下方資訊區 */
-.info_area{
+
+/* ---------- 下方資訊區 ---------- */
+.cart_info_area {
     display: flex;
     gap: 30px;
+
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
 }
+
 /* ---------- 送貨及付款方式/收件人資料 ---------- */
-.info_card{
-    box-sizing: border-box;
-    width: 460px;
-    height: 323px;
+.cart_info_card {
+    /* box-sizing: border-box; */
+    /* width: 460px;
+    height: 323px; */
+    width: 100%;
+    height: 100%;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(233, 166, 160, 0.25);
-  
+
     display: flex;
     flex-direction: column;
-    overflow: hidden;  /* 讓圓角不要被子元素溢出破壞 */
+    overflow: hidden; /* 讓圓角不要被子元素溢出破壞 */
 }
+
 /* 列表(共用) */
-.table_head {
+.cart_table_head {
     display: flex;
     align-items: center;
     height: 50px;
@@ -215,173 +264,211 @@
     gap: 10px;
 
     background: #A67CEB;
-    color: #FFFFFF;
-
-    font-family: "Noto Sans TC";
-    font-size: 16px;
-    line-height: 160%; 
-    letter-spacing: 1.6px;
 }
+
 /* 鑽石排列(共用) */
-.diamond{
+.cart_diamond {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
 /* 下方區塊 */
-.options_area{
+.cart_options_area {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     gap: 11px;
-    padding: 20px 0 30px 0; 
+    padding: 20px 25px 30px;
 }
+
 /* 選項 */
-.info_card label{
+.cart_info_card label {
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+    width: 100%;
+
+    color: #585858;
 }
 
-.info_card select {
-    width: 410px;
+.cart_info_card select {
+    /* width: 410px; */
     height: 38px;
-    
+
     border: 1px solid #A67CEB;
     border-radius: 99px;
 
-    appearance: none; /* 移除原生箭頭 */
+    appearance: none;
+    /* 移除原生箭頭 */
     background-image: url(/images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
     background-repeat: no-repeat;
-    background-position: right 15px center; 
-  
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+    background-position: right 15px center;
 
     cursor: pointer;
 }
-.info_card input{
-    width: 410px;
+
+.cart_info_card input {
+    /* width: 410px; */
     height: 38px;
-    
+
     border: 1px solid #A67CEB;
     border-radius: 99px;
-  
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
 
-    cursor: pointer;
+    color: rgba(0, 0, 0, 0.20);
+
+    text-align: left;
+    padding-left: 10px;
+
+    /* cursor: pointer; */
 }
-.info_card select{
+
+.cart_info_card select {
     color: #585858;
     text-align: center;
 }
-.info_card input{
-    color: rgba(0, 0, 0, 0.20);
-    text-align: left;
-    padding-left: 10px;
-}
 
 /* 右邊區域 */
-.right{
+.cart_right {
     box-sizing: border-box;
-    width: 330px;
-    height: 800px;
+    width: 100%;
+    max-width: 330px;
+    height: 100%;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(233, 166, 160, 0.25);
-  
+
     display: flex;
     flex-direction: column;
     overflow: hidden;
 }
+
 /* 列表=>已共用 */
 /* 鑽石排列=>已共用 */
 /* 下方：明細區 */
-.detail_area{
+.cart_detail_area {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    padding: 30px;
-    height: 750px;
 
+    padding: 30px;
+    height: 100%;
+    gap: 30px;
 }
+
 /* 明細項目 */
-.detail_area ul {
+.cart_detail_area ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+
     color: #585858;
 
-    height: 690px;
-    width: 270px;
+    /* height: 690px; */
+    height: 100%;
+    width: 100%;
+    /* width: 270px; */
 }
-  
+
 /* 每項 li */
-.detail_area ul li{
+.cart_detail_area ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-  
+
 /* 優惠券 */
-.detail_area ul li label{
+.cart_detail_area ul li label {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.detail_area ul li input {
+
+.cart_detail_area ul li input {
     width: 159px;
     height: 30px;
     border: 1px solid rgba(134, 134, 134, 0.50);
     border-radius: 99px;
     padding: 0 16px;
-    
+
     text-align: center;
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+
     color: rgba(0, 0, 0, 0.34);
 }
+
 /* 分隔線 */
-.detail_area ul hr{
+.cart_detail_area ul hr {
     width: 100%;
     border: 1px solid #A67CEB;
 }
-/* 合計金額 */
-.total {
-    color: #684581;
 
+/* 合計金額 */
+.cart_total {
+    color: #684581;
+}
+.cart_totalnum{
+    /* 中文/思源黑體/內文1 */
     font-family: "Noto Sans TC";
     font-size: 16px;
-    line-height: 160%;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
     letter-spacing: 1.6px;
 }
-  
-  /* 結帳按鈕 */
-.btn_checkout {
-    width: 100%;
+
+/* 結帳按鈕 */
+.cart_btn_checkout {
+    width: 270px;
     height: 50px;
     background-color: #B085EC;
-    color: white;
-    font-size: 20px;
+    
     border: none;
     border-radius: 100px;
     cursor: pointer;
+
+    /* 中文/思源黑體/小標題3 */
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 1px;
+    
+    color: white;
+}
+
+.cart_footer {
+    width: 100%;
+    position: relative;
+
+    clip-path: ellipse(70% 100% at 50% 100%);
+    /* box-sizing: border-box; */
+
+    padding-top: 145px;
+    /* 多預留上邊空間讓弧形浮出 */
+    /* min-height: 540px; */
+    /* 原本太矮會截掉圓弧 */
+    /* z-index: 2; */
+}
+
+@media (max-width: 1024px) {
+    .cart_point{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .cart_right{
+        width: 100%;
+        max-width: 950px;
+        height: 100%;
+    }
 }

@@ -1,0 +1,95 @@
+.footertrn{
+    width: 100%;
+    position:relative;
+    background-color: transparent;
+    /* background-color:brown; */
+
+    color: white;
+    /* height: 277px; */
+}
+
+.footertrn_info {
+    display: flex;
+    justify-content: center; 
+    gap: 120px;
+
+    padding: 35px 0;
+}
+
+/* 各標題 */
+.footertrn_title{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 1.40px;
+
+    margin-bottom: 15px;
+}
+
+/* 各標題內容 */
+.footertrn li,.footertrn a{
+    color: white;
+
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    /* font-weight: 200; */
+    line-height: 150%;
+    letter-spacing: 1.4px;
+
+    margin-bottom: 5px;
+}
+
+/* icon區 */
+.footertrn_social_icon{
+    display: flex;
+    gap: 10px;
+}
+.footertrn_social_icon a{
+    width: 40px;
+    height: 40px;
+    transition: 0.35s;
+    background-size: contain;
+}
+.footertrn-icon-line{
+    background-image: url(/images/S-Footer/icon_line.svg);
+}
+.footertrn-icon-ig{
+    background-image: url(/images/S-Footer/icon_ig.svg);
+}
+.footertrn-icon-fb{
+    background-image: url(/images/S-Footer/icon_fb.svg);
+}
+.footertrn-icon-line:hover {
+    background-image: url(/images/S-Footer/icon_line_h.svg);
+}
+.footertrn-icon-ig:hover {
+    background-image: url(/images/S-Footer/icon_ig_h.svg);
+}
+.footertrn-icon-fb:hover {
+    background-image: url(/images/S-Footer/icon_fb_h.svg);
+}
+
+/* 底部區域 */
+.footertrn_bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footertrn_bottom small{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    font-style: normal;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+
+    margin: 25px 0;
+}
+.footertrn_bottom hr{
+    width: 100%;
+    border: 0.5px solid #FFFFFF;
+    margin: 0;
+}

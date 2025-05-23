@@ -51,7 +51,7 @@ header ul {
   width: 34px;
   height: 34px;
   background-size: contain;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 .icon-menu {
   background-image: url(/public/images/S-NavBar/navicon_bgrbtn.svg);
@@ -74,20 +74,21 @@ header ul {
   }
 
   /*  icon 區塊放大但不影響 icon 大小 */
-  .icon2 li {
+  /* .icon2 li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 9px; /* 稍微縮小間距 */
+    margin: 0; 稍微縮小間距
+    margin: 0 9px;
     width: 30px;
     height: 30px;
-  }
+  } */
 
 
   /*  member icon 的 button 也確保大小一致 */
-  .member-button2 {
+  /* .member-button2 {
     width: 30px;
     height: 30px;
     padding: 0;
-  }
+  } */
 }

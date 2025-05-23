@@ -2,15 +2,35 @@ import '../App.scss/css/Style.min.css'
 import NavBarLight from '../components/NavBarLight'
 import FooterPlain from '../components/FooterPlain'
 import BgDarkBlock from '../components/BgDarkBlock'
+import { useEffect, useRef } from 'react';
 
-
+// const sections = ["第一頁", "第二頁", "第三頁", "第四頁", "第五頁", "第六頁"];
 export default function Cover() {
+    // const sectionRefs = useRef([]);
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         sectionRefs.current.forEach((section) => {
+    //             if (!section) return;
+    //             const rect = section.getBoundingClientRect();
+    //             const inView = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
+    //             section.classList.toggle("visible", inView);
+    //         });
+    //     };
+
+    //     window.addEventListener("scroll", handleScroll);
+    //     handleScroll(); // 初始化檢查
+
+    //     return () => window.removeEventListener("scroll", handleScroll);
+    // }, []);
+
     return (
         <>
+            {/* <div id='color'>做RWD用 之後會拿掉 */}
+            {/* <div id='color'> */}
             {/* 背景 */}
-            <div id='cover'>
-                <div className="bgdark1"><BgDarkBlock/></div>
-                <div className="bgdark2"><BgDarkBlock/></div>
+            <div id='coverbg'>
+                <div className="bgdark1"><BgDarkBlock /></div>
+                <div className="bgdark2"><BgDarkBlock /></div>
             </div>
 
             {/* menu bar*/}
@@ -31,18 +51,17 @@ export default function Cover() {
 
             {/* 封面2 */}
             <section className="section-starttest">
-                <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a>
-                </div>
                 <div className="startbox1">
                     <img src="./images/HomePage/L.svg" className="lefth" alt="" />
+                    <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a> </div>
                     <img src="./images/HomePage/R.svg" className="righth" alt="" />
+                    <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
+                    <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
                 </div>
                 <div className="startbox2">
                     <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
                     <div><img src="./images/HomePage/scroll.svg" alt="" /></div>
                 </div>
-                <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
-                <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
             </section>
 
             {/* 憑直覺抽一張吧 */}
@@ -244,7 +263,7 @@ export default function Cover() {
 
             {/* <footer id="footer"></footer> */}
             <FooterPlain />
-
+            {/* </div > */}
         </>
     )
 }
@@ -254,7 +273,6 @@ export default function Cover() {
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script >
 {/* 自訂的js (一定放在最下面) */ }
 < script src="./js/script.js" ></script >
-
 
 
 

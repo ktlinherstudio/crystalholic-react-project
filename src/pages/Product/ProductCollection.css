@@ -1,1 +1,190 @@
 @import '../../components/BgLight.css';
+
+/* 主要內容區 */
+
+/* ─── 系列 icon 區 ─────────────────────────────── */
+.pc_icon_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 485px;       /* 445 + 40(重疊) */
+    gap: 100px;
+    position: relative;  /* 給 z-index 用 */
+    z-index: 1;          /* 放在下層 */
+
+    /* 如需背景可取消註解
+    background:
+        url(../images/background_noise_light.png),
+        radial-gradient(circle 48.76vw at 5% 85%,
+            rgba(162, 141, 255, 0.45) 0%,
+            rgba(162, 141, 255, 0.09) 50.96%,
+            rgba(162, 141, 255, 0.00) 100%),
+        radial-gradient(circle 62.43vw at 125% 90%,
+            rgba(255, 120, 158, 0.32) 22.12%,
+            rgba(255, 120, 158, 0.05) 60.1%,
+            rgba(255, 120, 158, 0.00) 100%);
+    background-color: #FFFFFF;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    */
+}
+
+.pc_icon_item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.pc_icon_item img {
+    width: 140px;
+    height: 140px;
+}
+
+.pc_icon_item span {
+    color: #8750BF;
+    font-size: 20px;
+    font-family: "Noto Sans TC";
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+/* 被選中的 icon 下方三角形 */
+.pc_icon_item.pc_active::after {
+    content: "";
+    position: absolute;
+    bottom: -131px;              /* 對齊 product_area 上緣 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 71px;
+    height: 61px;
+    background: #E4EBE3;         /* 同 product_area 底色 */
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    z-index: 99;                 /* 確保蓋在最上面 */
+}
+
+/* ─── 商品區與背景對話框 ──────────────────────── */
+.pc_product_area {
+    height: 1040px;
+    background-color: #E4EBE3;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-top: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: -40px;  /* 覆蓋 40px */
+    position: relative; /* 給 z-index 用 */
+    z-index: 2;         /* 蓋在 .pc_icon_area 上 */
+}
+
+/* ─── 商品們 ─────────────────────────────────── */
+.pc_products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 80px;
+
+    background-color: #E4EBE3;
+    width: 80%;
+}
+
+.pc_product_card {
+    width: 18vw;
+    height: 42vh;
+}
+
+/* 商品照 */
+.pc_product_img_wrap {
+    position: relative;
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;  /* 寬 = 高 */
+}
+
+.pc_product_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pc_fav_icon {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+/* 商品資訊 */
+.pc_product_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.pc_product_name {
+    color: #585858;
+    font-size: 16px;
+    font-family: "Noto Sans TC";
+    line-height: 24px;
+    letter-spacing: 1.6px;
+}
+
+.pc_product_price {
+    color: #125FB2;
+    font-size: 14px;
+    font-family: "Noto Sans TC";
+    line-height: 21px;
+    letter-spacing: 1.4px;
+}
+
+/* 水晶 */
+.pc_product_crystals {
+    display: flex;
+    gap: 6px;
+}
+
+.pc_crystal_img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ─── 系列產品介紹 ────────────────────────────── */
+.pc_product_introduce {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pc_product_introduce h5 {
+    color: #128DB2;
+    font-size: 20px;
+    font-family: "LXGW WenKai Mono TC";
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+.pc_divider_line {
+    width: 700px;
+    margin: 10px 0 20px;
+}
+
+.pc_product_introduce p {
+    color: #585858;
+    font-size: 14px;
+    font-family: "Noto Sans TC";
+    line-height: 21px;
+    letter-spacing: 1.4px;
+}

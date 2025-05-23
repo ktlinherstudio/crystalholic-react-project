@@ -1,0 +1,291 @@
+@import '../../components/BgLight.css';
+
+/* ────────── 主要內容區 ────────────── */
+
+/* 單一商品區 */
+.p_product_area{
+    /* background-color: #585858; */
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    height: 964.27px;
+}
+
+.p_product_box{
+    /* background-color: #8750BF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    width: 1036.57px;
+    height: 514.7px;
+}
+
+/* 商品照 (左側) */
+.p_product_img_left{
+    border-radius: 40px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: relative;
+    width: 476.574px;
+    height: 514.7px;
+}
+
+.p_product_img{
+    object-fit: cover;
+}
+
+.p_product_img_left .p_fav_icon{
+    width: 73.47px;
+    height: 73.47px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* 商品介紹 (右側) */
+.p_product_right{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    color: #585858;
+    gap: 20px;
+}
+
+.p_product_title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.p_product_title h3{
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+.p_product_title span{
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 1.6px;
+}
+
+hr{
+    width: 100%;
+    stroke-width: 1px;
+}
+
+.p_product_description{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+}
+
+/* 水晶區 */
+.p_product_crystal_area{
+    gap: 8px;
+}
+
+.p_product_crystals{
+    display: flex;
+    gap: 10px;
+}
+
+.p_crystal_img{
+    width: 32.7px;
+    height: 32.7px;
+}
+
+.p_product_crystal_area p{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+}
+
+/* 串珠與手圍 */
+.p_product_size,
+.p_product_hand{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.p_product_size button,
+.p_product_hand button{
+    border-radius: 999px;
+    border: 1px solid #A67CEB;
+    background-color: transparent;
+    height: 39px;
+    width: 39px;
+    color: #A67CEB;
+}
+
+/* 數量 + / − */
+.p_product_qty,
+.p_product_qty button{
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.p_product_qty .p_left,
+.p_product_qty .p_right{
+    border-radius: 999px;
+    border: 1px solid #8750BF;
+    background-color: #8750BF;
+    height: 43px;
+    width: 43px;
+    color: #FFF;
+}
+
+.p_product_qty .p_center{
+    border-radius: 999px;
+    border: 1px solid #A67CEB;
+    background-color: transparent;
+    height: 43px;
+    width: 384px;
+    color: #585858;
+}
+
+/* 購買按鈕 */
+.p_product_buy{
+    display: flex;
+    gap: 20px;
+}
+
+.p_product_buy button{
+    border-radius: 999px;
+    border: 1px solid #A67CEB;
+    background-color: #A67CEB;
+    height: 44px;
+    width: 240px;
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    letter-spacing: 1.6px;
+    color: #FFF;
+}
+
+/* ────────── Collection 區 ───────────────────── */
+
+.p_collection{
+    position: relative;
+    background-color: #5348AA;
+    color: #FFF;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 43px;
+}
+
+/* 弧形 SVG */
+.p_collection_curve{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 146px;        /* 與 viewBox 高度一致 */
+    overflow: hidden;
+    pointer-events: none;
+    transform: translateY(-99%);
+}
+
+.p_collection_curve svg{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #5348AA;
+}
+
+/* 標題 */
+.p_collection_title{
+    font-family: "Lora";
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 2.4px;
+}
+
+/* 系列商品列表 */
+.p_collection_products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+/* 單張商品卡 */
+.p_product_card{
+    width: 259.25px;
+    height: 342.56px;
+}
+
+.p_product_img_wrap{
+    border-radius: 20px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    aspect-ratio: 1 / 1;   /* 寬 = 高 */
+}
+
+.p_product_img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.p_fav_icon{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* 商品資訊 */
+.p_product_info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.p_product_name{
+    font-family: "Noto Sans TC";
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1.6px;
+}
+
+.p_product_price{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 1.4px;
+}
+
+/* 卡片內水晶 */
+.p_product_crystals{
+    display: flex;
+    gap: 6px;
+}
+
+.p_crystal_img{
+    width: 18px;
+    height: 18px;
+}
