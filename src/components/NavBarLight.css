@@ -68,6 +68,18 @@ header ul {
   outline: none;
 }
 
+.member-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  z-index: 2000;
+}
+
 
 @media screen and (max-width: 1024px) {
 
@@ -79,24 +91,24 @@ header ul {
 
 
   /*  icon 區塊放大但不影響 icon 大小 */
-  .icon li {
+  /* .icon li {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 9px;
-  }
+  } */
 
   /*  圖片大小固定不變 */
-  .icon li img,
+  /* .icon li img,
   .member-button img {
     width: 30px;
     height: 30px;
-  }
+  } */
 
   /*  member icon 的 button 也確保大小一致 */
-  .member-button {
+  /* .member-button {
     width: 30px;
     height: 30px;
     padding: 0;
-  }
+  } */
 }

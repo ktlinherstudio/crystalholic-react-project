@@ -9,7 +9,7 @@ export default function LoginRegisterModal({ isOpen, onClose }) {
     <Modal isOpen={isOpen} onClose={onClose}>
       <div className="login-modal-outer">
         <div className="tabs-wrapper">
-          <LoginRegisterTabs />
+          <LoginRegisterTabs onLoginSuccess={onClose} /> {/* 成功後就關閉 */}
         </div>
       </div>
     </Modal>

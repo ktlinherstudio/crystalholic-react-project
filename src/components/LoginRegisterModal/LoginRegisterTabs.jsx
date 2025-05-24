@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-export default function LoginRegisterTabs() {
+export default function LoginRegisterTabs({ onLoginSuccess }) {
   const [activeTab, setActiveTab] = useState('login');
 
   return (
@@ -12,7 +12,9 @@ export default function LoginRegisterTabs() {
         <button className={activeTab === 'login' ? 'active' : ''} onClick={() => setActiveTab('login')}>登入</button>
       </div>
       <div className="form-area">
-        {activeTab === 'login' ? <LoginForm /> : <RegisterForm />}
+        {activeTab === 'login'
+          ? <LoginForm onLoginSuccess={onLoginSuccess} />
+          : <RegisterForm onLoginSuccess={onLoginSuccess} />}
       </div>
     </div>
   );
