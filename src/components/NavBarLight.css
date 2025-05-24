@@ -68,17 +68,56 @@ header ul {
   outline: none;
 }
 
+
+/* 登入後的會員選單 */
 .member-dropdown {
   position: absolute;
   top: 48px;
   right: 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  background: #f4f3fb !important;
+  padding: 10px 16px;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 220px;
 }
+
+.member-avatar {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  border: #8750bf solid 1px;
+}
+
+.member-name {
+  font-size: 16px;
+  color: #8750bf;
+  font-family: "Noto Sans TC";
+  font-weight: 500;
+}
+
+.logout-button {
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  color: #8750bf;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+  /* ⬅ 推到最右側 */
+  text-underline-offset: 4px;
+}
+
+.logout-button:hover {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
 
 
 @media screen and (max-width: 1024px) {

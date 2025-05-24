@@ -2,7 +2,7 @@ import { useState } from 'react';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 
-export default function LoginRegisterTabs({ onLoginSuccess }) {
+export default function LoginRegisterTabs({ onCloseModal }) {
   const [activeTab, setActiveTab] = useState('login');
 
   return (
@@ -13,8 +13,8 @@ export default function LoginRegisterTabs({ onLoginSuccess }) {
       </div>
       <div className="form-area">
         {activeTab === 'login'
-          ? <LoginForm onLoginSuccess={onLoginSuccess} />
-          : <RegisterForm onLoginSuccess={onLoginSuccess} />}
+          ? <LoginForm onCloseModal={onCloseModal} />
+          : <RegisterForm onCloseModal={onCloseModal} />}
       </div>
     </div>
   );

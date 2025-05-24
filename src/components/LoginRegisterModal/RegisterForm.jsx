@@ -1,13 +1,25 @@
-export default function RegisterForm({ onLoginSuccess }) {
+import { useState } from 'react';
+import { useAuth } from '../../context/AuthContext';
+
+
+export default function RegisterForm({ onCloseModal }) {
+    const { login, setUser } = useAuth();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleRegisterSubmit = (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+        setIsSubmitting(true);
 
-        localStorage.setItem('isLoggedIn', 'true'); //  註冊成功即登入
+        const formData = new FormData(e.target);
+        const name = formData.get('username') || '我愛礦礦';
+        const avatar = "/images/S-NavBar/navicon_member.svg";
+
+        login();
+        setUser({ name, avatar });
         alert('註冊成功！歡迎加入 ✨');
 
-        if (onLoginSuccess) onLoginSuccess(); // 關閉 modal
-
-
+        if (onCloseModal) onCloseModal();
         setIsSubmitting(false);
     };
 
@@ -25,9 +37,24 @@ export default function RegisterForm({ onLoginSuccess }) {
 
             <div className="divider"><span>或</span></div>
 
-            <input type="text" placeholder="用戶名" />
+            <input
+                type="text"
+                name="username"
+                placeholder="用戶名"
+                required
+                maxLength="6"
+                pattern="[\u4e00-\u9fa5]{1,4}|[A-Za-z]{1,6}"
+                title="中文最多 4 字，英文最多 6 字"
+            />
             <input type="email" placeholder="Email" />
-            <input type="password" placeholder="密碼" />
+            <input
+                type="password"
+                name="password"
+                placeholder="密碼"
+                required
+                minLength="8"
+                title="密碼至少需 8 個字元"
+            />
             <span className="hint">至少 8 個字元</span>
 
             <select required defaultValue="">

@@ -1,18 +1,24 @@
-export default function LoginForm({ onLoginSuccess }) {
+import { useState } from 'react';
+import { useAuth } from '../../context/AuthContext';
+
+export default function LoginForm({ onCloseModal }) {
+    const { login, setUser } = useAuth();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const handleLoginSubmit = (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+        setIsSubmitting(true);
 
-        // 模擬登入驗證（可加驗證邏輯）
-        localStorage.setItem('isLoggedIn', 'true'); // 記住登入狀態
+        const name = "我愛礦礦"; // 可改為從輸入中讀取
+        const avatar = "/images/S-NavBar/navicon_member.svg";
+        login();
+        setUser({ name, avatar });
         alert('登入成功！歡迎回來 👋');
 
-        // 關閉登入視窗
-        if (onLoginSuccess) onLoginSuccess();
-
-
-        setIsSubmitting(false); //防止誤點
+        if (onCloseModal) onCloseModal();
+        setIsSubmitting(false);
     };
-
 
     return (
         <form className="auth-form login-form" onSubmit={handleLoginSubmit}>
@@ -25,7 +31,14 @@ export default function LoginForm({ onLoginSuccess }) {
 
             <input type="email" placeholder="Email" required />
             <div className="password-group">
-                <input type="password" placeholder="密碼" required />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="密碼"
+                    required
+                    minLength="8"
+                    title="密碼至少需 8 個字元"
+                />
                 <div className="hint-row">
                     <span className="hint">至少 8 個字元</span>
                     <a href="#" className="forgot">忘記密碼？</a>
@@ -34,7 +47,7 @@ export default function LoginForm({ onLoginSuccess }) {
 
             <div className="checkbox">
                 <input type="checkbox" id="remember" />
-                <label htmlFor="remember" id="remember">記住我</label>
+                <label htmlFor="remember">記住我</label>
             </div>
             <div className="form-footer">
                 <button type="submit" className="submit-button">開始購物</button>
