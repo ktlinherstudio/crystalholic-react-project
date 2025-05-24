@@ -1,19 +1,21 @@
 export function createStarsBackground(container) {
   const canvas = document.createElement("canvas");
   canvas.id = "bg";
-// 設定 canvas 樣式
+  // 設定 canvas 樣式
   canvas.style.position = "absolute";
   canvas.style.top = 0;
   canvas.style.left = 0;
   canvas.style.width = "100%";
   canvas.style.height = "100%";
   canvas.style.zIndex = -2;
-  canvas.style.pointerEvents = "none"; 
+  canvas.style.pointerEvents = "none";
 
   // 同步 container 尺寸
   const rect = container.getBoundingClientRect();
   canvas.width = rect.width;
   canvas.height = rect.height;
+  // canvas.width = window.innerWidth;
+  // canvas.height = window.innerHeight;
 
 
   const ctx = canvas.getContext("2d");
@@ -52,6 +54,8 @@ export function createStarsBackground(container) {
   drawStars();
 
   function handleResize() {
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
     const rect = container.getBoundingClientRect();
     canvas.width = rect.width;
     canvas.height = rect.height;
