@@ -74,7 +74,8 @@ header ul {
   position: absolute;
   top: 48px;
   right: 0;
-  background: #f4f3fb !important;
+  background: rgba(244, 243, 251, 0.75) !important;
+  backdrop-filter: blur(8px);
   padding: 10px 16px;
   border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
