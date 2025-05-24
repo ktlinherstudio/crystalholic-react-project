@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'
 import '../../css/fonts.css';
 import './About.css'
@@ -7,12 +7,22 @@ import FooterBg from '../../components/FooterBg'
 import BgDarkBlock from '../../components/BgDarkBlock'
 import BackToTopBtn from '../../components/BackToTopBtn'
 // import FooterArc from '../../components/FooterArc'
+import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
 export default function About() {
+
+  const [showInfo, setShowInfo] = useState(true);
+
+  useEffect(() => {
+    setShowInfo(true);
+  }, []);
 
   return (
     <div className="font-style">
       <div className="about-page">
+         <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
+
+
         <NavBarLight />
 
         <main className="about-main">
