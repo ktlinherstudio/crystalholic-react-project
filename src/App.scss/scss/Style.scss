@@ -502,9 +502,11 @@ body {
     }
 }
 
+
+
 /*封面1*/
 .ch-cover {
-    border: #2fcf3d 2px solid;
+    // border: #2fcf3d 2px solid;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -696,10 +698,26 @@ body {
 
 }
 
+/// 動畫
+.section-starttest {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.8s ease;
+    pointer-events: none; // 避免還沒進場前就能互動
+}
+
+.section-starttest-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+///
+
 /*封面2*/
 .section-starttest {
 
-    border: #e28121 5px solid;
+    // border: #e28121 5px solid;
     width: 100%;
     height: 100vh;
     display: flex;

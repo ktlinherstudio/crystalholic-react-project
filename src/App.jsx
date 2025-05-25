@@ -8,6 +8,8 @@ import Menu from './pages/Menu';
 import KnowledgeCrystal from './pages/Others/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 import Cover from './pages/Cover';
+import CoverTest from './pages/CoverTest' ;
+import CoverFeedbackTest from './pages/CoverFeedbackTest';
 import NumTest1 from './pages/NumTest/NumTest1';
 import NumTest2 from './pages/NumTest/NumTest2';
 import Customize1 from './pages/Customize/Customize1';
@@ -21,7 +23,7 @@ export default function App() {
   return (
     <div className="page-layout">
       <BrowserRouter>
-        <AuthProvider> 
+        <AuthProvider>
           <ScrollToTop />
           <main className="main-content">
             <Routes>
@@ -30,6 +32,8 @@ export default function App() {
               <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
               <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
               <Route path="/cover" element={<Cover />} />
+              <Route path="/CoverTest" element={<CoverTest />} />
+              <Route path="/CoverFeedbackTest" element={<CoverFeedbackTest />} />
               <Route path="/NumTest1" element={<NumTest1 />} />
               <Route path="/NumTest2" element={<NumTest2 />} />
               <Route path="/Customize1" element={<Customize1 />} />
