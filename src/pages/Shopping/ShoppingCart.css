@@ -2,14 +2,20 @@
 
 /* 主要內容區 */
 .cart_page {
-    width: 100%;
+    /* width: 100%; */
     /* height: calc(100vh - 70px); */
     /* height: 1255px; */
+    width: 100%;
+    height: 100vh;                 /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 150px;             /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
+    /* display: flex; */
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    padding-top: 150px;/* 80px+70px(navbar高度) */
+    /* padding-top: 150px;80px+70px(navbar高度) */
     margin-bottom: 140px;
     gap: 50px;
 }

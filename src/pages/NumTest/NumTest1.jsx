@@ -18,7 +18,7 @@ export default function NumTest1(){
                     <h1 className="num1-title-2">生命靈數測驗</h1>
 
                     {/* 按鈕 */}
-                    <button className="num1-button">START!</button>
+                    <button className="num1-button" >START!</button>
                 </section>
             </main>
         </>

@@ -1,10 +1,18 @@
 @import '../../components/NumTestBg.css';
 
-/* 主要內容區 */
-.num2-numtest{
+/* ----------整頁容器（扣掉固定 Navbar 70px） ----------- */
+.numtest2 {
     width: 100%;
-    /* height: 100vh; */
-    height: calc(100vh - 70px);
+    height: 100vh;                 /* 剛好一整視窗高（含 padding） */
+    padding-top: 70px;             /* 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;        /* 讓 padding 計入 100vh */
+    display: flex;
+}
+
+/* 主要內容區 */
+.num2-numtest {
+    flex: 1; 
+    
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -16,102 +24,131 @@
     background-position: center;
 }
 
-/* 第一個標題區 */
-#num2-title-1{
-    /* width: 483.87px;
-    height: 42px; */
+/* ---------- 第一個標題 ---------- */
+.num2-title-1 {
     display: flex;
     justify-content: center; 
     align-items: center; 
-    gap: 32px;
-    margin-bottom: 46.11px; 
+    gap: 2rem; /* 32px */
+
+    margin-bottom: 3.75rem; /* 60px */
 }
 /* 左右裝飾 */
-.num2-decorate-left,.num2-decorate-right{
-    width: 82.94px;
-    height: 11.31px;
+.num2-decorate-left,.num2-decorate-right {
+    width: 5.183rem; /* 82.94px */
+    height: 0.707rem; /* 11.31px */
 }
 /* 標題 */
-.num2-decorate-title{
+.num2-decorate-title {
     color: #8750BF;
-    text-align: center;
+
+    /* 中文/霞鶩文楷/標題3 */
     font-family: "LXGW WenKai Mono TC";
-    font-size: 28px;
-    letter-spacing: 2.8px;
+    font-size: 1.75rem; /* 28px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.175rem; /* 2.8px */
 }
 
-/* 第二個：主標題區 */
-#num2-title-2{
-    font-family: "LXGW WenKai Mono TC";
-    font-size: 36px;
-    /* line-height: 54px; */
-    letter-spacing: 3.6px;
+/* ---------- 第二個:主標題 ---------- */
+.num2-title-2 {
     color: #8750BF;
-    height: 126px;
+
+    /* 中文/霞鶩文楷/標題1 */
+    font-family: "LXGW WenKai Mono TC";
+    font-size: 2.25rem; /* 36px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.225rem; /* 3.6px */
+    
+    margin-bottom: 3.75rem; /* 60px */
 }
 
-/* 填入西元出生年月日區 */
-#num2-date{
-    /* background-color: antiquewhite; */
+/* ---------- 填入西元出生年月日區 ----------  */
+.num2-date {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;          /* 64px */
+
+    margin-bottom: 5.625rem;/* 90px */
+}
+/* yyyy區/dd區/mm區 */
+.num2-date-enter {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 69px; /* 加大欄位之間的距離 */
-    margin-bottom: 89.79px; /* 跟下方按鈕保留空間 */
 
-}
-/* yyyy區/dd區/mm區 */
-.num2-date-enter{
-    /* background-color:#A67CEB; */
-    display: inline-flex;
     border-bottom: 2px solid #8750BF;
-    width: 213px; 
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+
+    gap: 1.25rem;           /* 20px */
+    width: clamp(10rem, 22vw, 13.313rem); /* 160px–213px */
 }
-/* yyyy/dd/mm */
+/* yyyy/dd/mm 文字、顏色 */
 .num2-date-enter span {
-    /* background-color: aqua; */
     color: rgba(0, 0, 0, 0.24);
+
     font-family: "Noto Sans TC";
-    font-size: 36px;
-    line-height: 59.76px;
-    letter-spacing: 7.20px;
-    /* margin-bottom: 8px; */
+    font-size: 2.25rem; /* 36px */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166%;
+    letter-spacing: 0.45rem;/* 7.2px */
 }
-/* 選擇鈕 */
+/* 選擇鈕(三角形) */
 .num2-date-button {
-    /* background-color: coral; */
-    height: 30px;
-    width: 31.46px;
+    width: 1.875rem; /* 31.46px */
+    height: 1.875rem; /* 30px */
     cursor: pointer;
-    /* margin-bottom: 15px; */
-    /* margin-left: 20px; */
 }
 /* 日曆button */
 .num2-calendar {
-    /* background-color: yellowgreen; */
-    height: 40px;
-    width: 36px;
+    height: 3rem;
+    width: 3rem;
     cursor: pointer;
-    /* margin-left: 60px; */
 }
 
 
 /* 按鈕 */
-#num2-button{
-    display: flex;
-    width: 300px;
-    padding: 10px 83px;
+.num2-button {
+    display: inline-flex;
     justify-content: center;
     align-items: center; 
+
+    padding: 1rem 6.5rem;
+
     border: none;
     border-radius: 999px; 
-    color: white; 
+
+    color: #ffffff;
     background-color: #A67CEB;
+
+    /* Button/24 */
     font-family: "Noto Sans TC";
-    font-size: 24px;
-    letter-spacing: 2.4px;
+    font-size: 1.5rem; /* 24px; */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.15rem; /* 2.4px; */
+
     cursor: pointer;
+}
+
+/* ========================================================= */
+/* ---------- RWD 斷點：≤ 1024px ---------- */
+@media (max-width: 1024px) {
+    .num2-title-1 {
+        gap: 1.5rem;
+    }
+    .num2-date {
+        gap: 2rem; 
+    }
+}
+/* ---------- RWD 斷點：≤ 820px ---------- */
+@media (max-width: 820px) {
+    .num2-title-1 {
+        gap: 1rem;
+    } 
 }

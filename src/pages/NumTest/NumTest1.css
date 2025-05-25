@@ -1,5 +1,3 @@
-/* NumTest1.css */
-/* ========================================================= */
 @import '../../components/NumTestBg.css';
 
 /* 🟣 整頁容器（扣掉固定 Navbar 70px） --------------------- */
@@ -12,8 +10,8 @@
 }
 
 /* 主要內容區 */
-.num1-numtest {
-    flex: 1;
+.num1-numtest { 
+    flex: 1;    /* 在父層 flex 裡撐滿剩餘空間 */
 
     display: flex;
     flex-direction: column;
@@ -26,22 +24,23 @@
     background-position: center;
 }
 
-/* ---------- 第一段標題 ---------- */
+/* ---------- 第一個標題 ---------- */
 .num1-title-1 {
     display: flex;
+    justify-content: center; 
     align-items: center;
     gap: 2rem; /* 32px */
-    margin-bottom: 2.125rem; /* 34px */
+
+    margin-bottom: 3.25rem; /* 52px */
 }
 
-.num1-decorate-left,
-.num1-decorate-right {
+.num1-decorate-left,.num1-decorate-right {
     width: 5.183rem; /* 82.94px */
     height: 0.707rem; /* 11.31px */
 }
 
 .num1-decorate-title {
-    color: #8750bf;
+    color: #8750BF;
 
     /* 中文/霞鶩文楷/標題3 */
     font-family: "LXGW WenKai Mono TC";
@@ -52,9 +51,9 @@
     letter-spacing: 0.175rem; /* 2.8px */
 }
 
-/* ---------- 第二段標題 ---------- */
+/* ---------- 第二個標題 ---------- */
 .num1-title-2 {
-    color: #8750bf;
+    color: #8750BF;
 
     /* 中文/霞鶩文楷/標題1 */
     font-family: "LXGW WenKai Mono TC";
@@ -64,25 +63,23 @@
     line-height: 150%;
     letter-spacing: 0.225rem; /* 3.6px */
     
-    margin-bottom: 4.375rem; /* 70px */
+    margin-bottom: 3.25rem; /* 52px */
 
 }
 
 /* ---------- 按鈕 ---------- */
 .num1-button {
     display: inline-flex;
-    width: min(30vw, 14rem);
-    padding: 0.625rem 5.188rem;
-    /* 10px 83px */
-
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+
+    padding: 1rem 6.5rem;
 
     border: none;
-    border-radius: 999px;
+    border-radius: 999px; 
 
     color: #ffffff;
-    background-color: #a67ceb;
+    background-color: #A67CEB;
 
     /* Button/24 */
     font-family: "Noto Sans TC";
@@ -96,76 +93,16 @@
 }
 
 /* ========================================================= */
-/* 🟣 RWD 斷點：≤ 1024px ------------------------------------ */
+/* ---------- RWD 斷點：≤ 1024px ---------- */
 @media (max-width: 1024px) {
     .num1-title-1 {
         gap: 1.5rem;
     }
-
-    .num1-decorate-title {
-        font-size: 1.625rem; /* 26px */
-    }
-
-    .num1-title-2 {
-        font-size: 2rem; /* 32px */
-        margin-bottom: 3.75rem;
-    }
-
-    .num1-button {
-        width: min(40vw, 13rem);
-        font-size: 1.375rem; /* 22px */
-        padding: 0.625rem 4rem;
-    }
 }
 
-/* 🟣 RWD 斷點：≤ 820px ------------------------------------- */
+/* ---------- RWD 斷點：≤ 820px ---------- */
 @media (max-width: 820px) {
-    .num1-decorate-title {
-        font-size: 1.5rem; /* 24px */
-        letter-spacing: 0.15rem;
-    }
-
     .num1-title-2 {
-        font-size: 1.75rem; /* 28px */
-    }
-
-    .num1-button {
-        width: min(60vw, 12rem);
-        font-size: 1.25rem; /* 20px */
-        padding: 0.625rem 3.5rem;
-    }
-}
-
-/* 🟣 RWD 斷點：≤ 640px ------------------------------------- */
-@media (max-width: 640px) {
-    .num1-title-1 {
-        /* flex-direction: column;    轉縱排 */
-        gap: 0.75rem;
-    }
-
-    .num1-decorate-left,
-    .num1-decorate-right {
-        width: 4rem; /* 縮小裝飾線 */
-    }
-
-    .num1-decorate-title,
-    .num1-title-2 {
-        text-align: center;
-    }
-
-    .num1-decorate-title {
-        font-size: 1.375rem; /* 22px */
-    }
-
-    .num1-title-2 {
-        font-size: 1.625rem; /* 26px */
-        letter-spacing: 0.15rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .num1-button {
-        width: 70vw;
-        font-size: 1.125rem; /* 18px */
-        padding: 0.625rem 2rem;
+        gap: 1rem;
     }
 }

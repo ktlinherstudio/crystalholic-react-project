@@ -2,28 +2,29 @@
     width: 100%;
     position:relative;
     background-color: transparent;
-    /* background-color:brown; */
 
     color: white;
-    /* height: 277px; */
 }
 
-.footertrn_info {
+.footertrn_info,.footertrn_rwdbox {
     display: flex;
     justify-content: center; 
     gap: 120px;
 
+}
+.footertrn_info{
     padding: 35px 0;
 }
 
 /* 各標題 */
 .footertrn_title{
+    /* 中文/思源黑體/footer標題 */
     font-family: "Noto Sans TC";
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     font-style: normal;
     font-weight: 700;
     line-height: 150%;
-    letter-spacing: 1.40px;
+    letter-spacing: 0.088rem; /* 1.4px */
 
     margin-bottom: 15px;
 }
@@ -32,12 +33,13 @@
 .footertrn li,.footertrn a{
     color: white;
 
+    /* 中文/思源黑體/內文2 */
     font-family: "Noto Sans TC";
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     font-style: normal;
-    /* font-weight: 200; */
+    font-weight: 400;
     line-height: 150%;
-    letter-spacing: 1.4px;
+    letter-spacing: 0.088rem; /* 1.4px */
 
     margin-bottom: 5px;
 }
@@ -80,11 +82,13 @@
     align-items: center;
 }
 .footertrn_bottom small{
+    /* 中文/思源黑體/內文2 */
     font-family: "Noto Sans TC";
-    font-size: 14px;
+    font-size: 0.875rem; /* 14px */
     font-style: normal;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+    font-weight: 400;
+    line-height: 150%; 
+    letter-spacing: 0.088rem; /* 1.4px */
 
     margin: 25px 0;
 }
@@ -92,4 +96,58 @@
     width: 100%;
     border: 0.5px solid #FFFFFF;
     margin: 0;
+}
+
+/* .footertrn a,.footertrn li,.footertrn p,.footertrn small,.footertrn h4 {
+    white-space: nowrap;
+    word-break: keep-all;
+} */
+
+/* COMPANY、SERVICE 文字連結底線動畫 --------------------------- */
+.footertrn_company a,.footertrn_service a {
+  display: inline-block;               /* 寬度 = 文字長度 */
+  padding: 0;                          /* 若有左右 padding 會拉長底線，先清掉 */
+  text-decoration: none;               /* 關掉原生底線 */
+
+  /* 底線：用背景控制 -------------------------------------- */
+  background-image: linear-gradient(currentColor, currentColor); /* 1px 線 */
+  background-repeat: no-repeat;
+  background-position: left bottom;    /* 從文字左下開始 */
+  background-size: 0 1px;              /* 起始寬度 0%，高度 1px */
+
+  transition: background-size 0.35s ease;  /* 平滑伸展 */
+}
+
+.footertrn_company a:hover,.footertrn_service a:hover {
+  background-size: 100% 1px;           /* 滑過時拉到 100% */
+}
+
+/* ========================================================= */
+/* ---------- RWD 斷點：≤ 1024px ---------- */
+@media (max-width: 1024px) {
+    .footertrn_rwdbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .footertrn_follow ul,.footertrn_follow li{
+        margin: 0;
+    }
+}
+
+/* ---------- RWD 斷點：≤ 820px ---------- */
+@media (max-width: 820px) {
+    .footertrn_info{
+        gap: 60px;
+    }
+    .footertrn_rwdbox{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .footertrn_follow ul,.footertrn_follow li{
+        margin: 0;
+    }
 }
