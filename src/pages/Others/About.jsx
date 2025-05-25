@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom'
 import '../../css/fonts.css';
 import './About.css'
-import NavBarLight from '../../components/NavBarLight'
+import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterBg from '../../components/FooterBg'
 import BgDarkBlock from '../../components/BgDarkBlock'
 import BackToTopBtn from '../../components/BackToTopBtn'
@@ -22,7 +22,7 @@ export default function About() {
       <div className="about-page">
          <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} /> 
 
-        <NavBarLight />
+        <NavBarWrapper variant="light" />
 
         <main className="about-main">
           <section className="about-hero" id='about-hero'>
