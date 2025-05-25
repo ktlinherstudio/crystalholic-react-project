@@ -11,11 +11,12 @@ export default function MenuOverlay() {
     <div className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}>
       {/* <div className="menu-backdrop"></div> */}
       <BgDarkBlock />
-      <div className="menu-panel">
-        <nav className="menu-navigation">
-          <span className="menu-closebtn" onClick={closeMenu}>
+      <div className="menu-panel"> 
+        <span className="menu-closebtn" onClick={closeMenu}>
             <img src="/images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
           </span>
+        <nav className="menu-navigation">
+         
 
           <div className="menu-columns-wrapper">
             <div className="menu-column">
@@ -51,13 +52,14 @@ export default function MenuOverlay() {
 
             <div className="menu-column">
               <h2>Customized</h2>
-              <div className="menu-child">
                 <ul>
                   <li><a href="../Jasmine/numtest/numtest-1.html">生命靈數測驗</a></li>
                   <li><a href="../阿啾/html/customization-1.html">開始客製</a></li>
                 </ul>
-              </div>
             </div>
+
+
+            
           </div>
 
           <div className="menu-last">
@@ -84,4 +86,5 @@ export default function MenuOverlay() {
       </div>
     </div>
   );
+
 }
