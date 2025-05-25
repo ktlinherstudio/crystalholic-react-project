@@ -4,6 +4,7 @@ import { useUI } from '../context/UIContext';
 import { Link } from 'react-router-dom';
 
 
+
 export default function MenuOverlay() {
   const { isMenuOpen, closeMenu } = useUI();
 
@@ -11,12 +12,25 @@ export default function MenuOverlay() {
     <div className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}>
       {/* <div className="menu-backdrop"></div> */}
       <BgDarkBlock />
-      <div className="menu-panel"> 
+      <div className="menu-panel">
         <span className="menu-closebtn" onClick={closeMenu}>
-            <img src="/images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
-          </span>
+          <img src="/images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
+        </span>
         <nav className="menu-navigation">
-         
+          <div className="menu-searchbar">
+            <input
+              type="text"
+              placeholder="搜尋水晶或系列名稱"
+              className="menu-search-input"
+            />
+            <button className="menu-search-btn" onClick={() => console.log('搜尋觸發')}>
+              <img
+                src="/images/S-NavBar/navicon_search.svg"
+                alt="search"
+                className="menu-search-icon"
+              />
+            </button>
+          </div>
 
           <div className="menu-columns-wrapper">
             <div className="menu-column">
@@ -52,14 +66,14 @@ export default function MenuOverlay() {
 
             <div className="menu-column">
               <h2>Customized</h2>
-                <ul>
-                  <li><a href="../Jasmine/numtest/numtest-1.html">生命靈數測驗</a></li>
-                  <li><a href="../阿啾/html/customization-1.html">開始客製</a></li>
-                </ul>
+              <ul>
+                <li><a href="../Jasmine/numtest/numtest-1.html">生命靈數測驗</a></li>
+                <li><a href="../阿啾/html/customization-1.html">開始客製</a></li>
+              </ul>
             </div>
 
 
-            
+
           </div>
 
           <div className="menu-last">

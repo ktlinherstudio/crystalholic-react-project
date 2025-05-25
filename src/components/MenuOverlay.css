@@ -1,7 +1,11 @@
+.menu-searchbar {
+  display: none;
+}
+
 .menu-overlay {
   position: fixed;
   inset: 0;
-  z-index: 9999;
+  z-index: 10000;
   display: flex;
   justify-content: flex-end;
   opacity: 0;
@@ -273,6 +277,7 @@
   .menu-panel {
     justify-content: center;
     padding: 0 40px;
+
   }
 
   .menu-navigation {
@@ -289,6 +294,9 @@
 
 /* 1024px平板 */
 @media (max-width: 1024px) {
+  .menu-overlay {
+    height: 100vh;
+  }
 
   .menu-panel {
     flex-direction: column;
@@ -305,13 +313,13 @@
   .menu-columns-wrapper {
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    height: 960px;
   }
 
   .menu-column,
   .menu-last {
-    width: 100% ;
-    max-width: 480px;
+    position: relative;
+    width: 500px;
     padding-bottom: 50px;
     border: none;
     border-bottom: 1px solid #fff;
@@ -319,6 +327,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .menu-last {
+    height: 304px;
   }
 
   .menu-column h2,
@@ -350,17 +362,43 @@
     justify-content: center;
   }
 
-  .menu-column:nth-child(4) {
-    order: 4; /* 不要設成 5！照自然順序來就好 */
-    width: 100%;
+  .menu-searchbar {
+    display: block;
+    width: 400px;
     max-width: 480px;
-    padding-bottom: 50px;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .menu-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border-radius: 999px;
     border: none;
-    border-bottom: 1px solid #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    font-size: 16px;
+    font-family: 'Noto Sans TC';
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+  }
+
+  .menu-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .menu-search-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    background-color: #A67CEB;
+    border-radius: 0 99px 99px 0;
+    transform: translateY(-50%);
+    right: 0px;
+    width: 60px;
+    height: 44px;
+    cursor: pointer;
+  }
+  .menu-search-icon:hover{
+    background-color: #684581;
   }
 }
-
