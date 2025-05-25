@@ -7,7 +7,7 @@ import FooterBg from '../../components/FooterBg'
 import BgDarkBlock from '../../components/BgDarkBlock'
 import BackToTopBtn from '../../components/BackToTopBtn'
 // import FooterArc from '../../components/FooterArc'
-import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal'; 
+import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
 export default function About() {
 
@@ -20,7 +20,7 @@ export default function About() {
   return (
     <div className="font-style">
       <div className="about-page">
-         <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} /> 
+        <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
 
         <NavBarWrapper variant="light" />
 
@@ -118,7 +118,7 @@ export default function About() {
             </div>
           </section>
         </main>
-         <BackToTopBtn /> 
+        <BackToTopBtn />
         {/* <FooterArc /> */}
         <FooterBg />
       </div>

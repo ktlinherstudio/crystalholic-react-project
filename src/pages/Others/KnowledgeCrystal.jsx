@@ -1,5 +1,5 @@
 import './KnowledgeCrystal.css';
-import NavBarDark from '../../components/NavBarDark'
+import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterPlain from '../../components/FooterPlain'
 import BgDarkBlock from '../../components/BgDarkBlock'
 import '../../css/fonts.css';
@@ -10,7 +10,7 @@ export default function CrystalPage() {
         <>
             <div className="font-style">
                 <div className='knowledge-crystal-page'>
-                    <NavBarDark />
+                    <NavBarWrapper variant="dark" />
                     <main className="knowledge-crystal-main" id="crystal-main">
                         {/* 上半區：文字與水晶簡介 */}
                         <section className="arc-k-outer-content">
@@ -79,7 +79,7 @@ export default function CrystalPage() {
                                     </div>
                                 </div>
                             </section>
-                            <BackToTopBtn /> 
+                            <BackToTopBtn />
                             <FooterPlain />
                         </div>
                     </main>

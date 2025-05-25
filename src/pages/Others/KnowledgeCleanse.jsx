@@ -1,5 +1,5 @@
 import './KnowledgeCleanse.css';
-import NavBarDark from '../../components/NavBarDark'
+import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterPlain from '../../components/FooterPlain'
 import BgDark from '../../components/BgDark'
 import '../../css/fonts.css';
@@ -9,7 +9,7 @@ export default function KnowledgeCleanse() {
     <div className="font-style">
       <div className="nc-page">
         <div className="nc-background"><BgDark /></div>
-        <NavBarDark />
+        <NavBarWrapper variant="dark" />
         <section className="content-nc" id='content-nc'>
           <div className="left-title">
             <img src="/images/HomePage/deco-diamond.png" alt="" className="dimand1" />
