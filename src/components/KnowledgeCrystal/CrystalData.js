@@ -550,13 +550,134 @@ const crystalsData = {
     ],
     愛與人際: [
         {
+            name: "菫青石",
+            englishName: "Iolite",
+            image: "/images/S-CrystalSingle/crystal-iolite.png",
+            description: "菫青石雖偏靜心導向，但對於情感釐清與溝通也極具幫助，協助理解他人與自己的需求。",
+            effects: "釐清困惑：協助看清感情糾結與真實想法。\n增進理解：提升溝通力與人際理解。\n整合理性與直覺：幫助做出平衡決策。",
+            suitableFor: "人際溝通困難、感情混亂的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-iolite.png", alt: "菫青石", category: "放鬆冥想", targetName: "菫青石" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-sodalite.png", alt: "蘇打石", category: "靈性直覺", targetName: "蘇打石" }
+            ]
+        },
+        {
+            name: "粉紫水晶",
+            englishName: "Lilac Amethyst",
+            image: "/images/S-CrystalSingle/crystal-lilac-amethyst.png",
+            description: "粉紫水晶兼具紫水晶與粉晶的特質，穩定心靈同時溫柔開放情感。",
+            effects: "放鬆情緒：穩定情緒波動與內心焦慮。\n溫柔覺察：引導愛與自我接納流動。\n人際平衡：提升共感力與理解他人感受。",
+            suitableFor: "敏感而害怕受傷、需要安心關係的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
+                { src: "/images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
+                { src: "/images/S-CrystalSingle/crystal-labradorite.png", alt: "拉長石", category: "靈性直覺", targetName: "拉長石" }
+            ]
+        },
+        {
+            name: "紅瑪瑙",
+            englishName: "Carnelian",
+            image: "/images/S-CrystalSingle/crystal-carnelian.png",
+            description: "紅瑪瑙不僅帶來行動力，也能協助戀愛時的勇氣與自信展現。",
+            effects: "行動力：提升戀愛積極性與自信表現。\n吸引力：展現個人魅力與能量磁場。\n情感穩定：協助面對關係波動與不安。",
+            suitableFor: "害羞、戀愛遲疑或自信不足的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-rubellite.png", alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" },
+                { src: "/images/S-CrystalSingle/crystal-garnet.png", alt: "紅石榴石", category: "愛與人際", targetName: "紅石榴石" },
+                { src: "/images/S-CrystalSingle/crystal-citrine.png", alt: "黃水晶", category: "專注工作", targetName: "黃水晶" }
+            ]
+        },
+        {
+            name: "紅石榴石",
+            englishName: "Garnet",
+            image: "/images/S-CrystalSingle/crystal-garnet.png",
+            description: "石榴石象徵深沉忠貞的愛，提升情感忠誠與穩定的關係能量。",
+            effects: "情感連結：強化伴侶間能量共鳴。\n穩固關係：增加忠誠與承諾能量。\n提升信任：穩定感情互動與情緒回應。",
+            suitableFor: "已在感情中、想經營穩定關係的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "愛與人際", targetName: "紅瑪瑙" },
+                { src: "/images/S-CrystalSingle/crystal-golden-strawberry-quartz.png", alt: "草莓晶", category: "愛與人際", targetName: "草莓晶" },
+                { src: "/images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "能量防護", targetName: "茶晶" }
+            ]
+        },
+        {
+            name: "海洋碧玉",
+            englishName: "Ocean Jasper",
+            image: "/images/S-CrystalSingle/crystal-oceanjasper.png",
+            description: "海洋碧玉帶有歡樂與流動特質，是增進人際與輕鬆交流的能量石。",
+            effects: "人際流動：營造輕鬆自在的人際環境。\n促進善意：增強溝通與包容互動。\n歡樂能量：帶來愉悅與心情釋放。",
+            suitableFor: "想改善人際圈、增強交流順利度的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
+                { src: "/images/S-CrystalSingle/crystal-citrine.png", alt: "黃水晶", category: "專注工作", targetName: "黃水晶" }
+            ]
+        },
+        {
             name: "玫瑰石英",
             englishName: "Rose Quartz",
             image: "/images/S-CrystalSingle/crystal-rosequartz.png",
-            description: "玫瑰石英是愛與療癒之石，能打開心輪，帶來溫柔與包容。",
-            effects: "促進人際關係、吸引愛情、療癒情傷",
-            suitableFor: "渴望愛與情感連結者",
-            recommended: []
+            description: "玫瑰石英是最經典的愛情水晶，擁有溫柔粉色能量，象徵無條件的愛與心輪療癒。",
+            effects: "打開心輪：喚醒愛與情感流動。\n促進包容：幫助接納自己與他人。\n修復人際：帶來關係的溫柔療癒。",
+            suitableFor: "渴望愛情、修補人際關係、提升自我愛的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-rubellite.png", alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" }
+            ]
+        },
+        {
+            name: "草莓晶",
+            englishName: "Strawberry",
+            image: "/images/S-CrystalSingle/crystal-golden-strawberry-quartz.png",
+            description: "草莓晶散發溫潤柔和的紅粉能量，有助吸引桃花與提升戀愛運，是甜美愛情能量的代表。",
+            effects: "增強桃花：提升戀愛運與人緣。\n甜美吸引：展現柔和與女性魅力。\n自我肯定：培養被愛的信心。",
+            suitableFor: "正在尋找戀愛對象或希望提升戀愛運的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
+                { src: "/images/S-CrystalSingle/crystal-rhodochrosite.png", alt: "紅紋石", category: "愛與人際", targetName: "紅紋石" },
+                { src: "/images/S-CrystalSingle/crystal-garnet.png", alt: "紅石榴石", category: "愛與人際", targetName: "紅石榴石" }
+            ]
+        },
+        {
+            name: "紅紋石",
+            englishName: "Rhodochrosite",
+            image: "/images/S-CrystalSingle/crystal-rhodochrosite.png",
+            description: "紅紋石帶有玫瑰紅與白紋，是深層情感療癒與內在小孩修復的重要水晶。",
+            effects: "療癒創傷：釋放過往情感陰影。\n喚醒溫柔：啟動內在小孩與愛的流動。\n開放心輪：幫助重新感受愛與被愛。",
+            suitableFor: "情感受過傷、希望重新敞開心房的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛與人際", targetName: "粉晶" },
+                { src: "/images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" },
+                { src: "/images/S-CrystalSingle/crystal-rubellite.png", alt: "紅碧璽", category: "愛與人際", targetName: "紅碧璽" }
+            ]
+        },
+        {
+            name: "粉晶",
+            englishName: "Pink Quartz",
+            image: "/images/S-CrystalSingle/crystal-pinkquartz.png",
+            description: "粉晶與玫瑰石英能量相似，但更加偏向於柔和內斂的愛與療癒，協助建立自愛與穩定情感。",
+            effects: "柔性愛能量：釋放恐懼與心牆。\n情感安撫：帶來平靜與自我關懷。\n關係修補：協助建立穩定情感連結。",
+            suitableFor: "缺乏安全感、想重新相信愛與人際連結的人",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-lilac-amethyst.png", alt: "粉紫水晶", category: "愛與人際", targetName: "粉紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-tridacna.png", alt: "硨磲石", category: "能量防護", targetName: "硨磲石" },
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" }
+            ]
+        },
+        {
+            name: "紅碧璽",
+            englishName: "Rubellite",
+            image: "/images/S-CrystalSingle/crystal-rubellite.png",
+            description: "紅碧璽是強力的情感激發石，能促進愛情能量流動與情緒表達。",
+            effects: "激發情感：喚醒愛情熱度與慾望。\n鼓勵表達：幫助說出真實情緒。\n戀愛推進：增強親密與互動意願。",
+            suitableFor: "戀愛中感到冷淡或情感表達困難者",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-rhodochrosite.png", alt: "紅紋石", category: "愛與人際", targetName: "紅紋石" },
+                { src: "/images/S-CrystalSingle/crystal-pinkquartz.png", alt: "粉晶", category: "愛與人際", targetName: "粉晶" },
+                { src: "/images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "愛與人際", targetName: "紅瑪瑙" }
+            ]
         }
     ],
     能量防護: [
@@ -739,35 +860,6 @@ const crystalsData = {
         }
     ],
     放鬆冥想: [
-
-        {
-            name: "天使石",
-            englishName: "Angelite",
-            image: "/images/S-CrystalSingle/crystal-angelite.png",
-            description: "天使石是一種溫柔的淡藍色水晶，象徵和平與靜心，常被視為與天使界連結的橋樑，能帶來深層的寧靜與支持感。",
-            effects: "情緒安撫：舒緩緊張與焦慮，帶來內在平靜。\n靈性連結：提升直覺，協助與高我或天使溝通。\n和平能量：營造安全、柔和、保護的能量場。",
-            suitableFor: "情緒敏感、容易緊張的人。\n希望透過冥想或靈性練習獲得守護與安定感者。",
-            recommended: [
-                {
-                    src: "/images/S-CrystalSingle/crystal-moonstone.png",
-                    alt: "月光石",
-                    category: "靈性直覺",
-                    targetName: "月光石"
-                },
-                {
-                    src: "/images/S-CrystalSingle/crystal-rosequartz.png",
-                    alt: "玫瑰石英",
-                    category: "愛與人際",
-                    targetName: "玫瑰石英"
-                },
-                {
-                    src: "/images/S-CrystalSingle/crystal-amethyst.png",
-                    alt: "紫水晶",
-                    category: "放鬆冥想",
-                    targetName: "紫水晶"
-                }
-            ]
-        },
         {
             name: "紫水晶",
             englishName: "Amethyst",
@@ -796,6 +888,35 @@ const crystalsData = {
                 }
             ]
         },
+        {
+            name: "天使石",
+            englishName: "Angelite",
+            image: "/images/S-CrystalSingle/crystal-angelite.png",
+            description: "天使石是一種溫柔的淡藍色水晶，象徵和平與靜心，常被視為與天使界連結的橋樑，能帶來深層的寧靜與支持感。",
+            effects: "情緒安撫：舒緩緊張與焦慮，帶來內在平靜。\n靈性連結：提升直覺，協助與高我或天使溝通。\n和平能量：營造安全、柔和、保護的能量場。",
+            suitableFor: "情緒敏感、容易緊張的人。\n希望透過冥想或靈性練習獲得守護與安定感者。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-moonstone.png",
+                    alt: "月光石",
+                    category: "靈性直覺",
+                    targetName: "月光石"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-rosequartz.png",
+                    alt: "玫瑰石英",
+                    category: "愛與人際",
+                    targetName: "玫瑰石英"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-amethyst.png",
+                    alt: "紫水晶",
+                    category: "放鬆冥想",
+                    targetName: "紫水晶"
+                }
+            ]
+        },
+
         {
             name: "太陽石",
             englishName: "Sunstone",
@@ -892,19 +1013,6 @@ const crystalsData = {
             ]
         },
         {
-            name: "碧璽貓眼石",
-            englishName: "Cat's Eye Tourmaline",
-            image: "/images/S-CrystalSingle/crystal-catseyetourmaline.png",
-            description: "碧璽貓眼石是一種兼具防護與靜心功能的晶石，其特殊光線反射能夠協助冥想聚焦並穩定情緒波動。",
-            effects: "冥想聚焦：集中注意力進入內在空間。\n保護平衡：阻隔負能並穩定能場。\n內觀清明：提升冥想中的直觀覺察力。",
-            suitableFor: "容易受干擾、思緒飄散或靈性初學者。",
-            recommended: [
-                { src: "/images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" },
-                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
-                { src: "/images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" }
-            ]
-        },
-        {
             name: "黑銀曜石",
             englishName: "Silver Sheen O.",
             image: "/images/S-CrystalSingle/crystal-silversheenobsidian.png",
@@ -915,6 +1023,62 @@ const crystalsData = {
                 { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
                 { src: "/images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
                 { src: "/images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" }
+            ]
+        },
+        {
+            name: "方鈉石",
+            englishName: "Hackmanite",
+            image: "/images/S-CrystalSingle/crystal-hackmanite.png",
+            description: "方鈉石是一種稀有的變色水晶，帶有淡紫或灰紫色調，擁有溫和而神秘的能量，能協助釋放潛藏情緒與促進內在清理，適合深度冥想與靜心修行使用。",
+            effects: "潛意識釋放：幫助釐清壓抑情緒與內在糾結。\n能量清理：提升靈性頻率，帶來內在明晰。\n深度冥想：支援靜心時的情緒療癒與覺察。",
+            suitableFor: "想深入療癒內在、釋放情緒結構與進入靜心狀態的使用者。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-amethyst.png",
+                    alt: "紫水晶",
+                    category: "放鬆冥想",
+                    targetName: "紫水晶"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-bluecalcite.png",
+                    alt: "藍方解石",
+                    category: "靈性直覺",
+                    targetName: "藍方解石"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-clearquartz.png",
+                    alt: "白水晶",
+                    category: "靈性直覺",
+                    targetName: "白水晶"
+                }
+            ]
+        },
+        {
+            name: "粉方解石",
+            englishName: "Pink Calcite",
+            image: "/images/S-CrystalSingle/crystal-pinkcalcite.png",
+            description: "粉方解石是一種溫柔的水晶，具備強大的心輪療癒能量，適合用於釋放情感創傷、進行自我寬容練習，協助冥想時達到溫柔穩定的能場狀態。",
+            effects: "情緒療癒：撫慰傷痛、建立自我寬容。\n心輪淨化：釋放過去的情緒殘留與創傷。\n放鬆安撫：協助冥想時放鬆並感受到安全感。",
+            suitableFor: "需要內在修復、處於心靈脆弱狀態或渴望被溫柔包覆的人。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-rosequartz.png",
+                    alt: "粉晶",
+                    category: "放鬆冥想",
+                    targetName: "粉晶"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-moonstone.png",
+                    alt: "月光石",
+                    category: "放鬆冥想",
+                    targetName: "月光石"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-tridacna.png",
+                    alt: "硨磲石",
+                    category: "能量防護",
+                    targetName: "硨磲石"
+                }
             ]
         }
 
