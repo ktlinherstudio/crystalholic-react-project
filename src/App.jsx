@@ -5,7 +5,7 @@ import { AuthProvider } from './context/AuthContext';
 
 import About from './pages/Others/About';
 import Menu from './pages/Menu';
-import KnowledgeCrystal from './pages/Others/KnowledgeCrystal';
+import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
 import Cover from './pages/Cover';

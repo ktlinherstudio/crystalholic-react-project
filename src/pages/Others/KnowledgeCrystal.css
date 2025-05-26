@@ -81,6 +81,7 @@ body {
   font-style: italic;
   text-align: center;
   width: 100%;
+  margin-top: -40px;
 }
 
 .crystal-k-img {
@@ -96,11 +97,13 @@ body {
 .crystal-k-arrow {
   width: 50px;
   height: 50px;
+  cursor: pointer;
 }
 
 .crystal-k-center {
   width: 150px;
   height: 150px;
+  cursor: pointer;
 }
 
 .arc-k-inner-content {
@@ -194,6 +197,7 @@ body {
 
 .recommended-crystals-k img {
   width: 50px;
+  height: 50px;
 }
 
 
@@ -290,6 +294,7 @@ body {
 
   .recommended-crystals-k img {
     width: 42px;
+    height: 42px;
   }
 }
 
@@ -347,6 +352,7 @@ hr {
 
   .recommended-crystals-k img {
     width: 36px;
+    height: 36px;
   }
 
   .footer {

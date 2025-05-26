@@ -1,9 +1,10 @@
-import './KnowledgeCrystal.css';
-import NavBarWrapper from '../../components/NavBarWrapper';
-import FooterPlain from '../../components/FooterPlain'
-import BgDarkBlock from '../../components/BgDarkBlock'
+import '../../pages/Others/KnowledgeCrystal.css';
+import NavBarWrapper from '../NavBarWrapper';
+import FooterPlain from '../FooterPlain'
+import BgDarkBlock from '../BgDarkBlock'
 import '../../css/fonts.css';
-import BackToTopBtn from '../../components/BackToTopBtn'
+import BackToTopBtn from '../BackToTopBtn'
+
 
 export default function CrystalPage() {
     return (
