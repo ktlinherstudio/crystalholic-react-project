@@ -1,6 +1,6 @@
 import './KnowledgeCleanse.css';
 import NavBarWrapper from '../../components/NavBarWrapper';
-import FooterPlain from '../../components/FooterPlain'
+import FooterTrn from '../../components/FooterTrn'
 import BgDark from '../../components/BgDark'
 import '../../css/fonts.css';
 
@@ -54,7 +54,7 @@ export default function KnowledgeCleanse() {
             </section>
           </div>
         </section>
-        <FooterPlain />
+        <FooterTrn />
       </div>
     </div>
 

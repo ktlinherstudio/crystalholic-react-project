@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../pages/Others/KnowledgeCrystal.css';
 import NavBarWrapper from '../NavBarWrapper';
-import FooterPlain from '../FooterPlain';
+import FooterTrn from '../FooterTrn';
 import BgDarkBlock from '../BgDarkBlock';
 import '../../css/fonts.css';
 import BackToTopBtn from '../BackToTopBtn';
@@ -142,7 +142,7 @@ export default function CrystalPage() {
 
                             </section>
                             <BackToTopBtn />
-                            <FooterPlain />
+                            <FooterTrn />
                         </div>
                     </main>
                 </div>
