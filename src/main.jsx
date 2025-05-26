@@ -3,6 +3,16 @@ import { createRoot } from 'react-dom/client'
 import './css/index.css'
 import App from './App.jsx'
 
+//bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ← 一定要加這行，才能啟用輪播功能！
+
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
