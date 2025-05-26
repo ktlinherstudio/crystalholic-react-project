@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import '../../css/fonts.css';
 import './About.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
-import FooterBg from '../../components/FooterBg'
+import FooterBgc from '../../components/FooterBgc'
 import BgDarkBlock from '../../components/BgDarkBlock'
 import BackToTopBtn from '../../components/BackToTopBtn'
 // import FooterArc from '../../components/FooterArc'
@@ -120,7 +120,7 @@ export default function About() {
         </main>
         <BackToTopBtn />
         {/* <FooterArc /> */}
-        <FooterBg />
+        <FooterBgc />
       </div>
     </div>
 
