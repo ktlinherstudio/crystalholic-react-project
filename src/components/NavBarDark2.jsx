@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
-import { useUI } from '../context/UIContext'; // ✅ 直接使用 useUI
+import { useUI } from '../context/UIContext'; 
 import './NavBarDark2.css';
 
 export default function NavBarDark() {
   const { isLoggedIn, logout, user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { openMenu } = useUI(); // ✅ 無 fallback，只有包了 UIProvider 才能使用
+  const { openMenu } = useUI(); 
 
   const handleMemberClick = () => {
     if (isLoggedIn) {

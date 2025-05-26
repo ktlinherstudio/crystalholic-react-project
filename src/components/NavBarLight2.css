@@ -33,18 +33,18 @@ header ul {
   flex-shrink: 0;
   max-width: 100%;
   padding-right: 14px;
+  align-items: center; 
+  /* margin: 0;
+  padding: 0; */
 }
 
 .icon li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
-}
-
-.icon li img {
-  width: 34px;
-  height: 34px;
+  margin: 0 10px; 
+  margin: 0;
+  padding: 0;
 }
 
 /*  member icon 按鈕樣式 */
