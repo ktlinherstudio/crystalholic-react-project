@@ -9,7 +9,7 @@ import crystalsData from './CrystalData'
 
 export default function CrystalPage() {
 
-    const [currentCategory, setCurrentCategory] = useState("放鬆冥想");
+    const [currentCategory, setCurrentCategory] = useState("靈性直覺");
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const currentCrystals = crystalsData[currentCategory];
@@ -131,6 +131,8 @@ export default function CrystalPage() {
                                                     if (targetIndex !== -1) {
                                                         setCurrentCategory(img.category);
                                                         setCurrentIndex(targetIndex);
+                                                        //滾動至頂端
+                                                        window.scrollTo({ top: 0, behavior: 'smooth' });
                                                     }
                                                 }}
                                             />
