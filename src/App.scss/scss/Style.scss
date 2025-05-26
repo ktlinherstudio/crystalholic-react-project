@@ -146,7 +146,7 @@ body {
     font-family: 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif; //serif 套系統有襯線字
     font-weight: 100;
     line-height: 1.5;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
 }
 
 // /*menu展開頁*/
@@ -506,7 +506,7 @@ body {
 
 /*封面1*/
 .ch-cover {
-    // border: #2fcf3d 2px solid;
+    border: #2fcf3d 2px solid;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -699,25 +699,25 @@ body {
 }
 
 /// 動畫
-.section-starttest {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.8s ease;
-    pointer-events: none; // 避免還沒進場前就能互動
-}
+// .section-starttest {
+//     opacity: 0;
+//     transform: translateY(100px);
+//     transition: all 0.8s ease;
+//     pointer-events: none; // 避免還沒進場前就能互動
+// }
 
-.section-starttest-active {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-}
+// .section-starttest-active {
+//     opacity: 1;
+//     transform: translateY(0);
+//     pointer-events: auto;
+// }
 
 ///
 
 /*封面2*/
 .section-starttest {
 
-    // border: #e28121 5px solid;
+    border: #e28121 5px solid;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -912,7 +912,7 @@ body {
 ////ipad pro 套不到
 #section-tarotcard {
 
-    border: #e22121 2px solid;
+    border: #e22121 5px solid;
 
     width: 100%;
     height: 100vh;
@@ -920,6 +920,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    //方便RWD觀賞用
+    position: sticky;
+    z-index: 2;
 
     @media ($media-lg) {
         justify-content: center;
@@ -936,23 +940,25 @@ body {
 
     .tarotcard {
         // margin: 8.7% 10% 9% 10%;
-
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
 
-        gap: 7.5%; ////////////////////////////////
-
         #tarotcard-title {
+            border: 2px yellow solid;
             color: #fff;
-            font-size: 24px;
-            width: 344px;
-            height: 42px;
-            margin-top: 8.7vh; //70px
-            margin-bottom: 7.5vh; //60px
+            font-size: 1.5rem; // 24px
+            //   font-size: 24px; 
+
+            width: 23.5%; // 344px;
+            height: 5%; // 42px
+            margin-top: 5%;
+            margin-bottom: 5%;
 
             // @media ($media-lg) {
+                        font-size: 1.5rem; // 24px
+
             //     margin-top: 8.7vh; //70px
             //     margin-bottom: 7.5vh; //60px
             // }
@@ -978,15 +984,15 @@ body {
             }
 
             .dimond-left {
-                width: 22px;
-                height: 39.22px;
-                margin: 0 50px 0 0;
+                width: 7%; // 22px;
+                // height: 39.22px;
+                margin: 0 15% 0 0; // 50px
             }
 
             .dimond-right {
-                width: 22px;
-                height: 39.22px;
-                margin: 0 0 0 50px;
+                width: 7%; // 22px;
+                // height: 39.22px;
+                margin: 0 0 0 15%; // 50px
             }
         }
 
@@ -1000,55 +1006,55 @@ body {
             align-items: center;
 
             .trcardchild-1 {
-                width: 280px;
-                height: 455px;
+                width: 20%;
+                // height: 455px;
                 margin-left: 0;
 
-                @media ($media-xlg) {
-                    width: 265px;
-                }
+                // @media ($media-xlg) {
+                //     width: 265px;
+                // }
 
 
-                @media ($media-lg) {
-                    width: 225px;
-                    height: 455px;
-                }
+                // @media ($media-lg) {
+                //     width: 225px;
+                //     height: 455px;
+                // }
 
-                @media ($media-md) {
-                    width: 210px;
-                    height: 455px;
-                }
+                // @media ($media-md) {
+                //     width: 210px;
+                //     height: 455px;
+                // }
 
-                @media ($media-sm) {
-                    width: 190px;
-                    height: 455px;
-                }
+                // @media ($media-sm) {
+                //     width: 190px;
+                //     height: 455px;
+                // }
             }
 
             .trcard {
-                width: 280px;
-                height: 455px;
-                margin-left: -110px;
+                width: 20%;
+                // height: 455px;
+                margin-left: -8%;
 
-                @media ($media-xlg) {
-                    width: 265px;
-                }
+                // @media ($media-xlg) {
+                //     width: 265px;
+                // }
 
-                @media ($media-lg) {
-                    width: 225px;
-                    height: 455px;
-                }
+                // @media ($media-lg) {
+                //     width: 225px;
+                //     height: 455px;
+                // }
 
-                @media ($media-md) {
-                    //ipad mini 1024*768 抓不到
-                    width: 210px;
-                    height: 455px;
-                }
+                // @media ($media-md) {
+                //     //ipad mini 1024*768 抓不到
+                //     width: 210px;
+                //     height: 455px;
+                // }
 
-                @media ($media-sm) {
-                    width: 190px;
-                    height: 455px;
-                }
+                // @media ($media-sm) {
+                //     width: 190px;
+                //     height: 455px;
+                // }
 
             }
 
@@ -1058,8 +1064,8 @@ body {
             width: 283px;
             height: 70px;
             // padding: 20px 100px;
-            margin-top: 60px;
-            margin-bottom: 70px;
+            margin-top: 5%;
+            margin-bottom: 5%;
             display: flex;
             justify-content: center; //items or content
             align-items: center;
@@ -1072,6 +1078,7 @@ body {
             backdrop-filter: blur(2px);
 
             a {
+                font-size: 1.25rem;
                 color: #8750BF;
             }
         }
@@ -1777,18 +1784,19 @@ body {
 
 /*礦迷回饋*/
 #section-feedback {
-    
-    .container{
 
-    }
+    .container {}
+
     .carousel-control-prev-icon {
         background-image: url(../../../public/images/HomePage/icon_arrow_left.ico.svg);
     }
+
     .carousel-control-next-icon {
-                background-image: url(../../../public/images/HomePage/icon_arrow_right.ico.svg);
+        background-image: url(../../../public/images/HomePage/icon_arrow_right.ico.svg);
 
     }
-    #carouselExample{
+
+    #carouselExample {
         display: flex;
         gap: 20%;
 
@@ -1834,7 +1842,7 @@ body {
         align-items: center;
 
         //SW
-        
+
 
 
 
