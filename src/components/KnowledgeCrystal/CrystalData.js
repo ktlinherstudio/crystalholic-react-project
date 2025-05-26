@@ -344,9 +344,9 @@ const crystalsData = {
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-smokyquartz.png",
-                    alt: "煙水晶",
-                    category: "能量防護",
-                    targetName: "煙水晶"
+                    alt: "茶晶",
+                    category: "放鬆冥想",
+                    targetName: "茶晶"
                 }
             ]
         },
@@ -422,9 +422,9 @@ const crystalsData = {
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-smokyquartz.png",
-                    alt: "煙水晶",
-                    category: "能量防護",
-                    targetName: "煙水晶"
+                    alt: "茶晶",
+                    category: "放鬆冥想",
+                    targetName: "茶晶"
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-clearquartz.png",
@@ -563,11 +563,30 @@ const crystalsData = {
         {
             name: "黑曜石",
             englishName: "Obsidian",
-            image: "/images/S-CrystalSingle/crystal-obsidian.png",
-            description: "黑曜石是強大的防護石，能吸收負能量並穩定氣場。",
-            effects: "防小人、防負能量、穩定磁場",
-            suitableFor: "容易受外界影響、需要保護的人",
-            recommended: []
+            image: "/images/S-CrystalSingle/crystal-blackobsidian.png",
+            description: "黑曜石是一種天然火山玻璃，具強大的負能量吸附與防護功能，是最經典的能場保護水晶之一。",
+            effects: "氣場清理：吸收周遭負能量並協助排出體內濁氣。\n能量屏障：形成保護罩避免能量干擾與攻擊。\n情緒釋放：協助釋放內在壓力與潛藏情緒。",
+            suitableFor: "長期處在高壓、人際複雜或能量混亂環境的人。\n靈性工作者或想強化自身氣場的人。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-snowflakeobsidian.png",
+                    alt: "雪花黑曜石",
+                    category: "能量防護",
+                    targetName: "雪花黑曜石"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-blacktourmaline.png",
+                    alt: "黑碧璽",
+                    category: "能量防護",
+                    targetName: "黑碧璽"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-amethyst.png",
+                    alt: "紫水晶",
+                    category: "放鬆冥想",
+                    targetName: "紫水晶"
+                }
+            ]
         },
         {
             name: "金曜石",
@@ -585,9 +604,9 @@ const crystalsData = {
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-smokyquartz.png",
-                    alt: "煙水晶",
-                    category: "能量防護",
-                    targetName: "煙水晶"
+                    alt: "茶晶",
+                    category: "放鬆冥想",
+                    targetName: "茶晶"
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-labradorite.png",
@@ -599,7 +618,7 @@ const crystalsData = {
         },
         {
             name: "黑碧璽",
-            englishName: "Black Tourmaline",
+            englishName: "Tourmaline",
             image: "/images/S-CrystalSingle/crystal-blacktourmaline.png",
             description: "黑碧璽是最具能量防護力的水晶之一，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
             effects: "氣場防護：建立能量屏障，防止外界干擾與情緒吸附。\n情緒穩定：減緩緊張、焦慮與能量混亂。\n地氣連結：強化根部穩定感，提升內在安全與行動力。",
@@ -607,9 +626,9 @@ const crystalsData = {
             recommended: [
                 {
                     src: "/images/S-CrystalSingle/crystal-smokyquartz.png",
-                    alt: "煙水晶",
-                    category: "能量防護",
-                    targetName: "煙水晶"
+                    alt: "茶晶",
+                    category: "放鬆冥想",
+                    targetName: "茶晶"
                 },
                 {
                     src: "/images/S-CrystalSingle/crystal-goldobsidian.png",
@@ -624,10 +643,103 @@ const crystalsData = {
                     targetName: "拉長石"
                 }
             ]
+        },
+        {
+            name: "雪花黑曜石",
+            englishName: "Snowflake O.",
+            image: "/images/S-CrystalSingle/crystal-snowflakeobsidian.png",
+            description: "雪花黑曜石是一種具有白色斑點的火山玻璃，能平衡陰陽能量並協助自我反思，具有強大的保護與情緒轉化作用。",
+            effects: "能量平衡：協調情緒能場與內在衝突。\n清理情緒：釋放壓抑與潛藏的創傷能量。\n穩定防護：建立內在穩定結界，抵禦負面波動。",
+            suitableFor: "情緒敏感或容易被他人影響的人。\n需要深入自我整合與能量保護的人。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-blackobsidian.png", alt: "黑曜石", category: "能量防護", targetName: "黑曜石" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" }
+            ]
+        },
+        {
+            name: "黑銀曜石",
+            englishName: "Silver Sheen O.",
+            image: "/images/S-CrystalSingle/crystal-silversheenobsidian.png",
+            description: "黑銀曜石表面呈現銀色光澤，象徵內在洞察與能量防護，適合需要看清真相與穩固自我界線的人使用。",
+            effects: "心靈保護：阻隔情緒干擾與負能量渲染。\n提升洞察：看見潛意識中的模式與真相。\n自我連結：穩定能場，深化內在力量。",
+            suitableFor: "靈性工作者、情緒敏感族群、能量療癒師。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-goldobsidian.png", alt: "金曜石", category: "能量防護", targetName: "金曜石" },
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+            ]
+        },
+        {
+            name: "紅紋石",
+            englishName: "Rhodochrosite",
+            image: "/images/S-CrystalSingle/crystal-rhodochrosite.png",
+            description: "紅紋石除了溫柔的情感療癒能量，也能協助在關係中設立健康界線，是一顆兼具保護與柔軟的水晶。",
+            effects: "建立界線：守護內在空間與情感完整性。\n情緒療癒：撫平創傷，激發愛與自我價值。\n溫柔防護：在不失開放的前提下保持能場穩定。",
+            suitableFor: "在人際中容易過度付出與能量流失者。\n需要學會說不、照顧自己界線的人。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "玫瑰石英", category: "愛與人際", targetName: "玫瑰石英" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+            ]
+        },
+        {
+            name: "黑鐵礦",
+            englishName: "Hematite",
+            image: "/images/S-CrystalSingle/crystal-hematite.png",
+            description: "黑鐵礦是富含金屬光澤的礦石，以強大的地氣與穩定能量著稱。它能協助集中注意力、排除負能量，並加強身體與地面的連結感，是經典的防護與接地型水晶。",
+            effects: "地氣穩定：強化根部連結與行動實踐。\n防護結界：隔離外界情緒干擾與負面投射。\n專注定心：清除雜念並提升專注執行力。",
+            suitableFor: "易焦慮、能量浮動大、難以集中精神的人。\n需要穩定根基與保護氣場的療癒師與職場工作者。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-smokyquartz.png",
+                    alt: "茶晶",
+                    category: "能量防護",
+                    targetName: "茶晶"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-blacktourmaline.png",
+                    alt: "黑碧璽",
+                    category: "能量防護",
+                    targetName: "黑碧璽"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-carnelian.png",
+                    alt: "紅瑪瑙",
+                    category: "專注工作",
+                    targetName: "紅瑪瑙"
+                }
+            ]
+        },
+        {
+            name: "硨磲石",
+            englishName: "Tridacna",
+            image: "/images/S-CrystalSingle/crystal-tridacna.png",
+            description: "硨磲石是海洋能量與佛教文化相連的聖石，有著淨化心念與提升正能量的功效，可穩定磁場並驅逐負面思緒。",
+            effects: "磁場淨化：清除雜念與心靈混亂。\n心性安定：提升慈悲頻率與內在和平。\n柔性防護：在柔和中形成能量結界。",
+            suitableFor: "靈性修行、冥想或容易心浮氣躁者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-labradorite.png", alt: "拉長石", category: "靈性直覺", targetName: "拉長石" }
+            ]
+        },
+        {
+            name: "龍血石",
+            englishName: "Bloodstone",
+            image: "/images/S-CrystalSingle/crystal-bloodstone.png",
+            description: "龍血石是一種具有綠紅斑紋的保護石，融合了勇氣、耐力與抗壓能量，常被視為戰士之石。",
+            effects: "強化氣場：提升生命力與能量耐受度。\n行動保護：在行動與挑戰中穩定自我。\n戰士精神：激發堅持與面對逆境的勇氣。",
+            suitableFor: "面對挑戰、轉變或易消耗能量的環境者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" },
+                { src: "/images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "專注工作", targetName: "紅瑪瑙" },
+                { src: "/images/S-CrystalSingle/crystal-blacktourmaline.png", alt: "黑碧璽", category: "能量防護", targetName: "黑碧璽" }
+            ]
         }
     ],
     放鬆冥想: [
-        
+
         {
             name: "天使石",
             englishName: "Angelite",
@@ -710,6 +822,99 @@ const crystalsData = {
                     category: "放鬆冥想",
                     targetName: "紫水晶"
                 }
+            ]
+        },
+        {
+            name: "茶晶",
+            englishName: "Smoky Quartz",
+            image: "/images/S-CrystalSingle/crystal-smokyquartz.png",
+            description: "茶晶是一種帶有灰棕色調的水晶，以其強大的穩定與排毒能量聞名。它能協助排出負面情緒與雜念，並穩固內在信念，是高壓生活中的守護石。",
+            effects: "能量釋放：協助釋放壓力、恐懼與焦慮。\n磁場穩定：穩定身心靈氣場，帶來踏實感。\n負能清理：清除體內累積的情緒毒素與雜亂能量。",
+            suitableFor: "壓力過大、情緒容易累積或經常處於忙碌環境中的人。\n需要地氣與穩定支撐的人。",
+            recommended: [
+                {
+                    src: "/images/S-CrystalSingle/crystal-blacktourmaline.png",
+                    alt: "黑碧璽",
+                    category: "能量防護",
+                    targetName: "黑碧璽"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-hematite.png",
+                    alt: "黑鐵礦",
+                    category: "能量防護",
+                    targetName: "黑鐵礦"
+                },
+                {
+                    src: "/images/S-CrystalSingle/crystal-amethyst.png",
+                    alt: "紫水晶",
+                    category: "放鬆冥想",
+                    targetName: "紫水晶"
+                }
+            ]
+        },
+        {
+            name: "菫青石",
+            englishName: "Iolite",
+            image: "/images/S-CrystalSingle/crystal-iolite.png",
+            description: "菫青石是一種帶有神秘紫藍色調的水晶，能幫助釐清混亂思緒、強化內在導引，是冥想與視覺化練習中的靈性之石。",
+            effects: "釐清思緒：協助從焦躁中回到中心點。\n直覺開啟：加強第三眼與靈視覺化。\n冥想引導：幫助聚焦並進入深度冥想狀態。",
+            suitableFor: "腦袋常打結、情緒反覆者。\n需要靈性練習與意念導引幫助者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-sodalite.png", alt: "蘇打石", category: "靈性直覺", targetName: "蘇打石" },
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" }
+            ]
+        },
+        {
+            name: "天青石",
+            englishName: "Celestite",
+            image: "/images/S-CrystalSingle/crystal-celestite.png",
+            description: "天青石散發出平靜與祥和的頻率，能協助放鬆神經系統、緩和緊張情緒，是非常適合冥想與睡前放鬆的水晶。",
+            effects: "穩定神經：減緩壓力與焦躁情緒。\n靜心入眠：幫助冥想與放鬆入睡。\n靈性共鳴：提升心靈寧靜與和平感。",
+            suitableFor: "睡眠障礙、神經緊繃或能量敏感者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-angelite.png", alt: "天使石", category: "放鬆冥想", targetName: "天使石" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-bluecalcite.png", alt: "藍方解石", category: "放鬆冥想", targetName: "藍方解石" }
+            ]
+        },
+        {
+            name: "綠螢石",
+            englishName: "Green Fluorite",
+            image: "/images/S-CrystalSingle/crystal-greenfluorite.png",
+            description: "綠螢石具有淨化思緒與安撫心輪的功效，能協助釋放雜念、整理混亂狀態，非常適合在靜心與放鬆時使用。",
+            effects: "釐清雜念：協助從混亂回到安定中心。\n能量整理：穩定思緒與心輪能場。\n靜心作用：支持冥想時的專注與平和。",
+            suitableFor: "容易分心、精神雜亂或情緒低落者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-rosequartz.png", alt: "粉晶", category: "放鬆冥想", targetName: "粉晶" }
+            ]
+        },
+        {
+            name: "碧璽貓眼石",
+            englishName: "Cat's Eye Tourmaline",
+            image: "/images/S-CrystalSingle/crystal-catseyetourmaline.png",
+            description: "碧璽貓眼石是一種兼具防護與靜心功能的晶石，其特殊光線反射能夠協助冥想聚焦並穩定情緒波動。",
+            effects: "冥想聚焦：集中注意力進入內在空間。\n保護平衡：阻隔負能並穩定能場。\n內觀清明：提升冥想中的直觀覺察力。",
+            suitableFor: "容易受干擾、思緒飄散或靈性初學者。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" },
+                { src: "/images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
+                { src: "/images/S-CrystalSingle/crystal-moonstone.png", alt: "月光石", category: "放鬆冥想", targetName: "月光石" }
+            ]
+        },
+        {
+            name: "黑銀曜石",
+            englishName: "Silver Sheen O.",
+            image: "/images/S-CrystalSingle/crystal-silversheenobsidian.png",
+            description: "黑銀曜石不僅具有能量防護作用，也能協助反思與穩定思緒，是進入深層冥想的優秀助手。",
+            effects: "能量隔離：避免干擾，讓冥想更安定。\n內省輔助：看見潛意識中的情緒模式。\n心念沉澱：清理思緒並帶來平靜力量。",
+            suitableFor: "靈性探索者與情緒敏感、容易受外界干擾的人。",
+            recommended: [
+                { src: "/images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
+                { src: "/images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
+                { src: "/images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" }
             ]
         }
 
