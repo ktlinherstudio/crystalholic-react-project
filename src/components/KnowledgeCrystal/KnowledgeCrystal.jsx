@@ -1,11 +1,35 @@
+import React, { useState } from 'react';
 import '../../pages/Others/KnowledgeCrystal.css';
 import NavBarWrapper from '../NavBarWrapper';
-import FooterPlain from '../FooterPlain'
-import BgDarkBlock from '../BgDarkBlock'
+import FooterPlain from '../FooterPlain';
+import BgDarkBlock from '../BgDarkBlock';
 import '../../css/fonts.css';
-import BackToTopBtn from '../BackToTopBtn'
+import BackToTopBtn from '../BackToTopBtn';
+import crystalsData from './CrystalData'
 
 export default function CrystalPage() {
+
+    const [currentCategory, setCurrentCategory] = useState("放鬆冥想");
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const currentCrystals = crystalsData[currentCategory];
+    const currentCrystal = currentCrystals[currentIndex];
+
+    const handleCategoryChange = (category) => {
+        setCurrentCategory(category);
+        setCurrentIndex(0);
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prev) => (prev + 1) % currentCrystals.length);
+    };
+
+    const handlePrev = () => {
+        setCurrentIndex((prev) =>
+            prev === 0 ? currentCrystals.length - 1 : prev - 1
+        );
+    };
+
     return (
         <>
             <div className="font-style">
@@ -15,21 +39,38 @@ export default function CrystalPage() {
                         {/* 上半區：文字與水晶簡介 */}
                         <section className="arc-k-outer-content">
                             <div className="space">
+
                                 <ul className="category-k">
-                                    <li>放鬆冥想</li>
-                                    <li>專注工作</li>
-                                    <li>愛與人際</li>
-                                    <li>能量防護</li>
-                                    <li>靈性直覺</li>
+                                    {Object.keys(crystalsData).map((cat) => (
+                                        <li
+                                            key={cat}
+                                            className={cat === currentCategory ? "active" : ""}
+                                            onClick={() => handleCategoryChange(cat)}
+                                        >
+                                            {cat}
+                                        </li>
+                                    ))}
                                 </ul>
-
                                 <div className="crystal-k">
-                                    <h1>Kyanite</h1>
-
+                                    <h1>{currentCrystal.englishName}</h1>
                                     <div className="crystal-k-img">
-                                        <img src="/images/S-Btn/btn_left.svg" alt="Left" className="crystal-k-arrow" />
-                                        <img src="/images/S-CrystalSingle/crystal-kyanite.png" alt="藍晶石" className="crystal-k-center" />
-                                        <img src="/images/S-Btn/btn_right.svg" alt="Right" className="crystal-k-arrow" />
+                                        <img
+                                            src="/images/S-Btn/btn_left.svg"
+                                            alt="Left"
+                                            className="crystal-k-arrow"
+                                            onClick={handlePrev}
+                                        />
+                                        <img
+                                            src={currentCrystal.image}
+                                            alt={currentCrystal.name}
+                                            className="crystal-k-center"
+                                        />
+                                        <img
+                                            src="/images/S-Btn/btn_right.svg"
+                                            alt="Right"
+                                            className="crystal-k-arrow"
+                                            onClick={handleNext}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -42,11 +83,8 @@ export default function CrystalPage() {
 
                             <section className="arc-k-inner-content">
                                 <div className="part1">
-                                    <h2>藍晶石</h2>
-                                    <p>
-                                        藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。
-                                        它常用於增強溝通、情緒平衡和靈性覺醒。
-                                    </p>
+                                    <h2>{currentCrystal.name}</h2>
+                                    <p>{currentCrystal.description}</p>
                                 </div>
 
                                 <div className="p2p3">
@@ -54,18 +92,24 @@ export default function CrystalPage() {
                                         <h2>主要功效</h2>
                                         <hr />
                                         <p>
-                                            促進溝通：幫助開啟喉輪，增強表達與自我溝通。<br />
-                                            情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。<br />
-                                            靈性覺醒：提升直覺與靈性成長，增強心靈覺醒。
+                                            {currentCrystal.effects.split('\n').map((line, index) => (
+                                                <span key={index}>
+                                                    {line}
+                                                    <br />
+                                                </span>
+                                            ))}
                                         </p>
                                     </div>
 
                                     <div className="part3">
                                         <h2>適合人群</h2>
                                         <hr />
-                                        <p>
-                                            追求心靈成長與靈性覺醒的人。<br />
-                                            需要情緒平衡與放鬆的人。
+                                        <p>{currentCrystal.suitableFor.split('\n').map((line, index) => (
+                                            <span key={index}>
+                                                {line}
+                                                <br />
+                                            </span>
+                                        ))}
                                         </p>
                                     </div>
                                 </div>
@@ -73,11 +117,27 @@ export default function CrystalPage() {
                                 <div className="recommended-crystals-k">
                                     <h2>推薦搭配水晶</h2>
                                     <div className="rc-img">
-                                        <img src="/images/S-CrystalSingle/crystal-angelite.png" alt="天使石" className="crystal1" />
-                                        <img src="/images/S-CrystalSingle/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
-                                        <img src="/images/S-CrystalSingle/crystal-sunstone.png" alt="太陽石" className="crystal3" />
+                                        {currentCrystal.recommended.map((img, index) => (
+                                            <img
+                                                key={index}
+                                                src={img.src}
+                                                alt={img.alt}
+                                                className={`crystal${index + 1}`}
+                                                onClick={() => {
+                                                    // 找出分類中對應水晶的 index
+                                                    const matchedCrystals = crystalsData[img.category];
+                                                    const targetIndex = matchedCrystals.findIndex(c => c.name === img.targetName);
+
+                                                    if (targetIndex !== -1) {
+                                                        setCurrentCategory(img.category);
+                                                        setCurrentIndex(targetIndex);
+                                                    }
+                                                }}
+                                            />
+                                        ))}
                                     </div>
                                 </div>
+
                             </section>
                             <BackToTopBtn />
                             <FooterPlain />

@@ -44,8 +44,6 @@
   flex-wrap: wrap;
   gap: 23px;
   height: 730px;
-  align-items: stretch;
-  /* 讓高度一致 */
 }
 
 .menu-overlay.open .menu-panel {
