@@ -48,7 +48,7 @@ export default function About() {
                 <div className="text-content">
                   <h2 className="title">美感與靈性的完美融合</h2>
                   <img
-                    src="/images/About/deco-divider_purple.svg"
+                    src="./images/About/deco-divider_purple.svg"
                     alt="divider"
                     className="line"
                   />
@@ -65,7 +65,7 @@ export default function About() {
                 </div>
               </div>
               <div className="image">
-                <img src="/images/About/aboutus-braclet.png" alt="設計款水晶手鍊" />
+                <img src="./images/About/aboutus-braclet.png" alt="設計款水晶手鍊" />
               </div>
             </div>
           </section>
@@ -76,7 +76,7 @@ export default function About() {
                 <div className="text-content">
                   <h2 className="title">讓水晶更貼近你的生活</h2>
                   <img
-                    src="/images/About/deco-divider_purple.svg"
+                    src="./images/About/deco-divider_purple.svg"
                     alt="divider"
                     className="line"
                   />
@@ -89,7 +89,7 @@ export default function About() {
                 </div>
               </div>
               <div className="image">
-                <img src="/images/About/aboutus-gift.png" alt="水晶禮物傳遞" />
+                <img src="./images/About/aboutus-gift.png" alt="水晶禮物傳遞" />
               </div>
             </div>
           </section>
@@ -100,7 +100,7 @@ export default function About() {
                 <div className="text-content">
                   <h2 className="title">Crystalholic的品質保證</h2>
                   <img
-                    src="/images/About/deco-divider_purple.svg"
+                    src="./images/About/deco-divider_purple.svg"
                     alt="divider"
                     className="line"
                   />
@@ -112,7 +112,7 @@ export default function About() {
                 </div>
               </div>
               <div className="image">
-                <img src="/images/About/aboutus-quality.png" alt="嚴選水晶品質" />
+                <img src="./images/About/aboutus-quality.png" alt="嚴選水晶品質" />
               </div>
             </div>
           </section>

@@ -11,7 +11,7 @@ export default function LoginForm({ onCloseModal }) {
         setIsSubmitting(true);
 
         const name = "我愛礦礦"; // 可改為從輸入中讀取
-        const avatar = "/images/S-NavBar/navicon_member.svg";
+        const avatar = "./images/S-NavBar/navicon_member.svg";
         login();
         setUser({ name, avatar });
         alert('登入成功！歡迎回來 👋');
@@ -23,8 +23,8 @@ export default function LoginForm({ onCloseModal }) {
     return (
         <form className="auth-form login-form" onSubmit={handleLoginSubmit}>
             <div className="social-login">
-                <a href="#"><img src="/images/LoginRegister/btn-google.svg" alt="Google" /></a>
-                <a href="#"><img src="/images/LoginRegister/btn-line.svg" alt="LINE" /></a>
+                <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
+                <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
             </div>
 
             <div className="divider"><span>或</span></div>

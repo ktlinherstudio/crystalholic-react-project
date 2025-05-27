@@ -14,7 +14,7 @@ export default function MenuOverlay() {
       <BgDarkBlock />
       <div className="menu-panel">
         <span className="menu-closebtn" onClick={closeMenu}>
-          <img src="/images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
+          <img src="./images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
         </span>
         <nav className="menu-navigation">
           <div className="menu-searchbar">
@@ -25,7 +25,7 @@ export default function MenuOverlay() {
             />
             <button className="menu-search-btn" onClick={() => console.log('搜尋觸發')}>
               <img
-                src="/images/S-NavBar/navicon_search.svg"
+                src="./images/S-NavBar/navicon_search.svg"
                 alt="search"
                 className="menu-search-icon"
               />

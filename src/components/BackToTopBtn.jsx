@@ -13,7 +13,7 @@ export default function BackToTopBtn() {
         aria-label="Back to top"
       >
         <img
-          src="/images/S-Btn/btn-BackToTop.png"
+          src="./images/S-Btn/btn-BackToTop.png"
           alt="Back to Top"
           className="back-to-top-img"
         />

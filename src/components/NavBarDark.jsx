@@ -25,7 +25,7 @@ export default function NavBarDark() {
     <>
       <header id="navbar2">
         <Link className="logo" to="/cover">
-          <img src="/images/S-NavBar/logotext_nav2.svg" alt="首頁" />
+          <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
         <nav className="navigation2">
           <ul className="icon2">
@@ -39,7 +39,7 @@ export default function NavBarDark() {
               {isLoggedIn && showDropdown && (
                 <div className="member-dropdown">
                   <img
-                    src="/images/Numtest/characters/生命靈數角色_s1.svg"
+                    src="./images/Numtest/characters/生命靈數角色_s1.svg"
                     alt="avatar"
                     className="member-avatar"
                   />

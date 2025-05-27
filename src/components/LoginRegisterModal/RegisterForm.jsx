@@ -13,7 +13,7 @@ export default function RegisterForm({ onCloseModal }) {
 
         const formData = new FormData(e.target);
         const name = formData.get('username') || '我愛礦礦';
-        const avatar = "/images/S-NavBar/navicon_member.svg";
+        const avatar = "./images/S-NavBar/navicon_member.svg";
 
         login();
         setUser({ name, avatar });
@@ -31,8 +31,8 @@ export default function RegisterForm({ onCloseModal }) {
     return (
         <form className="auth-form" onSubmit={handleRegisterSubmit}>
             <div className="social-login">
-                <a href="#"><img src="/images/LoginRegister/btn-google.svg" alt="Google" /></a>
-                <a href="#"><img src="/images/LoginRegister/btn-line.svg" alt="LINE" /></a>
+                <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
+                <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
             </div>
 
             <div className="divider"><span>或</span></div>

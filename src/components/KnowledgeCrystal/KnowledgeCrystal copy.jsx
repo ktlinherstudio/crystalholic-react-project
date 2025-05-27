@@ -28,9 +28,9 @@ export default function CrystalPage() {
                                     <h1>Kyanite</h1>
 
                                     <div className="crystal-k-img">
-                                        <img src="/images/S-Btn/btn_left.svg" alt="Left" className="crystal-k-arrow" />
-                                        <img src="/images/S-CrystalSingle/crystal-kyanite.png" alt="藍晶石" className="crystal-k-center" />
-                                        <img src="/images/S-Btn/btn_right.svg" alt="Right" className="crystal-k-arrow" />
+                                        <img src="./images/S-Btn/btn_left.svg" alt="Left" className="crystal-k-arrow" />
+                                        <img src="./images/S-CrystalSingle/crystal-kyanite.png" alt="藍晶石" className="crystal-k-center" />
+                                        <img src="./images/S-Btn/btn_right.svg" alt="Right" className="crystal-k-arrow" />
                                     </div>
                                 </div>
                             </div>
@@ -74,9 +74,9 @@ export default function CrystalPage() {
                                 <div className="recommended-crystals-k">
                                     <h2>推薦搭配水晶</h2>
                                     <div className="rc-img">
-                                        <img src="/images/S-CrystalSingle/crystal-angelite.png" alt="天使石" className="crystal1" />
-                                        <img src="/images/S-CrystalSingle/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
-                                        <img src="/images/S-CrystalSingle/crystal-sunstone.png" alt="太陽石" className="crystal3" />
+                                        <img src="./images/S-CrystalSingle/crystal-angelite.png" alt="天使石" className="crystal1" />
+                                        <img src="./images/S-CrystalSingle/crystal-amethyst.png" alt="紫水晶" className="crystal2" />
+                                        <img src="./images/S-CrystalSingle/crystal-sunstone.png" alt="太陽石" className="crystal3" />
                                     </div>
                                 </div>
                             </section>

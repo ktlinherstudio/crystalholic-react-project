@@ -109,7 +109,7 @@
   display: block;
   width: 10px;
   height: 16px;
-  background-image: url('/images/HomePage/deco-menu-diamond.svg');
+  background-image: url('./images/HomePage/deco-menu-diamond.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -171,7 +171,7 @@
   display: block;
   width: 10px;
   height: 16px;
-  background-image: url('/images/HomePage/deco-menu-diamond.svg');
+  background-image: url('./images/HomePage/deco-menu-diamond.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -223,27 +223,27 @@
 
 
 .scicon-box .line {
-  background-image: url('/images/S-Footer/icon_line.svg');
+  background-image: url('./images/S-Footer/icon_line.svg');
 }
 
 .scicon-box .ig {
-  background-image: url('/images/S-Footer/icon_ig.svg');
+  background-image: url('./images/S-Footer/icon_ig.svg');
 }
 
 .scicon-box .fb {
-  background-image: url('/images/S-Footer/icon_fb.svg');
+  background-image: url('./images/S-Footer/icon_fb.svg');
 }
 
 .scicon-box .line:hover {
-  background-image: url('/images/S-Footer/icon_line_h.svg');
+  background-image: url('./images/S-Footer/icon_line_h.svg');
 }
 
 .scicon-box .ig:hover {
-  background-image: url('/images/S-Footer/icon_ig_h.svg');
+  background-image: url('./images/S-Footer/icon_ig_h.svg');
 }
 
 .scicon-box .fb:hover {
-  background-image: url('/images/S-Footer/icon_fb_h.svg');
+  background-image: url('./images/S-Footer/icon_fb_h.svg');
 }
 
 

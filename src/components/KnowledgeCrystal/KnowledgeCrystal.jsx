@@ -55,7 +55,7 @@ export default function CrystalPage() {
                                     <h1>{currentCrystal.englishName}</h1>
                                     <div className="crystal-k-img">
                                         <img
-                                            src="/images/S-Btn/btn_left.svg"
+                                            src="./images/S-Btn/btn_left.svg"
                                             alt="Left"
                                             className="crystal-k-arrow"
                                             onClick={handlePrev}
@@ -66,7 +66,7 @@ export default function CrystalPage() {
                                             className="crystal-k-center"
                                         />
                                         <img
-                                            src="/images/S-Btn/btn_right.svg"
+                                            src="./images/S-Btn/btn_right.svg"
                                             alt="Right"
                                             className="crystal-k-arrow"
                                             onClick={handleNext}
