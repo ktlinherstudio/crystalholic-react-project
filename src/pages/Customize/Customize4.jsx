@@ -15,7 +15,7 @@ export default function Customize4() {
 
     return (
         <>
-        <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
+            <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
             <NavBarWrapper variant="dark" />
             {/* 內容 */}
             <main className={style.index}>
@@ -76,13 +76,13 @@ export default function Customize4() {
                     {/* 單顆水晶列表 */}
                     <div id={style.beadWindow}>
                         <nav className={style.tabs}>
-                            <button className={style.tab}>風格4</button>
+                            <button className={style.tab}>澄語之藍</button>
                             <hr />
-                            <button className={style.tab}>風格3</button>
+                            <button className={style.tab}>秘境探光</button>
                             <hr />
-                            <button className={style.tab}>風格2</button>
+                            <button className={style.tab}>四季琉波</button>
                             <hr />
-                            <button className={style.tab}>風格1</button>
+                            <button className={style.tab}>微醺晶釀</button>
                         </nav>
 
                         <div className={style.beadGrid}>
@@ -158,27 +158,27 @@ export default function Customize4() {
                 <div className={style.iconBox2}>
                     <div className={style.icon1Box}>
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="./public/images/Custom/btn_size_tool.svg" alt="" />
+                            <div className={style.iconBtn1}></div>
                             <p>手圍測量</p>
                         </div>
                         <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="./public/images/Custom/btn_ans_tool.svg" alt="" />
+                            <div className={style.iconBtn2}></div>
                             <p> 測驗結果</p>
                         </div>
                         <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="./public/images/Custom/btn_knowl_tool.svg" alt="" />
+                            <div className={style.iconBtn3}></div>
                             <p>水晶百科</p>
                         </div>
                         <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="./public/images/Custom/btn_note_tool.svg" alt="" />
+                            <div className={style.iconBtn4}></div>
                             <p>注意事項</p>
                         </div>
                         <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="./public/images/Custom/btn_dum_tool.svg" alt="" />
+                            <div className={style.iconBtn5}></div>
                             <p>特別訂製</p>
                         </div>
                     </div>
