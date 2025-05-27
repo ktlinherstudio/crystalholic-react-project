@@ -181,7 +181,9 @@ export default function NumTest3() {
                     {/* 按鈕 */}
                     <div id="button-box">
                         <button className="button1-j">分享測驗結果</button>
-                        <button className="button2-j">✦ 訂製專屬手鍊 ✦</button>
+                        <button className="button2-j" onClick={() => navigate('/NumTest2')}>
+        ✦ 訂製專屬手鍊 ✦
+          </button>
                     </div>
                 </div>
             </main>
