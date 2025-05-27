@@ -42,7 +42,7 @@ export default function App() {
               <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
               <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
               
-              <Route path="/cover" element={<Cover />} />
+              <Route path="/" element={<Cover />} />
               <Route path="/CoverTest" element={<CoverTest />} />
               <Route path="/CoverTest0527" element={<CoverTest0527 />} />
               {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
