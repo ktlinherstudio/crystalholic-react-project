@@ -109,7 +109,7 @@ body {
         /*中文*/
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     overflow-x: hidden;
-   //cover1&2 動態
+    //cover1&2 動態
     // overflow: hidden;
 
 }
@@ -404,7 +404,7 @@ body {
 //     background-color: #484351; //做RWD用
 // }
 
-#coverbg {
+.coverbg {
     // background-color: #484351; //做RWD用
     // border: #fff 5px solid; //做RWD用
 
@@ -426,8 +426,8 @@ body {
         padding: 120px 20px 160px;
         display: flex;
         width: 100%;
-        // height: 255vh;
-        height: 155vh;
+        height: 255vh;
+        // height: 155vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -472,6 +472,7 @@ body {
         //     height: 36.5%;
         position: absolute;
         top: 481.6vh;
+
         left: 0;
 
         @media ($media-xlg) {
@@ -480,7 +481,7 @@ body {
         }
 
         @media ($media-lg) {
-            height: 69vh;
+            height: 72.5vh;
             top: 485.6vh;
         }
 
@@ -504,6 +505,14 @@ body {
         //         // height: 587px;
         //     }
     }
+}
+
+/*coverfooter*/
+.coverfooter {
+    @media ($media-xlg) {
+        display: none;
+    }
+
 }
 
 
@@ -769,6 +778,7 @@ body {
 
         .startbtn {
             margin-top: 28%;
+            z-index: 99;
 
             @media ($media-lg) {
                 margin-top: 54%;
@@ -897,7 +907,7 @@ body {
 
         p {
             color: #FFF;
-            font-size: 24px;
+            font-size: 1.5rem;
             padding-top: 50.2px;
 
             @media ($media-xlg) {
@@ -915,7 +925,6 @@ body {
 /*憑直覺抽一張吧*/
 ////ipad pro 套不到
 #section-tarotcard {
-
     // border: #e22121 5px solid;
 
     width: 100%;
@@ -924,167 +933,135 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    //方便RWD觀賞用
+    //方便顯示框線 RWD觀賞用
     position: sticky;
     z-index: 2;
 
-    @media ($media-lg) {
-        justify-content: center;
-    }
-
-    @media ($media-md) {
-        justify-content: center;
-    }
-
-    @media ($media-sm) {
-        justify-content: center;
-    }
-
-
-    .tarotcard {
-        // margin: 8.7% 10% 9% 10%;
+    #tarotcard-title {
+        // border: 2px yellow solid;
+        color: #fff;
+        font-size: 1.5rem; // 24px
+        width: 23.5%; // 344px;
+        // height: 5%; // 42px
+        margin-top: 5%;
+        margin-bottom: 5%;
         display: flex;
-        flex-direction: column;
-        justify-items: center;
+        justify-content: center;
         align-items: center;
+        gap: 15%;
 
-        #tarotcard-title {
-            // border: 2px yellow solid;
-            color: #fff;
-            font-size: 1.5rem; // 24px
-            //   font-size: 24px; 
+        @media ($media-lg) {
+            // font-size: 1.5rem; // 24px
+            width: 43.5%; // 344px;
+            margin-top: 5vh;
+            margin-bottom: 13.5vh;
+        }
 
-            width: 23.5%; // 344px;
-            height: 5%; // 42px
-            margin-top: 5%;
-            margin-bottom: 5%;
+        // @media ($media-md) {
+        //     margin-top: 8.7vh; //70px
+        //     margin-bottom: 7.5vh; //60px
+        // }
+        .dimond-left {
+            width: 7%; // 22px;
+            // margin: 0 15% 0 0; // 50px
+        }
+
+        .dimond-right {
+            width: 7%; // 22px;
+            // margin: 0 0 0 15%; // 50px
+        }
+    }
+
+    #tarotcard-box {
+        // width: 1279;
+        // height: 427px;
+        // border: 1px solid white; 
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        .trcardchild-1 {
+            width: 20%;
+            // height: 455px;
+            margin-left: 0;
+
+            // @media ($media-xlg) {
+            //     width: 265px;
+            // }
+
 
             // @media ($media-lg) {
-            font-size: 1.5rem; // 24px
-
-            //     margin-top: 8.7vh; //70px
-            //     margin-bottom: 7.5vh; //60px
+            //     width: 225px;
+            //     height: 455px;
             // }
 
             // @media ($media-md) {
-            //     margin-top: 8.7vh; //70px
-            //     margin-bottom: 7.5vh; //60px
+            //     width: 210px;
+            //     height: 455px;
             // }
 
             // @media ($media-sm) {
-            //     margin-top: 8.7vh; //70px
-            //     margin-bottom: 7.5vh; //60px
+            //     width: 190px;
+            //     height: 455px;
+            // }
+        }
+
+        .trcard {
+            width: 20%;
+            // height: 455px;
+            margin-left: -8%;
+
+            // @media ($media-xlg) {
+            //     width: 265px;
             // }
 
-            display: flex;
-            justify-items: center;
-            align-items: center;
+            // @media ($media-lg) {
+            //     width: 225px;
+            //     height: 455px;
+            // }
 
-            span {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+            // @media ($media-md) {
+            //     //ipad mini 1024*768 抓不到
+            //     width: 210px;
+            //     height: 455px;
+            // }
 
-            .dimond-left {
-                width: 7%; // 22px;
-                // height: 39.22px;
-                margin: 0 15% 0 0; // 50px
-            }
-
-            .dimond-right {
-                width: 7%; // 22px;
-                // height: 39.22px;
-                margin: 0 0 0 15%; // 50px
-            }
-        }
-
-        #tarotcard-box {
-            // width: 1279;
-            // height: 427px;
-            // border: 1px solid white; 
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .trcardchild-1 {
-                width: 20%;
-                // height: 455px;
-                margin-left: 0;
-
-                // @media ($media-xlg) {
-                //     width: 265px;
-                // }
-
-
-                // @media ($media-lg) {
-                //     width: 225px;
-                //     height: 455px;
-                // }
-
-                // @media ($media-md) {
-                //     width: 210px;
-                //     height: 455px;
-                // }
-
-                // @media ($media-sm) {
-                //     width: 190px;
-                //     height: 455px;
-                // }
-            }
-
-            .trcard {
-                width: 20%;
-                // height: 455px;
-                margin-left: -8%;
-
-                // @media ($media-xlg) {
-                //     width: 265px;
-                // }
-
-                // @media ($media-lg) {
-                //     width: 225px;
-                //     height: 455px;
-                // }
-
-                // @media ($media-md) {
-                //     //ipad mini 1024*768 抓不到
-                //     width: 210px;
-                //     height: 455px;
-                // }
-
-                // @media ($media-sm) {
-                //     width: 190px;
-                //     height: 455px;
-                // }
-
-            }
+            // @media ($media-sm) {
+            //     width: 190px;
+            //     height: 455px;
+            // }
 
         }
 
-        #tarotcard-btn {
-            width: 283px;
-            height: 70px;
-            // padding: 20px 100px;
-            margin-top: 5%;
-            margin-bottom: 5%;
-            display: flex;
-            justify-content: center; //items or content
-            align-items: center;
+    }
 
-            /*樣式*/
-            color: #8750BF;
-            background-color: transparent;
-            border-radius: 1000px;
-            border: 2px solid #8750BF;
-            backdrop-filter: blur(2px);
+    #tarotcard-btn {
+        width: 283px;
+        height: 70px;
+        // padding: 20px 100px;
+        margin-top: 20%;
+        margin-bottom: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-            a {
-                font-size: 1.25rem;
-                color: #8750BF;
-            }
+        /*樣式*/
+        color: #8750BF;
+        background-color: transparent;
+        border-radius: 1000px;
+        border: 2px solid #8750BF;
+        backdrop-filter: blur(2px);
+        font-size: 1.25rem;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #8750BF;
+        }
+
+        @media ($media-lg) {
+            margin-top: 13.5vh;
+            margin-bottom: 5vh;
         }
     }
 }
@@ -1209,7 +1186,11 @@ body {
 
     }
 
-    button {
+    #custombtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.25rem;
         width: 264px;
         height: 57px;
         /* 玻璃擬態 */
@@ -1218,10 +1199,9 @@ body {
         background: rgba(255, 255, 255, 0.25);
         box-shadow: 2px 2px 2px 0px rgba(255, 255, 255, 0.10) inset, 0px 0px 15px 2px rgba(233, 166, 160, 0.30);
         backdrop-filter: blur(25px);
+        color: #FFF;
 
-        a {
-            color: #FFF;
-        }
+       
     }
 }
 
@@ -1581,6 +1561,11 @@ body {
         gap: 35px;
     }
 
+    p {
+        font-family: "Noto Sans TC";
+        // 'Lora-Italic', 'Georgia', "LXGW WenKai Mono TC", serif;
+    }
+
     header {
         width: 498px;
         height: 78px;
@@ -1638,7 +1623,7 @@ body {
         gap: 20px;
 
         /* 水晶info */
-        .crystal {
+        .covercrystal {
             width: 600px;
             height: 118px;
             padding: 20px 35px;
@@ -1803,7 +1788,6 @@ body {
     #carouselExample {
         display: flex;
         gap: 20%;
-
     }
 
     width: 100%;
@@ -1846,9 +1830,6 @@ body {
         align-items: center;
 
         //SW
-
-
-
 
         .feedback-arrowleft {
             width: 48px;
@@ -1904,7 +1885,6 @@ body {
                 display: none;
             }
         }
-
     }
 
     .feedback {
@@ -1940,8 +1920,6 @@ body {
             gap: 10px;
         }
 
-
-
         .review-pic {
             display: flex;
             flex-direction: column;
@@ -1953,7 +1931,7 @@ body {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                margin-bottom: -50%;
+                margin-bottom: -30%;
                 position: sticky;
                 z-index: 1;
 
@@ -1981,12 +1959,12 @@ body {
             justify-content: center;
             gap: 7px;
 
-            .star-box {
+            .fdstar-box {
                 display: flex;
                 justify-content: start;
                 gap: 8px;
 
-                .star {
+                .fdstar {
                     width: 10px;
                     height: 17px;
                 }

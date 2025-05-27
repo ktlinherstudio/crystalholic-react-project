@@ -85,7 +85,7 @@ export default function Product() {
                 <section className="p_collection">
                     <BgDark />
                     {/* 區塊標題 */}
-                    <h1 className="p_collection_title">✦ Collection ✦</h1>
+                    <h1 className="p_collection_title">✦&nbsp;&nbsp;Collection&nbsp;&nbsp;✦</h1>
 
                     {/* 系列商品卡片 */}
                     <div className="p_collection_products">

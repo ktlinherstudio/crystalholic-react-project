@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react';
 import NavBarLight from '../../components/NavBarLight'
 import FooterPlain from '../../components/FooterPlain'
@@ -14,7 +15,7 @@ export default function Cover() {
             {/* <div id='color'>做RWD用 之後會拿掉 */}
             {/* <div id='color'> */}
             {/* 背景 */}
-            <div id='coverbg'>
+            <div className='coverbg'>
                 <div className="bgdark1"><BgDarkBlock /></div>
                 <div className="bgdark2"><BgDarkBlock /></div>
             </div>
@@ -41,7 +42,9 @@ export default function Cover() {
             <section className="section-starttest">
                 <div className="startbox1">
                     <img src="./images/HomePage/L.svg" className="lefth" alt="" />
-                    <div className="startbtn"><a href="#"><img src="./images/HomePage/start-test-btn.svg" alt="" /></a> </div>
+                    <div className="startbtn">
+                        <Link to="Numtest1"><img src="./images/HomePage/start-test-btn.svg" alt="" /></Link>
+                    </div>
                     <img src="./images/HomePage/R.svg" className="righth" alt="" />
                     <span className="bling"><img src="./images/HomePage/deco-bling2.svg" alt="" /></span>
                     <span className="numbg"><img src="./images/HomePage/deco-num-bg.svg" alt="" /></span>
@@ -55,21 +58,21 @@ export default function Cover() {
 
             {/* 憑直覺抽一張吧 */}
             <section id="section-tarotcard">
-                <div className="tarotcard">
-                    <h2 id="tarotcard-title">
-                        <span className="dimond-left"><img src="./images/HomePage/deco-diamond-left.svg" alt="" /></span>
-                        <div id="tarot-title">憑直覺抽一張吧</div>
-                        <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
-                    </h2>
-                    <div id="tarotcard-box">
-                        <img src="./images/HomePage/tarot-back.svg" className="trcardchild-1" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    </div>
-                    <button id="tarotcard-btn"><a href="#">所有商品</a></button>
+                <div id="tarotcard-title">
+                    <span className="dimond-left"><img src="./images/HomePage/deco-diamond-left.svg" alt="" /></span>
+                    <h2 id="tarot-title">憑直覺抽一張吧</h2>
+                    <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
+                </div>
+                <div id="tarotcard-box">
+                    <img src="./images/HomePage/tarot-back.svg" className="trcardchild-1" alt="" />
+                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                </div>
+                <div >
+                    <Link to="/ProductCollection" id="tarotcard-btn">所有商品</Link>
                 </div>
             </section>
 
@@ -85,7 +88,8 @@ export default function Cover() {
                         </div>
                         <span><img src="./images/HomePage/deco-diamond-right.svg" className="dimond-right" alt="" /></span>
                     </header>
-                    <button><a href="../阿啾/html/customization-1.html">立即訂製</a></button>
+                    {/* <button><a href="../阿啾/html/customization-1.html">立即訂製</a></button> */}
+                    <Link to="/Customize1" id='custombtn'>立即訂製</Link>
                 </div>
             </section>
 
@@ -117,7 +121,7 @@ export default function Cover() {
                         </div>
                     </header>
                     <div className="crystaldiscovery">
-                        <article className="crystal">
+                        <article className="covercrystal">
                             <div className="crystal-name">
                                 <span className="en">Kyanite</span>
                                 <span className="ch">藍晶石</span>
@@ -175,12 +179,12 @@ export default function Cover() {
                         </div>
                         <div className="feedback-left">
                             {/* 水晶5星評價 */}
-                            <div className="star-box">
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
+                            <div className="fdstar-box">
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
                             </div>
                             {/* 回饋內文 */}
                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
@@ -195,12 +199,12 @@ export default function Cover() {
                         </div>
                         <div className="feedback-left">
                             {/* 水晶5星評價 */}
-                            <div className="star-box">
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
+                            <div className="fdstar-box">
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
                             </div>
                             {/* 回饋內文  */}
                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
@@ -215,12 +219,12 @@ export default function Cover() {
                         </div>
                         <div className="feedback-left">
                             {/* 水晶5星評價  */}
-                            <div className="star-box">
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
+                            <div className="fdstar-box">
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
                             </div>
                             {/* 回饋內文  */}
                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
@@ -235,12 +239,12 @@ export default function Cover() {
                         </div>
                         <div className="feedback-left">
                             {/* 水晶5星評價  */}
-                            <div className="star-box">
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
-                                <img src="./images/HomePage/star.svg" className="star" alt="" />
+                            <div className="fdstar-box">
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
                             </div>
                             {/* 回饋內文  */}
                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
@@ -251,7 +255,7 @@ export default function Cover() {
             </section>
 
             {/* <footer id="footer"></footer> */}
-            <FooterTrn />
+            <div className="coverfooter"><FooterTrn /></div>
             {/* </div > */}
         </>
     )

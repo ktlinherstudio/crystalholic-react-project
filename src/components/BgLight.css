@@ -2,7 +2,7 @@ main {
     height: 100%; 
     background:
         /* 材質圖 */
-        url(/public/images/S-Background/bg-noise-light.png),
+        url(./public/images/S-Background/bg-noise-light.png),
 
         /* 左上角白色暈光 */
         radial-gradient(circle 40vw at 0% 0%,
@@ -48,4 +48,5 @@ main {
     background-position: center; /* 每層置中（光暈已用 at 定位不受影響） */
     background-attachment: fixed;/* 捲動時位置固定 */
 
+    z-index: 0;
 }

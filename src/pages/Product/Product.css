@@ -3,6 +3,7 @@
 .p_product {
     width: 100%;
     /* height: 100vh; */
+    min-height:100vh; 
     padding-top:4.375rem; /* 70px */           
     box-sizing: border-box;
     display:flex;
@@ -45,13 +46,17 @@
 
     flex: 1 0 42%;          /* 在左右雙欄中占約 42% */
     max-width: 32rem;       /* ≈512 px；桌機上限 */
-    aspect-ratio: 1 / 1;    /* 1:1，CSS 會自算 height */
+    aspect-ratio: 25 / 27; 
 }
 
+/* 與collection區共用 */
 .p_product_img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.p_fav_icon{
+    cursor: pointer;
 }
 
 .p_product_img_left .p_fav_icon{
@@ -60,7 +65,6 @@
     position: absolute;
     top: 1rem;/* 16px */
     right: 1rem;
-    cursor: pointer;
 }
 
 /* 商品介紹 (右側) */
@@ -89,7 +93,6 @@
     font-weight: 500;
     line-height: 150%;
     letter-spacing: 0.063rem; /* 1px */
-    margin: 0;
 }
 
 .p_product_title span{
@@ -100,18 +103,18 @@
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0.1rem;/* 1.6px */
-    margin: 0;
 }
 
 .p_product_right hr{
     width: 100%;
     border: 1px solid #000000;
-    margin: 0;
 }
 
+/* 文字共用區 */
 .p_product_description,
 .p_product_crystal_area p,
-.p_product_size,.p_product_hand{
+.p_product_size,.p_product_hand,
+/* collection */.p_product_price{
     /* 中文/內文2 */
     font-family: "Noto Sans TC";
     font-size: 0.875rem; /* 14px */
@@ -119,7 +122,6 @@
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 0.088rem; /* 1.4px */
-    margin: 0;
 }
 
 /* 水晶區 */
@@ -128,7 +130,7 @@
     flex-direction: column;
 }
 
-.p_product_crystals{
+.p_product_right .p_product_crystals{
     display: flex;
     gap: 0.625rem;/* 10px */
     margin-bottom: 0.5rem;/* 8px */
@@ -171,7 +173,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 1rem;
 }
 
 .p_product_qty .p_left,
@@ -217,7 +219,6 @@
 }
 
 /* ────────── Collection 區 ───────────────────── */
-
 .p_collection{
     color: #FFF;
     /* height: 600px; */
@@ -225,17 +226,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 43px;
-
-
-    /* width: 100%;
-    position: relative; */
+    gap: 3rem;
 
     clip-path: ellipse(77% 100% at 50% 100%);
-    /* box-sizing: border-box; */
 
-    padding-top: 145px;
-    margin-bottom: 50px;
+    padding-top: 9rem;
+    margin-bottom: 3rem;
 }
 
 /* 標題 */
@@ -255,64 +251,60 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 32px;
+    gap: 2rem;/* 32px */
 }
 
 /* 單張商品卡 */
 .p_product_card{
-    width: 259.25px;
-    height: 342.56px;
+    /* width: 259.25px;
+    height: 342.56px; */
+    flex:1 1 16rem; /* 256px 寬，可縮放 */
+    max-width:18rem; /* 288px 上限 */
 }
 
 .p_product_img_wrap{
+    position: relative;
+    
     border-radius: 20px;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.80);
+    
     overflow: hidden;
-    position: relative;
-    margin-bottom: 20px;
-    aspect-ratio: 1 / 1;   /* 寬 = 高 */
+
+    margin-bottom: 1.25rem;/* 20px */
+    aspect-ratio: 25 / 27;   /* 寬 = 高 */
 }
 
-.p_product_img{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.p_fav_icon{
-    width: 48px;
-    height: 48px;
+.p_product_img_wrap .p_fav_icon{
+    width: 3rem;
+    height: 3rem;
     position: absolute;
-    top: 16px;
-    right: 20px;
-    cursor: pointer;
+    top: 1rem; /* 16px */
+    right: 1rem;
 }
+
 
 /* 商品資訊 */
 .p_product_info{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;/* 8px */
 }
 
 .p_product_name{
+    /* 中文/小標題2 */
     font-family: "Noto Sans TC";
-    font-size: 16px;
+    font-size: 1rem;/* 16px */
+    font-style: normal;
+    font-weight: 500;
     line-height: 150%;
-    letter-spacing: 1.6px;
-}
-
-.p_product_price{
-    font-family: "Noto Sans TC";
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 1.4px;
+    letter-spacing: 0.1rem;/* 1.6px */
 }
 
 /* 卡片內水晶 */
-.p_product_crystals{
+.p_product_card .p_product_crystals{
     display: flex;
-    gap: 6px;
+    gap: 0.375rem; /* 6px */
 }
 
 .ps_crystal_img{
@@ -322,5 +314,5 @@
 
 .p_footer{
     position: relative;
-    /* z-index: 2; */
-  }
+    z-index: 2;
+}
