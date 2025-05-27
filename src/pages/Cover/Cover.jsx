@@ -7,6 +7,7 @@ import BgDarkBlock from '../../components/BgDarkBlock'
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
 import '../../App.scss/css/Style.min.css'
+import BackToTopBtn from '../../components/BackToTopBtn'
 
 export default function Cover() {
 
@@ -156,6 +157,7 @@ export default function Cover() {
                     </div>
                 </div>
             </section>
+             <BackToTopBtn />
 
             {/* 礦迷回饋 */}
             <section id="section-feedback">

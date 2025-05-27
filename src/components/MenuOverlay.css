@@ -1,5 +1,5 @@
 .menu-bg-img {
-  background-image: url('${import.meta.env.BASE_URL}images/S-Background/bgrbtn_bg.png');
+  background-image: url(./images/S-Background/bgrbtn_bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
