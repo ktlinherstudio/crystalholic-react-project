@@ -57,22 +57,22 @@
     background-size: contain;
 }
 .footertrn-icon-line{
-    background-image: url(/images/S-Footer/icon_line.svg);
+    background-image: url(./images/S-Footer/icon_line.svg);
 }
 .footertrn-icon-ig{
-    background-image: url(/images/S-Footer/icon_ig.svg);
+    background-image: url(./images/S-Footer/icon_ig.svg);
 }
 .footertrn-icon-fb{
-    background-image: url(/images/S-Footer/icon_fb.svg);
+    background-image: url(./images/S-Footer/icon_fb.svg);
 }
 .footertrn-icon-line:hover {
-    background-image: url(/images/S-Footer/icon_line_h.svg);
+    background-image: url(./images/S-Footer/icon_line_h.svg);
 }
 .footertrn-icon-ig:hover {
-    background-image: url(/images/S-Footer/icon_ig_h.svg);
+    background-image: url(./images/S-Footer/icon_ig_h.svg);
 }
 .footertrn-icon-fb:hover {
-    background-image: url(/images/S-Footer/icon_fb_h.svg);
+    background-image: url(./images/S-Footer/icon_fb_h.svg);
 }
 
 /* 底部區域 */
