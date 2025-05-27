@@ -1,10 +1,21 @@
 import './customize4.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarDark'
+import { useEffect, useState } from 'react';
+import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
+
+
 
 export default function Customize4() {
+    const [showInfo, setShowInfo] = useState(true);
+
+    useEffect(() => {
+        setShowInfo(true);
+    }, []);
+
     return (
         <>
+        <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
             <NavBarWrapper variant="dark" />
             {/* 內容 */}
             <main className="index">
