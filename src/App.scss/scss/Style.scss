@@ -423,7 +423,8 @@ body {
         padding: 120px 20px 160px;
         display: flex;
         width: 100%;
-        height: 255vh;
+        // height: 255vh;
+        height: 155vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -461,7 +462,7 @@ body {
         padding-bottom: 160px;
 
         width: 100%;
-        height: 112vh;
+        height: 115vh;
         //     background-image: url(../../../public/images/coverbg2.svg);
         //     background-repeat: no-repeat;
         //     width: 100%;
@@ -506,7 +507,7 @@ body {
 
 /*封面1*/
 .ch-cover {
-    border: #2fcf3d 2px solid;
+    // border: #2fcf3d 2px solid;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -717,13 +718,13 @@ body {
 /*封面2*/
 .section-starttest {
 
-    border: #e28121 5px solid;
+    // border: #e28121 5px solid;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 999;
+    // z-index: 999;
 
     // gap: 0;
     @media ($media-xlg) {
@@ -912,7 +913,7 @@ body {
 ////ipad pro 套不到
 #section-tarotcard {
 
-    border: #e22121 5px solid;
+    // border: #e22121 5px solid;
 
     width: 100%;
     height: 100vh;
@@ -946,7 +947,7 @@ body {
         align-items: center;
 
         #tarotcard-title {
-            border: 2px yellow solid;
+            // border: 2px yellow solid;
             color: #fff;
             font-size: 1.5rem; // 24px
             //   font-size: 24px; 
@@ -1225,7 +1226,7 @@ body {
 #section-crystaldiscovery {
     width: 100%;
     height: 100vh;
-    border: #e9df70 5px solid;
+    // border: #e9df70 5px solid;
     color: #8750BF;
     display: flex;
     justify-content: start;
@@ -1804,7 +1805,7 @@ body {
 
     width: 100%;
     height: 68.75vh;
-    border: 2px white solid;
+    // border: 2px white solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
