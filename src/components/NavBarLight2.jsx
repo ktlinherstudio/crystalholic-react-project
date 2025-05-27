@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
-import { useUI } from '../context/UIContext'; 
+import { useUI } from '../context/UIContext';
 import './NavBarLight2.css';
 
 export default function NavBarLight() {
   const { isLoggedIn, logout, user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { openMenu } = useUI(); 
+  const { openMenu } = useUI();
 
   const handleMemberClick = () => {
     if (isLoggedIn) {
@@ -32,7 +32,11 @@ export default function NavBarLight() {
         <nav className="navigation">
           <ul className="icon">
             <li><a href="#"><img src="./images/S-NavBar/navicon_search.svg" alt="Search" /></a></li>
-            <li><a href="#"><img src="./images/S-NavBar/navicon_cart.svg" alt="Cart" /></a></li>
+            <li>
+              <Link to="/ShoppingCart">
+                <img src="./images/S-NavBar/navicon_cart.svg" alt="Cart" />
+              </Link>
+            </li>
             <li style={{ position: 'relative' }}>
               <button className="member-button" onClick={handleMemberClick}>
                 <img
@@ -60,7 +64,7 @@ export default function NavBarLight() {
                 className="icon-menu"
                 onClick={() => {
                   console.log('✅ 漢堡選單點到了');
-                  openMenu(); 
+                  openMenu();
                 }}
               ></button>
             </li>
