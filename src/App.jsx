@@ -8,10 +8,10 @@ import Menu from './pages/Menu';
 import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
-import Cover from './pages/Cover';
-import CoverTest from './pages/CoverTest';
-import CoverFeedbackBs from './pages/CoverFeedbackBs';
-import CoverFeedbackSW from './pages/CoverFeedbackSW';
+import Cover from './pages/Cover/Cover';
+import CoverTest from './pages/Cover/CoverTest';
+// import CoverFeedbackBs from './pages/Cover/CoverFeedbackBs';
+// import CoverFeedbackSW from './pages/Cover/CoverFeedbackSW';
 
 import NumTest1 from './pages/NumTest/NumTest1';
 import NumTest2 from './pages/NumTest/NumTest2';
@@ -37,8 +37,8 @@ export default function App() {
               
               <Route path="/cover" element={<Cover />} />
               <Route path="/CoverTest" element={<CoverTest />} />
-              <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} />
-              <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} />
+              {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
+              {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
               <Route path="/NumTest1" element={<NumTest1 />} />
               <Route path="/NumTest2" element={<NumTest2 />} />
