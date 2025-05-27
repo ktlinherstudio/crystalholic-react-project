@@ -9,7 +9,7 @@ export default function ShoppingCart() {
     return (
         <>
             <NavBarDark />
-            <main className="cart_page">
+            <main className="cart_main">
                 {/* 標題 */}
                 <div className="cart_title">
                     <img
