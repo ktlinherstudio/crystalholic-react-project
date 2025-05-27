@@ -1,5 +1,5 @@
 import './MenuOverlay.css';
-import BgDarkBlock from './BgDarkBlock';
+// import BgDarkBlock from './BgDarkBlock';
 import { useUI } from '../context/UIContext';
 import { Link } from 'react-router-dom';
 
@@ -11,7 +11,8 @@ export default function MenuOverlay() {
   return (
     <div className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}>
       {/* <div className="menu-backdrop"></div> */}
-      <BgDarkBlock />
+      {/* <BgDarkBlock /> */}
+      <div className='menu-bg-img'>
       <div className="menu-panel">
         <span className="menu-closebtn" onClick={closeMenu}>
           <img src="./images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />
@@ -98,6 +99,7 @@ export default function MenuOverlay() {
           </div>
         </nav>
       </div>
+    </div>
     </div>
   );
 
