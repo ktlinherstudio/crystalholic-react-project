@@ -5,6 +5,8 @@
     min-height:100vh;
     padding-top: 70px;             /* 🟣 下推內容，避免被 navbar 壓住 */
     box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
+    display:flex;
+    flex-direction:column; 
 }
 /* 主要內容區 */
 
@@ -13,7 +15,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 485px;       /* 445 + 40(重疊) */
+
+    height: 28.5rem;/* 485px */
     gap: 100px;
     position: relative;  /* 給 z-index 用 */
     z-index: 1;          /* 放在下層 */
@@ -28,8 +31,8 @@
 }
 
 .pc_icon_item img {
-    width: 140px;
-    height: 140px;
+    width: 8.75rem;/* 140px */
+    height: 8.75rem;
 }
 
 .pc_icon_item span {
@@ -47,29 +50,67 @@
 .pc_icon_item.pc_active::after {
     content: "";
     position: absolute;
-    bottom: -131px;              /* 對齊 product_area 上緣 */
+    bottom: -8rem;           /* 對齊 product_area 上緣 */
     left: 50%;
     transform: translateX(-50%);
-    width: 71px;
-    height: 61px;
-    background: #E4EBE3;         /* 同 product_area 底色 */
+    width: 6rem;
+    height: 5rem;
+    background:
+    /* 材質圖 */
+    url(./public/images/S-Background/bg-noise-light.png), 
+    #F1F7F7;         /* 同 product_area 底色 */
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     z-index: 99;                 /* 確保蓋在最上面 */
+
 }
 
 /* ─── 商品區與背景對話框 ──────────────────────── */
 .pc_product_area {
-    height: 1040px;
-    background-color: #E4EBE3;
+    /* height: 1040px; */
+    
+    background:
+        /* 材質圖 */
+        url(./public/images/S-Background/bg-noise-light.png),
+
+        /* 左中 */
+        radial-gradient(circle 40vw at 0% 0%,
+            rgba(245, 249, 212, 0.35) 0%, 
+            rgba(245, 249, 212, 0.00) 100%),
+
+        /* 左下 */
+        radial-gradient(circle 48.76vw at 5% 85%,
+            rgb(209, 235, 240) 0%, 
+            rgba(209, 235, 240, 0.00) 100%),
+
+        /* 上 */
+        radial-gradient(circle 48.76vw at 75% -15%,
+            rgba(245, 249, 212, 0.35) 0%, 
+            rgba(245, 249, 212, 0.00) 100%),
+
+        /* 右上 */
+        radial-gradient(circle 62.43vw at 50% -45%,
+            rgb(209, 235, 240) 0%, 
+            rgba(209, 235, 240, 0.00) 100%),
+        
+        /* 右下 */
+        radial-gradient(circle 62.43vw at 125% 90%,
+            rgb(209, 235, 240) 0%, 
+            rgba(209, 235, 240, 0.00) 100%);
+    background-color:#F1F7F7;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center; /* 每層置中（光暈已用 at 定位不受影響） */
+    background-attachment: fixed;/* 捲動時位置固定 */
+
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding-top: 110px;
+    padding:8rem 0 16rem; 
 
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    margin-top: -40px;  /* 覆蓋 40px */
+    margin-top: -2.5rem;  /* 覆蓋 40px */
     position: relative; /* 給 z-index 用 */
     z-index: 2;         /* 蓋在 .pc_icon_area 上 */
 }
@@ -80,9 +121,8 @@
     align-items: center;
     justify-content: center;
     gap: 3rem;
-    margin-bottom: 80px;
+    margin-bottom: 5rem;/* 80px */
 
-    background-color: #E4EBE3;
     width: 80%;
 }
 
@@ -180,8 +220,8 @@
 }
 
 .pc_divider_line {
-    width: 700px;
-    margin: 10px 0 20px;
+    width: 43.75rem;/* 700px */
+    margin: 0.625rem 0 1.25rem;
 }
 
 .pc_product_introduce p {
@@ -195,12 +235,13 @@
     letter-spacing: 0.088rem;/* 1.4px */
 }
 .pc_footer{
-    width: 100%;
+    /* width: 100%; */
     position: relative;
 
     clip-path: ellipse(70% 100% at 50% 100%);
-    padding-top: 145px;
-    margin-top: 80px;
+    padding-top: 9.0625rem;/* 145px */
+
+    margin-top:-10rem; 
 
     z-index: 3;
 }

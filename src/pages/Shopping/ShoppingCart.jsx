@@ -23,8 +23,13 @@ const handleCheckout = () => {
 };
     return (
         <>
+<<<<<<< HEAD
              <NavBarWrapper variant="dark" />
             <main className="cart_page">
+=======
+            <NavBarDark />
+            <main className="cart_main">
+>>>>>>> 924a70a6bf4ff4822d8c944758182f34fc07397b
                 {/* 標題 */}
                 <div className="cart_title">
                     <img
