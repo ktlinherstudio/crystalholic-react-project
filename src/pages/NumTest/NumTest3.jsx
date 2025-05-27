@@ -1,6 +1,8 @@
 import './NumTest3.css'
 import '../../components/NumTestBg.css'
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavBarWrapper from '../../components/NavBarWrapper'
+
 
 export default function NumTest3() {
     return (
@@ -166,9 +168,11 @@ export default function NumTest3() {
                                 <div className="star-box">
                                     <img className="star" src="./public/images/Numtest/star.png" alt="" />
                                 </div>
-                                <div className="bracelet-box">
-                                    <img className="bracelet" src="./public/images/Numtest/bracelet.png" alt="" />
-                                </div>
+                                <Link to="/Product">
+                                    <div className="bracelet-box">
+                                        <img className="bracelet" src="./public/images/Numtest/bracelet.png" alt="bracelet" />
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </div>
