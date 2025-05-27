@@ -6,7 +6,6 @@ import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
 
 import About from './pages/Others/About';
-import Menu from './pages/Menu';
 import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
@@ -39,7 +38,6 @@ export default function App() {
           <main className="main-content">
             <Routes>
               <Route path="/about" element={<About />} />
-              <Route path="/menu" element={<Menu />} />
               <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
               <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
               
