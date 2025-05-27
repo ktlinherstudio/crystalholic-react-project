@@ -39,7 +39,7 @@ export default function NavBarDark() {
               {isLoggedIn && showDropdown && (
                 <div className="member-dropdown">
                   <img
-                    src="./images/Numtest/characters/生命靈數角色_s1.svg"
+                    src="./images/Numtest/characters/numCharacter_s1.svg"
                     alt="avatar"
                     className="member-avatar"
                   />
