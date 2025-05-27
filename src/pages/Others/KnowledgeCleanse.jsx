@@ -3,6 +3,7 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn'
 import BgDark from '../../components/BgDark'
 import '../../css/fonts.css';
+const base = import.meta.env.BASE_URL;
 
 export default function KnowledgeCleanse() {
   return (
@@ -12,9 +13,9 @@ export default function KnowledgeCleanse() {
         <NavBarWrapper variant="dark" />
         <section className="content-nc" id='content-nc'>
           <div className="left-title">
-            <img src="./images/HomePage/deco-diamond.png" alt="" className="dimand1" />
+            <img src={`${base}images/HomePage/deco-diamond.png`} alt="" className="dimand1" />
             <h1 className="title">使用與淨化指南</h1>
-            <img src="./images/HomePage/deco-diamond.png" alt="" className="dimand2" />
+            <img src={`${base}images/HomePage/deco-diamond.png`} alt="" className="dimand2" />
           </div>
 
           {/* 背景月亮圖 */}

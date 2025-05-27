@@ -1,7 +1,7 @@
 import React from 'react'; 
 
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
 
@@ -29,7 +29,8 @@ import Product from './pages/Product/Product';
 export default function App() {
   return (
     <div className="page-layout">
-      <BrowserRouter basename="/crystalholic-react-project">
+      {/* <BrowserRouter basename="/crystalholic-react-project"> */}
+      <HashRouter>
         <AuthProvider>
           <ScrollToTop />
           <main className="main-content">
@@ -39,7 +40,8 @@ export default function App() {
               <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
               <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
               
-              <Route path="/cover" element={<Cover />} />
+              {/* <Route path="/cover" element={<Cover />} /> */}
+              <Route path="/" element={<Cover />} />
               <Route path="/CoverTest" element={<CoverTest />} />
               {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
               {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
@@ -57,7 +59,8 @@ export default function App() {
             </Routes>
           </main>
         </AuthProvider>
-      </BrowserRouter>
+        </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }
