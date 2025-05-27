@@ -26,7 +26,7 @@ export default function NavBarDark() {
   return (
     <>
       <header id="navbar2">
-        <Link className="logo" to="/cover">
+        <Link className="logo" to="/">
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
         <nav className="navigation2">

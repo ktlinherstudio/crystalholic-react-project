@@ -26,7 +26,7 @@ export default function NavBarLight() {
   return (
     <>
       <header id="navbar">
-        <Link className="logo" to="/cover">
+        <Link className="logo" to="/">
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
         <nav className="navigation">
