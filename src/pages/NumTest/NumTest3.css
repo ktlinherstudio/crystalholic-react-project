@@ -365,6 +365,7 @@
     /* 左側 */
     .index-numtest3 {
         flex-direction: column;
+        height: 100%;
     }
 
     #left {
@@ -373,12 +374,12 @@
         flex-direction: row;
         align-items: flex-start;
         gap: 5%;
-        margin-bottom: 7%;
+        margin: 7% auto;
     }
 
     .box-numtest3 {
         height: 100%;
-        gap: 10%;
+        gap: 1rem;
         width: 100%;
         align-items: flex-end;
     }
@@ -422,6 +423,9 @@
 
     #box2 {
         margin-bottom: 2.5rem;
+    }
+    #button-box {
+        margin-bottom: 7%;
     }
 
     /* 圖片大小 */
