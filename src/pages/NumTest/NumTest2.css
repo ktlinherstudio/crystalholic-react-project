@@ -67,47 +67,83 @@
 }
 
 /* ---------- 填入西元出生年月日區 ----------  */
+/* yyyy / mm / dd 外層容器 */
 .num2-date {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;          /* 64px */
-
-    margin-bottom: 5.625rem;/* 90px */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 5.625rem;
 }
-/* yyyy區/dd區/mm區 */
+
+/* 單一欄位：年、月、日 + 下拉圖示 */
 .num2-date-enter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    border-bottom: 2px solid #8750BF;
-
-    gap: 1.25rem;           /* 20px */
-    width: clamp(10rem, 22vw, 13.313rem); /* 160px–213px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #8750BF;
+  gap: 1.25rem;
+  width: clamp(10rem, 22vw, 13.313rem);
+  position: relative;
 }
-/* yyyy/dd/mm 文字、顏色 */
-.num2-date-enter span {
-    color: rgba(0, 0, 0, 0.24);
 
-    font-family: "Noto Sans TC";
-    font-size: 2.25rem; /* 36px */
-    font-style: normal;
-    font-weight: 400;
-    line-height: 166%;
-    letter-spacing: 0.45rem;/* 7.2px */
+/* select 選單樣式 */
+.num2-select {
+  width: 100%;
+  height: 48px;
+  padding: 0 1rem;
+  font-size: 2.25rem; /* 36px */
+  font-family: "Noto Sans TC";
+  color: rgba(0, 0, 0, 0.24);
+  border: none;
+  background: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  line-height: 48px;              /* ✅ 垂直置中 */
+  text-align: center;             /* ✅ 水平置中 */
+  text-align-last: center;        /* ✅ Firefox 專用，讓下拉展開時也置中 */
+
 }
-/* 選擇鈕(三角形) */
+
+.num2-select:invalid {
+  color: rgba(0, 0, 0, 0.24); /* 顯示預設值用灰色 */
+}
+
+
+/* 有選擇值時字變深 */
+.num2-select:valid {
+  color: #8750BF;
+}
+
+/* 選單右邊圖示（三角形） */
 .num2-date-button {
-    width: 1.875rem; /* 31.46px */
-    height: 1.875rem; /* 30px */
-    cursor: pointer;
+  width: 1.875rem;
+  height: 1.875rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
-/* 日曆button */
+
+/* 日曆圖示 */
 .num2-calendar {
-    height: 3rem;
-    width: 3rem;
-    cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+.num2-calendar-wrapper {
+  position: relative;
+}
+
+.num2-date-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 0;
+  height: 0;
 }
 
 
@@ -134,6 +170,9 @@
     letter-spacing: 0.15rem; /* 2.4px; */
 
     cursor: pointer;
+}
+.num2-button:hover{
+    background-color: #684581;
 }
 
 /* ========================================================= */
