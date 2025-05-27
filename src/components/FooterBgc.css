@@ -187,20 +187,23 @@
 
 /* ---------- RWD 斷點：≤ 820px ---------- */
 @media (max-width: 820px) {
-    .footerbgc_info {
-        gap: clamp(1.875rem, 8vw, 3.75rem);
-        /* 30–60px 自適應 */
+    .footerbgc{
+        display: none;
     }
+    /* .footerbgc_info {
+        gap: clamp(1.875rem, 8vw, 3.75rem);
+        /* 30–60px 自適應 
+    } */
 
-    .footerbgc_rwdbox {
+    /* .footerbgc_rwdbox {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         gap: 0;
-    }
+    } */
 
-    .footerbgc_follow ul,
+    /* .footerbgc_follow ul,
     .footerbgc_follow li {
         margin: 0;
-    }
+    } */
 }

@@ -1,8 +1,12 @@
-.menu-bg-img{
+.menu-bg-img {
   background-image: url(./public/images/S-Background/bgrbtn_bg.png);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
   width: 100%;
-  height: 100%;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;  
 }
 
 .menu-searchbar {
@@ -17,8 +21,8 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  height: 800px; 
   display: flex;
+   overflow-y: auto;
 }
 
 .menu-overlay.open {
@@ -328,7 +332,7 @@
   .menu-columns-wrapper {
     flex-direction: column;
     align-items: center;
-    height: 960px;
+    height: 1000px;
   }
 
   .menu-column,
@@ -415,5 +419,128 @@
   }
   .menu-search-icon:hover{
     background-color: #684581;
+  }
+}
+
+/* 640px手機 */
+@media (max-width: 640px) {
+  .menu-overlay {
+    height: 100dvh;
+    overflow-y: auto;
+  }
+
+  .menu-panel {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 16px;
+    height: auto;
+  }
+
+  .menu-navigation {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .menu-columns-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    height: auto;
+  }
+
+  .menu-column,
+  .menu-last {
+    width: 100%;
+    max-width: 320px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding: 24px 12px;
+    text-align: center;
+  }
+
+  .menu-column h2,
+  .menu-last1 h2 {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+  }
+
+  .menu-column ul,
+  .menu-last1 ul {
+    gap: 20px;
+    align-items: center;
+  }
+
+  .menu-column li,
+  .menu-last1 li {
+    font-size: 16px; /* ✅ 不小於 14px */
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .menu-footer {
+    position: relative;
+    margin-top: 32px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu-footer h3 {
+    font-size: 14px; /* ✅ 提高至 14px */
+  }
+
+  .menu-footer .scicon-box {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .menu-searchbar {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .menu-search-input {
+    width: 100%;
+    padding: 10px 40px 10px 16px;
+    border-radius: 999px;
+    font-size: 16px; /* ✅ 輸入文字不小於 14px */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+
+  .menu-search-input::placeholder {
+    font-size: 14px; /* ✅ placeholder 也保證可讀 */
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .menu-search-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 44px;
+    background-color: #A67CEB;
+    border-radius: 0 999px 999px 0;
+    cursor: pointer;
+  }
+
+  .menu-search-icon:hover {
+    background-color: #684581;
+  }
+
+  .menu-closebtn {
+    top: 12px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .menu-closebtn img {
+    width: 100%;
+    height: auto;
   }
 }
