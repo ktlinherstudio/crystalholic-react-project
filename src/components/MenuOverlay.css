@@ -231,14 +231,17 @@
 
 .scicon-box .line {
   background-image: url('./images/S-Footer/icon_line.svg');
+  cursor: pointer;
 }
 
 .scicon-box .ig {
   background-image: url('./images/S-Footer/icon_ig.svg');
+  cursor: pointer;
 }
 
 .scicon-box .fb {
   background-image: url('./images/S-Footer/icon_fb.svg');
+  cursor: pointer;
 }
 
 .scicon-box .line:hover {
@@ -255,13 +258,15 @@
 
 
 /* link hover underline 動畫（非圖示用） */
-.menu-column p:not(:has(img)) {
+.menu-column p:not(:has(img)),
+.menu-last1 p:not(:has(img)) {
   position: relative;
   display: inline-block;
   padding-bottom: 2px;
 }
 
-.menu-column p:not(:has(img))::after {
+.menu-column p:not(:has(img))::after,
+.menu-last1 p:not(:has(img))::after {
   content: "";
   position: absolute;
   left: 0;
@@ -272,7 +277,8 @@
   transition: width 0.2s ease;
 }
 
-.menu-column p:not(:has(img)):hover::after {
+.menu-column p:not(:has(img)):hover::after,
+.menu-last1 p:not(:has(img)):hover::after {
   width: 100%;
 }
 
