@@ -32,6 +32,7 @@ export default function App() {
   return (
     <div className="page-layout">
       {/* <BrowserRouter basename="/crystalholic-react-project"> */}
+     
       <HashRouter>
         <AuthProvider>
           <ScrollToTop />
