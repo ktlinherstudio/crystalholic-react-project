@@ -12,9 +12,9 @@ export default function Customize3() {
                 <div className="text3-wrap">
                     <div className="text3">
                         <h2>
-                            <img src="/public/images/Custom/line_left.svg" alt="" />
+                            <img src="./public/images/Custom/line_left.svg" alt="" />
                             選擇一條推薦手鍊
-                            <img src="/public/images/Custom/line_right.svg" alt="" />
+                            <img src="./public/images/Custom/line_right.svg" alt="" />
                         </h2>
                     </div>
                 </div>

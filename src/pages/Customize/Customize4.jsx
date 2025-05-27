@@ -65,10 +65,10 @@ export default function Customize4() {
                                 <p>手鍊配飾：</p>
                             </div>
                             <div className={style.imagesBox}>
-                                <img src="/public/images/Custom/ball1.png" alt="" />
-                                <img src="/public/images/Custom/ball2.png" alt="" />
-                                <img src="/public/images/Custom/ball3.png" alt="" />
-                                <img src="/public/images/Custom/ball4.png" alt="" />
+                                <img src="./public/images/Custom/ball1.png" alt="" />
+                                <img src="./public/images/Custom/ball2.png" alt="" />
+                                <img src="./public/images/Custom/ball3.png" alt="" />
+                                <img src="./public/images/Custom/ball4.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -86,15 +86,15 @@ export default function Customize4() {
                         </nav>
 
                         <div className={style.beadGrid}>
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-moonstone.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-pinkquartz.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-golden-strawberry-quartz.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-citrine.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-sunstone.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-green-phantom.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-angelite.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-kyanite.png" alt="" />
-                            <img className={style.bead} src="/public/images/S-CrystalSingle/crystal-lilac-amethyst.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-moonstone.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-pinkquartz.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-golden-strawberry-quartz.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-citrine.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-sunstone.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-green-phantom.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-angelite.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-kyanite.png" alt="" />
+                            <img className={style.bead} src="./public/images/S-CrystalSingle/crystal-lilac-amethyst.png" alt="" />
                             <span className={style.bead}></span>
                             <span className={style.bead}></span>
                             <span className={style.bead}></span>
@@ -143,8 +143,8 @@ export default function Customize4() {
 
                         {/* 按鈕  */}
                         <div className={style.iconBox1}>
-                            <img src="/public/images/Custom/btn-del.svg" alt="" />
-                            <img src="/public/images/Custom/btn-save.svg" alt="" />
+                            <img src="./public/images/Custom/btn-del.svg" alt="" />
+                            <img src="./public/images/Custom/btn-save.svg" alt="" />
                         </div>
                     </div>
 
@@ -158,34 +158,34 @@ export default function Customize4() {
                 <div className={style.iconBox2}>
                     <div className={style.icon1Box}>
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="/public/images/Custom/btn_size_tool.svg" alt="" />
+                            <img className={style.iconBtn} src="./public/images/Custom/btn_size_tool.svg" alt="" />
                             <p>手圍測量</p>
                         </div>
-                        <hr />
+                        <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="/public/images/Custom/btn_ans_tool.svg" alt="" />
+                            <img className={style.iconBtn} src="./public/images/Custom/btn_ans_tool.svg" alt="" />
                             <p> 測驗結果</p>
                         </div>
-                        <hr />
+                        <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="/public/images/Custom/btn_knowl_tool.svg" alt="" />
+                            <img className={style.iconBtn} src="./public/images/Custom/btn_knowl_tool.svg" alt="" />
                             <p>水晶百科</p>
                         </div>
-                        <hr />
+                        <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="/public/images/Custom/btn_note_tool.svg" alt="" />
+                            <img className={style.iconBtn} src="./public/images/Custom/btn_note_tool.svg" alt="" />
                             <p>注意事項</p>
                         </div>
-                        <hr />
+                        <hr className={style.line2} />
                         <div className={style.icon1}>
-                            <img className={style.iconBtn} src="/public/images/Custom/btn_dum_tool.svg" alt="" />
+                            <img className={style.iconBtn} src="./public/images/Custom/btn_dum_tool.svg" alt="" />
                             <p>特別訂製</p>
                         </div>
                     </div>
 
                     {/* 購物按鈕 */}
                     <div className={style.icon2}>
-                        <img className={style.icon2_1} src="/public/images/Custom/btn_cart_tool.svg" alt="" />
+                        <img className={style.icon2_1} src="./public/images/Custom/btn_cart_tool.svg" alt="" />
                         <p>加購物車</p>
                     </div>
                 </div>

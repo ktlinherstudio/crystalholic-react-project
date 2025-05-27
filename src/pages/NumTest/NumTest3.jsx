@@ -28,7 +28,7 @@ export default function NumTest3() {
                     </div>
 
                     <div className="imgp0-box">
-                        <img className="img-p0" src="/public/images/Numtest/characters/numCharacter_1.svg" alt="" />
+                        <img className="img-p0" src="./public/images/Numtest/characters/numCharacter_1.png" alt="" />
                     </div>
                 </div>
                 <div id="right">
@@ -56,21 +56,21 @@ export default function NumTest3() {
                             {/* 好麻吉3個 */}
                             <ul className="people-box">
                                 <li className="people">
-                                    <img className="img-p1" src="/public/images/Numtest/num3-s.svg" alt="" />
+                                    <img className="img-p1" src="./public/images/Numtest/characters/numCharacter_s3.svg" alt="" />
                                     <div>
                                         <p className="name">3號人</p>
                                         <p className="content-numtest3">快樂達人</p>
                                     </div>
                                 </li>
                                 <li className="people">
-                                    <img className="img-p2" src="/public/images/Numtest/num5-s.svg" alt="" />
+                                    <img className="img-p2" src="./public/images/Numtest/characters/numCharacter_s5.svg" alt="" />
                                     <div>
                                         <p className="name">5號人</p>
                                         <p className="content-numtest3">冒險家</p>
                                     </div>
                                 </li>
                                 <li className="people">
-                                    <img className="img-p3" src="/public/images/Numtest/num7-s.svg" alt="" />
+                                    <img className="img-p3" src="./public/images/Numtest/characters/numCharacter_s7.svg" alt="" />
                                     <div>
                                         <p className="name">7號人</p>
                                         <p className="content-numtest3">深度思考者</p>
@@ -88,21 +88,21 @@ export default function NumTest3() {
                             </div>
                             <ul className="people-box2">
                                 <li className="people">
-                                    <img className="img-p4" src="/public/images/Numtest/num3-s.svg" alt="" />
+                                    <img className="img-p4" src="./public/images/Numtest/characters/numCharacter_s8.svg" alt="" />
                                     <div>
                                         <p className="name">8號人</p>
                                         <p className="content-numtest3">霸氣領袖</p>
                                     </div>
                                 </li>
                                 <li className="people">
-                                    <img className="img-p5" src="/public/images/Numtest/num5-s.svg" alt="" />
+                                    <img className="img-p5" src="./public/images/Numtest/characters/numCharacter_s9.svg" alt="" />
                                     <div>
                                         <p className="name">9號人</p>
                                         <p className="content-numtest3">大愛使者</p>
                                     </div>
                                 </li>
                                 <li className="people">
-                                    <img className="img-p6" src="/public/images/Numtest/num7-s.svg" alt="" />
+                                    <img className="img-p6" src="./public/images/Numtest/characters/numCharacter_s1.svg" alt="" />
                                     <div>
                                         <p className="name">1號人</p>
                                         <p className="content-numtest3">獨立領袖</p>
@@ -122,21 +122,21 @@ export default function NumTest3() {
                             </div>
                             <ul className="crystal-box">
                                 <li className="crystal">
-                                    <img className="img-p7" src="/public/images/S-CrystalSingle/crystal-citrine.png" alt="" />
+                                    <img className="img-p7" src="./public/images/S-CrystalSingle/crystal-citrine.png" alt="" />
                                     <div>
                                         <p className="name">黃水晶</p>
                                         <p className="content-numtest3">金錢強強滾</p>
                                     </div>
                                 </li>
                                 <li className="crystal">
-                                    <img className="img-p8" src="/public/images/S-CrystalSingle/crystal-green-phantom.png" alt="" />
+                                    <img className="img-p8" src="./public/images/S-CrystalSingle/crystal-green-phantom.png" alt="" />
                                     <div>
                                         <p className="name">綠幽靈</p>
                                         <p className="content-numtest3">工作神隊友</p>
                                     </div>
                                 </li>
                                 <li className="crystal">
-                                    <img className="img-p9" src="/public/images/S-CrystalSingle/crystal-kyanite.png" alt="" />
+                                    <img className="img-p9" src="./public/images/S-CrystalSingle/crystal-kyanite.png" alt="" />
                                     <div>
                                         <p className="name">藍晶石</p>
                                         <p className="content-numtest3">溝通表達力</p>
@@ -164,10 +164,10 @@ export default function NumTest3() {
                             </div>
                             <div className="title3">
                                 <div className="star-box">
-                                    <img className="star" src="/public/images/Numtest/star.png" alt="" />
+                                    <img className="star" src="./public/images/Numtest/star.png" alt="" />
                                 </div>
                                 <div className="bracelet-box">
-                                    <img className="bracelet" src="/public/images/Numtest/bracelet.png" alt="" />
+                                    <img className="bracelet" src="./public/images/Numtest/bracelet.png" alt="" />
                                 </div>
                             </div>
                         </div>

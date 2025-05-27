@@ -109,6 +109,9 @@ body {
         /*中文*/
         "蘋方-繁", "PingFang TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", "Noto Sans TC", sans-serif;
     overflow-x: hidden;
+   //cover1&2 動態
+    overflow: hidden;
+
 }
 
 /* 重置標題 */
@@ -718,7 +721,7 @@ body {
 /*封面2*/
 .section-starttest {
 
-    // border: #e28121 5px solid;
+    border: #e28121 5px solid;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -958,7 +961,7 @@ body {
             margin-bottom: 5%;
 
             // @media ($media-lg) {
-                        font-size: 1.5rem; // 24px
+            font-size: 1.5rem; // 24px
 
             //     margin-top: 8.7vh; //70px
             //     margin-bottom: 7.5vh; //60px

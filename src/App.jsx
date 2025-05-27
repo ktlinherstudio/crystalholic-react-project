@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 
 import './App.css';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
@@ -12,6 +12,8 @@ import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
 import Cover from './pages/Cover/Cover';
 import CoverTest from './pages/Cover/CoverTest';
+import CoverTest0527 from './pages/Cover/CoverTest0527';
+
 // import CoverFeedbackBs from './pages/Cover/CoverFeedbackBs';
 // import CoverFeedbackSW from './pages/Cover/CoverFeedbackSW';
 
@@ -40,9 +42,9 @@ export default function App() {
               <Route path="/KnowledgeCrystal" element={<KnowledgeCrystal />} />
               <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
               
-              {/* <Route path="/cover" element={<Cover />} /> */}
-              <Route path="/" element={<Cover />} />
+              <Route path="/cover" element={<Cover />} />
               <Route path="/CoverTest" element={<CoverTest />} />
+              <Route path="/CoverTest0527" element={<CoverTest0527 />} />
               {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
               {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
