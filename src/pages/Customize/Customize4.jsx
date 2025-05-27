@@ -1,4 +1,3 @@
-// import './Customize4.css'
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarDark'
