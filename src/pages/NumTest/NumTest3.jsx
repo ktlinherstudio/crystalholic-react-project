@@ -2,9 +2,12 @@ import './NumTest3.css'
 import '../../components/NumTestBg.css'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavBarWrapper from '../../components/NavBarWrapper'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function NumTest3() {
+    const navigate = useNavigate();
+
     return (
         <>
             <NavBarWrapper variant="dark" />
@@ -181,9 +184,9 @@ export default function NumTest3() {
                     {/* 按鈕 */}
                     <div id="button-box">
                         <button className="button1-j">分享測驗結果</button>
-                        <button className="button2-j" onClick={() => navigate('/NumTest2')}>
-        ✦ 訂製專屬手鍊 ✦
-          </button>
+                        <button className="button2-j" onClick={() => navigate('/Customize1')}>
+                            ✦ 訂製專屬手鍊 ✦
+                        </button>
                     </div>
                 </div>
             </main>

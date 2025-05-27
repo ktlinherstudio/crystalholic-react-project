@@ -1,6 +1,6 @@
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
-import NavBarWrapper from '../../components/NavBarDark'
+import NavBarWrapper from '../../components/NavBarWrapper';
 import { useEffect, useState } from 'react';
 import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 

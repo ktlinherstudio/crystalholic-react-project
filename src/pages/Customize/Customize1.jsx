@@ -1,11 +1,25 @@
 import './customize1-3.css'
 import '../../components/Bglight.css'
-import NavBarDark from '../../components/NavBarDark'
+import NavBarWrapper from '../../components/NavBarWrapper';
+import { useNavigate } from 'react-router-dom';
 
 export default function Customize1() {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        const hasCompletedNumTest2 = sessionStorage.getItem('numtest2-completed') === 'true';
+
+        if (hasCompletedNumTest2) {
+            navigate('/Customize3');
+        } else {
+            navigate('/Customize2');
+        }
+    };
+
     return (
         <div className="customize1-page">
-            <NavBarDark />
+            <NavBarWrapper variant="dark" />
 
             <main className="index">
                 <div className="text-j">
@@ -17,7 +31,9 @@ export default function Customize1() {
                     </p>
                 </div>
                 <div className="button-box">
-                    <button className="button1">DIY 水晶手鍊</button>
+                    <button className="button1" onClick={handleClick}>
+                        DIY 水晶手鍊
+                    </button>
                     <button className="button1">其他訂製需求</button>
                 </div>
             </main>

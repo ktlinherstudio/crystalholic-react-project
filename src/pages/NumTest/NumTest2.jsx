@@ -93,6 +93,7 @@ export default function NumTest2() {
             className="num2-button"
             onClick={() => {
               if (year && month && day) {
+                sessionStorage.setItem('numtest2-completed', 'true'); //  記錄按過
                 navigate('/NumTest3');
               } else {
                 alert('請完整填寫出生年月日');
@@ -101,6 +102,7 @@ export default function NumTest2() {
           >
             輸入完成
           </button>
+
         </section>
       </main>
     </>
