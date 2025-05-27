@@ -1,7 +1,7 @@
 import './MenuOverlay.css';
 // import BgDarkBlock from './BgDarkBlock';
 import { useUI } from '../context/UIContext';
-import { Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';

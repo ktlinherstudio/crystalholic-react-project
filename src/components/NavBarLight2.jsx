@@ -1,5 +1,5 @@
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
 import { useUI } from '../context/UIContext';

@@ -1,15 +1,15 @@
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
-import { useUI } from '../context/UIContext'; 
+import { useUI } from '../context/UIContext';
 import './NavBarDark2.css';
 
 export default function NavBarDark() {
   const { isLoggedIn, logout, user } = useAuth();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { openMenu } = useUI(); 
+  const { openMenu } = useUI();
 
   const handleMemberClick = () => {
     if (isLoggedIn) {
@@ -32,7 +32,11 @@ export default function NavBarDark() {
         <nav className="navigation2">
           <ul className="icon2">
             <li><a href="#" className="icon-search"></a></li>
-            <li><a href="#" className="icon-cart"></a></li>
+            <li>
+              <Link to="/ShoppingCart">
+                <img src="./images/S-NavBar/navicon_cart.svg" alt="Cart" />
+              </Link>
+            </li>
             <li style={{ position: 'relative' }}>
               <button className="member-button2" onClick={handleMemberClick}>
                 <a className="icon-member" href="#"></a>
