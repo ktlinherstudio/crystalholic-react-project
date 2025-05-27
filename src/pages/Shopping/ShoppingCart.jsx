@@ -14,12 +14,12 @@ export default function ShoppingCart() {
                 <div className="cart_title">
                     <img
                         className="cart_decorate-left"
-                        src="/images/ShoppingCart/shoppingcart_deco-left.svg"
+                        src="./images/ShoppingCart/shoppingcart_deco-left.svg"
                         alt="左裝飾"
                     />
                     <h3 className="cart_decorate-title">購物車</h3>
                     <img className="cart_decorate-right"
-                        src="/images/ShoppingCart/shoppingcart_deco-right.svg"
+                        src="./images/ShoppingCart/shoppingcart_deco-right.svg"
                         alt="右裝飾"
                     />
                 </div>
@@ -45,7 +45,7 @@ export default function ShoppingCart() {
                             <div className="cart_table_row">
                                 {/* 商品資訊（縮圖＋名稱） */}
                                 <div className="cart_product_info">
-                                    <img src="/images/S-CrystalBracelet/product_blue_river.jpg" alt="沁藍之澗商品照" />
+                                    <img src="./images/S-CrystalBracelet/product_blue_river.jpg" alt="沁藍之澗商品照" />
                                     <p>沁藍之澗</p>
                                 </div>
                                 {/* 尺寸 */}
@@ -75,7 +75,7 @@ export default function ShoppingCart() {
                                 {/* 刪除按鈕 */}
                                 <div className="cart_cross_btn">
                                     <button>
-                                        <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
+                                        <img src="./images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
                                     </button>
                                 </div>
                             </div>
@@ -84,7 +84,7 @@ export default function ShoppingCart() {
                             <div className="cart_table_row">
                                 {/* 商品資訊（縮圖＋名稱） */}
                                 <div className="cart_product_info">
-                                    <img src="/images/S-CrystalBracelet/product_blue_goldfish.jpg" alt="金魚泡泡商品照" />
+                                    <img src="./images/S-CrystalBracelet/product_blue_goldfish.jpg" alt="金魚泡泡商品照" />
                                     <p>金魚泡泡</p>
                                 </div>
                                 {/* 尺寸 */}
@@ -114,7 +114,7 @@ export default function ShoppingCart() {
                                 {/* 刪除按鈕 */}
                                 <div className="cart_cross_btn">
                                     <button>
-                                        <img src="/images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
+                                        <img src="./images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
                                     </button>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@ export default function ShoppingCart() {
                                 <button className="cart_num_items">
                                     <span>(共2件)</span>
                                     <img
-                                        src="/images/ShoppingCart/shoppingcart-btn_accordion-grey.svg"
+                                        src="./images/ShoppingCart/shoppingcart-btn_accordion-grey.svg"
                                         alt="收合"
                                     />
                                 </button>
@@ -140,7 +140,7 @@ export default function ShoppingCart() {
                                 <div className="cart_table_head">
                                     <div className="cart_diamond">
                                         <img
-                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                             alt="送貨及付款方式"
                                         />
                                     </div>
@@ -183,11 +183,11 @@ export default function ShoppingCart() {
                                 <div className="cart_table_head">
                                     <div className="cart_diamond">
                                         <img
-                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                             alt="收件人資料"
                                         />
                                         <img
-                                            src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                            src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                             alt="收件人資料"
                                         />
                                     </div>
@@ -238,15 +238,15 @@ export default function ShoppingCart() {
                         <div className="cart_table_head">
                             <div className="cart_diamond">
                                 <img
-                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                     alt="訂單資訊"
                                 />
                                 <img
-                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                     alt="訂單資訊"
                                 />
                                 <img
-                                    src="/images/ShoppingCart/shoppingcart_ diamond.svg"
+                                    src="./images/ShoppingCart/shoppingcart_ diamond.svg"
                                     alt="訂單資訊"
                                 />
                             </div>
