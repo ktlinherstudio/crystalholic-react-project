@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import '../App.scss/css/Style.min.css'
 import NavBarLight from '../components/NavBarLight'
 import FooterPlain from '../components/FooterPlain'

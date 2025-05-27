@@ -27,7 +27,7 @@ import Product from './pages/Product/Product';
 export default function App() {
   return (
     <div className="page-layout">
-      <BrowserRouter>
+      <BrowserRouter basename="/crystalholic-react-project">
         <AuthProvider>
           <ScrollToTop />
           <main className="main-content">
