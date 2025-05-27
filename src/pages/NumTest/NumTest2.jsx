@@ -1,5 +1,5 @@
 import './NumTest2.css';
-import NavBarDark from '../../components/NavBarDark';
+import NavBarWrapper from '../../components/NavBarWrapper';
 import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,7 +20,7 @@ export default function NumTest2() {
 
   return (
     <>
-      <NavBarDark />
+      <NavBarWrapper variant="dark" />
       <main className="numtest2">
         <section className="num2-numtest">
           {/* 第一個標題 */}
