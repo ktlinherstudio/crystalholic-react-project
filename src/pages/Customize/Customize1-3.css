@@ -68,9 +68,15 @@
 }
 .index, .index2, .index3 {
     /* height: calc(100vh - 70px); */
-    height: 100vh;
     position: relative;
     z-index: 0;
+
+    width: 100%;
+    height: 100vh;                 /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 70px;             /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
+
+
 }
 .index {
     display: flex;
@@ -161,14 +167,14 @@
     display: block;
   }
 .img1 {
-    background-image: url(/public/images/Custom/custom-bracelet-recommend-1.png);
+    background-image: url(./public/images/Custom/custom-bracelet-recommend-1.png);
     width: 35vw;
 }
 .img2 {
-    background-image: url(/public/images/Custom/custom-bracelet-recommend-2.png);
+    background-image: url(./public/images/Custom/custom-bracelet-recommend-2.png);
 }
 .img3 {
-    background-image: url(/public/images/Custom/custom-bracelet-recommend-3.png);
+    background-image: url(./public/images/Custom/custom-bracelet-recommend-3.png);
 }
 .img2, .img3 {
     width: 28vw;

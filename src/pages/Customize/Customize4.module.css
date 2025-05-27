@@ -106,10 +106,9 @@
     color: var(--color-primary1);
 }
 .line {
-    border-style: none;
+    border: 1px solid #8c5abe80;
     height: 1px;
     margin-bottom: 24px;
-    background: rgb(135, 80, 191, 0.5);
 }
 .button {
     font-size: 14px;
@@ -205,14 +204,14 @@
 
 /* 大珍珠樣式 */
 .pearlBig {
-  /* composes: pearl; */
+  composes: pearl;
   width: 52.72px;
   height: 52.72px;
 }
 
 /* 小珍珠樣式 */
 .pearlSmall {
-  /* composes: pearl; */
+  composes: pearl;
   width: 23.594px;
   height: 23.594px;
 }
@@ -393,4 +392,9 @@
     width: 40px;
     padding-bottom: 5px;
     margin: 0 auto;
+}
+.line2 {
+    border: .5px solid var(--color-font-gray);
+    height: 1px;
+    margin-bottom: 24px;
 }

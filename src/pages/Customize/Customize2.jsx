@@ -10,9 +10,9 @@ export default function Customize2() {
             <main className="index2">
                 <div className="text2">
                     <h2>
-                        <img src="/public/images/Custom/line_left.svg" alt="" />
+                        <img src="./public/images/Custom/line_left.svg" alt="" />
                         客製專屬自己的手鍊
-                        <img src="/public/images/Custom/line_right.svg" alt="" />
+                        <img src="./public/images/Custom/line_right.svg" alt="" />
                     </h2>
                 </div>
                 <div className="button-box2">
@@ -20,7 +20,7 @@ export default function Customize2() {
                     <button className="button1">直接開始設計</button>
                 </div>
                 <div className="background-1">
-                    <img src="/public/images/Custom/custom-bracelet-blur.svg" alt="" />
+                    <img src="./public/images/Custom/custom-bracelet-blur.svg" alt="" />
                 </div>
             </main>
 
