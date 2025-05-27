@@ -31,9 +31,9 @@ import Product from './pages/Product/Product';
 export default function App() {
   return (
     <div className="page-layout">
-      {/* <BrowserRouter basename="/crystalholic-react-project"> */}
+      <BrowserRouter>
      
-      <HashRouter>
+      {/* <HashRouter> */}
         <AuthProvider>
           <ScrollToTop />
           <main className="main-content">
@@ -62,8 +62,8 @@ export default function App() {
             </Routes>
           </main>
         </AuthProvider>
-        </HashRouter>
-      {/* </BrowserRouter> */}
+        {/* </HashRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
