@@ -1,14 +1,29 @@
 import './ShoppingCart.css';
-import NavBarDark from '../../components/NavBarDark';
+import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
 import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
+import { useAuth } from '../../context/AuthContext';
+import { useUI } from '../../context/UIContext';
+import LoginRegisterModal from "../../components/LoginRegisterModal/LoginRegisterModal";
+import { useState } from 'react';
 
 
 export default function ShoppingCart() {
+    const { isLoggedIn } = useAuth();
+const { showAuthModal, openAuthModal, closeAuthModal } = useUI();
+const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+
+const handleCheckout = () => {
+  if (!isLoggedIn) {
+    openAuthModal();
+  } else {
+    setShowSuccessMsg(true);
+  }
+};
     return (
         <>
-            <NavBarDark />
+             <NavBarWrapper variant="dark" />
             <main className="cart_page">
                 {/* 標題 */}
                 <div className="cart_title">
@@ -282,11 +297,23 @@ export default function ShoppingCart() {
                                     <span className="cart_totalnum">NT$ 5,250</span>
                                 </li>
                             </ul>
-                            <button className="cart_btn_checkout">確認結帳</button>
+                            <button className="cart_btn_checkout" onClick={handleCheckout}>
+  確認結帳
+</button>
                         </div>
                     </section>
                 </section>
             </main>
+            {showSuccessMsg && (
+  <div className="checkout-success-modal">
+    <div className="success-content">
+      <h3>✦ 結帳完成 ✦</h3>
+      <p>商品即將出貨，感謝您的購買</p>
+    </div>
+  </div>
+)}
+<LoginRegisterModal isOpen={showAuthModal} onClose={closeAuthModal} />
+
 
             <footer className="cart_footer">
                 <BgDark/>

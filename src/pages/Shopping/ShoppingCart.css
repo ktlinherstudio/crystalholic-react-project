@@ -461,6 +461,31 @@
     /* z-index: 2; */
     margin-top: 80px;
 }
+/* 結帳成功視窗 */
+.checkout-success-modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 2px solid #8750bf;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  z-index: 9999;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.checkout-success-modal h3 {
+  font-size: 20px;
+  color: #8750bf;
+  margin-bottom: 12px;
+}
+
+.checkout-success-modal p {
+  font-size: 16px;
+  color: #333;
+}
 
 @media (max-width: 1024px) {
     .cart_point{
