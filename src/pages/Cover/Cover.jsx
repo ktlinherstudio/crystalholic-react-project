@@ -13,15 +13,12 @@ export default function Cover() {
 
     return (
         <>
-            {/* <div id='color'>做RWD用 之後會拿掉 */}
-            {/* <div id='color'> */}
             {/* 背景 */}
             <div className='coverbg'>
                 <div className="bgdark1"><BgDarkBlock /></div>
                 <div className="bgdark2"><BgDarkBlock /></div>
             </div>
             {/* menu bar*/}
-            {/* <NavBarLight /> */}
             <NavBarWrapper variant="light" />
 
             {/* 封面1  */}
@@ -255,10 +252,7 @@ export default function Cover() {
                     <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
                 </div>
             </section>
-
-            {/* <footer id="footer"></footer> */}
             <div className="coverfooter"><FooterTrn /></div>
-            {/* </div > */}
         </>
     )
 }

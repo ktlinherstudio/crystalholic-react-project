@@ -121,6 +121,7 @@
   width: 10px;
   height: 16px;
   background-image: url('./images/HomePage/deco-menu-diamond.svg');
+
   background-size: contain;
   background-repeat: no-repeat;
 }
