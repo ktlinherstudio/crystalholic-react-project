@@ -109,6 +109,8 @@ export default function Cover() {
 
                         <img src="./images/HomePage/covercrystal/crystal-amethyst.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-sunstone.svg" className="circle" alt="" />
+                   {/* <button><img src="./images/HomePage/icon_btn_down.ico.svg" alt="" /></button> */}
+                   {/* <button><img src="./images/HomePage/icon_btn_up.ico.svg" alt="" /></button> */}
                     </div>
                 </div>
                 <div className="section-crystaldiscovery">
