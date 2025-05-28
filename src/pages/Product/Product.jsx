@@ -4,11 +4,13 @@ import FooterTrn from '../../components/FooterTrn';
 import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Product() {
   const [isFav, setIsFav] = useState(false);
   const [collectionFavs, setCollectionFavs] = useState([false, false, false]);
   const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
 
   const handleFavClick = (e) => {
     e.stopPropagation();
@@ -91,7 +93,9 @@ export default function Product() {
               </div>
               <div className="p_product_buy">
                 <button type="button" className="p_btn_cart">加入購物車</button>
-                <button type="button" className="p_btn_buy">立即購買</button>
+                <button className="button" onClick={() => navigate('/ShoppingCart')}>
+                  立即購買
+                </button>
               </div>
             </div>
           </div>
