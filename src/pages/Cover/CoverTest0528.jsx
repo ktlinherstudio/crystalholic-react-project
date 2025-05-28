@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import BgDarkBlock from '../../components/BgDarkBlock'
 import '../../App.scss/css/Style.min.css'
 
-export default function Cover() {
+export default function CoverTes() {
     const [pageIndex, setPageIndex] = useState(0); // 0: 第一頁, 1: 第二頁
 
     // 🚫 根據 pageIndex 鎖住或恢復頁面滾動
@@ -77,7 +77,7 @@ export default function Cover() {
                     </div>
                     <div className="startbox2">
                         <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
-                        <div><img src="./images/HomePage/scroll.svg" alt="" /></div>
+                        <div><img src="./images/HomePage/scroll.svg" className="scroll2" alt="" /></div>
                     </div>
                 </motion.section>
             </div>
@@ -114,7 +114,6 @@ export default function Cover() {
                         </div>
                         <span><img src="./images/HomePage/deco-diamond-right.svg" className="dimond-right" alt="" /></span>
                     </header>
-                    <button><a href="../阿啾/html/customization-1.html">立即訂製</a></button>
                     <Link to="/Customize1" id='custombtn'>立即訂製</Link>
                 </div>
             </section>

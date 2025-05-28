@@ -26,6 +26,7 @@ import Customize4 from './pages/Customize/Customize4';
 import ShoppingCart from './pages/Shopping/ShoppingCart';
 import ProductCollection from './pages/Product/ProductCollection';
 import Product from './pages/Product/Product';
+import TarotCard0528 from './pages/Cover/TarotCard0528';
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
                 <Route path="/" element={<Cover />} />
                 <Route path="/CoverTest0527" element={<CoverTest0527 />} />
                 <Route path="/CoverTest0528" element={<CoverTest0528 />} />
+                <Route path="/TarotCard0528" element={<TarotCard0528 />} />
 
                 {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
                 {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
