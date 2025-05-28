@@ -168,14 +168,14 @@
     display: block;
   }
 .img1 {
-    background-image: url(./images/Custom/custom-bracelet-recommend-1.png);
+    background-image: url(../images/Custom/custom-bracelet-recommend-1.png);
     width: 35vw;
 }
 .img2 {
-    background-image: url(./images/Custom/custom-bracelet-recommend-2.png);
+    background-image: url(../images/Custom/custom-bracelet-recommend-2.png);
 }
 .img3 {
-    background-image: url(./images/Custom/custom-bracelet-recommend-3.png);
+    background-image: url(../images/Custom/custom-bracelet-recommend-3.png);
 }
 .img2, .img3 {
     width: 28vw;
