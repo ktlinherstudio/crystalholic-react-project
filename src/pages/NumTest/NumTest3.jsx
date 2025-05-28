@@ -173,7 +173,7 @@ export default function NumTest3() {
                                 </div>
                                 <Link to="/Product">
                                     <div className="bracelet-box">
-                                        <img className="bracelet" src="./images/Numtest/bracelet.png" alt="bracelet" />
+                                        <img className="bracelet" src="./images/Numtest/bracelet-num1.png" alt="bracelet" />
                                     </div>
                                 </Link>
                             </div>

@@ -3,7 +3,7 @@ main {
   
     /* 背景圖層 */
     background:
-      url('/images/S-Background/bg-noise-light.png'),
+      url('../images/S-Background/bg-noise-light.png'),
       radial-gradient(circle 48.24vw at -10% -12%,
           rgba(255, 120, 158, 0.32) 22.12%,
           rgba(255, 120, 158, 0.05) 59.62%,
