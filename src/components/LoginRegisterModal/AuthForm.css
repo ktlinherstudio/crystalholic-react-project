@@ -178,7 +178,7 @@
   padding: 12px 16px;
   background-color: #fff;
 
-  background-image: url('./images/S-Btn/btn_select_dropdown.png'); /* ← 你箭頭圖片的路徑 */
+  background-image: url('../images/S-Btn/btn_select_dropdown.png'); /* ← 你箭頭圖片的路徑 */
   background-repeat: no-repeat;
   background-position: right 16px center; /* ← 位置靠右內縮 */
   background-size: 26px; 
