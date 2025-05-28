@@ -29,22 +29,31 @@ header ul {
 
 .icon {
   display: flex;
-  margin-right: 25px;
-  flex-shrink: 0;
-  max-width: 100%;
-  padding-right: 14px;
-  align-items: center; 
-  /* margin: 0;
-  padding: 0; */
+  align-items: center;
+  gap: 20px; 
+  margin-right: 50px;
 }
 
 .icon li {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px; 
-  margin: 0;
   padding: 0;
+}
+
+.icon a,
+.icon button {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 34px;
+  height: 34px;
+  display: block;
 }
 
 /*  member icon 按鈕樣式 */
@@ -59,8 +68,8 @@ header ul {
 }
 
 .member-button img {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   display: block;
 }
 
