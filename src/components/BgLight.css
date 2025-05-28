@@ -2,7 +2,7 @@ main {
     height: 100%; 
     background:
         /* 材質圖 */
-        url(./images/S-Background/bg-noise-light.png),
+        url(../images/S-Background/bg-noise-light.png),
 
         /* 左上角白色暈光 */
         radial-gradient(circle 40vw at 0% 0%,
