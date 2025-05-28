@@ -18,7 +18,7 @@
     justify-content: center; 
     align-items: center; 
 
-    background: url(./public/images/Numtest/numtest_backgroung.png);
+    background: url(../images/Numtest/numtest_backgroung.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -57,7 +57,7 @@
     height: 5rem;
     background:
     /* 材質圖 */
-    url(./public/images/S-Background/bg-noise-light.png), 
+    url(../images/S-Background/bg-noise-light.png), 
     #F1F7F7;         /* 同 product_area 底色 */
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     z-index: 99;                 /* 確保蓋在最上面 */
@@ -70,7 +70,7 @@
     
     background:
         /* 材質圖 */
-        url(./public/images/S-Background/bg-noise-light.png),
+        url(../images/S-Background/bg-noise-light.png),
 
         /* 左中 */
         radial-gradient(circle 40vw at 0% 0%,

@@ -171,7 +171,7 @@
     border-radius: 99px;
 
     appearance: none; /* 移除原生箭頭 */
-    background-image: url(./images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
+    background-image: url(../images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
     background-repeat: no-repeat;
     background-position: right 15px center;
 
@@ -309,7 +309,7 @@
 
     appearance: none;
     /* 移除原生箭頭 */
-    background-image: url(./images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
+    background-image: url(../images/ShoppingCart/shoppingcart-btn_accordion-purple.svg);
     background-repeat: no-repeat;
     background-position: right 15px center;
 
