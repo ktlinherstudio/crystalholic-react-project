@@ -44,14 +44,14 @@ export default function Product() {
             <div className="p_product_img_left">
               <img
                 className="p_fav_icon"
-                src={isFav ? "./imsges/Product/btn-fav-click.svg" : "./imsges/Product/btn-fav.svg"}
+                src={isFav ? "./images/Product/btn-fav-click.svg" : "./images/Product/btn-fav.svg"}
                 alt="收藏"
                 onClick={handleFavClick}
                 style={{ cursor: 'pointer' }}
               />
               <img
                 className="p_product_img"
-                src="./imsges/S-CrystalBracelet/product_cocktail_whisky.jpg"
+                src="./images/S-CrystalBracelet/product_cocktail_whisky.jpg"
                 alt="薩提爾的獨酌"
               />
             </div>
@@ -66,9 +66,9 @@ export default function Product() {
               </p>
               <div className="p_product_crystal_area">
                 <div className="p_product_crystals">
-                  <img className="p_crystal_img" src="./imsges/Product/pc_wg_ws-1.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./imsges/Product/pc_wg_ws-2.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./imsges/Product/pc_wg_ws-3.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-1.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-2.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-3.svg" alt="水晶名稱" />
                 </div>
                 <p>主石：黃碧璽｜自信與平衡之石</p>
                 <p>其他：喜馬拉雅白水晶、黃葡萄石、摩根石、虎眼石</p>
@@ -112,51 +112,51 @@ export default function Product() {
                         {/* ── 卡片 1 ── */}
                         <div className="p_product_card">
                             <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./imsges/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./imsges/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
+                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
+                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
                             </div>
                             <div className="p_product_info">
                                 <span className="p_product_name">煙花紅酒</span>
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
 
                         {/* ── 卡片 2 ── */}
                         <div className="p_product_card">
                             <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./imsges/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./imsges/S-CrystalBracelet/product_cocktail_mojito.jpg" alt="薄荷之吻" />
+                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
+                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_mojito.jpg" alt="薄荷之吻" />
                             </div>
                             <div className="p_product_info">
                                 <span className="p_product_name">薄荷之吻</span>
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_mj-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_mj-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_mj-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
 
                         {/* ── 卡片 3 (重複示範) ── */}
                         <div className="p_product_card">
                             <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./imsges/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./imsges/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
+                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
+                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
                             </div>
                             <div className="p_product_info">
                                 <span className="p_product_name">煙花紅酒</span>
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./imsges/Product/pc_wg_red-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
                     </div>
