@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react';
-import NavBarLight from '../../components/NavBarLight'
-import FooterPlain from '../../components/FooterPlain'
 import BgDarkBlock from '../../components/BgDarkBlock'
 // import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import NavBarWrapper from '../../components/NavBarWrapper';
