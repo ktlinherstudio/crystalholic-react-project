@@ -409,35 +409,35 @@
 
 /* 右邊按鈕 */
 .iconBtn1 {
-    background-image: url(./public/images/Custom/btn_size_tool.svg);
+    background-image: url(./images/Custom/btn_size_tool.svg);
 }
 .iconBtn2 {
-    background-image: url(./public/images/Custom/btn_ans_tool.svg);
+    background-image: url(./images/Custom/btn_ans_tool.svg);
 }
 .iconBtn3 {
-    background-image: url(./public/images/Custom/btn_knowl_tool.svg);
+    background-image: url(./images/Custom/btn_knowl_tool.svg);
 }
 .iconBtn4 {
-    background-image: url(./public/images/Custom/btn_note_tool.svg);
+    background-image: url(./images/Custom/btn_note_tool.svg);
 }
 .iconBtn5 {
-    background-image: url(./public/images/Custom/btn_dum_tool.svg);
+    background-image: url(./images/Custom/btn_dum_tool.svg);
 }
 /* hover */
 .iconBtn1:hover {
-    background-image: url(./public/images/Custom/btn_size_tool_hover.svg);
+    background-image: url(./images/Custom/btn_size_tool_hover.svg);
 }
 .iconBtn2:hover {
-    background-image: url(./public/images/Custom/btn_ans_tool_hover.svg);
+    background-image: url(./images/Custom/btn_ans_tool_hover.svg);
 }
 .iconBtn3:hover {
-    background-image: url(./public/images/Custom/btn_knowl_tool_hover.svg);
+    background-image: url(./images/Custom/btn_knowl_tool_hover.svg);
 }
 .iconBtn4:hover {
-    background-image: url(./public/images/Custom/btn_note_tool_hover.svg);
+    background-image: url(./images/Custom/btn_note_tool_hover.svg);
 }
 .iconBtn5:hover {
-    background-image: url(./public/images/Custom/btn_dum_tool_hover.svg);
+    background-image: url(./images/Custom/btn_dum_tool_hover.svg);
 }
 
 
