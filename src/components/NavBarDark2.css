@@ -11,7 +11,7 @@
     /* 背景材質 */
     background-image:
       linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
-      url(/public/images/S-Background/noise-background.jpg);
+      url(../images/S-Background/noise-background.jpg);
   }
 
   .logo2 img {
@@ -40,15 +40,15 @@
 
   /* icon */
   .icon-search {
-    background-image: url(/public/images/S-NavBar/navicon_search.svg);
+    background-image: url(../images/S-NavBar/navicon_search.svg);
   }
 
   .icon-cart {
-    background-image: url(/public/images/S-NavBar/navicon_cart.svg);
+    background-image: url(../images/S-NavBar/navicon_cart.svg);
   }
 
   .icon-member {
-    background-image: url(/public/images/S-NavBar/navicon_member.svg);
+    background-image: url(../images/S-NavBar/navicon_member.svg);
     display: block;
     width: 34px;
     height: 34px;
@@ -57,7 +57,7 @@
   }
 
   .icon-menu {
-    background-image: url(/public/images/S-NavBar/navicon_bgrbtn.svg);
+    background-image: url(../images/S-NavBar/navicon_bgrbtn.svg);
   }
 
 
