@@ -1,4 +1,5 @@
 @use "./variable" as *;
+@use"./keyframe";
 @import "../../index.css";
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&family=Lora:ital,wght@0,400..700;1,400..700&family=Noto+Sans+TC:wght@100..900&display=swap');
 //google font，就算瀏覽者電腦中沒有安裝也能套到
@@ -426,8 +427,8 @@ body {
         padding: 120px 20px 160px;
         display: flex;
         width: 100%;
-        height: 255vh;
-        // height: 155vh;
+        // height: 255vh;
+        height: 155vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -515,20 +516,30 @@ body {
 
 }
 
+/*動畫*/
+.covercontainer {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
 
 
 /*封面1*/
 .ch-cover {
-    // border: #2fcf3d 2px solid;
+    border: #2fcf3d 2px solid;
     width: 100%;
     height: 100vh;
+    z-index: 1;
     position: relative;
+
 
     @media ($media-md) {
         width: 100%;
     }
 
     .cover-box {
+        animation: fadeIn 2s ease-in-out;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -681,9 +692,12 @@ body {
         }
 
         .scroll {
+            //動畫
+            animation: floatY 0.8s ease-in-out infinite,
+                Afterdelay 5s ease-in 0s 1 forwards;
+
             width: 28.5px;
             height: 97.1px;
-
             // 定位
             position: absolute;
             left: 49%;
@@ -693,7 +707,6 @@ body {
                 left: 50%;
                 top: 76.1%;
             }
-
 
             @media ($media-md) {
                 left: 50%;
@@ -706,9 +719,7 @@ body {
             }
         }
 
-
     }
-
 }
 
 /// 動畫
@@ -736,7 +747,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // z-index: 999;
+    // position: sticky;
+    // z-index: 1;
 
     // gap: 0;
     @media ($media-xlg) {
@@ -1217,9 +1229,10 @@ body {
 
 /*水晶小百科*/
 #section-crystaldiscovery {
+    border: #e9df70 5px solid;
+
     width: 100%;
     height: 100vh;
-    // border: #e9df70 5px solid;
     color: #8750BF;
     display: flex;
     justify-content: start;
@@ -1800,9 +1813,14 @@ body {
         gap: 20%;
     }
 
+    //RWD
+    border: 5px rgb(226, 35, 35) solid;
+    position: sticky;
+    z-index: 99;
+    //
+
     width: 100%;
     height: 68.75vh;
-    // border: 2px white solid;
     display: flex;
     flex-direction: column;
     justify-content: center;

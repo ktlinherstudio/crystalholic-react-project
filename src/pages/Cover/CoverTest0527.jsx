@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import BgDarkBlock from '../../components/BgDarkBlock';
+// import '../../App.scss/css/Style.min.css';
 import '../../App.scss/css/Style.min.css';
-
 export default function CoverTest() {
     const [showFirstPage, setShowFirstPage] = useState(true);
     const [scrollTriggered, setScrollTriggered] = useState(false);
@@ -97,29 +97,6 @@ export default function CoverTest() {
                     </div>
                 </motion.section>
             )}
-
-            {/* Tarot Section（正常捲動） */}
-            <motion.section id="section-tarotcard"
-                initial={{ opacity: 1, y: 0 }}
-                animate={scrollTriggered ? { opacity: 1, y: -800 } : {}}
-                transition={{ duration: 0 }}>
-                <div className="tarotcard">
-                    <h2 id="tarotcard-title">
-                        <span className="dimond-left"><img src="./images/HomePage/deco-diamond-left.svg" alt="" /></span>
-                        <div id="tarot-title">憑直覺抽一張吧</div>
-                        <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
-                    </h2>
-                    <div id="tarotcard-box">
-                        <img src="./images/HomePage/tarot-back.svg" className="trcardchild-1" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                        <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    </div>
-                    <button id="tarotcard-btn"><a href="#">所有商品</a></button>
-                </div>
-            </motion.section>
         </>
     );
 }

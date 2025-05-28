@@ -4,16 +4,15 @@ import './App.css';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider } from './context/AuthContext';
-import { UIProvider } from './context/UIContext'; 
+import { UIProvider } from './context/UIContext';
 
 import About from './pages/Others/About';
 import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
 import Cover from './pages/Cover/Cover';
-import CoverTest from './pages/Cover/CoverTest';
 import CoverTest0527 from './pages/Cover/CoverTest0527';
-
+import CoverTest0528 from './pages/Cover/CoverTest0528';
 // import CoverFeedbackBs from './pages/Cover/CoverFeedbackBs';
 // import CoverFeedbackSW from './pages/Cover/CoverFeedbackSW';
 
@@ -44,8 +43,9 @@ export default function App() {
                 <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
 
                 <Route path="/" element={<Cover />} />
-                <Route path="/CoverTest" element={<CoverTest />} />
                 <Route path="/CoverTest0527" element={<CoverTest0527 />} />
+                <Route path="/CoverTest0528" element={<CoverTest0528 />} />
+
                 {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
                 {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
