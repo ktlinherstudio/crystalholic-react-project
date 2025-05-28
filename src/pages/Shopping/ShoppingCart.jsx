@@ -124,6 +124,7 @@ export default function ShoppingCart() {
                 <div className="cart_table_head">
                   <div className="cart_diamond">
                     <img src="./images/ShoppingCart/shoppingcart_ diamond.svg" alt="收件人資料" />
+                    <img src="./images/ShoppingCart/shoppingcart_ diamond.svg" alt="收件人資料" />
                   </div>
                   <h2>收件人資料</h2>
                 </div>
@@ -139,6 +140,8 @@ export default function ShoppingCart() {
           <section className="cart_right">
             <div className="cart_table_head">
               <div className="cart_diamond">
+                <img src="./images/ShoppingCart/shoppingcart_ diamond.svg" alt="訂單資訊" />
+                <img src="./images/ShoppingCart/shoppingcart_ diamond.svg" alt="訂單資訊" />
                 <img src="./images/ShoppingCart/shoppingcart_ diamond.svg" alt="訂單資訊" />
               </div>
               <h2>訂單資訊</h2>
