@@ -143,8 +143,8 @@ export default function Customize4() {
 
                         {/* 按鈕  */}
                         <div className={style.iconBox1}>
-                            <img src="./images/Custom/btn-del.svg" alt="" />
-                            <img src="./images/Custom/btn-save.svg" alt="" />
+                                <div className={style.btnDel}></div>
+                                <div className={style.btnSave}></div>
                         </div>
                     </div>
 

@@ -12,6 +12,7 @@
     --color-primary6:#D7BEFF;
     --color-primary7:#FAF6FF;
     --color-primary8:#e7d8ea;
+    --color-primary9:#A770DE;
     --color-hover1:#d8c9ef;
     --color-font-gray:#8284A2;
 
@@ -302,8 +303,6 @@
 }
 /* 珠子外觀 */
 .bead{
-  /* width: 46px;
-  height: 46px; */
   width: 90%;
   height: 90%;
   border-radius: 50%;
@@ -325,10 +324,37 @@
     transform: translate(-50%, -50%);
     gap: 3.125rem;
 }
-.iconBox1 img {
+.btnDel, .btnSave {
     width: 3.125rem;
+    height: 3.125rem;
     cursor: pointer;
 }
+
+
+/* icon按鈕 */
+.btnDel {
+    background-image: url(../images/Custom/btn_del.svg);
+}
+.btnSave {
+    background-image: url(../images/Custom/btn_save.svg);
+}
+/* hover */
+.btnDel:hover {
+    background-image: url(../images/Custom/btn_del_hover.svg);
+}
+.btnSave:hover {
+    background-image: url(../images/Custom/btn_save_hover.svg);
+}
+/* active */
+.btnDel:active, .btnSave:active {
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid var(--color-primary9);
+    padding: 1rem;
+    border-radius: 0.94rem;
+}
+
+
 
 
 
