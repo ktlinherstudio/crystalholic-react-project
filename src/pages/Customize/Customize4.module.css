@@ -353,6 +353,16 @@
     padding: 1rem;
     border-radius: 0.94rem;
 }
+.preload {
+    position: absolute;
+    top: -624.938rem;
+    left: -624.938rem;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-image: url(../images/Custom/btn_del_hover.svg),
+                      url(../images/Custom/btn_save_hover.svg);
+}
 
 
 

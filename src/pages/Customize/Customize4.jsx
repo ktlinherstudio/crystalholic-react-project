@@ -19,6 +19,9 @@ export default function Customize4() {
             <NavBarWrapper variant="dark" />
             {/* 內容 */}
             <main className={style.index}>
+                {/* 預載icon hover按鈕(解決重整頁面hover狀態前的閃爍問題) */}
+                <div className={style.preload} /> 
+                
                 <div className={style.boxs}>
                     {/* 名稱欄 */}
                     <div className={style.name}>
