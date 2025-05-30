@@ -10,7 +10,7 @@ import productSeriesData from '../../pages/Product/ProductCollection';
 export default function ProductCollection() {
     /* --- React states ---------------------------------------------------- */
     const [activeSeries, setActiveSeries] = useState('blue');   // 目前選中的系列
-    const [isFavorited, setIsFavorited] = useState(false);      // 示範用：單一收藏狀態
+    const [favorites, setFavorites] = useState({});
     const [triangleX, setTriangleX] = useState(0);            // 三角形的水平位置
 
     /* --- refs ------------------------------------------------------------ */
@@ -28,10 +28,13 @@ export default function ProductCollection() {
     ];
 
     /* --- 點擊收藏 -------------------------------------------------------- */
-    const toggleFavorite = (e) => {
+    const toggleFavorite = (e, idx) => {
         e.preventDefault(); // 阻止 <Link> 預設跳轉
         e.stopPropagation(); // 阻止事件冒泡
-        setIsFavorited((prev) => !prev);
+        setFavorites(prev => ({
+            ...prev,
+            [idx]: !prev[idx]           // 只改這張卡
+        }));
     };
 
     /* --- 點擊商品卡片導頁 ---------------------------------------------- */
@@ -92,9 +95,11 @@ export default function ProductCollection() {
                                 <div className="pc_product_img_wrap">
                                     <img
                                         className="pc_fav_icon"
-                                        src={isFavorited ? './images/Product/btn-fav-click.svg' : './images/Product/btn-fav.svg'}
+                                        src={favorites[idx]
+                                            ? './images/Product/btn-fav-click.svg'
+                                            : './images/Product/btn-fav.svg'}
                                         alt="收藏"
-                                        onClick={toggleFavorite}
+                                        onClick={(e) => toggleFavorite(e, idx)}
                                     />
                                     <img className="pc_product_img" src={p.image} alt={p.name} />
                                 </div>

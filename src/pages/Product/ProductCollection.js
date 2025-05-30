@@ -12,8 +12,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_blue_river.jpg",
         crystals: [
-          "./images/Product/pc_blue_1.svg",
-          "./images/Product/pc_blue_2.svg"
+          "./images/Product/pc_bule_r-1.svg",
+          "./images/Product/pc_bule_r-2.svg",
+          "./images/Product/pc_bule_r-3.svg"
         ]
       },
       {
@@ -21,8 +22,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_blue_party.jpg",
         crystals: [
-          "./images/Product/pc_blue_3.svg",
-          "./images/Product/pc_blue_4.svg"
+          "./images/Product/pc_bule_p-1.svg",
+          "./images/Product/pc_bule_p-2.svg",
+          "./images/Product/pc_bule_p-3.svg"
         ]
       },
       {
@@ -30,8 +32,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_blue_goldfish.jpg",
         crystals: [
-          "./images/Product/pc_blue_3.svg",
-          "./images/Product/pc_blue_4.svg"
+          "./images/Product/pc_bule_gf-1.svg",
+          "./images/Product/pc_bule_gf-2.svg",
+          "./images/Product/pc_bule_gf-3.svg"
         ]
       }
     ]
@@ -50,7 +53,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_adventure_sea.jpg",
         crystals: [
-          "./images/Product/pc_adv_1.svg"
+          "./images/Product/pc_ad_sea-1.svg",
+          "./images/Product/pc_ad_sea-2.svg",
+          "./images/Product/pc_ad_sea-3.svg"
         ]
       },
       {
@@ -58,8 +63,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_adventure_wave.jpg",
         crystals: [
-          "./images/Product/pc_adv_2.svg",
-          "./images/Product/pc_adv_3.svg"
+          "./images/Product/pc_ad_wave-1.svg",
+          "./images/Product/pc_ad_wave-2.svg",
+          "./images/Product/pc_ad_wave-3.svg"
         ]
       },
       {
@@ -67,8 +73,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_adventure_polar.jpg",
         crystals: [
-          "./images/Product/pc_adv_2.svg",
-          "./images/Product/pc_adv_3.svg"
+          "./images/Product/pc_ad_po-1.svg",
+          "./images/Product/pc_ad_po-2.svg",
+          "./images/Product/pc_ad_po-3.svg"
         ]
       }
     ]
@@ -87,9 +94,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_seasons_spring.jpg",
         crystals: [
-          "./images/Product/pc_season_1.svg",
-          "./images/Product/pc_season_2.svg",
-          "./images/Product/pc_season_3.svg"
+          "./images/Product/pc_s_sp-1.svg",
+          "./images/Product/pc_s_sp-2.svg",
+          "./images/Product/pc_s_sp-3.svg"
         ]
       },
       {
@@ -97,9 +104,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_seasons_summer.jpg",
         crystals: [
-          "./images/Product/pc_season_1.svg",
-          "./images/Product/pc_season_2.svg",
-          "./images/Product/pc_season_3.svg"
+          "./images/Product/pc_s_sum-1.svg",
+          "./images/Product/pc_s_sum-2.svg",
+          "./images/Product/pc_s_sum-3.svg"
         ]
       },
       {
@@ -107,9 +114,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_seasons_winter.jpg",
         crystals: [
-          "./images/Product/pc_season_1.svg",
-          "./images/Product/pc_season_2.svg",
-          "./images/Product/pc_season_3.svg"
+          "./images/Product/pc_s_w-1.svg",
+          "./images/Product/pc_s_w-2.svg",
+          "./images/Product/pc_s_w-3.svg"
         ]
       }
     ]
@@ -128,9 +135,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_cocktail_mojito.jpg",
         crystals: [
-          "./images/Product/pc_wg_mj-1.svg",
-          "./images/Product/pc_wg_mj-2.svg",
-          "./images/Product/pc_wg_mj-3.svg"
+          "./images/Product/pc_ct_mj-1.svg",
+          "./images/Product/pc_ct_mj-2.svg",
+          "./images/Product/pc_ct_mj-3.svg"
         ]
       },
       {
@@ -138,9 +145,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_cocktail_whisky.jpg",
         crystals: [
-          "./images/Product/pc_wg_ws-1.svg",
-          "./images/Product/pc_wg_ws-2.svg",
-          "./images/Product/pc_wg_ws-3.svg"
+          "./images/Product/pc_ct_ws-1.svg",
+          "./images/Product/pc_ct_ws-2.svg",
+          "./images/Product/pc_ct_ws-3.svg"
         ]
       },
       {
@@ -148,9 +155,9 @@ const productSeriesData = {
         price: "$2,590",
         image: "./images/S-CrystalBracelet/product_cocktail_redwine.jpg",
         crystals: [
-          "./images/Product/pc_wg_red-1.svg",
-          "./images/Product/pc_wg_red-2.svg",
-          "./images/Product/pc_wg_red-3.svg"
+          "./images/Product/pc_ct_red-1.svg",
+          "./images/Product/pc_ct_red-2.svg",
+          "./images/Product/pc_ct_red-3.svg"
         ]
       }
     ]
