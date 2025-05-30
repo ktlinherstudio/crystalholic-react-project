@@ -353,6 +353,7 @@
     padding: 1rem;
     border-radius: 0.94rem;
 }
+/* 預載icon hover按鈕(解決重整頁面hover狀態前的閃爍問題) */
 .preload {
     position: absolute;
     top: -624.938rem;

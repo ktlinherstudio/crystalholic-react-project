@@ -1,0 +1,108 @@
+/* ---------- root ---------- */
+:root {
+  --color-bg1: #b493ee;
+  --color-bg2: #131757;
+  --color1: 66 73 212;
+  --color2: 0 3 70;
+  --color3: 36 40 105;
+  --color4: 66 73 212;
+  --color5: 180 147 238;
+  --color-interactive: 0 3 70;
+
+  --circle-size: 120%;      /* ★ changed (was 200%) ★ */
+  --blending: hard-light;
+}
+
+/* ---------- keyframes unchanged ---------- */
+@keyframes moveInCircle { 0%{transform:rotate(0)} 50%{transform:rotate(180deg)} 100%{transform:rotate(360deg)} }
+@keyframes moveVertical  { 0%{transform:translateY(-50%)} 50%{transform:translateY(50%)} 100%{transform:translateY(-50%)} }
+@keyframes moveHorizontal{ 0%{transform:translate(-50%,-10%)}50%{transform:translate(50%,10%)}100%{transform:translate(-50%,-10%)}}
+
+/* ---------- gradient background ---------- */
+.gradient-bg{
+  position:fixed;
+  inset:0;
+  width:100vw;
+  min-height:100vh;
+  z-index:-99;
+  overflow:hidden;
+  background:linear-gradient(40deg,var(--color-bg1),var(--color-bg2));
+}
+.gr adient-bg svg{display:none}
+
+/* ★ removed goo filter, kept blur only → 減少重算層 ★ */
+.gradients-container{
+  filter:blur(30px);  /* ★ changed ★ */
+  width:100%;
+  height:100%;
+}
+
+.gradient-bg .g1,
+.gradient-bg .g2,
+.gradient-bg .g3,
+.gradient-bg .g4,
+.gradient-bg .g5,
+.gradient-bg .interactive{
+  position:absolute;
+  mix-blend-mode:var(--blending);
+  will-change:transform;      /* ★ GPU hint ★ */
+}
+
+/* ---------- circles (縮小尺寸 + 保留動畫) ---------- */
+.gradient-bg .g1{
+  background:radial-gradient(circle at center,rgba(var(--color1)/.8) 0,transparent 50%) no-repeat;
+  width:var(--circle-size);height:var(--circle-size);
+  top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
+  animation:moveVertical 30s ease infinite;
+}
+.gradient-bg .g2{
+  background:radial-gradient(circle at center,rgba(var(--color2)/.8) 0,transparent 50%) no-repeat;
+  width:var(--circle-size);height:var(--circle-size);
+  top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
+  transform-origin:calc(50% - 400px);
+  animation:moveInCircle 20s reverse infinite;
+}
+.gradient-bg .g3{
+  background:radial-gradient(circle at center,rgba(var(--color3)/.8) 0,transparent 50%) no-repeat;
+  width:var(--circle-size);height:var(--circle-size);
+  top:calc(50% - var(--circle-size)/2 + 160px); /* ★ y-offset 微調 ★ */
+  left:calc(50% - var(--circle-size)/2 - 400px);
+  transform-origin:calc(50% + 400px);
+  animation:moveInCircle 40s linear infinite;
+}
+.gradient-bg .g4{
+  background:radial-gradient(circle at center,rgba(var(--color4)/.8) 0,transparent 50%) no-repeat;
+  width:var(--circle-size);height:var(--circle-size);
+  top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
+  transform-origin:calc(50% - 200px);
+  animation:moveHorizontal 40s ease infinite;
+  opacity:.7;
+}
+.gradient-bg .g5{
+  background:radial-gradient(circle at center,rgba(var(--color5)/.8) 0,transparent 50%) no-repeat;
+  width:calc(var(--circle-size)*1.5);height:calc(var(--circle-size)*1.5); /* ★ smaller ★ */
+  top:calc(50% - var(--circle-size)*0.75);
+  left:calc(50% - var(--circle-size)*0.75);
+  transform-origin:calc(50% - 600px) calc(50% + 150px);
+  animation:moveInCircle 20s ease infinite;
+}
+
+/* ---------- interactive layer ---------- */
+.gradient-bg .interactive{
+  background:radial-gradient(circle at center,rgba(var(--color-interactive)/.8) 0,transparent 50%) no-repeat;
+  width:100%;height:100%;top:-50%;left:-50%;opacity:.6;
+}
+
+.gradient-bg::before{
+  content:"";
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:#35c952;
+  filter:url(#f);           /* 噪點保留 */
+  mix-blend-mode:overlay;
+}
+
+/* ---------- stars ---------- */
+#bg-container{
+  position:fixed;inset:0;z-index:-98;pointer-events:none;
+}
+#bg{position:absolute;inset:0}
