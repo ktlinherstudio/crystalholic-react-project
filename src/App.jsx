@@ -13,6 +13,9 @@ import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 import Cover from './pages/Cover/Cover';
 import CoverTest0527 from './pages/Cover/CoverTest0527';
 import CoverTest0528 from './pages/Cover/CoverTest0528';
+import TarotCard0528 from './pages/Cover/TarotCard0528';
+import TarotCard0529 from './pages/Cover/TarotCard0529';
+
 // import CoverFeedbackBs from './pages/Cover/CoverFeedbackBs';
 // import CoverFeedbackSW from './pages/Cover/CoverFeedbackSW';
 
@@ -26,7 +29,6 @@ import Customize4 from './pages/Customize/Customize4';
 import ShoppingCart from './pages/Shopping/ShoppingCart';
 import ProductCollection from './pages/Product/ProductCollection';
 import Product from './pages/Product/Product';
-import TarotCard0528 from './pages/Cover/TarotCard0528';
 
 export default function App() {
   return (
@@ -47,7 +49,7 @@ export default function App() {
                 <Route path="/CoverTest0527" element={<CoverTest0527 />} />
                 <Route path="/CoverTest0528" element={<CoverTest0528 />} />
                 <Route path="/TarotCard0528" element={<TarotCard0528 />} />
-
+                <Route path="/TarotCard0529" element={<TarotCard0529 />} />
                 {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
                 {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
