@@ -5,7 +5,7 @@ import '../../css/fonts.css';
 import './About.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterBgc from '../../components/FooterBgc'
-import BgDarkBlock from '../../components/BgDarkBlock'
+import BgDark1 from '../../components/BgDarkBlock'
 import BackToTopBtn from '../../components/BackToTopBtn'
 // import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
@@ -26,8 +26,7 @@ export default function About() {
 
         <main className="about-main">
           <section className="about-hero" id='about-hero'>
-            <div className="bgdark-inside"> <BgDarkBlock /></div>
-
+            <BgDark1/>
             <div className="about-hero-content">
               <h1 className="about-hero-title">Crystalholic</h1>
               <p className="about-hero-subtitle">在忙碌世界中，找回屬於自己的寧靜</p>
