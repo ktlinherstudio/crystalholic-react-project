@@ -1,4 +1,4 @@
-const categories = ["放鬆冥想", "專注工作", "愛與人際", "能量防護", "靈性直覺"];
+const categories = ["靈性直覺", "專注工作", "愛與人際", "能量防護", "放鬆冥想"];
 
 export default function CategoryTabs({ current, onClick }) {
   return (

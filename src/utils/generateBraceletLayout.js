@@ -1,7 +1,7 @@
 // utils/generateBraceletLayout.js
 
 // 統一壓縮係數，控制珠子之間間距（越大越疏鬆）
-const compressionRatio = 1.1;
+const compressionRatio = 1;
 
 export function generateBraceletLayout(crystalSize = 8, wristSize = 16) {
   const metalSize = 3;
@@ -9,6 +9,7 @@ export function generateBraceletLayout(crystalSize = 8, wristSize = 16) {
   const wristLengthMM = wristSize * 10;
 
   const pairCount = Math.floor(wristLengthMM / unitLength);
+
 
   const layout = [];
   for (let i = 0; i < pairCount; i++) {
@@ -30,8 +31,8 @@ export function calculateBeadAngles(beads, crystalSize) {
 
   // 根據水晶尺寸給不同的比例微調，確保各尺寸對齊視覺
   const adjustmentMap = {
-    8: { metalRatio: 2.2, crystalRatio: 0.8 },
-    10: { metalRatio: 2.6, crystalRatio: 0.76 },
+    8: { metalRatio: 2.1, crystalRatio: 0.8 },
+    10: { metalRatio: 2.5, crystalRatio: 0.76 },
   };
 
   // 若找不到對應尺寸則 fallback
