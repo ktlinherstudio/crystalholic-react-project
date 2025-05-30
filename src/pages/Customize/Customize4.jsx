@@ -1,8 +1,12 @@
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+
 import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
+
+import { generateBraceletLayout, calculateRadius, calculateBeadAngles } from '../../utils/generateBraceletLayout';
+
 
 
 
@@ -13,6 +17,37 @@ export default function Customize4() {
         setShowInfo(true);
     }, []);
 
+    //尺寸及畫布設定
+    const [selectedSize, setSelectedSize] = useState(8); // 預設 8mm
+    const [wristSize, setWristSize] = useState(16);
+    const [braceletBeads, setBraceletBeads] = useState(generateBraceletLayout(8));
+
+    const handleConfirm = () => {
+        const newLayout = generateBraceletLayout(selectedSize, wristSize);
+        setBraceletBeads(newLayout);
+    };
+
+    //滑動手圍尺寸立即重繪
+    useEffect(() => {
+        const newLayout = generateBraceletLayout(selectedSize, wristSize);
+        setBraceletBeads(newLayout);
+    }, [selectedSize, wristSize]);
+
+    // 根據手圍計算半徑
+    const braceletRadius = useMemo(() => {
+        return calculateRadius(wristSize) * 1.1;
+    }, [wristSize]);
+
+    const scale = 6; // 視覺放大比例
+
+    //在 useMemo 裡取得角度陣列
+    const beadAngles = useMemo(() => {
+        return calculateBeadAngles(braceletBeads, selectedSize);
+    }, [braceletBeads, selectedSize]);
+
+
+
+
     return (
         <>
             <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
@@ -20,8 +55,8 @@ export default function Customize4() {
             {/* 內容 */}
             <main className={style.index}>
                 {/* 預載icon hover按鈕(解決重整頁面hover狀態前的閃爍問題) */}
-                <div className={style.preload} /> 
-                
+                <div className={style.preload} />
+
                 <div className={style.boxs}>
                     {/* 名稱欄 */}
                     <div className={style.name}>
@@ -46,9 +81,18 @@ export default function Customize4() {
                                 <p>水晶大小：</p>
                             </div>
                             <div className={style.crystalSizeButtons}>
-                                <button className={style.button}>6mm</button>
-                                <button className={style.button}>8mm</button>
+                                {[8, 10].map(size => (
+                                    <button
+                                        key={size}
+                                        className={`${style.button} ${selectedSize === size ? style.active : ''}`}
+                                        onClick={() => setSelectedSize(size)}
+                                    >
+                                        {size}mm
+                                    </button>
+                                ))}
                             </div>
+
+
                         </div>
 
                         <div className={style.ringSizeBox}>
@@ -56,11 +100,20 @@ export default function Customize4() {
                                 <p>手圍尺寸：</p>
                             </div>
                             <div className={style.ringSizeSlider}>
-                                <input type="range" className={style.sliderInput} min="0" max="100" />
+                                <input
+                                    type="range"
+                                    className={style.sliderInput}
+                                    min="13"
+                                    max="18"
+                                    step="1"
+                                    value={wristSize}
+                                    onChange={(e) => setWristSize(Number(e.target.value))}
+                                />
                             </div>
                             <div className={style.ringSizeValueBox}>
-                                <p className={style.sizeValue}>16cm</p>
+                                <p className={style.sizeValue}>{wristSize}cm</p>
                             </div>
+
                         </div>
 
                         <div className={style.ringJewelryBox}>
@@ -74,6 +127,9 @@ export default function Customize4() {
                                 <img src="./images/Custom/ball4.png" alt="" />
                             </div>
                         </div>
+                        <button className={style.button} onClick={handleConfirm}>
+                            確定
+                        </button>
                     </div>
 
                     {/* 單顆水晶列表 */}
@@ -107,49 +163,61 @@ export default function Customize4() {
 
                 <div className={style.boxs2}>
                     {/* 手鏈 */}
-                    <div className={style.bracelet}>
-                        {/* 依序放 32 顆珍珠，奇數大珠、偶數小珠 */}
-                        {/* 用 inline style 設定 --i 角度索引，0~31 */}
-                        {/* 大珠（16 顆） */}
-                        <span className={style.pearlBig} style={{ '--i': 0 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 1 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 2 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 3 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 4 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 5 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 6 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 7 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 8 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 9 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 10 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 11 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 12 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 13 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 14 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 15 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 16 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 17 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 18 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 19 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 20 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 21 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 22 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 23 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 24 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 25 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 26 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 27 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 28 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 29 }}></span>
-                        <span className={style.pearlBig} style={{ '--i': 30 }}></span>
-                        <span className={style.pearlSmall} style={{ '--i': 31 }}></span>
+                    <div
 
-                        {/* 按鈕  */}
+                        className={style.bracelet}
+                        style={{
+                            width: `${braceletRadius * 2 * scale}px`,
+                            height: `${braceletRadius * 2 * scale}px`,
+                        }}
+                    >
+                       {(() => {
+  let accumulatedAngle = 0;
+
+  return braceletBeads.map((bead, index) => {
+    const isMetal = bead === "metal";
+    const size = isMetal ? 6 : selectedSize;
+    const angle = beadAngles[index];
+    const offset = (size * scale) / 2;
+
+    accumulatedAngle += angle;
+
+    return (
+      <span
+        key={index}
+        style={{
+          width: `${size * scale}px`,
+          height: `${size * scale}px`,
+          backgroundColor: isMetal ? "#ccc" : "#a78dbb",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          borderRadius: "50%",
+          transform: `
+            rotate(${accumulatedAngle}deg)
+            translate(${braceletRadius * scale}px)
+            rotate(-${accumulatedAngle}deg)
+            translate(-${offset}px, -${offset}px)
+          `,
+          transformOrigin: "0 0",
+        }}
+      />
+    );
+  });
+})()}
+
+
+
+
+
                         <div className={style.iconBox1}>
-                                <div className={style.btnDel}></div>
-                                <div className={style.btnSave}></div>
+                            <div className={style.btnDel}></div>
+                            <div className={style.btnSave}></div>
                         </div>
                     </div>
+
+
+
 
                     {/* 價格框 */}
                     <div className={style.priceBox}>

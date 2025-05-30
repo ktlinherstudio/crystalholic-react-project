@@ -116,6 +116,12 @@
     border-radius: 1.25rem;
     background:var(--color-primary4)
 }
+
+.button.active {
+  background-color: var(--color-primary3);
+  color: white;
+}
+
 .crystalSizeButtons {
     display: flex;
     flex-direction: row;
@@ -443,7 +449,7 @@
 .icon2 p {
     color: var(--color-primary4);
 }
-
+ 
 /* 右邊按鈕 */
 .iconBtn1 {
     background-image: url(../images/Custom/btn_size_tool.svg);
