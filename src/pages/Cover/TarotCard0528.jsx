@@ -1,19 +1,73 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../App.scss/css/Style.min.css';
+import { div, img } from 'framer-motion/client';
 
 export default function TarotCard0528() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState(null);
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
 
   const tarotDescriptions = [
-    '你最近需要多關心自己。',
-    '你將迎來一個轉變。',
-    '有人正在默默支持你。',
-    '現在是放手的時候了。',
-    '勇敢接受挑戰會帶來好運。',
-    '請相信直覺的指引。'
+    <div className="lbcontent">
+      <h2 className="lbh2">沁藍之澗</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>,
+    <div className="lbcontent">
+      <h2 className="lbh2">金魚泡泡</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>,
+    <div className="lbcontent">
+      <h2 className="lbh2">沉睡王國的夢幻派對</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>,
+    <div className="lbcontent">
+      <h2 className="lbh2">北國雪森</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>,
+    <div className="lbcontent">
+      <h2 className="lbh2">薄荷之吻</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>,
+    <div className="lbcontent">
+      <h2 className="lbh2">極圈探險家</h2>
+      <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+        海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      <button className="lbbtn">看看手鍊</button>
+    </div>
   ];
+
+  const tarotImg = [
+    <img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc2.svg" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc3.svg" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc4.svg" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc5.svg" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc6.svg" className="lbimg" alt="" />,
+
+  ]
 
   const handleCardClick = (index) => {
     setSelectedCardIndex(index);
@@ -28,6 +82,7 @@ export default function TarotCard0528() {
   return (
     <>
       <section id="section-tarotcard">
+        {/* title */}
         <div id="tarotcard-title">
           <span className="dimond-left"><img src="./images/HomePage/deco-diamond-left.svg" alt="" /></span>
           <h2 id="tarot-title">憑直覺抽一張吧</h2>
@@ -54,30 +109,19 @@ export default function TarotCard0528() {
       {lightboxOpen && (
         <div className="lightbox" onClick={closeLightbox}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={closeLightbox}>×</button>
-            <p className="lightbox-text">{tarotDescriptions[selectedCardIndex]}</p>
-          </div>
-        </div>
-      )}
-
-      {/* lightbox */}
-      <div id='lblb'>
-        <section className=''>
-          <div className='lbborder1'>
-            <div className='lbcard'>
-              <div><img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" /></div>
-              <div className="lbcontent">
-                <h2 className="lbh2">沁藍之澗</h2>
-                <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
-                <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
-                <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。
-                  海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
-                <button className="lbbtn">看看手鍊</button>
+            <div className='lbborder1'>
+              <div className='lbborder2'>
+                <button className="lightbox-close" onClick={closeLightbox}>×</button>
+                <div>{tarotImg[selectedCardIndex]}</div>
+                <div className="lightbox-text">{tarotDescriptions[selectedCardIndex]}</div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div >
+      )
+      }
+
+      
     </>
   );
 }
@@ -99,4 +143,27 @@ export default function TarotCard0528() {
 //     <div >
 //         <Link to="/ProductCollection" id="tarotcard-btn">所有商品</Link>
 //     </div>
-// </section>
+// </section>\
+//   className={index === 0 ? 'trcardchild-1' : 'trcard'}
+
+
+
+{/* lightbox */}
+      // <div id='lblb'>
+      //   <section className='lbborder1'>
+      //     <div className='lbborder2'>
+      //       <div className='lbcard'>
+      //         <button className="lightbox-close" onClick={closeLightbox}>×</button>
+      //         {/* <div><img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" /></div> */}
+      //         <div className="lbcontent">
+      //           <h2 className="lbh2">沁藍之澗</h2>
+      //           <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+      //           <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+      //           <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+      //             海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+      //           <button className="lbbtn">看看手鍊</button>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </section>
+      // </div>
