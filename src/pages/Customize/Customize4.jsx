@@ -19,6 +19,9 @@ export default function Customize4() {
             <NavBarWrapper variant="dark" />
             {/* 內容 */}
             <main className={style.index}>
+                {/* 預載icon hover按鈕(解決重整頁面hover狀態前的閃爍問題) */}
+                <div className={style.preload} /> 
+                
                 <div className={style.boxs}>
                     {/* 名稱欄 */}
                     <div className={style.name}>
@@ -143,8 +146,8 @@ export default function Customize4() {
 
                         {/* 按鈕  */}
                         <div className={style.iconBox1}>
-                            <img src="./images/Custom/btn-del.svg" alt="" />
-                            <img src="./images/Custom/btn-save.svg" alt="" />
+                                <div className={style.btnDel}></div>
+                                <div className={style.btnSave}></div>
                         </div>
                     </div>
 

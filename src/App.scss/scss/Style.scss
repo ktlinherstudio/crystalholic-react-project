@@ -144,6 +144,12 @@ a {
     text-decoration: none;
 }
 
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 /* ------字體------ */
 
 body {
@@ -693,8 +699,8 @@ body {
 
         .scroll {
             //動畫
-            animation: floatY 0.8s ease-in-out infinite,
-                Afterdelay 5s ease-in 0s 1 forwards;
+            animation: Afterdelay 5s ease-in 5s forwards,
+                floatY 0.8s ease-in-out infinite;
 
             width: 28.5px;
             height: 97.1px;
@@ -927,15 +933,151 @@ body {
             }
         }
 
-        img {
+        .scroll2 {
+            //動畫
+            animation: Afterdelay 10s ease-in 10s forwards,
+                floatY-s 0.8s ease-in-out infinite;
             width: 28.5px;
             height: 97.1px;
         }
+
+        // img {
+        //     width: 28.5px;
+        //     height: 97.1px;
+        // }
     }
 }
 
 /*憑直覺抽一張吧*/
 ////ipad pro 套不到
+
+/* 燈箱效果*/
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+
+    &-content {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        max-width: 80vw;
+        max-height: 60vh;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        position: relative;
+        animation: zoomIn 0.3s ease;
+        text-align: center;
+    }
+
+    &-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    &-close {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        background: transparent;
+        border: none;
+        color: #666;
+        cursor: pointer;
+
+        &:hover {
+            color: #000;
+        }
+    }
+}
+
+#lblb {
+    ///會刪掉
+    width: 1000px;
+    height: 700px;
+    border: #2fcf3d 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lbcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    width: 850px;
+    height: 550px;
+    background-color: rgba(66, 53, 75, 0.65);
+
+
+    h2,
+    p,
+    .lbbtn {
+        text-align: center;
+    }
+
+    .lbimg {
+        width: 95%;
+    }
+
+    .lbcontent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+
+        width: 420px;
+        height: 350px;
+
+        .lbh2 {
+            font-size: 1.75rem;
+            color: rgb(227, 210, 255);
+            position: relative;
+
+
+
+            // &::after {
+            //     content: "";
+            //     display: block;
+            //     background-image: url(../../../public/images/HomePage/lbdeco.svg);
+            //     background-size: contain; //讓圖片填滿容器
+            //     background-position: center; //圖片置中
+            //     background-repeat: no-repeat;
+            //     width: 100%;
+            //     height: 8px;
+            //     position: absolute;
+            //     bottom: -10px;
+            //     z-index: 99;
+            // }
+        }
+
+        .lbdeco {
+            width: 90%;
+            height: 100%;
+        }
+
+        .lbbtn {
+            width: 200px;
+            height: 44px;
+            border-radius: 99px;
+            background-color: #8750BF;
+            color: rgb(255, 255, 255);
+            text-align: center;
+
+        }
+    }
+
+
+}
+
 #section-tarotcard {
     // border: #e22121 5px solid;
 
