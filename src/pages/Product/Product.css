@@ -19,10 +19,10 @@
     align-items: center;
 
     width: 100%;
-    min-height: calc(100vh - 70px);
+    /* min-height: calc(100vh - 70px); */
     padding: 6rem 12rem;/* 95px 190px */
 
-    margin-bottom: 6.5vw;
+    margin-bottom: 5rem;
     z-index: 1; 
 }
 
