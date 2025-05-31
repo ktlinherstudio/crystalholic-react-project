@@ -4,35 +4,51 @@ import FooterTrn from '../../components/FooterTrn';
 import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import productSeriesData from './productSeriesData';
 
 export default function Product() {
+  const { seriesKey, productIndex } = useParams();
+  const series = productSeriesData[seriesKey];
+  const product = series?.products?.[productIndex];
+
   const [isFav, setIsFav] = useState(false);
-  const [collectionFavs, setCollectionFavs] = useState([false, false, false]);
   const [quantity, setQuantity] = useState(1);
-  const navigate = useNavigate();
+
+  if (!product) return <div>商品不存在</div>;
 
   const handleFavClick = (e) => {
     e.stopPropagation();
     setIsFav((prev) => !prev);
   };
 
-  const handleCollectionFavClick = (index) => (e) => {
-    e.stopPropagation();
-    setCollectionFavs((prev) => {
-      const updated = [...prev];
-      updated[index] = !updated[index];
-      return updated;
-    });
-  };
+  const handleIncreaseQty = () => setQuantity((prev) => prev + 1);
+  const handleDecreaseQty = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
-  const handleIncreaseQty = () => {
-    setQuantity((prev) => prev + 1);
-  };
+  // 推薦商品：同系列最多兩個
+  const sameSeriesProducts = series.products
+    .filter((_, i) => i !== Number(productIndex))
+    .slice(0, 2);
 
-  const handleDecreaseQty = () => {
-    setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
-  };
+  // 隨機推薦商品（來自其他系列）
+  const otherSeriesKeys = Object.keys(productSeriesData).filter(key => key !== seriesKey);
+  const randomSeriesKey = otherSeriesKeys[Math.floor(Math.random() * otherSeriesKeys.length)];
+  const randomProducts = productSeriesData[randomSeriesKey].products;
+  const randomProduct = randomProducts[Math.floor(Math.random() * randomProducts.length)];
+
+  // 推薦清單（同系列兩個 + 隨機一個）
+  const recommendedProducts = [
+    ...sameSeriesProducts.map((p, i) => ({
+      ...p,
+      seriesKey,
+      index: series.products.findIndex(prod => prod.name === p.name),
+    })),
+    {
+      ...randomProduct,
+      seriesKey: randomSeriesKey,
+      index: productSeriesData[randomSeriesKey].products.findIndex(prod => prod.name === randomProduct.name),
+    },
+  ];
 
   return (
     <>
@@ -44,34 +60,31 @@ export default function Product() {
             <div className="p_product_img_left">
               <img
                 className="p_fav_icon"
-                src={isFav ? "./images/Product/btn-fav-click.svg" : "./images/Product/btn-fav.svg"}
+                src={isFav ? "/images/Product/btn-fav-click.svg" : "/images/Product/btn-fav.svg"}
                 alt="收藏"
                 onClick={handleFavClick}
-                style={{ cursor: 'pointer' }}
               />
-              <img
-                className="p_product_img"
-                src="./images/S-CrystalBracelet/product_cocktail_whisky.jpg"
-                alt="薩提爾的獨酌"
-              />
+              <img className="p_product_img" src={product.image} alt={product.name} />
             </div>
             <div className="p_product_right">
               <div className="p_product_title">
-                <h3>薩提爾的獨酌</h3>
-                <span>NT$2,590</span>
+                <h3>{product.name}</h3>
+                <span>{product.price}</span>
               </div>
               <hr />
-              <p className="p_product_description">
-                這款設計靈感來自加入冰塊的威士忌，透過喜馬拉雅白水晶所營造出的「冰晶意象」，傳達出清冽、透明且深層的情感釋放。
-              </p>
+              <div className="p_product_description">
+                {Array.isArray(product.description)
+                  ? product.description.map((line, i) => <p key={i}>{line}</p>)
+                  : <p>{product.description}</p>}
+              </div>
               <div className="p_product_crystal_area">
                 <div className="p_product_crystals">
-                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-1.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-2.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-3.svg" alt="水晶名稱" />
+                  {product.crystals.map((src, i) => (
+                    <img key={i} className="p_crystal_img" src={src} alt="水晶名稱" />
+                  ))}
                 </div>
-                <p>主石：黃碧璽｜自信與平衡之石</p>
-                <p>其他：喜馬拉雅白水晶、黃葡萄石、摩根石、虎眼石</p>
+                <p>主石：{Array.isArray(product.mainStone) ? product.mainStone.join('、') : product.mainStone}</p>
+                <p>其他：{Array.isArray(product.otherStones) ? product.otherStones.join('、') : product.otherStones}</p>
               </div>
               <div className="p_product_size">
                 <span>串珠</span>
@@ -93,7 +106,7 @@ export default function Product() {
               </div>
               <div className="p_product_buy">
                 <button type="button" className="p_btn_cart">加入購物車</button>
-                <button className="button" onClick={() => navigate('/ShoppingCart')}>
+                <button className="button" onClick={() => window.location.href = '/#/ShoppingCart'}>
                   立即購買
                 </button>
               </div>
@@ -101,72 +114,40 @@ export default function Product() {
           </div>
         </section>
 
-                {/* Collection 區 */}
-                <section className="p_collection">
-                    <BgDark />
-                    {/* 區塊標題 */}
-                    <h1 className="p_collection_title">✦&nbsp;&nbsp;Recommended&nbsp;&nbsp;✦</h1>
+        {/* 推薦商品區 */}
+        <section className="p_collection">
+          <BgDark />
+          <h1 className="p_collection_title">✦&nbsp;&nbsp;Recommended&nbsp;&nbsp;✦</h1>
 
-                    {/* 系列商品卡片 */}
-                    <div className="p_collection_products">
-                        {/* ── 卡片 1 ── */}
-                        <div className="p_product_card">
-                            <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
-                            </div>
-                            <div className="p_product_info">
-                                <span className="p_product_name">煙花紅酒</span>
-                                <span className="p_product_price">$2,590</span>
-                            </div>
-                            <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-3.svg" alt="水晶名稱" />
-                            </div>
-                        </div>
+          <div className="p_collection_products">
+            {recommendedProducts.map((item, idx) => (
+              <Link
+                to={`/Product/${item.seriesKey}/${item.index}`}
+                className="p_product_card"
+                key={idx}
+              >
+                <div className="p_product_img_wrap">
+                  <img className="p_fav_icon" src="/images/Product/btn-fav.svg" alt="收藏" />
+                  <img className="p_product_img" src={item.image} alt={item.name} />
+                </div>
+                <div className="p_product_info">
+                  <span className="p_product_name">{item.name}</span>
+                  <span className="p_product_price">{item.price}</span>
+                </div>
+                <div className="p_product_crystals">
+                  {item.crystals.map((src, i) => (
+                    <img key={i} className="ps_crystal_img" src={src} alt="水晶名稱" />
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </main>
 
-                        {/* ── 卡片 2 ── */}
-                        <div className="p_product_card">
-                            <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_mojito.jpg" alt="薄荷之吻" />
-                            </div>
-                            <div className="p_product_info">
-                                <span className="p_product_name">薄荷之吻</span>
-                                <span className="p_product_price">$2,590</span>
-                            </div>
-                            <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-3.svg" alt="水晶名稱" />
-                            </div>
-                        </div>
-
-                        {/* ── 卡片 3 (重複示範) ── */}
-                        <div className="p_product_card">
-                            <div className="p_product_img_wrap">
-                                <img className="p_fav_icon" src="./images/Product/btn-fav.svg" alt="收藏" />
-                                <img className="p_product_img" src="./images/S-CrystalBracelet/product_cocktail_redwine.jpg" alt="煙花紅酒" />
-                            </div>
-                            <div className="p_product_info">
-                                <span className="p_product_name">煙花紅酒</span>
-                                <span className="p_product_price">$2,590</span>
-                            </div>
-                            <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-3.svg" alt="水晶名稱" />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <footer className="p_footer">
-                {/* <BgDark /> */}
-                <FooterTrn />
-            </footer>
-        </>
-    )
-} 
+      <footer className="p_footer">
+        <FooterTrn />
+      </footer>
+    </>
+  );
+}

@@ -141,6 +141,7 @@
 .pc_product_card {
     flex:1 1 16rem; /* 256px 寬，可縮放 */
     max-width:18rem; /* 288px 上限 */
+    cursor: pointer;
 }
 
 /* 商品照 */

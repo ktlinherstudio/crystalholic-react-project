@@ -256,6 +256,7 @@
     height: 342.56px; */
     flex:1 1 16rem; /* 256px 寬，可縮放 */
     max-width:18rem; /* 288px 上限 */
+    cursor: pointer;
 }
 
 .p_product_img_wrap{
@@ -285,6 +286,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;/* 8px */
+    color: #FFFFFF;
 }
 
 .p_product_name{

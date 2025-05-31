@@ -62,7 +62,8 @@ export default function App() {
                 <Route path="/Customize4" element={<Customize4 />} />
                 <Route path="/ShoppingCart" element={<ShoppingCart />} />
                 <Route path="/ProductCollection" element={<ProductCollection />} />
-                <Route path="/Product" element={<Product />} />
+                {/* <Route path="/Product" element={<Product />} /> */}
+                <Route path="/Product/:seriesKey/:productIndex" element={<Product />} />
               </Routes>
             </main>
           </UIProvider>

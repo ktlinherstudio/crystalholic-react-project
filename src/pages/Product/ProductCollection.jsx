@@ -4,26 +4,26 @@ import BgDark from '../../components/BgDark';
 import FooterTrn from '../../components/FooterTrn';
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import productSeriesData from './productSeriesData';   // ←❗ 修正
+import productSeriesData from './productSeriesData';
 
 export default function ProductCollection() {
   /* --- React states ---------------------------------------------------- */
-  const [activeSeries, setActiveSeries]   = useState('blue');
-  const [favorites,     setFavorites]     = useState({});
-  const [triangleX,     setTriangleX]     = useState(0);
+  const [activeSeries, setActiveSeries] = useState('blue');
+  const [favorites, setFavorites] = useState({});
+  const [triangleX, setTriangleX] = useState(0);
 
   /* --- refs ------------------------------------------------------------ */
-  const iconRefs   = useRef({});
+  const iconRefs = useRef({});
   const iconAreaRef = useRef(null);
 
   const navigate = useNavigate();
 
   /* ---  icon 清單（id 必須對應資料檔 key） ----------------------------- */
   const iconList = [
-    { id: 'blue',      label: '澄語之藍', icon: '/images/Product/icon_procat-blue.svg' },
+    { id: 'blue', label: '澄語之藍', icon: '/images/Product/icon_procat-blue.svg' },
     { id: 'adventure', label: '秘境探光', icon: '/images/Product/icon_procat-adventure.svg' },
-    { id: 'seasons',   label: '四季琉波', icon: '/images/Product/icon_procat_seasons.svg' },
-    { id: 'cocktail',  label: '微醺晶釀', icon: '/images/Product/icon_procat-cocktail.svg' }
+    { id: 'seasons', label: '四季琉波', icon: '/images/Product/icon_procat_seasons.svg' },
+    { id: 'cocktail', label: '微醺晶釀', icon: '/images/Product/icon_procat-cocktail.svg' }
   ];
 
   /* --- 點擊收藏 -------------------------------------------------------- */
@@ -34,7 +34,9 @@ export default function ProductCollection() {
   };
 
   /* --- 點擊商品卡片導頁 ---------------------------------------------- */
-  const handleClickCard = () => navigate('/Product');
+  const handleClickCard = (seriesKey, productIndex) => {
+    navigate(`/Product/${seriesKey}/${productIndex}`);
+  };
 
   /* --- 切換系列時移動三角形 ------------------------------------------ */
   useEffect(() => {
@@ -78,7 +80,7 @@ export default function ProductCollection() {
               <div
                 key={idx}
                 className="pc_product_card"
-                onClick={handleClickCard}
+                onClick={() => handleClickCard(activeSeries, idx)}
               >
                 <div className="pc_product_img_wrap">
                   <img
