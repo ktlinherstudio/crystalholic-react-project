@@ -36,7 +36,7 @@ export default function Product() {
   const randomProducts = productSeriesData[randomSeriesKey].products;
   const randomProduct = randomProducts[Math.floor(Math.random() * randomProducts.length)];
 
-  // 推薦清單（同系列兩個 + 隨機一個）
+  // 推薦清單
   const recommendedProducts = [
     ...sameSeriesProducts.map((p, i) => ({
       ...p,
@@ -58,11 +58,11 @@ export default function Product() {
         <section className="p_product_area">
           <div className="p_product_box">
             <div className="p_product_img_left">
-              <img
-                className="p_fav_icon"
-                src={isFav ? "/images/Product/btn-fav-click.svg" : "/images/Product/btn-fav.svg"}
-                alt="收藏"
+              <div
+                className={`p_fav_icon ${isFav ? 'clicked' : ''}`}
                 onClick={handleFavClick}
+                onMouseEnter={(e) => e.currentTarget.classList.add('hover')}
+                onMouseLeave={(e) => e.currentTarget.classList.remove('hover')}
               />
               <img className="p_product_img" src={product.image} alt={product.name} />
             </div>
@@ -127,7 +127,7 @@ export default function Product() {
                 key={idx}
               >
                 <div className="p_product_img_wrap">
-                  <img className="p_fav_icon" src="/images/Product/btn-fav.svg" alt="收藏" />
+                  <div className="p_fav_icon" />
                   <img className="p_product_img" src={item.image} alt={item.name} />
                 </div>
                 <div className="p_product_info">
