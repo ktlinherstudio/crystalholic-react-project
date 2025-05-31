@@ -8,6 +8,8 @@
   --color4:66 73 212;
   --color5:180 147 238;
   --color-interactive:19 0 129;
+  --gradientColor:rgb(131, 46, 228);
+  /* --gradientColor:rgb(228, 46, 46); */
 
   --circle-size:120%;
   --blending:hard-light;
@@ -18,16 +20,36 @@
 @keyframes moveVertical{0%{transform:translateY(-50%)}50%{transform:translateY(50%)}100%{transform:translateY(-50%)}}
 @keyframes moveHorizontal{0%{transform:translate(-50%,-10%)}50%{transform:translate(50%,10%)}100%{transform:translate(-50%,-10%)}}
 
-/* ---------- gradient background ---------- */
+
+
+/* 背景 */
 .gradient-bg{
-  position:fixed;
-  inset:0;
-  width:100vw;
-  min-height:100vh;
-  z-index:-99;
-  overflow:hidden;
-  background:linear-gradient(40deg,var(--color-bg1),var(--color-bg2));
+  position:fixed;inset:0;
+  width:100vw;min-height:100vh;
+  z-index:-99;overflow:hidden;
+
+  /* 多層 background，最上面是 5 顆光暈，再疊噪點材質，最後才是線性漸層 */
+  background:
+    /* 2️⃣ 左下紫光 */
+    radial-gradient(circle 1rem at 5% 85%,
+      var(--gradientColor,.8) 0%,
+      var(--gradientColor,.5) 50%,
+      var(--gradientColor,.1) 100%),
+
+    /* 7️⃣ 噪點材質圖 */
+    url(../images/S-Background/bg-noise-light.png),
+
+    /* 8️⃣ 原本的線性漸層底色 */
+    linear-gradient(40deg,var(--color-bg1),var(--color-bg2));
+
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed; /* 滾動時固定 */
 }
+
+
+
 .gr adient-bg svg{display:none}
 
 /* ★ removed goo filter, kept blur only → 減少重算層 ★ */
@@ -106,22 +128,5 @@
 #bg-container{position:fixed;inset:0;z-index:-97;pointer-events:none;}
 #bg{position:absolute;inset:0}
 
-/* ---------- 左下固定色塊 ---------- */
-/* ---------- 左下固定色塊 (Safari fix) ---------- */
-main::before{                                  /* ★ mod #1 ★ */
-  content:"";
-  position:fixed;
-  bottom:-180px;left:-140px;     /* 稍微往外推，確保不露方角 */
-  width:80vh;height:80vh;      /* 正圓大小，vh 對手機也穩定 */
-  pointer-events:none;
-  z-index:-90;
 
-  /* 4 段透明度，由實到全透，邊緣自然消失 */
-  background:radial-gradient(circle at center,
-    rgba(108,71,212,.8)  0%,   /* 中心 */
-    rgba(108,71,212,.7) 35%,   /* 中圈 */
-    rgba(108,71,212,.1) 65%,   /* 外圈 */
-    rgba(108,71,212,0)  100%);  /* 完全透明 */
-  filter: blur(120px);
-  mix-blend-mode: multiply; 
-}
+
