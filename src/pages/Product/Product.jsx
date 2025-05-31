@@ -66,9 +66,9 @@ export default function Product() {
               </p>
               <div className="p_product_crystal_area">
                 <div className="p_product_crystals">
-                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-1.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-2.svg" alt="水晶名稱" />
-                  <img className="p_crystal_img" src="./images/Product/pc_wg_ws-3.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-1.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-2.svg" alt="水晶名稱" />
+                  <img className="p_crystal_img" src="./images/Product/pc_ct_ws-3.svg" alt="水晶名稱" />
                 </div>
                 <p>主石：黃碧璽｜自信與平衡之石</p>
                 <p>其他：喜馬拉雅白水晶、黃葡萄石、摩根石、虎眼石</p>
@@ -120,9 +120,9 @@ export default function Product() {
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
 
@@ -137,9 +137,9 @@ export default function Product() {
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_mj-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_mj-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
 
@@ -154,9 +154,9 @@ export default function Product() {
                                 <span className="p_product_price">$2,590</span>
                             </div>
                             <div className="p_product_crystals">
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-1.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-2.svg" alt="水晶名稱" />
-                                <img className="ps_crystal_img" src="./images/Product/pc_wg_red-3.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-1.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-2.svg" alt="水晶名稱" />
+                                <img className="ps_crystal_img" src="./images/Product/pc_ct_red-3.svg" alt="水晶名稱" />
                             </div>
                         </div>
                     </div>
