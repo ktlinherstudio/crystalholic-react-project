@@ -26,7 +26,7 @@ export function createStarsBackground(container) {
 
   /* 縮減星星數量 ↓ */
   const stars = [];
-  const numStars = 80;              /* ★ changed ★ */
+  const numStars = 120;              /* ★ changed ★ */
   for (let i = 0; i < numStars; i++) {
     stars.push({
       x: Math.random() * canvas.width / DPR,

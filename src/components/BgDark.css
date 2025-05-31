@@ -1,22 +1,22 @@
 /* ---------- root ---------- */
-:root {
-  --color-bg1: #b493ee;
-  --color-bg2: #131757;
-  --color1: 66 73 212;
-  --color2: 0 3 70;
-  --color3: 36 40 105;
-  --color4: 66 73 212;
-  --color5: 180 147 238;
-  --color-interactive: 0 3 70;
+:root{
+  --color-bg1:#b493ee;
+  --color-bg2:#420f99;
+  --color1:66 73 212;
+  --color2:0 3 70;
+  --color3:36 40 105;
+  --color4:66 73 212;
+  --color5:180 147 238;
+  --color-interactive:19 0 129;
 
-  --circle-size: 120%;      /* ★ changed (was 200%) ★ */
-  --blending: hard-light;
+  --circle-size:120%;
+  --blending:hard-light;
 }
 
-/* ---------- keyframes unchanged ---------- */
-@keyframes moveInCircle { 0%{transform:rotate(0)} 50%{transform:rotate(180deg)} 100%{transform:rotate(360deg)} }
-@keyframes moveVertical  { 0%{transform:translateY(-50%)} 50%{transform:translateY(50%)} 100%{transform:translateY(-50%)} }
-@keyframes moveHorizontal{ 0%{transform:translate(-50%,-10%)}50%{transform:translate(50%,10%)}100%{transform:translate(-50%,-10%)}}
+/* ---------- keyframes ---------- */
+@keyframes moveInCircle{0%{transform:rotate(0)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}
+@keyframes moveVertical{0%{transform:translateY(-50%)}50%{transform:translateY(50%)}100%{transform:translateY(-50%)}}
+@keyframes moveHorizontal{0%{transform:translate(-50%,-10%)}50%{transform:translate(50%,10%)}100%{transform:translate(-50%,-10%)}}
 
 /* ---------- gradient background ---------- */
 .gradient-bg{
@@ -45,64 +45,83 @@
 .gradient-bg .interactive{
   position:absolute;
   mix-blend-mode:var(--blending);
-  will-change:transform;      /* ★ GPU hint ★ */
+  will-change:transform;
 }
 
-/* ---------- circles (縮小尺寸 + 保留動畫) ---------- */
+/* ---------- circles ---------- */
 .gradient-bg .g1{
-  background:radial-gradient(circle at center,rgba(var(--color1)/.8) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color1)/.75) 0,transparent 50%) no-repeat;
   width:var(--circle-size);height:var(--circle-size);
   top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
   animation:moveVertical 30s ease infinite;
 }
+
 .gradient-bg .g2{
-  background:radial-gradient(circle at center,rgba(var(--color2)/.8) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color2)/.8) 0,transparent 50%) no-repeat;
   width:var(--circle-size);height:var(--circle-size);
   top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
   transform-origin:calc(50% - 400px);
   animation:moveInCircle 20s reverse infinite;
 }
+
 .gradient-bg .g3{
-  background:radial-gradient(circle at center,rgba(var(--color3)/.8) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color3)/.8) 0,transparent 50%) no-repeat;
   width:var(--circle-size);height:var(--circle-size);
-  top:calc(50% - var(--circle-size)/2 + 160px); /* ★ y-offset 微調 ★ */
-  left:calc(50% - var(--circle-size)/2 - 400px);
+  top:calc(50% + 160px);left:calc(50% - 400px);
   transform-origin:calc(50% + 400px);
   animation:moveInCircle 40s linear infinite;
 }
+
 .gradient-bg .g4{
-  background:radial-gradient(circle at center,rgba(var(--color4)/.8) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color4)/.7) 0,transparent 50%) no-repeat;
   width:var(--circle-size);height:var(--circle-size);
   top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
   transform-origin:calc(50% - 200px);
-  animation:moveHorizontal 40s ease infinite;
-  opacity:.7;
+  animation:moveHorizontal 40s ease infinite;opacity:.7;
 }
+
 .gradient-bg .g5{
-  background:radial-gradient(circle at center,rgba(var(--color5)/.8) 0,transparent 50%) no-repeat;
-  width:calc(var(--circle-size)*1.5);height:calc(var(--circle-size)*1.5); /* ★ smaller ★ */
-  top:calc(50% - var(--circle-size)*0.75);
-  left:calc(50% - var(--circle-size)*0.75);
-  transform-origin:calc(50% - 600px) calc(50% + 150px);
-  animation:moveInCircle 20s ease infinite;
+  background:radial-gradient(circle,rgba(var(--color5)/.22) 0,transparent 60%) no-repeat;
+  width:calc(var(--circle-size)*1.15);height:calc(var(--circle-size)*1.15);
+  top:calc(50% - var(--circle-size)*0.575);left:calc(50% - var(--circle-size)*0.575);
+  transform-origin:calc(50% - 520px) calc(50% + 120px);
+  animation:moveInCircle 28s ease infinite;
 }
 
 /* ---------- interactive layer ---------- */
 .gradient-bg .interactive{
-  background:radial-gradient(circle at center,rgba(var(--color-interactive)/.8) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color-interactive)/.8) 0,transparent 50%) no-repeat;
   width:100%;height:100%;top:-50%;left:-50%;opacity:.6;
 }
 
+/* ---------- noise overlay ---------- */
 .gradient-bg::before{
-  content:"";
-  position:absolute;inset:0;z-index:1;pointer-events:none;
-  background:#35c952;
-  filter:url(#f);           /* 噪點保留 */
-  mix-blend-mode:overlay;
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
+  background:rgba(157,12,12,.18);
+  filter:url(#f);
+  mix-blend-mode:multiply;
 }
 
 /* ---------- stars ---------- */
-#bg-container{
-  position:fixed;inset:0;z-index:-98;pointer-events:none;
-}
+#bg-container{position:fixed;inset:0;z-index:-97;pointer-events:none;}
 #bg{position:absolute;inset:0}
+
+/* ---------- 左下固定色塊 ---------- */
+/* ---------- 左下固定色塊 (Safari fix) ---------- */
+main::before{                                  /* ★ mod #1 ★ */
+  content:"";
+  position:fixed;
+  bottom:-180px;left:-140px;     /* 稍微往外推，確保不露方角 */
+  width:80vh;height:80vh;      /* 正圓大小，vh 對手機也穩定 */
+  pointer-events:none;
+  z-index:-90;
+
+  /* 4 段透明度，由實到全透，邊緣自然消失 */
+  background:radial-gradient(circle at center,
+    rgba(108,71,212,.8)  0%,   /* 中心 */
+    rgba(108,71,212,.7) 35%,   /* 中圈 */
+    rgba(108,71,212,.1) 65%,   /* 外圈 */
+    rgba(108,71,212,0)  100%);  /* 完全透明 */
+  filter: blur(120px);
+  mix-blend-mode: multiply; 
+}
