@@ -985,20 +985,57 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
+  width: 100%;
+  height: 50%;
+  padding-left: 4%;
+  /*旋轉效果用(還在研究)*/
+  /*最原始沒有翻牌效果*/
+}
+#section-tarotcard #tarotcard-box .Rcard {
+  width: 18%;
+  height: 100%;
+  margin-left: -5%;
+  transform: rotate(-12deg);
+  /* 讓 3D 效果能夠產生 */
+}
+#section-tarotcard #tarotcard-box .card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+#section-tarotcard #tarotcard-box .Rcard:hover .card-inner {
+  transform: rotateY(180deg);
+  /* 水平翻轉 180 度 */
+}
+#section-tarotcard #tarotcard-box .card-front,
+#section-tarotcard #tarotcard-box .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+#section-tarotcard #tarotcard-box .card-front img,
+#section-tarotcard #tarotcard-box .card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#section-tarotcard #tarotcard-box .card-back {
+  transform: rotateY(180deg);
+  /* 背面也要轉 180 度，對齊正面翻轉後的角度 */
 }
 #section-tarotcard #tarotcard-box .trcardchild-1 {
   width: 20%;
   margin-left: 0;
 }
-#section-tarotcard #tarotcard-box .trcardchild-1:hover {
-  filter: drop-shadow(0px 0px 22px #FFF);
-}
 #section-tarotcard #tarotcard-box .trcard {
   width: 20%;
-  margin-left: -8%;
-}
-#section-tarotcard #tarotcard-box .trcard:hover {
-  filter: drop-shadow(0px 0px 22px #FFF);
+  /*hover發亮*/
 }
 #section-tarotcard #tarotcard-btn {
   width: 283px;

@@ -60,12 +60,12 @@ export default function Cover() {
                     <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
                 </div>
                 <div id="tarotcard-box">
-                    <img src="./images/HomePage/tarot-back.svg" className="trcardchild-1" alt="" />
-                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
-                    <img src="./images/HomePage/tarot-back.svg" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcardchild-1" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcard" alt="" />
+                    <img src="./images/HomePage/tarot-back.png" className="trcard" alt="" />
                 </div>
                 <div >
                     <Link to="/ProductCollection" id="tarotcard-btn">所有商品</Link>

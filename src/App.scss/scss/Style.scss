@@ -1045,7 +1045,7 @@ body {
             justify-content: center;
             align-items: center;
             margin: 20%;
-        
+
 
             width: 420px;
             height: 350px;
@@ -1172,6 +1172,9 @@ body {
         }
     }
 
+
+
+
     #tarotcard-box {
         // width: 1279;
         // height: 427px;
@@ -1180,16 +1183,74 @@ body {
         display: flex;
         justify-content: center;
         align-content: center;
+        width: 100%;
+        height: 50%;
+        padding-left: 4%;
 
+
+
+        /*旋轉效果用(還在研究)*/
+        .Rcard {
+            // border: #2fcf3d 2px solid;
+            width: 18%;
+            height: 100%;
+            margin-left: -5%;
+
+            transform: rotate(-12deg);
+            // perspective: 1000px;
+            /* 讓 3D 效果能夠產生 */
+        }
+
+        .card-inner {
+            // border: #cf2f2f 2px solid;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+
+            perspective: 1000px;
+
+        }
+
+        .Rcard:hover .card-inner {
+            transform: rotateY(180deg);
+            /* 水平翻轉 180 度 */
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            // box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-front img,
+        .card-back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            /* 背面也要轉 180 度，對齊正面翻轉後的角度 */
+        }
+
+        /*最原始沒有翻牌效果*/
         .trcardchild-1 {
             width: 20%;
             // height: 455px;
             margin-left: 0;
 
-            &:hover {
-                filter: drop-shadow(0px 0px 22px #FFF);
-
-            }
+            // /*hover發亮*/
+            // &:hover {
+            //     filter: drop-shadow(0px 0px 22px #FFF);
+            // }
 
             // @media ($media-xlg) {
             //     width: 265px;
@@ -1215,11 +1276,12 @@ body {
         .trcard {
             width: 20%;
             // height: 455px;
-            margin-left: -8%;
+            // margin-left: -8%;
 
-            &:hover {
-                filter: drop-shadow(0px 0px 22px #FFF);
-            }
+            /*hover發亮*/
+            // &:hover {
+            //     filter: drop-shadow(0px 0px 22px #FFF);
+            // }
 
             // @media ($media-xlg) {
             //     width: 265px;

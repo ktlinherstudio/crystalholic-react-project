@@ -60,13 +60,12 @@ export default function TarotCard0528() {
   ];
 
   const tarotImg = [
-    <img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" />,
-    <img src="./images/HomePage/lbtc2.svg" className="lbimg" alt="" />,
-    <img src="./images/HomePage/lbtc3.svg" className="lbimg" alt="" />,
-    <img src="./images/HomePage/lbtc4.svg" className="lbimg" alt="" />,
-    <img src="./images/HomePage/lbtc5.svg" className="lbimg" alt="" />,
-    <img src="./images/HomePage/lbtc6.svg" className="lbimg" alt="" />,
-
+    <img src="./images/HomePage/lbtc1.png" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc2.png" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc3.png" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc4.png" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc5.png" className="lbimg" alt="" />,
+    <img src="./images/HomePage/lbtc6.png" className="lbimg" alt="" />,
   ]
 
   const handleCardClick = (index) => {
@@ -89,11 +88,11 @@ export default function TarotCard0528() {
           <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
         </div>
 
-        <div id="tarotcard-box">
+         <div id="tarotcard-box">
           {tarotDescriptions.map((desc, index) => (
             <img
               key={index}
-              src="./images/HomePage/tarot-back.svg"
+              src="./images/HomePage/tarot-back.png"
               className={index === 0 ? 'trcardchild-1' : 'trcard'}
               alt={`tarot card ${index + 1}`}
               onClick={() => handleCardClick(index)}
@@ -121,7 +120,7 @@ export default function TarotCard0528() {
       )
       }
 
-      
+
     </>
   );
 }
@@ -148,22 +147,35 @@ export default function TarotCard0528() {
 
 
 
-{/* lightbox */}
-      // <div id='lblb'>
-      //   <section className='lbborder1'>
-      //     <div className='lbborder2'>
-      //       <div className='lbcard'>
-      //         <button className="lightbox-close" onClick={closeLightbox}>×</button>
-      //         {/* <div><img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" /></div> */}
-      //         <div className="lbcontent">
-      //           <h2 className="lbh2">沁藍之澗</h2>
-      //           <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
-      //           <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
-      //           <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
-      //             海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
-      //           <button className="lbbtn">看看手鍊</button>
-      //         </div>
-      //       </div>
-      //     </div>
-      //   </section>
-      // </div>
+{/* lightbox */ }
+// <div id='lblb'>
+//   <section className='lbborder1'>
+//     <div className='lbborder2'>
+//       <div className='lbcard'>
+//         <button className="lightbox-close" onClick={closeLightbox}>×</button>
+//         {/* <div><img src="./images/HomePage/lbtc1.svg" className="lbimg" alt="" /></div> */}
+//         <div className="lbcontent">
+//           <h2 className="lbh2">沁藍之澗</h2>
+//           <div><img src="./public/image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+//           <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
+//           <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
+//             海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
+//           <button className="lbbtn">看看手鍊</button>
+//         </div>
+//       </div>
+//     </div>
+//   </section>
+// </div>
+
+/*6張塔羅牌*/
+//  <div id="tarotcard-box">
+//           {tarotDescriptions.map((desc, index) => (
+//             <img
+//               key={index}
+//               src="./images/HomePage/tarot-back.svg"
+//               className={index === 0 ? 'trcardchild-1' : 'trcard'}
+//               alt={`tarot card ${index + 1}`}
+//               onClick={() => handleCardClick(index)}
+//             />
+//           ))}
+//         </div>
