@@ -37,7 +37,7 @@ export default function Product() {
   return (
     <>
       <NavBarWrapper variant="dark" />
-      <main className="p_product">
+      <main className="product_main">
         {/* 單一商品區 */}
         <section className="p_product_area">
           <div className="p_product_box">
