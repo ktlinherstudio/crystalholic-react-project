@@ -4,7 +4,6 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import { useNavigate } from 'react-router-dom';
 
 export default function Customize1() {
-
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -13,7 +12,7 @@ export default function Customize1() {
         if (hasCompletedNumTest2) {
             navigate('/Customize3');
         } else {
-            navigate('/Customize2');
+            navigate('/NumTest1');
         }
     };
 
@@ -32,12 +31,13 @@ export default function Customize1() {
                 </div>
                 <div className="button-box">
                     <button className="button1" onClick={handleClick}>
-                        DIY 水晶手鍊
+                        測驗獲得推薦結果
                     </button>
-                    <button className="button1">其他訂製需求</button>
+                    <button className="button1" onClick={() => navigate('/Customize4')}>
+                        直接開始設計
+                    </button>
                 </div>
             </main>
-
         </div>
     )
 }

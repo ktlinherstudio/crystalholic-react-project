@@ -96,8 +96,7 @@
     box-shadow: 0 0 0.3rem var(--color-primary4);
 }
 
-.inputName::placeholder
- {
+.inputName::placeholder {
     color: rgba(0, 0, 0, 0.2);
     text-align: center;
     line-height: 3.25rem;
@@ -110,15 +109,15 @@
 }
 
 .price {
-  text-align: center;
-  line-height: 3.25rem;  
-  text-align: center;
-  font-size: 1rem; 
-  color:rgba(0, 0, 0, 0.4); 
+    text-align: center;
+    line-height: 3.25rem;
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.4);
 }
 
-.price:focus{
-outline: none;
+.price:focus {
+    outline: none;
 }
 
 
@@ -153,8 +152,7 @@ outline: none;
 }
 
 .button.active {
-    background-color: var(--color-primary3);
-    color: white;
+    background-color: #6e3bbf;
 }
 
 .crystalSizeButtons {
@@ -268,7 +266,7 @@ outline: none;
 .pearlBig {
     composes: pearl;
     cursor: pointer;
-    background-color: #F3ECF5;
+    background-color: #e7ddeb;
     mix-blend-mode: normal;
     isolation: isolate;
     z-index: 2;
@@ -278,7 +276,7 @@ outline: none;
 .pearlSmall {
     composes: pearl;
     cursor: pointer;
-    background-color: #F3ECF5;
+    background-color: #e7ddeb;
     mix-blend-mode: normal;
     isolation: isolate;
     z-index: 2;
@@ -490,8 +488,9 @@ outline: none;
 .icon2 {
     width: 2.5rem;
     border-radius: 0.938rem;
-    background: rgb(255, 255, 255, .6);
+    background: rgb(255, 255, 255, 225);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    z-index: 1000;
 }
 
 .icon1Box {
@@ -674,4 +673,164 @@ outline: none;
 
 .inputName {
     font-size: 1.5rem;
+}
+
+
+/* 側邊滑入視窗 */
+.panelOverlay {
+    pointer-events: none;
+    /* ← 不攔截點擊*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-start;
+    /* 不控制滑出距離，讓 panelContent 自己決定位置 */
+    align-items: flex-start;
+}
+
+.panelContent {
+    pointer-events: auto;
+    /* ← 保留互動功能*/
+    position: absolute;
+    width: 18.75rem;
+    height: 26.125rem;
+    top: 10rem;
+    right: 14.45rem;
+    max-width: 90vw;
+    border-radius: 40px 0px 0px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
+    backdrop-filter: blur(2px);
+    padding: 0rem 1.2rem 2rem;
+    animation: slideIn 0.3s ease forwards;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #FFF #E4DEED;
+}
+
+
+
+.panelTitle {
+    color: #8750BF;
+    text-align: center;
+    /* 中文/思源黑體/小標題3 */
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.063rem;
+}
+
+.panelOverlay p {
+    color: #585858;
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+    text-align: left;
+}
+
+.decorLine {
+    margin: 0.635rem auto 0.938rem auto;
+}
+
+.overlayContent {
+    position: relative;
+    display: flex;
+    padding: 0px 20px;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.panelTitle2 {
+    color: #A67CEB;
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+}
+
+.closeBtnWrapper {
+    position: sticky;
+    top: 1rem;
+    left: -1rem;
+    z-index: 9999;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closeBtn {
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #8750bf;
+    line-height: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(3rem);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/*wikiBtn */
+.wikiBtn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    font-family: "Noto Sans TC", sans-serif;
+    background-color: var(--color-primary4);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.wikiBtn:hover {
+    background-color: #6e3bbf;
+    box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
+}
+
+
+/*特別訂製*/
+.customTextarea {
+    height: 9rem;
+    border: #8750BF solid 2px;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.088rem;
+    color: #333;
+}
+
+.customTextarea:focus {
+  outline: none;
+}
+
+.customTextarea::placeholder {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.088rem;
 }

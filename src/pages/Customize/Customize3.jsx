@@ -6,9 +6,17 @@ import { useNavigate } from 'react-router-dom';
 export default function Customize3() {
   const navigate = useNavigate();
 
+  const handleStartWithRecommend = () => {
+    navigate('/Customize4');
+  };
+
+  const handleStartWithoutRecommend = () => {
+    navigate('/Customize4');
+  };
+
   return (
     <div className="customize3-page">
-       <NavBarWrapper variant="dark" />
+      <NavBarWrapper variant="dark" />
 
       <main className="index3">
         {/* 標題 */}
@@ -16,7 +24,7 @@ export default function Customize3() {
           <div className="text3">
             <h2>
               <img src="/images/Custom/line_left.svg" alt="" />
-              選擇一條推薦手鍊
+              你是？號人 以下為你推薦手鍊 可選擇一條開始設計
               <img src="/images/Custom/line_right.svg" alt="" />
             </h2>
           </div>
@@ -31,8 +39,12 @@ export default function Customize3() {
 
         {/* 按鈕 */}
         <div className="button-box3">
-          <button className="button2" onClick={() => navigate('/Customize4')}>
-            開始DIY
+
+          <button className="button2" onClick={handleStartWithoutRecommend}>
+            不套用推薦手鍊
+          </button>
+          <button className="button2" onClick={handleStartWithRecommend}>
+            套用推薦手鍊
           </button>
         </div>
       </main>
