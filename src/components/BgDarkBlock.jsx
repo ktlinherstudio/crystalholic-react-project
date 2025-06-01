@@ -13,7 +13,7 @@ export default function BgDarkBlock() {
     }, []);
 
     return (
-            <section className="bgdark-wrapper">
+        <section className="bgdark-wrapper">
             {/* 星星特效背景 */}
             <div id="bgb-container" ref={bgRef} aria-hidden="true" />
 
@@ -24,7 +24,7 @@ export default function BgDarkBlock() {
                     <defs>
                         <filter id="goo">
                             <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                            <feColorMatrix in="blur" mode="matrix" 
+                            <feColorMatrix in="blur" mode="matrix"
                                 values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
                             <feBlend in="SourceGraphic" in2="goo" />
                         </filter>
@@ -32,8 +32,8 @@ export default function BgDarkBlock() {
                         {/* 噪點 — ★ safari-fix ★ */}
                         <filter id="f">
                             <feTurbulence type="fractalNoise"
-                                baseFrequency="0.8"  
-                                numOctaves="4"        
+                                baseFrequency="0.8"
+                                numOctaves="4"
                                 seed="7"
                                 stitchTiles="stitch" />
                             <feColorMatrix type="saturate" values="0" />
@@ -49,7 +49,7 @@ export default function BgDarkBlock() {
                     <div className="interactive" />
                 </div>
             </div>
-         </section>
-        
+        </section>
+
     );
 }

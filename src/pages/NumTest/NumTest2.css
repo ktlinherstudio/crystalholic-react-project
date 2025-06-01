@@ -11,17 +11,11 @@
 
 /* 主要內容區 */
 .num2-numtest {
-    flex: 1; 
-    
+     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-
-    background: url(../images/Numtest/numtest_backgroung.png);
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ---------- 第一個標題 ---------- */
