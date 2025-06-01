@@ -440,7 +440,7 @@ body {
         align-items: center;
         text-align: center;
         z-index: 0;
-        overflow: hidden; 
+        overflow: hidden;
 
 
         @media ($media-xlg) {
@@ -468,7 +468,7 @@ body {
         overflow: hidden;
         z-index: 0;
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         padding-bottom: 160px;
 
         width: 100%;
@@ -1494,60 +1494,41 @@ body {
     height: 100vh;
     color: #8750BF;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     overflow: hidden;
-
-    // @media ($media-xlg-up) {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center; /////
-    //     align-items: center;
-    // }
 
     @media ($media-lg) {
         display: flex;
         flex-direction: column;
-        justify-content: center; /////
+        justify-content: start;
         align-items: center;
     }
 
     @media ($media-md) {
         display: flex;
         flex-direction: column;
-        justify-content: center; /////
+        justify-content: center;
         align-items: center;
     }
 
     .crystal-display {
-        // display: flex;
-        // justify-content: center;
-        // align-items:center ;
         position: relative;
-        margin: auto;
+        // margin: auto;
 
         width: 40%;
-        height: 691px;
+        height: 100%;
 
-        // @media ($media-xlg-up) {
-        //     width: 100%;
-        //     height: 58.5%;
-        //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: center;
-        //     align-items: center;
-        //     gap: 0%;
-
+        /*要留的RWD，需要再調整*/
+        // @media ($media-xlg) {
+        //     //**
+        //     margin-right: 34%;
         // }
 
-        @media ($media-xlg) {
-            //**
-            margin-right: 34%;
-        }
-
-        @media ($media-lg-up) {
-            margin-right: 34%;
-        }
+        // @media ($media-lg-up) {
+        //     margin-right: 34%;
+        // }
+        /****************************************/
 
         @media ($media-lg) {
             width: 100%;
@@ -1581,39 +1562,17 @@ body {
 
 
         .circlebox {
-            // @media ($media-xlg-up) {
-            //     position: absolute;
-            //     top: 23%;
-            //     left: 15%;
-            //     transform: rotate(270deg);
-            // }
-            // @media ($media-xlg) {
-            //     position: absolute;
-            //     top: 27%;
-            //     left: 12%;
-            //     transform: rotate(270deg);
-            // }
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: auto;
 
             @media ($media-lg) {
-                // border: #2fcf3d 2px solid;
-                // width: 100px;
-                // height: 100px;
-                // display: flex;
-                // justify-content: center;
-                // align-content: center;
                 position: absolute;
                 top: 22%;
                 left: 20%;
                 transform: rotate(270deg);
             }
-
-            // @media ($media-lg-h) { 
-
-            //     position: static;
-            //     top: 22%;
-            //     left: 20%;
-            //     transform: rotate(270deg);
-            // }
 
             @media ($media-md-up) {
                 position: absolute;
@@ -1630,23 +1589,15 @@ body {
             }
 
             .circle {
-                position: absolute;
-                top: 80%;
-                left: 13%;
-                width: 100px;
+                position: relative;
+
+                width: 130px;
                 height: 100px;
-                object-fit: cover;
-                transform-origin: center -230px;
+                position: absolute;
+                top: 43%;
+                transform-origin: center;
                 /* 半徑可調整 */
 
-                // @media ($media-xlg-up) {
-                //     top: 80%;
-                //     left: 13%;
-                //     width: 100px;
-                //     height: 100px;
-                //     object-fit: cover;
-                //     transform-origin: center 350px;
-                // }
 
                 @media ($media-lg) {
                     top: 80%;
@@ -1667,50 +1618,58 @@ body {
                     transform-origin: center 235px;
                 }
 
+                .withbtn {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    position: absolute;
+                    left: -19%;
+                    top: -7%;
+                }
+
             }
 
             .circle:nth-child(1) {
-                transform: rotate(0deg);
+                transform: rotate(0deg) translate(280px) rotate(-0deg);
+                width: 260px;
+                height: 150px;
             }
 
             .circle:nth-child(2) {
-                transform: rotate(30deg);
+                transform: rotate(30deg) translate(280px) rotate(-30deg);
             }
 
             .circle:nth-child(3) {
-                transform: rotate(60deg);
+                transform: rotate(60deg) translate(280px) rotate(-60deg);
             }
 
             .circle:nth-child(4) {
-                transform: rotate(90deg);
+                transform: rotate(90deg) translate(280px) rotate(-90deg);
             }
 
             .circle:nth-child(5) {
-                transform: rotate(120deg);
+                transform: rotate(120deg) translate(280px) rotate(-120deg);
             }
 
             .circle:nth-child(6) {
-                transform: rotate(150deg);
+                transform: rotate(150deg) translate(280px) rotate(-150deg);
             }
 
             .circle:nth-child(7) {
-                transform: rotate(180deg);
+                transform: rotate(180deg) translate(280px) rotate(-180deg);
             }
 
             .circle:nth-child(8) {
-                transform: rotate(210deg);
+                transform: rotate(210deg) translate(280px) rotate(-210deg);
             }
 
             .circle:nth-child(9) {
-                transform: rotate(240deg);
+                transform: rotate(240deg) translate(280px) rotate(-240deg);
             }
 
             .circle:nth-child(10) {
-                transform: rotate(270deg);
-                width: 150px;
-                height: 150px;
+                transform: rotate(270deg) translate(280px) rotate(-270deg);
 
-                // position: relative;
                 @media ($media-xlg-up) {
                     width: 125px;
                     height: 125px;
@@ -1729,90 +1688,16 @@ body {
                     width: 95px;
                     height: 95px;
                 }
-
-                &::before {
-                    content: "";
-                    width: 60px;
-                    height: 60px;
-                    background-image: url(../../../public/images/HomePage/icon_btn_up.ico.svg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    display: inline-block;
-                    position: fixed;
-                    top: -49%;
-                    right: 36%;
-
-                    @media ($media-xlg-up) {
-                        width: 48px;
-                        height: 48px;
-                        top: -41%;
-                        right: 30%;
-                        transform: rotate(90deg);
-                    }
-
-                    @media ($media-lg) {
-                        width: 48px;
-                        height: 48px;
-                        top: -41%;
-                        right: 30%;
-                        transform: rotate(90deg);
-                    }
-
-                    @media ($media-md) {
-                        background-size: 75%;
-                        width: 48px;
-                        height: 48px;
-                        top: -41%;
-                        right: 30%;
-                        transform: rotate(90deg);
-                    }
-                }
-
-                &::after {
-                    content: "";
-                    width: 60px;
-                    height: 60px;
-                    background-image: url(../../../public/images/HomePage/icon_btn_down.ico.svg);
-                    background-size: cover;
-                    background-repeat: no-repeat;
-                    display: inline-block;
-                    position: absolute;
-                    top: 108%;
-                    right: 36%;
-
-                    @media ($media-xlg-up) {
-                        width: 48px;
-                        height: 48px;
-                        top: 102%;
-                        right: 31%;
-                        transform: rotate(90deg);
-                    }
-
-                    @media ($media-lg) {
-                        width: 48px;
-                        height: 48px;
-                        top: 102%;
-                        right: 31%;
-                        transform: rotate(90deg);
-                    }
-
-                    @media ($media-md) {
-                        background-size: 75%;
-                        width: 48px;
-                        height: 48px;
-                        top: 102%;
-                        right: 31%;
-                        transform: rotate(90deg);
-                    }
-                }
             }
 
             .circle:nth-child(11) {
-                transform: rotate(300deg);
+                transform: rotate(300deg) translate(280px) rotate(-300deg);
+                ;
             }
 
             .circle:nth-child(12) {
-                transform: rotate(330deg);
+                transform: rotate(330deg) translate(280px) rotate(-330deg);
+                ;
             }
         }
 
@@ -1820,7 +1705,7 @@ body {
 }
 
 .section-crystaldiscovery {
-    margin: 6.7% 11.5% 9.7% 7.91%;
+    // margin: 6.7% 11.5% 9.7% 7.91%;
 
     display: flex;
     flex-direction: column;
@@ -2059,24 +1944,21 @@ body {
     /*codepen輪播*/
 
     /**/
+    // .container {}
 
+    // .carousel-control-prev-icon {
+    //     background-image: url(../../../public/images/HomePage/icon_arrow_left.ico.svg);
+    // }
 
+    // .carousel-control-next-icon {
+    //     background-image: url(../../../public/images/HomePage/icon_arrow_right.ico.svg);
 
-    .container {}
+    // }
 
-    .carousel-control-prev-icon {
-        background-image: url(../../../public/images/HomePage/icon_arrow_left.ico.svg);
-    }
-
-    .carousel-control-next-icon {
-        background-image: url(../../../public/images/HomePage/icon_arrow_right.ico.svg);
-
-    }
-
-    #carouselExample {
-        display: flex;
-        gap: 20%;
-    }
+    // #carouselExample {
+    //     display: flex;
+    //     gap: 20%;
+    // }
 
     //RWD
     border: 5px rgb(226, 35, 35) solid;
@@ -2132,7 +2014,7 @@ body {
             margin: 0 23px 0 0;
             z-index: 99;
             position: absolute;
-            left:-30% ;
+            left: -30%;
 
             @media ($media-xlg) {
                 margin: 0;
