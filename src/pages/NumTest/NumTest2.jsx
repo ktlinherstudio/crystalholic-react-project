@@ -1,6 +1,8 @@
 import './NumTest2.css';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import { useRef, useState } from 'react';
+import '../../components/BgLight.css';
+import BgLightAni from '../../components/BgLightAni';
 import { useNavigate } from 'react-router-dom';
 
 export default function NumTest2() {
@@ -21,7 +23,8 @@ export default function NumTest2() {
   return (
     <>
       <NavBarWrapper variant="dark" />
-      <main className="numtest2">
+      <main className="numtest2" style={{ position: 'relative', overflow: 'hidden' }}>
+        <BgLightAni />
         <section className="num2-numtest">
           {/* 第一個標題 */}
           <div className="num2-title-1">

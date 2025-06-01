@@ -52,8 +52,8 @@ export default function App() {
                 <Route path="/CoverTest0528" element={<CoverTest0528 />} />
                 <Route path="/TarotCard0528" element={<TarotCard0528 />} />
                 <Route path="/TarotCard0529" element={<TarotCard0529 />} />
-                <Route path="/FeedBack" element={<FeedBack/>} />
-                <Route path="/FeedBack" element={<FeedBackCarousel/>} />
+                <Route path="/FeedBack" element={<FeedBack />} />
+                <Route path="/FeedBack" element={<FeedBackCarousel />} />
                 {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
                 {/* <Route path="/CoverFeedbackSW" element={<CoverFeedbackSW />} /> */}
 
