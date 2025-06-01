@@ -1661,6 +1661,8 @@ body {
 
 /*礦迷回饋*/
 #section-feedback {
+  /*codepen輪播*/
+  /**/
   border: 5px rgb(226, 35, 35) solid;
   position: sticky;
   z-index: 99;
@@ -1703,12 +1705,15 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  position: relative;
 }
 #section-feedback .feedback-box .feedback-arrowleft {
   width: 48px;
   height: 48px;
   margin: 0 23px 0 0;
   z-index: 99;
+  position: absolute;
+  left: -30%;
 }
 @media (max-width:1367px) {
   #section-feedback .feedback-box .feedback-arrowleft {
@@ -1720,6 +1725,8 @@ body {
   height: 48px;
   margin: 0 0 0 23px;
   z-index: 99;
+  position: absolute;
+  left: 90%;
 }
 @media (max-width:1367px) {
   #section-feedback .feedback-box .feedback-arrowright {
