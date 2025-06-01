@@ -1,5 +1,5 @@
 import React from 'react';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
