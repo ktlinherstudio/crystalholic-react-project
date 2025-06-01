@@ -10,18 +10,12 @@
 }
 
 /* 主要內容區 */
-.num1-numtest { 
-    flex: 1;    /* 在父層 flex 裡撐滿剩餘空間 */
-
+.num1-numtest {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background: url(../images/Numtest/numtest_backgroung.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 /* ---------- 第一個標題 ---------- */
