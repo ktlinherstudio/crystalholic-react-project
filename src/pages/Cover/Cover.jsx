@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react';
-import BgDarkBlock from '../../components/BgDarkBlock'
+import BgDark from '../../components/BgDark'
 // import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
@@ -13,8 +13,8 @@ export default function Cover() {
         <>
             {/* 背景 */}
             <div className='coverbg'>
-                <div className="bgdark1"><BgDarkBlock /></div>
-                <div className="bgdark2"><BgDarkBlock /></div>
+                <div className="bgdark1"><BgDark/></div>
+                <div className="bgdark2"><BgDark/></div>
             </div>
             {/* menu bar*/}
             <NavBarWrapper variant="light" />

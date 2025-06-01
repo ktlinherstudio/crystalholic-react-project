@@ -440,7 +440,7 @@ body {
         align-items: center;
         text-align: center;
         z-index: 0;
-        overflow: hidden;
+        overflow: hidden; 
 
 
         @media ($media-xlg) {
@@ -468,7 +468,7 @@ body {
         overflow: hidden;
         z-index: 0;
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
         padding-bottom: 160px;
 
         width: 100%;
@@ -2056,6 +2056,12 @@ body {
 /*礦迷回饋*/
 #section-feedback {
 
+    /*codepen輪播*/
+
+    /**/
+
+
+
     .container {}
 
     .carousel-control-prev-icon {
@@ -2115,6 +2121,8 @@ body {
         flex-direction: row;
         // justify-content: center;
         align-items: center;
+        position: relative;
+
 
         //SW
 
@@ -2123,6 +2131,8 @@ body {
             height: 48px;
             margin: 0 23px 0 0;
             z-index: 99;
+            position: absolute;
+            left:-30% ;
 
             @media ($media-xlg) {
                 margin: 0;
@@ -2138,6 +2148,9 @@ body {
             height: 48px;
             margin: 0 0 0 23px;
             z-index: 99;
+            position: absolute;
+            left: 90%;
+
 
             @media ($media-xlg) {
                 margin: 0;
