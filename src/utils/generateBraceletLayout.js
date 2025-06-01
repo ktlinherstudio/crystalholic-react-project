@@ -1,15 +1,29 @@
 // utils/generateBraceletLayout.js
 
-// 統一壓縮係數，控制珠子之間間距（越大越疏鬆）
-const compressionRatio = 1;
+
 
 export function generateBraceletLayout(crystalSize = 8, wristSize = 16) {
-  const metalSize = 3;
-  const unitLength = (metalSize + crystalSize) * compressionRatio;
-  const wristLengthMM = wristSize * 10;
+  const pairCountMap = {
+    8: {
+      13: 12,
+      14: 13,
+      15: 14,
+      16: 15,
+      17: 16,
+      18: 17,
+    },
+    10: {
+      13: 10,
+      14: 11,
+      15: 12,
+      16: 13,
+      17: 14,
+      18: 14,
+    },
+  };
 
-  const pairCount = Math.floor(wristLengthMM / unitLength);
-
+  const pairCount =
+    pairCountMap[crystalSize]?.[wristSize] || 9; // fallback: 9對
 
   const layout = [];
   for (let i = 0; i < pairCount; i++) {
@@ -19,14 +33,19 @@ export function generateBraceletLayout(crystalSize = 8, wristSize = 16) {
 
   return layout;
 }
-
 export function calculateRadius(wristSize) {
   const wristLengthMM = wristSize * 10;
-  const radius = wristLengthMM / (2 * Math.PI);
+  const radius = wristLengthMM / (2 * Math.PI)*1.15;
   return radius;
 }
 
 export function calculateBeadAngles(beads, crystalSize) {
+  // 統一壓縮係數，控制珠子之間間距（越大越疏鬆）
+  const compressionRatioMap = {
+    8: 1,
+    10: 0.85,
+  };
+  const compressionRatio = compressionRatioMap[crystalSize] || 1;
   const metalSize = 3;
 
   // 根據水晶尺寸給不同的比例微調，確保各尺寸對齊視覺
