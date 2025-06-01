@@ -3,6 +3,7 @@ import '../../components/Bglight.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Customize1() {
     const navigate = useNavigate();
 
