@@ -22,10 +22,11 @@
 
 .index-numtest3 {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     max-width: 80%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 5%;  /* 左邊圖片本身左右有空白 */
     gap: 4%;
     /* flex: 1; */
 
@@ -366,6 +367,7 @@
     .index-numtest3 {
         flex-direction: column;
         height: 100%;
+        margin: 0 auto;
     }
 
     #left {
