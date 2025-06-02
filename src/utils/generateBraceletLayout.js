@@ -35,7 +35,7 @@ export function generateBraceletLayout(crystalSize = 8, wristSize = 16) {
 }
 export function calculateRadius(wristSize) {
   const wristLengthMM = wristSize * 10;
-  const radius = wristLengthMM / (2 * Math.PI)*1.15;
+  const radius = wristLengthMM / (2 * Math.PI)*1.2
   return radius;
 }
 
