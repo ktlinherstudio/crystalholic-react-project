@@ -310,13 +310,13 @@ const characterData = {
 
 export default function NumTest3() {
     const navigate = useNavigate();
-    const [lifeNumber, setLifeNumber] = useState(1);          // 預設先顯示 1
+    const [lifeNumber, setLifeNumber] = useState(1);          
 
     useEffect(() => {
         const stored = sessionStorage.getItem('lifePathNumber');
         if (stored) {
-            const parsed = parseInt(stored, 10);                  // ✅ 修改1：強制轉數字
-            if (!isNaN(parsed) && characterData[parsed]) {        // ✅ 修改2：驗證範圍
+            const parsed = parseInt(stored, 10);                  
+            if (!isNaN(parsed) && characterData[parsed]) {        
                 setLifeNumber(parsed);
             }
         }

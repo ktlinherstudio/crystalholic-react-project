@@ -33,7 +33,7 @@ import { useNavigate } from 'react-router-dom';
     };
 
     // ---------- 下一步 ----------
-    const handleNext = () => {                         // ✅ 修改：抽成專用函式
+    const handleNext = () => {                         
       if (year && month && day) {
         const result = calculateLifePathNumber(year, month, day);
         sessionStorage.setItem('numtest2-completed', 'true');
@@ -56,6 +56,8 @@ import { useNavigate } from 'react-router-dom';
         <NavBarWrapper variant="dark" />
         <main className="numtest2" style={{ position: 'relative', overflow: 'hidden' }}>
         <BgLightAni/>
+        {/* <main className="numtest2"> */}
+        {/* <BgLightAni/> */}
           <section className="num2-numtest">
             {/* 第一個標題 */}
             <div className="num2-title-1">
