@@ -57,7 +57,7 @@
 .p_fav_icon {
     width: 3rem;
     height: 3rem;
-    position: absolute;
+    /* position: absolute; */
     top: 1rem;
     right: 1rem;
     cursor: pointer;
@@ -68,15 +68,15 @@
     background-position: center;
   
     transition: background-image 0.2s ease;
-  }
+}
   
-  .p_fav_icon.hover:not(.clicked) {
+.p_fav_icon.hover:not(.clicked) {
     background-image: url('/images/Product/btn-fav-hover.svg'); 
-  }
+}
   
-  .p_fav_icon.clicked {
+.p_fav_icon.clicked {
     background-image: url('/images/Product/btn-fav-click.svg'); 
-  }
+}
   
 .p_product_img_left .p_fav_icon{
     width: 4.5rem;
@@ -98,11 +98,21 @@
 
     color: #585858;
 }
-
-.p_product_title{
+.p_product_title_box{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
+.p_product_title{
+    display: flex;
+    flex-direction: column;
+}
+
+/* .p_product_title{
+    display: flex;
+    justify-content: space-between;
+} */
 
 .p_product_title h3{
     /* 中文/小標題1 */

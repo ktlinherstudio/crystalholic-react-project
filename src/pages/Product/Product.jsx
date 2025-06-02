@@ -58,18 +58,30 @@ export default function Product() {
         <section className="p_product_area">
           <div className="p_product_box">
             <div className="p_product_img_left">
-              <div
+              {/* <div
                 className={`p_fav_icon ${isFav ? 'clicked' : ''}`}
                 onClick={handleFavClick}
                 onMouseEnter={(e) => e.currentTarget.classList.add('hover')}
                 onMouseLeave={(e) => e.currentTarget.classList.remove('hover')}
-              />
+              /> */}
               <img className="p_product_img" src={product.image} alt={product.name} />
             </div>
             <div className="p_product_right">
-              <div className="p_product_title">
+              {/* <div className="p_product_title">
                 <h3>{product.name}</h3>
                 <span>{product.price}</span>
+              </div> */}
+              <div className="p_product_title_box">
+                <div className="p_product_title">
+                  <h3>{product.name}</h3>
+                  <span>{product.price}</span>
+                </div>
+                <div
+                  className={`p_fav_icon ${isFav ? 'clicked' : ''}`}
+                  onClick={handleFavClick}
+                  onMouseEnter={(e) => e.currentTarget.classList.add('hover')}
+                  onMouseLeave={(e) => e.currentTarget.classList.remove('hover')}
+                />
               </div>
               <hr />
               <div className="p_product_description">
