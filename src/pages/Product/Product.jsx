@@ -3,7 +3,7 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
 import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import productSeriesData from './productSeriesData';
 
@@ -14,6 +14,10 @@ export default function Product() {
 
   const [isFav, setIsFav] = useState(false);
   const [quantity, setQuantity] = useState(1);
+
+  useEffect(() => {
+    setIsFav(false);
+  }, [seriesKey, productIndex]);
 
   if (!product) return <div>商品不存在</div>;
 
@@ -56,6 +60,19 @@ export default function Product() {
       <main className="product_main">
         {/* 單一商品區 */}
         <section className="p_product_area">
+           {/* 麵包屑導覽 */}
+           <div className="breadcrumb">
+                <img src="./images/Product/breadcrumb.svg" alt="breadcrumb icon" className="bc_icon" />
+                <span className="bc_text">
+                  <Link to="/cover0602">首頁</Link>
+                  <span className="bc_sep">｜</span>
+                  <Link to="/ProductCollection">全系列商品</Link>
+                  <span className="bc_sep">｜</span>
+                  <Link to={`/ProductCollection#${seriesKey}`}>{series?.name}</Link>
+                  <span className="bc_sep">-</span>
+                  <span>{product?.name}</span>
+                </span>
+              </div>
           <div className="p_product_box">
             <div className="p_product_img_left">
               {/* <div
@@ -139,7 +156,7 @@ export default function Product() {
                 key={idx}
               >
                 <div className="p_product_img_wrap">
-                  <div className="p_fav_icon" />
+                  {/* <div className="p_fav_icon" /> */}
                   <img className="p_product_img" src={item.image} alt={item.name} />
                 </div>
                 <div className="p_product_info">

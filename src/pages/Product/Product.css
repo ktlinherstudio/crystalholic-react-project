@@ -11,16 +11,67 @@
 
 
 /* ────────── 主要內容區 ────────────── */
+/* 麵包屑導覽 */
+.breadcrumb {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #585858;
+
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+
+    gap: 0.5rem;
+    margin-bottom: 3.5rem;
+    /* max-width: 70.25rem; */
+}
+  
+.bc_icon {
+    width: 1rem;
+    object-fit: contain;
+    margin: 0 0.5rem 0 1rem;
+}
+  
+.bc_text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.bc_text>a {
+    display: inline-block;               /* 寬度 = 文字長度 */
+  padding: 0;                          /* 若有左右 padding 會拉長底線，先清掉 */
+  text-decoration: none;               /* 關掉原生底線 */
+
+  /* 底線：用背景控制 -------------------------------------- */
+  background-image: linear-gradient(currentColor, currentColor); /* 1px 線 */
+  background-repeat: no-repeat;
+  background-position: left bottom;    /* 從文字左下開始 */
+  background-size: 0 1px;              /* 起始寬度 0%，高度 1px */
+
+  transition: background-size 0.35s ease;  /* 平滑伸展 */
+}
+.bc_text>a:hover {
+    background-size: 100% 1px; 
+}
 
 /* 單一商品區 */
 .p_product_area{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
     width: 100%;
-    /* min-height: calc(100vh - 70px); */
-    padding: 6rem 12rem;/* 95px 190px */
+    min-height: calc(100vh - 70px);
+    padding: 0 12rem;/* 95px 190px */
 
     margin-bottom: 5rem;
     z-index: 1; 
@@ -37,15 +88,20 @@
 
 /* 商品照 (左側) */
 .p_product_img_left{
+
+
+    flex: 1 0 42%;          /* 在左右雙欄中占約 42% */
+    max-width: 32rem;       /* ≈512 px；桌機上限 */
+    aspect-ratio: 25 / 27; 
+}
+
+
+.p_product_img_left>.p_product_img{
     border-radius: 2.5rem;/* 40px */
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
     overflow: hidden;
     position: relative;
-
-    flex: 1 0 42%;          /* 在左右雙欄中占約 42% */
-    max-width: 32rem;       /* ≈512 px；桌機上限 */
-    aspect-ratio: 25 / 27; 
 }
 
 /* 與collection區共用 */
@@ -92,7 +148,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.25rem;/* 20px */
+    gap: 1rem;
 
     max-width: 34.5rem;
 
@@ -284,7 +340,7 @@
 .p_product_card{
     /* width: 259.25px;
     height: 342.56px; */
-    flex:1 1 16rem; /* 256px 寬，可縮放 */
+    width: 16rem;
     max-width:18rem; /* 288px 上限 */
     cursor: pointer;
 }

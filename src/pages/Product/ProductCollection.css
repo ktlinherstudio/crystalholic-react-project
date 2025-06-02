@@ -165,7 +165,7 @@
 }
 
 /* 收藏 icon 的三種狀態 */
-.pc_fav_icon {
+/* .pc_fav_icon {
     width: 3rem;
     height: 3rem;
     position: absolute;
@@ -179,17 +179,17 @@
     background-position: center;
   
     transition: background-image 0.2s ease;
-}
+} */
   
 /* hover 狀態（僅當未收藏） */
-.pc_fav_icon.hover:not(.clicked) {
+/* .pc_fav_icon.hover:not(.clicked) {
     background-image: url('/images/Product/btn-fav-hover.svg'); 
-}
+} */
   
 /* 點擊收藏後 */
-.pc_fav_icon.clicked {
+/* .pc_fav_icon.clicked {
     background-image: url('/images/Product/btn-fav-click.svg'); 
-}
+} */
 
 /* 商品資訊 */
 .pc_product_info {
