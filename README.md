@@ -67,3 +67,30 @@ public/images/
 按鈕長寬要大於觸控範圍48px
 /* ==========大手機或平板橫向（820px 以下） ========== */
 /* ========== 手機直向（640px 以下） ========== */
+
+
+
+#上傳gh-pages
+第一次操作請打開終端機
+npm install gh-pages --save-dev
+
+確認package.json檔有
+"scripts": {
+  "build": "vite build",
+  "deploy": "gh-pages -d dist"
+},
+
+確認vite.config.js檔有
+export default defineConfig({
+  base:'./',
+  plugins: [react()],
+})
+
+因為我們的App.jsx目前是用 <BrowserRouter> 來檢視所有頁面
+要上傳PAGE的話必須改成<HashRouter></HashRouter>才看得到
+並把<BrowserRouter></BrowserRouter>先註解掉
+
+每次要上傳時 依序執行
+npm run build
+npm run deploy
+
