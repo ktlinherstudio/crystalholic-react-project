@@ -20,10 +20,10 @@ export default function ProductCollection() {
 
   /* ---  icon 清單（id 必須對應資料檔 key） ----------------------------- */
   const iconList = [
-    { id: 'blue', label: '澄語之藍', icon: '/images/Product/icon_procat-blue.svg' },
-    { id: 'adventure', label: '秘境探光', icon: '/images/Product/icon_procat-adventure.svg' },
-    { id: 'seasons', label: '四季琉波', icon: '/images/Product/icon_procat_seasons.svg' },
-    { id: 'cocktail', label: '微醺晶釀', icon: '/images/Product/icon_procat-cocktail.svg' }
+    { id: 'blue', label: '澄語之藍', icon: './images/Product/icon_procat-blue.svg' },
+    { id: 'adventure', label: '秘境探光', icon: './images/Product/icon_procat-adventure.svg' },
+    { id: 'seasons', label: '四季琉波', icon: './images/Product/icon_procat_seasons.svg' },
+    { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_procat-cocktail.svg' }
   ];
 
   /* --- 點擊收藏 -------------------------------------------------------- */
