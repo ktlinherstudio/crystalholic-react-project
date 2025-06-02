@@ -11,6 +11,8 @@ import KnowledgeCrystal from './components/KnowledgeCrystal/KnowledgeCrystal';
 import KnowledgeCleanse from './pages/Others/KnowledgeCleanse';
 
 import Cover from './pages/Cover/Cover';
+import Cover0602 from './pages/Cover/Cover0602';
+
 import CoverTest0527 from './pages/Cover/CoverTest0527';
 import CoverTest0528 from './pages/Cover/CoverTest0528';
 import TarotCard0528 from './pages/Cover/TarotCard0528';
@@ -50,6 +52,7 @@ export default function App() {
                 <Route path="/KnowledgeCleanse" element={<KnowledgeCleanse />} />
 
                 <Route path="/" element={<Cover />} />
+                <Route path="/cover0602" element={<Cover0602 />} />
                 <Route path="/CoverTest0527" element={<CoverTest0527 />} />
                 <Route path="/CoverTest0528" element={<CoverTest0528 />} />
                 <Route path="/TarotCard0528" element={<TarotCard0528 />} />

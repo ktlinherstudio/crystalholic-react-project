@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import BgDarkBlock from '../../components/BgDarkBlock'
 import '../../App.scss/css/Style.min.css'
 
-export default function CoverTes() {
+export default function CoverTes0528() {
     const [pageIndex, setPageIndex] = useState(0); // 0: 第一頁, 1: 第二頁
 
     // 🚫 根據 pageIndex 鎖住或恢復頁面滾動

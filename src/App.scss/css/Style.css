@@ -443,7 +443,7 @@ body {
   width: 100%;
   height: 115vh;
   position: absolute;
-  top: 481.6vh;
+  top: 381vh;
   left: 0;
 }
 @media (max-width:1367px) {
@@ -475,7 +475,6 @@ body {
 
 /*封面1*/
 .ch-cover {
-  border: #2fcf3d 2px solid;
   width: 100%;
   height: 100vh;
   z-index: 1;
@@ -946,7 +945,6 @@ body {
 }
 
 #section-tarotcard {
-  background-color: rgb(44, 46, 144);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -1023,7 +1021,6 @@ body {
 #section-tarotcard #tarotcard-box .card-back img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 #section-tarotcard #tarotcard-box .card-back {
   transform: rotateY(180deg);
@@ -1197,7 +1194,6 @@ body {
 
 /*水晶小百科*/
 #section-crystaldiscovery {
-  border: #e9df70 5px solid;
   width: 100%;
   height: 100vh;
   color: #8750BF;
@@ -1329,10 +1325,20 @@ body {
   left: -19%;
   top: -7%;
 }
+#section-crystaldiscovery .crystal-display .circlebox .circle .withbtn #circleup:hover {
+  content: "";
+  background-image: url(../../../public/images/HomePage/icon_btn_up_h.ico.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+}
+#section-crystaldiscovery .crystal-display .circlebox .circle .withbtn #circledown {
+  background-image: url(../../../public/images/HomePage/icon_btn_up_h.ico.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+}
 #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(1) {
   transform: rotate(0deg) translate(280px) rotate(0deg);
-  width: 260px;
-  height: 150px;
+  width: 230px;
 }
 #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(2) {
   transform: rotate(30deg) translate(280px) rotate(-30deg);
@@ -1482,11 +1488,12 @@ body {
   align-items: center;
 }
 .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-name .en {
-  font-size: 20px;
+  font-size: 1.125rem;
   font-style: italic;
+  text-align: center;
 }
 .section-crystaldiscovery .crystaldiscovery .covercrystal .crystal-name .ch {
-  font-size: 28px;
+  font-size: 1.25rem;
 }
 .section-crystaldiscovery .crystaldiscovery .covercrystal .discovery-content {
   font-size: 100%;
@@ -1494,6 +1501,8 @@ body {
   height: 78px;
   padding: 0 0 0 24px;
   margin: none;
+  display: flex;
+  align-items: center;
 }
 .section-crystaldiscovery .crystaldiscovery .discovery-p1 {
   width: 600px;
@@ -1586,7 +1595,6 @@ body {
 #section-feedback {
   /*codepen輪播*/
   /**/
-  border: 5px rgb(226, 35, 35) solid;
   position: sticky;
   z-index: 99;
   width: 100%;

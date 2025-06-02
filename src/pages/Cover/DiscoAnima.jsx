@@ -111,8 +111,8 @@ function renderCrystalContent(id) {
         },
         'disc-amethyst': {
             name_en: 'Amethyst',
-            name_ch: '2水晶',
-            description: '紫水晶被認為是精神上的守護石，有助於舒緩壓力與提升直覺力。',
+            name_ch: "紫水晶",
+            description: "紫水晶是一種高頻能量的靈性水晶，象徵智慧與平靜，能淨化心靈並帶來內在穩定。",
             benefits: [
                 '安神鎮定：幫助釋放壓力、改善睡眠品質。',
                 '提升智慧：強化集中力與創造力。',
@@ -123,15 +123,15 @@ function renderCrystalContent(id) {
                 '從事創作、學習與靈修活動的人。'
             ],
             suggestionImgs: [
-                'crystal-rose-quartz.png',
-                'crystal-kyanite.png',
-                'crystal-moonstone.png'
+                'crystal-rosequartz.png',
+                'crystal-clearquartz.png',
+                'crystal-angelite.png'
             ]
         },
         'disc-sunstone': {
-            name_en: 'Kyanite',
-            name_ch: '3晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Sunstone',
+            name_ch: '太陽石',
+            description: "太陽石是一種帶有金橘色光澤的水晶，象徵溫暖、活力與正向能量，能喚醒內在的生命力與快樂感。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -142,15 +142,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-citrine.png',
+                'crystal-rosequartz.png',
+                'crystal-amethyst.png'
             ]
         },
         'disc-golden': {
-            name_en: 'Kyanite',
-            name_ch: '4晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Gold Obsidia',
+            name_ch: '金曜石',
+            description: "金曜石是一種擁有金色光澤的黑曜石，象徵光明照進黑暗，能深入潛意識協助轉化陰影與建立能量防護罩，是極具力量的靈性護盾。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -161,15 +161,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-blacktourmaline.png',
+                'crystal-smokyquartz.png',
+                'crystal-labradorite.png'
             ]
         },
         'disc-strawberry': {
-            name_en: 'Kyanite',
-            name_ch: '5晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Strawberry',
+            name_ch: '草莓晶',
+            description: "草莓晶散發溫潤柔和的紅粉能量，有助吸引桃花與提升戀愛運，是甜美愛情能量的代表。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -180,15 +180,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-rosequartz.png',
+                'crystal-rhodochrosite.png',
+                'crystal-garnet.png'
             ]
         },
         'disc-angelite': {
-            name_en: 'Kyanite',
-            name_ch: '6晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Angelite',
+            name_ch: '天使石',
+            description: "天使石是一種溫柔的淡藍色水晶，象徵和平與靜心，常被視為與天使界連結的橋樑，能帶來深層的寧靜與支持感。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -199,15 +199,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-moonstone.png',
+                'crystal-rosequartz.png',
+                'crystal-amethyst.png'
             ]
         },
         'disc-moonstone': {
-            name_en: 'Kyanite',
-            name_ch: '7晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Moonstone',
+            name_ch: '月光石',
+            description: "月光石擁有柔和光澤，象徵女性能量與直覺之美，是與月亮能量連結的重要水晶。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -218,15 +218,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
+                'crystal-labradorite.png',
+                'crystal-albite.png',
                 'crystal-sunstone.png'
             ]
         },
         'disc-rose': {
-            name_en: 'Kyanite',
-            name_ch: '8晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Rose Quartz',
+            name_ch: '玫瑰石英',
+            description: "玫瑰石英是最經典的愛情水晶，擁有溫柔粉色能量，象徵無條件的愛與心輪療癒。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -237,15 +237,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-moonstone.png',
+                'crystal-clearquartz.png',
+                'crystal-rubellite.png'
             ]
         },
         'disc-green': {
-            name_en: 'Kyanite',
-            name_ch: '9晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: "Green Fluorite",
+            name_ch: '綠螢石',
+            description: "綠螢石具有淨化思緒與安撫心輪的功效，能協助釋放雜念、整理混亂狀態，非常適合在靜心與放鬆時使用。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -256,15 +256,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-smokyquartz.png',
+                'crystal-clearquartz.png',
+                'crystal-rosequartz.png'
             ]
         },
         'disc-moonstone1': {
-            name_en: 'Kyanite',
-            name_ch: '10晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Moonstone',
+            name_ch: '月光石',
+            description: "月光石擁有柔和光澤，象徵女性能量與直覺之美，是與月亮能量連結的重要水晶。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -275,15 +275,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
+                'crystal-labradorite.png',
+                'crystal-albite.png',
                 'crystal-sunstone.png'
             ]
         },
         'disc-rose1': {
-            name_en: 'Kyanite',
-            name_ch: '11晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Rose Quartz',
+            name_ch: '玫瑰石英',
+            description: "玫瑰石英是最經典的愛情水晶，擁有溫柔粉色能量，象徵無條件的愛與心輪療癒。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -294,15 +294,15 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-moonstone.png',
+                'crystal-clearquartz.png',
+                'crystal-rubellite.png'
             ]
         },
         'disc-angelite1': {
-            name_en: 'Kyanite',
-            name_ch: '12晶石',
-            description: '藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。',
+            name_en: 'Angelite',
+            name_ch: '天使石',
+            description: "天使石是一種溫柔的淡藍色水晶，象徵和平與靜心，常被視為與天使界連結的橋樑，能帶來深層的寧靜與支持感。",
             benefits: [
                 '促進溝通：幫助開啟喉輪，增強表達與自我溝通。',
                 '情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。',
@@ -313,9 +313,9 @@ function renderCrystalContent(id) {
                 '需要情緒平衡與放鬆的人。'
             ],
             suggestionImgs: [
-                'crystal-angelite.png',
-                'crystal-amethyst.png',
-                'crystal-sunstone.png'
+                'crystal-moonstone.png',
+                'crystal-rosequartz.png',
+                'crystal-amethyst.png'
             ]
         }
         // ...你可以根據這個格式繼續補充其他水晶
