@@ -37,9 +37,9 @@ import Product from './pages/Product/Product';
 export default function App() {
   return (
     <div className="page-layout">
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
 
-        {/* <HashRouter> */}
+        <HashRouter>
         <AuthProvider>
           <UIProvider>
             <ScrollToTop />
@@ -78,8 +78,8 @@ export default function App() {
         </AuthProvider>
 
 
-        {/* </HashRouter> */}
-      </BrowserRouter>
+        </HashRouter>
+      {/* </BrowserRouter> */}
     </div>
   );
 }

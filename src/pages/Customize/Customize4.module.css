@@ -265,9 +265,9 @@
 /* 大珍珠樣式 */
 .pearlBig {
     composes: pearl;
-    cursor: pointer;
-    background-color: #e7ddeb;
-    mix-blend-mode: normal;
+     cursor: pointer;
+    background-color:#F3ECF5;
+    mix-blend-mode: multiply;
     isolation: isolate;
     z-index: 2;
 }
@@ -276,8 +276,8 @@
 .pearlSmall {
     composes: pearl;
     cursor: pointer;
-    background-color: #e7ddeb;
-    mix-blend-mode: normal;
+    background-color:#F3ECF5;
+    mix-blend-mode: multiply;
     isolation: isolate;
     z-index: 2;
 }
