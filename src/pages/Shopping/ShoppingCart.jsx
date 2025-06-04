@@ -67,9 +67,12 @@ export default function ShoppingCart() {
             <section className="cart_purchase_items">
               {/* 表頭 */}
               <div className="cart_card">
-                <div className="cart_table_head">
-                  <span>商品</span><span>尺寸</span><span>價格</span>
-                  <span>數量</span><span>小計</span>
+                <div className="cart_table_head_1">
+                  <span>商品</span>
+                  <span>尺寸</span>
+                  <span>價格</span>
+                  <span>數量</span>
+                  <span>小計</span>
                 </div>
               </div>
 
@@ -119,27 +122,21 @@ export default function ShoppingCart() {
                 </div>
               )}
 
-              {/* 繼續購物／件數統計 */}
-              {cartItems.length > 0 && (
-                <div className="cart_shopping_tip">
-                  <button className="cart_continue_shopping" onClick={() => navigate('/ProductCollection')}>
-                    繼續購物
-                  </button>
-                  <button className="cart_num_items">
-                    <span>(共 {cartItems.length} 件)</span>
-                    <img src="./images/ShoppingCart/shoppingcart-btn_accordion-grey.svg" alt="收合" />
-                  </button>
-                </div>
-              )}
-
-              {/* 超過三列時顯示展開/收合按鈕 */}
+              {/* 繼續購物／展開清單提示（合併為一句） */}
               {cartItems.length > 3 && (
                 <div className="cart_shopping_tip">
                   <button
                     className="cart_continue_shopping"
                     onClick={() => setShowAllItems(!showAllItems)}
                   >
-                    {showAllItems ? '收合清單' : '展開全部商品'}
+                    {showAllItems ? '收起購物清單' : `查看完整購物清單（共 ${cartItems.length} 件）`}
+                    <img
+                      src={showAllItems
+                        ? './images/ShoppingCart/shoppingcart-btn_accordion-open.svg'
+                        : './images/ShoppingCart/shoppingcart-btn_accordion-close.svg'}
+                      alt="展開收合按鈕"
+                      className="cart_toggle_icon"
+                    />
                   </button>
                 </div>
               )}
