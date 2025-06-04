@@ -1,99 +1,73 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import '../../App.scss/css/Style.min.css'
+import React, { Component } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import '../../App.scss/css/Style.min.css'
 
-// class Carousel extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       items: this.props.items,
-//       active: 0,
-//       direction: ''
-//     };
-//     this.rightClick = this.moveRight.bind(this);
-//     this.leftClick = this.moveLeft.bind(this);
-//   }
+class Carousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: this.props.items,
+      active: this.props.active,
+      direction: '',
+    };
+  }
 
-//   generateItems() {
-//     const items = [];
-//     for (let i = this.state.active - 2; i <= this.state.active + 2; i++) {
-//       let index = i;
-//       if (i < 0) {
-//         index = this.state.items.length + i;
-//       } else if (i >= this.state.items.length) {
-//         index = i % this.state.items.length;
-//       }
-//       const level = this.state.active - i;
-//       items.push(
-//         <Item key={index} data={this.state.items[index]} level={level} />
-//       );
-//     }
-//     return items;
-//   }
+  generateItems() {
+    const items = [];
+    const { active } = this.state;
+    const { items: allItems } = this.state;
 
-//   moveLeft() {
-//     let newActive = this.state.active - 1;
-//     if (newActive < 0) {
-//       newActive = this.state.items.length - 1;
-//     }
-//     this.setState({
-//       active: newActive,
-//       direction: 'left'
-//     });
-//   }
+    for (let i = active - 2; i <= active + 2; i++) {
+      let index = (i + allItems.length) % allItems.length;
+      let level = active - i;
+      items.push(
+        <Item key={index} id={allItems[index]} level={level} />
+      );
+    }
+    return items;
+  }
 
-//   moveRight() {
-//     let newActive = (this.state.active + 1) % this.state.items.length;
-//     this.setState({
-//       active: newActive,
-//       direction: 'right'
-//     });
-//   }
+  moveLeft = () => {
+    const { active, items } = this.state;
+    const newActive = active - 1 < 0 ? items.length - 1 : active - 1;
+    this.setState({
+      active: newActive,
+      direction: 'left'
+    });
+  }
 
-//   render() {
-//     return (
-//       <section id="section-feedback">
-//         <header className="feedback-displaytitle">
-//           <span><img src="./images/HomePage/deco-left.svg" alt="" /></span>
-//           <div id="fbtitle">
-//             <span>Feedback</span>
-//             <span>礦迷回饋</span>
-//           </div>
-//           <span><img src="./images/HomePage/deco-right.svg" alt="" /></span>
-//         </header>
+  moveRight = () => {
+    const { active, items } = this.state;
+    const newActive = (active + 1) % items.length;
+    this.setState({
+      active: newActive,
+      direction: 'right'
+    });
+  }
 
-//         <div id="carousel" className="noselect">
-//           <div className="arrow arrow-left" onClick={this.leftClick}>
-//             <img src="./images/HomePage/icon_arrow_left.ico.svg" alt="" />
-//           </div>
-//           {this.generateItems()}
-//           <div className="arrow arrow-right" onClick={this.rightClick}>
-//             <img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" />
-//           </div>
-//         </div>
-//       </section>
-//     );
-//   }
-// }
+  render() {
+    return (
+      <div className="carousel noselect">
+        <div className="arrow arrow-left" onClick={this.moveLeft}>&lt;</div>
+        <TransitionGroup component={null} className={`transition-group ${this.state.direction}`}>
+          {this.generateItems()}
+        </TransitionGroup>
+        <div className="arrow arrow-right" onClick={this.moveRight}>&gt;</div>
+      </div>
+    );
+  }
+}
 
-// function Item({ data, level }) {
-//   const className = `item level${level}`;
-//   return (
-//     <div className={className}>
-//       <div className="review-pic">
-//         <span><img src={data.memberImg} className="member-img" alt="" /></span>
-//         <span><img src={data.reviewImg} className="review-img" alt="" /></span>
-//       </div>
-//       <div className="feedback-left">
-//         <div className="fdstar-box">
-//           {[...Array(5)].map((_, idx) => (
-//             <img key={idx} src="./images/HomePage/star.svg" className="fdstar" alt="star" />
-//           ))}
-//         </div>
-//         <p>{data.text}</p>
-//       </div>
-//     </div>
-//   );
-// }
+class Item extends Component {
+  render() {
+    const className = `item level${this.props.level}`;
+    return <div className={className}>{this.props.id}</div>;
+  }
+}
 
-// export default Carousel;
+export default Carousel;
+
+// Sample usage:
+import ReactDOM from 'react-dom/client';
+const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+ReactDOM.createRoot(document.getElementById('root')).render(<Carousel items={items} active={0} />);
