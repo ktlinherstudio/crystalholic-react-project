@@ -11,15 +11,46 @@ import { resultCrystalMap } from '../../utils/resultCrystalMap';
 
 export default function Customize4() {
   const [showInfo, setShowInfo] = useState(true);
+  
+
+const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
+  const [wristSize, setWristSize] = useState(16);       // 手圍
+  const [braceletBeads, setBraceletBeads] = useState([]);
+  const [recommendedCrystals, setRecommendedCrystals] = useState([]);
+  
 
   useEffect(() => {
     setShowInfo(true);
   }, []);
 
-  //尺寸及畫布設定
-  const [selectedSize, setSelectedSize] = useState(8); // 預設 8mm
-  const [wristSize, setWristSize] = useState(16);
-  const [braceletBeads, setBraceletBeads] = useState(generateBraceletLayout(8));
+  //套入推薦手鍊
+ useEffect(() => {
+  const stored = sessionStorage.getItem('recommendedCrystals');
+  if (stored) {
+    try {
+      const crystals = JSON.parse(stored);
+      console.log("載入的推薦水晶：", crystals);
+
+      const layout = generateBraceletLayout(selectedSize, wristSize);
+      let crystalIndex = 0;
+       const filled = layout.map((item, i) => {
+  if (item === 'metal') return { type: 'metal' };
+
+  const c = crystals.length > 0 ? crystals[crystalIndex % crystals.length] : null;
+  crystalIndex++;
+  return c
+    ? { type: 'crystal', name: c.name, image: c.image }
+    : { type: 'crystal', name: '', image: '/images/Custom/ball3.png' }; // fallback 圖片
+});
+      setBraceletBeads(filled);
+      setRecommendedCrystals(crystals); // 如果你還有這一筆 state
+    } catch (e) {
+      console.error("解析推薦水晶失敗:", e);
+    }
+  }
+}, [selectedSize, wristSize]);
+
+
 
   useEffect(() => {
     const newLayout = generateBraceletLayout(selectedSize, wristSize);
