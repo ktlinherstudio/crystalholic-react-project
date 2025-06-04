@@ -276,11 +276,11 @@
 
 .button2-j {
     color: var(--color-white);
-    background: var(--color-primary4);
+    background: #A67CEB;
 }
 
 .button2-j:hover{
-    background-color: #684581;
+    background-color: #9764ca;
 }
 
 

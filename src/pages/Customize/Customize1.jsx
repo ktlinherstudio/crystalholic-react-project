@@ -32,7 +32,7 @@ export default function Customize1() {
                 </div>
                 <div className="button-box">
                     <button className="button1" onClick={handleClick}>
-                        測驗獲得推薦結果
+                        獲得推薦結果
                     </button>
                     <button className="button1" onClick={() => navigate('/Customize4')}>
                         直接開始設計

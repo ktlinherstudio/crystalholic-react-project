@@ -1,13 +1,13 @@
 /* 變數：root */
-:root{
-    --color-deep:#585858;
-    --bg:url(../images/S-Background/noise-background.jpg);
-    --color-bg1:#faf2fc;
-    --color-primary1:#8750BF;
-    --color-primary2:rgb(162, 105, 232);
-    --color-lesser3:rgb(66, 73, 212);
-    --letter-spacing:2.4px;
-    --font-h2: "LXGW WenKai Mono TC",  monospace;
+:root {
+    --color-deep: #585858;
+    --bg: url(../images/S-Background/noise-background.jpg);
+    --color-bg1: #faf2fc;
+    --color-primary1: #8750BF;
+    --color-primary2: rgb(162, 105, 232);
+    --color-lesser3: rgb(66, 73, 212);
+    --letter-spacing: 2.4px;
+    --font-h2: "LXGW WenKai Mono TC", monospace;
     --font-button-24: "Noto Sans TC", sans-serif;
 }
 
@@ -23,26 +23,34 @@
     text-align: center;
     margin: 3vh 0 0;
 }
+
 .text-j {
     color: var(--color-deep);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.text2, .text3 {
+
+.text2,
+.text3 {
     color: var(--color-deep);
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 10px;
 }
+
 .text3-wrap {
     top: 150px;
 }
-.text2 img, .text3 img {
+
+.text2 img,
+.text3 img {
     width: 82.936px;
 }
-.text2 h2, .text3 h2 {
+
+.text2 h2,
+.text3 h2 {
     color: var(--color-primary1);
     display: flex;
     justify-content: center;
@@ -52,9 +60,11 @@
     font-size: 30px;
     letter-spacing: var(--letter-spacing);
 }
+
 .text2 h2 {
     margin-top: -230px;
 }
+
 .text-j h2 {
     color: var(--color-primary1);
     text-align: center;
@@ -66,18 +76,25 @@
     font-size: 30px;
     letter-spacing: var(--letter-spacing);
 }
-.index, .index2, .index3 {
+
+.index,
+.index2,
+.index3 {
     /* height: calc(100vh - 70px); */
     position: relative;
     z-index: 0;
 
     width: 100%;
-    height: 100vh;                 /* 🟣 剛好一整視窗高（含 padding） */
-    padding-top: 70px;             /* 🟣 下推內容，避免被 navbar 壓住 */
-    box-sizing: border-box;        /* 🟣 讓 padding 計入 100vh */
+    height: 100vh;
+    /* 🟣 剛好一整視窗高（含 padding） */
+    padding-top: 70px;
+    /* 🟣 下推內容，避免被 navbar 壓住 */
+    box-sizing: border-box;
+    /* 🟣 讓 padding 計入 100vh */
 
 
 }
+
 .index {
     display: flex;
     flex-flow: column;
@@ -85,6 +102,7 @@
     justify-content: center;
     gap: 50px;
 }
+
 .index2 {
     display: flex;
     justify-content: center;
@@ -94,22 +112,28 @@
     gap: 300px;
     z-index: 1;
 }
+
 .button-box {
     display: flex;
     justify-content: center;
     position: relative;
     gap: 50px;
 }
-.button-box2, .button-box3 {
+
+.button-box2,
+.button-box3 {
     display: flex;
     justify-content: center;
     position: relative;
     gap: 50px;
 }
+
 .button-box2 {
     margin-top: -150px;
 }
-.button1, .button2 {
+
+.button1,
+.button2 {
     color: #ffffff;
     font-size: 24px;
     font-family: 'Noto Sans TC';
@@ -117,12 +141,16 @@
     letter-spacing: var(--letter-spacing);
     border: none;
     border-radius: 999px;
-        /* 背景材質 */
-        background-image: 
-        linear-gradient(rgba(162, 105, 232, 0.95), rgba(162, 105, 232, 0.95)),
-        var(--bg);
+    /* 背景材質 */
+    background-color: #A67CEB;
     z-index: 1;
 }
+
+.button1:hover,
+.button2:hover {
+    background-color: #9763Ca;
+}
+
 .button1 {
     padding: 1px 6px;
     width: 340px;
@@ -134,7 +162,9 @@
     width: 236px;
     height: 56px;
 }
-.background-1, .background-2 {
+
+.background-1,
+.background-2 {
     /* border: 3px solid #83000b; */
     position: absolute;
     top: 55%;
@@ -145,41 +175,53 @@
     /* top: 280px; */
     z-index: 0;
 }
+
 .background-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 }
+
 .background-2 li {
     display: block;
     margin: 0 -20px;
 }
+
 .background-1 img {
     display: block;
     justify-content: center;
     width: 170%;
 }
-.img1, .img2, .img3 {
+
+.img1,
+.img2,
+.img3 {
     aspect-ratio: 1;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     display: block;
-  }
+}
+
 .img1 {
     background-image: url(../images/Custom/custom-bracelet-recommend-1.png);
     width: 35vw;
 }
+
 .img2 {
     background-image: url(../images/Custom/custom-bracelet-recommend-2.png);
 }
+
 .img3 {
     background-image: url(../images/Custom/custom-bracelet-recommend-3.png);
 }
-.img2, .img3 {
+
+.img2,
+.img3 {
     width: 28vw;
 }
+
 .index3 {
     display: flex;
     flex-direction: column;
@@ -190,39 +232,48 @@
 }
 
 @media (max-width: 1024px) {
+
     /* Customize2 */
     .text2 {
         margin-top: -60px;
     }
+
     .button-box2 {
         margin-top: -120px;
         gap: 30px;
-    }   
+    }
+
     .button-box {
         gap: 30px;
-    } 
+    }
+
     .button1 {
         width: 280px;
         height: 60px;
-    }  
+    }
+
     .background-1 img {
         display: flex;
         justify-content: center;
         width: 180%;
-    } 
-    
+    }
+
     /* Customize3 */
     .index3 {
         padding-top: 350px;
-        padding-bottom: 250px;    
+        padding-bottom: 250px;
     }
+
     .background-2 li {
         margin: 0 -20px;
     }
+
     .img1 {
         width: 38vw;
     }
-    .img2, .img3 {
+
+    .img2,
+    .img3 {
         width: 31vw;
     }
 }
