@@ -16,7 +16,7 @@ export default function Customize4() {
 const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
   const [wristSize, setWristSize] = useState(16);       // 手圍
   const [braceletBeads, setBraceletBeads] = useState([]);
-  const [recommendedCrystals, setRecommendedCrystals] = useState([]);
+  const [recommendedCrystal, setRecommendedCrystal] = useState([]);
   
 
   useEffect(() => {
@@ -25,25 +25,32 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
 
   //套入推薦手鍊
  useEffect(() => {
-  const stored = sessionStorage.getItem('recommendedCrystals');
+  const stored = sessionStorage.getItem('recommendedCrystal');
+   console.log("sessionStorage 內容：", stored); 
   if (stored) {
     try {
-      const crystals = JSON.parse(stored);
-      console.log("載入的推薦水晶：", crystals);
+      const crystal = JSON.parse(stored);
+      console.log("載入推薦水晶：", crystal);
 
       const layout = generateBraceletLayout(selectedSize, wristSize);
-      let crystalIndex = 0;
-       const filled = layout.map((item, i) => {
-  if (item === 'metal') return { type: 'metal' };
+      const filled = layout.map((item) => {
+        if (item === 'metal') return 'metal'; // 保持一致格式
+        return {
+          type: 'crystal',
+          image: crystal.image, // ✅ 正確：直接拿 image 字串
+        };
+      });
 
-  const c = crystals.length > 0 ? crystals[crystalIndex % crystals.length] : null;
-  crystalIndex++;
-  return c
-    ? { type: 'crystal', name: c.name, image: c.image }
-    : { type: 'crystal', name: '', image: '/images/Custom/ball3.png' }; // fallback 圖片
-});
       setBraceletBeads(filled);
-      setRecommendedCrystals(crystals); // 如果你還有這一筆 state
+      setCrystalPlacement(() => {
+        const placement = {};
+        filled.forEach((bead, i) => {
+          if (bead.type === 'crystal') {
+            placement[i] = bead.image; // ✅ 確保是 image 字串
+          }
+        });
+        return placement;
+      });
     } catch (e) {
       console.error("解析推薦水晶失敗:", e);
     }
@@ -52,10 +59,14 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
 
 
 
+
   useEffect(() => {
+  const stored = sessionStorage.getItem('recommendedCrystal');
+  if (!stored) {
     const newLayout = generateBraceletLayout(selectedSize, wristSize);
     setBraceletBeads(newLayout);
-  }, [selectedSize, wristSize]);
+  }
+}, [selectedSize, wristSize]);
 
   const braceletRadius = useMemo(() => {
     return calculateRadius(wristSize) * 1.1;

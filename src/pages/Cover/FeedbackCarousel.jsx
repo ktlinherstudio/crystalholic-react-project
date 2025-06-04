@@ -68,6 +68,7 @@ class Item extends Component {
 export default Carousel;
 
 // Sample usage:
-import ReactDOM from 'react-dom/client';
-const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-ReactDOM.createRoot(document.getElementById('root')).render(<Carousel items={items} active={0} />);
+// import ReactDOM from 'react-dom/client';
+// const items = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// ReactDOM.createRoot(document.getElementById('root')).render(<Carousel items={items} active={0} />);
+//這段好像只要寫在一個地方就好 不然會一直報錯
