@@ -15,6 +15,7 @@ export default function ShoppingCart() {
   const { cartItems, removeFromCart, updateQuantity } = useCart(); // 🆕
   const { isLoggedIn } = useAuth();
   const { showAuthModal, openAuthModal, closeAuthModal } = useUI();
+  const [showAllItems, setShowAllItems] = useState(false); // 🆕 是否展開全部商品
   const [showSuccessMsg, setShowSuccessMsg] = useState(false);
   const [readyToCheckout, setReadyToCheckout] = useState(false);
   const navigate = useNavigate(); // 「繼續購物」導回商品列表
@@ -46,8 +47,7 @@ export default function ShoppingCart() {
   const total = subtotal + shipping;
 
   /* ---- 將數字轉成 NT$ x,xxx 格式的小工具 ---- */
-  const formatCurrency = (num) =>
-    `NT$${num.toLocaleString('zh-TW')}`;
+  const formatCurrency = (num) => `NT$${num.toLocaleString('zh-TW')}`;
 
   return (
     <>
@@ -55,17 +55,9 @@ export default function ShoppingCart() {
       <main className="cart_main">
         {/* ----------- 標題區 ----------- */}
         <div className="cart_title">
-          <img
-            className="cart_decorate-left"
-            src="./images/ShoppingCart/shoppingcart_deco-left.svg"
-            alt="左裝飾"
-          />
+          <img className="cart_decorate-left" src="./images/ShoppingCart/shoppingcart_deco-left.svg" alt="左裝飾" />
           <h3 className="cart_decorate-title">購物車</h3>
-          <img
-            className="cart_decorate-right"
-            src="./images/ShoppingCart/shoppingcart_deco-right.svg"
-            alt="右裝飾"
-          />
+          <img className="cart_decorate-right" src="./images/ShoppingCart/shoppingcart_deco-right.svg" alt="右裝飾" />
         </div>
 
         {/* ----------- 內容大區塊 ----------- */}
@@ -81,8 +73,8 @@ export default function ShoppingCart() {
                 </div>
               </div>
 
-              {/* 動態列出購物車商品 */}
-              {cartItems.map((item, idx) => (
+              {/* 動態列出購物車商品，僅顯示前三筆，超過則可展開全部 */}
+              {(showAllItems ? cartItems : cartItems.slice(0, 3)).map((item, idx) => (
                 <div className="cart_table_row" key={`${item.name}-${idx}`}>
                   {/* 商品縮圖＋名稱 */}
                   <div className="cart_product_info">
@@ -91,11 +83,7 @@ export default function ShoppingCart() {
                   </div>
                   {/* 尺寸 */}
                   <div className="cart_product_size">
-                    <p>
-                      串珠 {item.size}
-                      <br />
-                      手圍 {item.wrist}
-                    </p>
+                    <p>串珠 {item.size}<br />手圍 {item.wrist}</p>
                   </div>
                   {/* 價格（單件） */}
                   <div className="cart_product_price">
@@ -105,9 +93,7 @@ export default function ShoppingCart() {
                   <select
                     className="cart_qty_select"
                     value={item.quantity}
-                    onChange={(e) =>
-                      updateQuantity(idx, Number(e.target.value))
-                    }
+                    onChange={(e) => updateQuantity(idx, Number(e.target.value))}
                   >
                     {[1, 2, 3, 4, 5].map((n) => (
                       <option key={n}>{n}</option>
@@ -120,10 +106,7 @@ export default function ShoppingCart() {
                   {/* 刪除 */}
                   <div className="cart_cross_btn">
                     <button onClick={() => removeFromCart(idx)}>
-                      <img
-                        src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
-                        alt="刪除"
-                      />
+                      <img src="./images/ShoppingCart/shoppingcart-btn_cross.svg" alt="刪除" />
                     </button>
                   </div>
                 </div>
@@ -139,24 +122,30 @@ export default function ShoppingCart() {
               {/* 繼續購物／件數統計 */}
               {cartItems.length > 0 && (
                 <div className="cart_shopping_tip">
-                  <button
-                    className="cart_continue_shopping"
-                    onClick={() => navigate('/ProductCollection')}
-                  >
+                  <button className="cart_continue_shopping" onClick={() => navigate('/ProductCollection')}>
                     繼續購物
                   </button>
                   <button className="cart_num_items">
                     <span>(共 {cartItems.length} 件)</span>
-                    <img
-                      src="./images/ShoppingCart/shoppingcart-btn_accordion-grey.svg"
-                      alt="收合"
-                    />
+                    <img src="./images/ShoppingCart/shoppingcart-btn_accordion-grey.svg" alt="收合" />
+                  </button>
+                </div>
+              )}
+
+              {/* 超過三列時顯示展開/收合按鈕 */}
+              {cartItems.length > 3 && (
+                <div className="cart_shopping_tip">
+                  <button
+                    className="cart_continue_shopping"
+                    onClick={() => setShowAllItems(!showAllItems)}
+                  >
+                    {showAllItems ? '收合清單' : '展開全部商品'}
                   </button>
                 </div>
               )}
             </section>
 
-            {/* ===== 送貨＆收件表單（原樣保留，可自行串後端） ===== */}
+            {/* ===== 送貨＆收件表單 ===== */}
             <section className="cart_info_area">
               {/* 送貨付款 */}
               <form className="cart_info_card">
