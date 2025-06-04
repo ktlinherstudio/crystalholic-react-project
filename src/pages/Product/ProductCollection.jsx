@@ -108,7 +108,7 @@ export default function ProductCollection() {
                 className="pc_product_card"
                 onClick={() => handleClickCard(activeSeries, idx)}
               >
-                <div className="pc_product_img_wrap">
+                <div className={`pc_product_img_wrap pc_shadow_${activeSeries}`}>
                   {/* <div
                     className={`pc_fav_icon ${favorites[idx] ? 'clicked' : ''}`}
                     onClick={e => toggleFavorite(e, idx)}
