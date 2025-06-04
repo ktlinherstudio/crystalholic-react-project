@@ -164,7 +164,6 @@ export default function Customize4() {
     "./images/Custom/ball4.png": 200,
     "./images/Custom/ball5.png": 400,
     "./images/Custom/ball6.png": 300,
-    "./images/Custom/ball7.png": 600,
   };
 
   const categorizedCrystalInfo = {
@@ -462,47 +461,69 @@ export default function Customize4() {
     ]
   };
 
+  const [selectedCrystal, setSelectedCrystal] = useState(null); // 選中的水晶圖
+  const [selectedBeadIndexes, setSelectedBeadIndexes] = useState([]); // 多個選中的 bead index
+  const [crystalPlacement, setCrystalPlacement] = useState({}); // index 對應的水晶圖
 
-  const [selectedCrystal, setSelectedCrystal] = useState(null);
-  const [crystalPlacement, setCrystalPlacement] = useState({});
-  const [selectedBeadIndex, setSelectedBeadIndex] = useState(null);
+  // 點 bead（格子）
   const handleBeadClick = (index) => {
     if (braceletBeads[index] === 'metal') return;
 
+    // 已選水晶 → 放進去
     if (selectedCrystal) {
-      // 有選水晶 → 放到點的格子裡
       setCrystalPlacement(prev => ({
         ...prev,
         [index]: selectedCrystal
       }));
       setSelectedCrystal(null);
-      setSelectedBeadIndex(null);
-    } else if (crystalPlacement[index]) {
-      // 有放過 → 選取現有的水晶
-      setSelectedCrystal(crystalPlacement[index]);
-      setSelectedBeadIndex(index);
+      setSelectedBeadIndexes([]);
+      return;
+    }
+
+    // 沒選水晶 → 多選框框邏輯
+    if (selectedBeadIndexes.includes(index)) {
+      // 已選中 → 取消選取
+      setSelectedBeadIndexes(prev => prev.filter(i => i !== index));
     } else {
-      // 沒選水晶 → 先記下 index 等待選水晶
-      setSelectedBeadIndex(index);
+      // 未選中 → 加入選取
+      setSelectedBeadIndexes(prev => [...prev, index]);
     }
   };
 
+  // 點水晶
+  const handleCrystalSelect = (crystal) => {
+    setSelectedCrystal(crystal);
+
+    if (Array.isArray(selectedBeadIndexes) && selectedBeadIndexes.length > 0) {
+      const updatedPlacement = { ...crystalPlacement };
+      selectedBeadIndexes.forEach((i) => {
+        updatedPlacement[i] = crystal;
+      });
+      setCrystalPlacement(updatedPlacement);
+
+      // 清空選取狀態
+      setSelectedBeadIndexes([]);
+      setSelectedCrystal(null);
+    }
+  };
+
+
   useEffect(() => {
-    if (selectedCrystal && selectedBeadIndex !== null) {
+    if (selectedCrystal && selectedBeadIndexes !== null) {
       setCrystalPlacement(prev => ({
         ...prev,
-        [selectedBeadIndex]: selectedCrystal
+        [selectedBeadIndexes]: selectedCrystal
       }));
       setSelectedCrystal(null);
-      setSelectedBeadIndex(null);
+      setSelectedBeadIndexes(null);
     }
-  }, [selectedCrystal, selectedBeadIndex]);
+  }, [selectedCrystal, selectedBeadIndexes]);
 
   //刪除按鈕 清空手鍊
   const handleClearBracelet = () => {
     setCrystalPlacement({});
     setSelectedCrystal(null);
-    setSelectedBeadIndex(null);
+    setSelectedBeadIndexes(null);
     setSelectedMetalImage(null);
   }
 
@@ -650,7 +671,7 @@ export default function Customize4() {
                 <p>手鍊配飾：</p>
               </div>
               <div className={style.imagesBox}>
-                {["ball1", "ball2", "ball3", "ball4", "ball5", "ball6", "ball7"].map((img, i) => (
+                {["ball1", "ball2", "ball3", "ball4", "ball5", "ball6"].map((img, i) => (
                   <img
                     key={i}
                     src={`./images/Custom/${img}.png`}
@@ -680,8 +701,9 @@ export default function Customize4() {
                   className={`${style.bead} ${selectedCrystal === imgSrc ? style.selectedBead : ''}`}
                   src={imgSrc}
                   alt=""
-                  onClick={() => setSelectedCrystal(imgSrc)}
+                  onClick={() => handleCrystalSelect(imgSrc)}
                 />
+
               ))}
             </div>
           </div>
@@ -707,7 +729,10 @@ export default function Customize4() {
                   <span
                     key={index}
                     onClick={() => handleBeadClick(index)}
-                    className={`${isMetal ? style.pearlSmall : style.pearlBig} ${selectedBeadIndex === index ? style.selectedBead : ''}`}
+                    className={`${isMetal ? style.pearlSmall : style.pearlBig} ${Array.isArray(selectedBeadIndexes) && selectedBeadIndexes.includes(index)
+                        ? style.selectedBead
+                        : ''
+                      }`}
                     style={{
                       backgroundImage: crystalPlacement[index]
                         ? `url(${crystalPlacement[index]})`
@@ -716,16 +741,15 @@ export default function Customize4() {
                           : undefined,
                       width: `${size * scale}px`,
                       height: `${size * scale}px`,
-                      position: "absolute",
-                      top: "50%",
-                      left: "50%",
-                      borderRadius: "50%",
+                      position: 'absolute',
+                      top: '50%',
+                      left: '50%',
+                      borderRadius: '50%',
                       transform: `rotate(${accumulatedAngle}deg)translate(${braceletRadius * scale}px)rotate(-${accumulatedAngle}deg)translate(-${offset}px, -${offset}px)`,
-                      transformOrigin: "0 0",
-
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
+                      transformOrigin: '0 0',
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
                     }}
                   />
                 );
@@ -1008,17 +1032,17 @@ export default function Customize4() {
           </div>
         )}
 
-{showConfirmModal && (
-  <div className={style.modalOverlay}>
-    <div className={style.modalContent}>
-      <p>確定要清除整條手鍊嗎？</p>
-      <div className={style.modalButtons}>
-        <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
-        <button onClick={() => setShowConfirmModal(false)}>取消</button>
-      </div>
-    </div>
-  </div>
-)}
+        {showConfirmModal && (
+          <div className={style.modalOverlay}>
+            <div className={style.modalContent}>
+              <p>確定要清除整條手鍊嗎？</p>
+              <div className={style.modalButtons}>
+                <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
+                <button onClick={() => setShowConfirmModal(false)}>取消</button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   )
