@@ -265,8 +265,8 @@
 /* 大珍珠樣式 */
 .pearlBig {
     composes: pearl;
-     cursor: pointer;
-    background-color:#F3ECF5;
+    cursor: pointer;
+    background-color: #F3ECF5;
     mix-blend-mode: multiply;
     isolation: isolate;
     z-index: 2;
@@ -276,7 +276,7 @@
 .pearlSmall {
     composes: pearl;
     cursor: pointer;
-    background-color:#F3ECF5;
+    background-color: #F3ECF5;
     mix-blend-mode: multiply;
     isolation: isolate;
     z-index: 2;
@@ -568,23 +568,28 @@
 }
 
 /* hover */
-.iconBtn1:hover {
+.iconBtn1:hover,
+.iconBtn1.active {
     background-image: url(../images/Custom/btn_size_tool_hover.svg);
 }
 
-.iconBtn2:hover {
+.iconBtn2:hover,
+.iconBtn2.active {
     background-image: url(../images/Custom/btn_ans_tool_hover.svg);
 }
 
-.iconBtn3:hover {
+.iconBtn3:hover,
+.iconBtn3.active {
     background-image: url(../images/Custom/btn_knowl_tool_hover.svg);
 }
 
-.iconBtn4:hover {
+.iconBtn4:hover,
+.iconBtn4.active {
     background-image: url(../images/Custom/btn_note_tool_hover.svg);
 }
 
-.iconBtn5:hover {
+.iconBtn5:hover,
+.iconBtn5.active {
     background-image: url(../images/Custom/btn_dum_tool_hover.svg);
 }
 
@@ -784,6 +789,8 @@
     line-height: 1;
 }
 
+
+
 @keyframes slideIn {
     from {
         transform: translateX(3rem);
@@ -826,7 +833,7 @@
 }
 
 .customTextarea:focus {
-  outline: none;
+    outline: none;
 }
 
 .customTextarea::placeholder {
