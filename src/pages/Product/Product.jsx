@@ -62,15 +62,15 @@ export default function Product() {
         <section className="p_product_area">
            {/* 麵包屑導覽 */}
            <div className="breadcrumb">
-                <img src="./images/Product/breadcrumb.svg" alt="breadcrumb icon" className="bc_icon" />
+                {/* <img src="./images/Product/breadcrumb.svg" alt="breadcrumb icon" className="bc_icon" /> */}
                 <span className="bc_text">
-                  <Link to="/cover0602">首頁</Link>
+                  <Link to="/cover0602" className="bc_link">首頁</Link>
                   <span className="bc_sep">｜</span>
-                  <Link to="/ProductCollection">全系列商品</Link>
+                  <Link to="/ProductCollection" className="bc_link">全系列商品</Link>
                   <span className="bc_sep">｜</span>
-                  <Link to={`/ProductCollection#${seriesKey}`}>{series?.name}</Link>
+                  <Link to={`/ProductCollection#${seriesKey}`} className="bc_link">{series?.name}</Link>
                   <span className="bc_sep">-</span>
-                  <span>{product?.name}</span>
+                  <span className="bc_current">{product?.name}</span>
                 </span>
               </div>
           <div className="p_product_box">

@@ -49,8 +49,8 @@ export default function ProductCollection() {
     }
   }, [activeSeries]);
 
-  useEffect (()=>{
-    const hash =window.location.hash?.replace('#', '');
+  useEffect(() => {
+    const hash = window.location.hash?.replace('#', '');
     if (hash && productSeriesData[hash]) {
       setActiveSeries(hash);
     }
@@ -64,7 +64,7 @@ export default function ProductCollection() {
         <section className="pc_icon_area" ref={iconAreaRef}>
           {/* 三角形指示器 */}
           <div
-            className="pc_triangle_indicator"
+            className={`pc_triangle_indicator triangle_${activeSeries}`}
             style={{ left: `${triangleX - 48}px` }}
           />
           {iconList.map(({ id, label, icon }) => (
@@ -81,7 +81,7 @@ export default function ProductCollection() {
         </section>
 
         {/* ─── 商品區 ─────────────────────────── */}
-        <section className="pc_product_area">
+        <section className={`pc_product_area pc_bg_${activeSeries}`}>
           <section className="pc_products">
             {productSeriesData[activeSeries]?.products.map((p, idx) => (
               <div
@@ -101,7 +101,7 @@ export default function ProductCollection() {
 
                 <div className="pc_product_info">
                   <span className="pc_product_name">{p.name}</span>
-                  <span className="pc_product_price">{p.price}</span>
+                  <span className={`pc_product_price price_${activeSeries}`}>{p.price}</span>
                 </div>
 
                 <div className="pc_product_crystals">
@@ -115,10 +115,12 @@ export default function ProductCollection() {
 
           {/* ─── 系列介紹 ─────────────────────── */}
           <section className="pc_product_introduce">
-            <h5>{productSeriesData[activeSeries].name}</h5>
+            <h5 className={`pc_intro_title pc_intro_title_${activeSeries}`}>
+              {productSeriesData[activeSeries].name}
+            </h5>
             <img
               className="pc_divider_line"
-              src="/images/Product/deco-divider_blue.png"
+              src={`/images/Product/deco-divider_${activeSeries}.svg`}
               alt=""
             />
             {productSeriesData[activeSeries].description.map((line, i) => (

@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
 
-    color: #585858;
+    /* color: #585858; */
 
     font-family: "Noto Sans TC";
     font-size: 0.875rem;
@@ -28,21 +28,27 @@
     letter-spacing: 0.088rem;
 
     gap: 0.5rem;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2rem;
     /* max-width: 70.25rem; */
 }
   
-.bc_icon {
+/* .bc_icon {
     width: 1rem;
     object-fit: contain;
     margin: 0 0.5rem 0 1rem;
+} */
+.bc_link {
+    color: #726089;
 }
-  
 .bc_text {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+}
+.bc_current {
+    color: #8B63BA;
+    font-weight: 500;
 }
 
 .bc_text>a {
