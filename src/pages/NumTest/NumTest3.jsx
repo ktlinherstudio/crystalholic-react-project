@@ -5,6 +5,8 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
+// 生命靈數資料
 const characterData = {
     1: {
         number: "1",
@@ -38,6 +40,7 @@ const characterData = {
         crystaltext1: "金錢強強滾",
         crystaltext2: "工作神隊友",
         crystaltext3: "溝通表達力",
+        bracelet: "./images/Numtest/bracelet/bracelet1.png",
     },
     2: {
         number: "2",
@@ -71,6 +74,7 @@ const characterData = {
         crystaltext1: "人氣吸引機",
         crystaltext2: "戀愛桃花王",
         crystaltext3: "直覺開天眼",
+        bracelet: "./images/Numtest/bracelet/bracelet2.png",
     },
     3: {
         number: "3",
@@ -104,6 +108,7 @@ const characterData = {
         crystaltext1: "點子製造機",
         crystaltext2: "內心靜音器",
         crystaltext3: "避邪防小人",
+        bracelet: "./images/Numtest/bracelet/bracelet3.png",
     },
     4: {
         number: "4",
@@ -137,6 +142,7 @@ const characterData = {
         crystaltext1: "智慧增強器",
         crystaltext2: "工作神隊友",
         crystaltext3: "心靈超療癒",
+        bracelet: "./images/Numtest/bracelet/bracelet3.png",
     },
     5: {
         number: "5",
@@ -170,6 +176,7 @@ const characterData = {
         crystaltext1: "避邪防小人",
         crystaltext2: "行動開外掛",
         crystaltext3: "理性大腦派",
+        bracelet: "./images/Numtest/bracelet/bracelet4.png",
     },
     6: {
         number: "6",
@@ -203,6 +210,7 @@ const characterData = {
         crystaltext1: "直覺開天眼",
         crystaltext2: "潛能大爆發",
         crystaltext3: "萬能淨化王",
+        bracelet: "./images/Numtest/bracelet/bracelet2.png",
     },
     7: {
         number: "7",
@@ -236,6 +244,7 @@ const characterData = {
         crystaltext1: "潛能大爆發",
         crystaltext2: "溝通表達力",
         crystaltext3: "人氣甜甜圈",
+        bracelet: "./images/Numtest/bracelet/bracelet1.png",
     },
     8: {
         number: "8",
@@ -269,6 +278,7 @@ const characterData = {
         crystaltext1: "事業守護神",
         crystaltext2: "心靈超療癒",
         crystaltext3: "目標衝衝衝",
+        bracelet: "./images/Numtest/bracelet/bracelet4.png",
     },
     9: {
         number: "9",
@@ -302,21 +312,21 @@ const characterData = {
         crystaltext1: "避邪防小人",
         crystaltext2: "自信開外掛",
         crystaltext3: "情傷修補師",
+        bracelet: "./images/Numtest/bracelet/bracelet2.png",
     },
 };
 
 
 
-
 export default function NumTest3() {
     const navigate = useNavigate();
-    const [lifeNumber, setLifeNumber] = useState(1);          
+    const [lifeNumber, setLifeNumber] = useState(1);
 
     useEffect(() => {
         const stored = sessionStorage.getItem('lifePathNumber');
         if (stored) {
-            const parsed = parseInt(stored, 10);                  
-            if (!isNaN(parsed) && characterData[parsed]) {        
+            const parsed = parseInt(stored, 10);
+            if (!isNaN(parsed) && characterData[parsed]) {
                 setLifeNumber(parsed);
             }
         }
@@ -430,7 +440,7 @@ export default function NumTest3() {
                                 </div>
                                 <Link to="/Product">
                                     <div className="bracelet-box">
-                                        <img className="bracelet" src={`./images/Numtest/bracelet-num${data.number}.png`} alt="bracelet" />
+                                        <img className="bracelet" src={data.bracelet} alt="bracelet" />
                                     </div>
                                 </Link>
                             </div>
