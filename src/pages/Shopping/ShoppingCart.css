@@ -66,6 +66,7 @@
 
 /* ---------- 共用區 ----------  */
 /* 列表頭共用文字 */
+.cart_table_head_1,
 .cart_table_head,
 .cart_table_head span,
 .cart_shopping_tip {
@@ -107,27 +108,39 @@
     flex-direction: column;
     overflow: hidden; /* 讓圓角不要被子元素溢出破壞 */
 
-    gap: 0.625rem;/* 10px */
-    padding-bottom: 0.625rem;/* 10px */
+    gap: 1rem;
+    padding-bottom: 1rem;
 }
 
 /* 列表 */
-.cart_purchase_items .cart_card .cart_table_head {
+.cart_table_head_1,
+.cart_purchase_items .cart_table_row  {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 40px;
+    grid-template-columns: 280px 1fr 1fr 1fr 1fr 40px;
     align-items: center;
-    padding: 0 2.188rem;/* 35px */
+    padding: 0 2.188rem;
 
+    /* background: #A67CEB; */
+}
+.cart_table_head_1 {
+    /* display: flex; */
+    /* align-items: center; */
+    height: 3.125rem; /* 50px */
+
+    background: #A67CEB;
+}
+
+.cart_table_head{
     background: #A67CEB;
 }
 
 /* 單一商品列(1)(2) */
 .cart_table_row {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 40px;
-    align-items: center;
+    align-items: center; */
     height: 6.25rem;/* 100px */
-    padding: 0 2.188rem;/* 35px */
+    /* padding: 0 2.188rem; */
 
     color: #585858;
 }
@@ -192,24 +205,31 @@
 /* 繼續購物  */
 .cart_shopping_tip {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.313rem;/* 5px */
+    color: #8750BF;
+    padding-bottom: 1rem;
 
-    color: #585858;
-    text-align: center;
+    text-decoration: none; /* 確保預設沒有底線 */
+    transition: color 0.3s ease;
 }
+.cart_shopping_tip:hover {
+    text-decoration: underline;
+  }
+.cart_continue_shopping { 
+    display: flex;
+    align-items: center;
 
-.cart_continue_shopping,
-.cart_num_items {
+    position: relative;
     background: none;
     border: none;
     cursor: pointer;
-}
 
-.cart_continue_shopping {
-    text-decoration: underline;
+    color: #8750BF;
+}
+.cart_toggle_icon {
+    width: 15px;
+    height: 15px;
 }
 
 .cart_num_items {
