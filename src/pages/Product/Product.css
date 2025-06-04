@@ -242,6 +242,16 @@
     width: 2.3rem;
     color: #A67CEB;
 }
+.p_product_size button:hover,
+.p_product_hand button:hover {
+  background-color: #D4C0F1;
+  color: #FFFFFF;
+}
+.p_product_size button.active,
+.p_product_hand button.active {
+  background-color: #A67CEB; 
+  color: #FFFFFF;            
+}
 
 /* 數量 + / − */
 .p_product_qty,
@@ -302,7 +312,6 @@
     line-height: 150%; 
     letter-spacing: 0.1rem;/* 1.6px */
 }
-
 /* ────────── Collection 區 ───────────────────── */
 .p_collection{
     color: #FFF;

@@ -1,15 +1,23 @@
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
+
+/* 🆕 取得購物車內容 */
+import { useCart } from '../pages/Shopping/CartContext.jsx';
+
 import './NavBarLight2.css';
 
 export default function NavBarLight() {
   const { isLoggedIn, logout, user } = useAuth();
+  const { openMenu } = useUI();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { openMenu } = useUI();
+
+  /* 🆕 計算購物車總件數 */
+  const { cartItems } = useCart();
+  const totalQty = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleMemberClick = () => {
     if (isLoggedIn) {
@@ -19,9 +27,7 @@ export default function NavBarLight() {
     }
   };
 
-  const handleLoginSuccess = () => {
-    setShowAuthModal(false);
-  };
+  const handleLoginSuccess = () => setShowAuthModal(false);
 
   return (
     <>
@@ -29,22 +35,29 @@ export default function NavBarLight() {
         <Link className="logo" to="/">
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
+
         <nav className="navigation">
           <ul className="icon">
-            <li><a href="#"><img src="./images/S-NavBar/navicon_search.svg" alt="Search" /></a></li>
             <li>
+              <a href="#"><img src="./images/S-NavBar/navicon_search.svg" alt="Search" /></a>
+            </li>
+
+            {/* 🆕 購物車 icon + 數量徽章 */}
+            <li className="cart-li" style={{ position: 'relative' }}>
               <Link to="/ShoppingCart">
                 <img src="./images/S-NavBar/navicon_cart.svg" alt="Cart" />
+                {totalQty > 0 && (
+                  <span className="cart-badge">
+                    {totalQty > 99 ? '99+' : totalQty}
+                  </span>
+                )}
               </Link>
             </li>
+
+            {/* 會員區 */}
             <li style={{ position: 'relative' }}>
               <button className="member-button" onClick={handleMemberClick}>
-                <img
-                  src="./images/S-NavBar/navicon_member.svg"
-                  alt="Member"
-                  width="30"
-                  height="30"
-                />
+                <img src="./images/S-NavBar/navicon_member.svg" alt="Member" />
               </button>
 
               {isLoggedIn && showDropdown && (
@@ -59,6 +72,7 @@ export default function NavBarLight() {
                 </div>
               )}
             </li>
+
             <li>
               <button
                 className="icon-menu"

@@ -267,6 +267,8 @@
       /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(209, 235, 240) 0%, rgba(209, 235, 240, 0.00) 100%),
       /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(209, 235, 240) 0%, rgba(209, 235, 240, 0.00) 100%);
     background-color: #DCEFEF;
+    background-repeat: repeat;
+    background-size: cover;
 }
 .triangle_blue {
     background:url(../images/S-Background/bg-noise-light.png),#DCEFEF;
@@ -288,6 +290,8 @@
       /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(255, 219, 180) 0%, rgba(255, 219, 180, 0.00) 100%),
       /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(255, 219, 180) 0%, rgba(255, 219, 180, 0.00) 100%);
     background-color: #FBECD5;
+    background-repeat: repeat;
+    background-size: cover;
 }
 .triangle_adventure {
     background:url(../images/S-Background/bg-noise-light.png),#FBECD5;
@@ -309,6 +313,8 @@
       /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%),
       /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%);
     background-color: #EDF4D4;
+    background-repeat: repeat;
+    background-size: cover;
 }
 .triangle_seasons {
     background:url(../images/S-Background/bg-noise-light.png),#EDF4D4;
@@ -330,6 +336,8 @@
       /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(255, 206, 197) 0%, rgba(255, 206, 197, 0.00) 100%),
       /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(255, 206, 197) 0%, rgba(255, 206, 197, 0.00) 100%);
     background-color: #FDE7E7;
+    background-repeat: repeat;
+    background-size: cover;
 }
 .triangle_cocktail {
     background:url(../images/S-Background/bg-noise-light.png),#FDE7E7;
