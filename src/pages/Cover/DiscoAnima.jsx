@@ -47,11 +47,34 @@ export default function Cover() {
     return (
         <>
             <section id="section-crystaldiscovery">
+                {/* 版2 */}
                 <div className="crystal-display">
+                    <div className="circlebox">
+                        {crystals.map((id) => (
+                            <div className='circle' key={id}>
+                                <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
+                            </div>
+                        ))}
+                    </div>
+                    {/* <div id='crystalbtn'> */}
+                    <div className='ver4'>
+                        <button id='circleup' onClick={handleUp}>
+                            <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
+                        </button>
+                        <button id='circledown' onClick={handleDown}>
+                            <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
+                        </button>
+                    </div>
+                    {/* </div> */}
+                </div>
+
+                {/* 版1 */}
+                {/* <div className="crystal-display">
                     <div className="circlebox">
                         {crystals.map((id, index) => (
                             <div className='circle' key={id}>
-                                {index === 0 ? (
+                                {index === 0 ?
+                                 (
                                     <div className='withbtn'>
                                         <button id='circleup' onClick={handleUp}>
                                             <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
@@ -63,13 +86,15 @@ export default function Cover() {
                                             <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
                                         </button>
                                     </div>
-                                ) : (
+                                ) 
+                                :
+                                 (
                                     <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
                                 )}
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* 顯示對應水晶資訊 */}
                 <div className="section-crystaldiscovery">

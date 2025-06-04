@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,7 +18,7 @@ import CoverTest0528 from './pages/Cover/CoverTest0528';
 import TarotCard0528 from './pages/Cover/TarotCard0528';
 import TarotCard0529 from './pages/Cover/TarotCard0529';
 import FeedBack from './pages/Cover/FeedBack';
-import FeedBackCarousel from './pages/Cover/FeedbackCarousel';
+// import FeedBackCarousel from './pages/Cover/FeedbackCarousel';
 import Disco from './pages/Cover/Disco';
 import DiscoAnima from './pages/Cover/DiscoAnima';
 
@@ -58,7 +58,7 @@ export default function App() {
                 <Route path="/TarotCard0528" element={<TarotCard0528 />} />
                 <Route path="/TarotCard0529" element={<TarotCard0529 />} />
                 <Route path="/FeedBack" element={<FeedBack />} />
-                <Route path="/FeedBack" element={<FeedBackCarousel />} />
+                {/* <Route path="/FeedBack" element={<FeedBackCarousel />} /> */}
                 <Route path="/Disco" element={<Disco />} />
                 <Route path="/DiscoAnima" element={<DiscoAnima />} />
                 {/* <Route path="/CoverFeedbackBs" element={<CoverFeedbackBs />} /> */}
