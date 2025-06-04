@@ -56,6 +56,25 @@ export default function ProductCollection() {
     }
   }, []);
 
+  useEffect(() => {
+    // 預載每個系列的主圖與水晶圖
+    Object.values(productSeriesData).forEach(series => {
+      series.products.forEach(product => {
+        // 預載主圖
+        const img = new Image();
+        img.src = product.image;
+  
+        // 預載水晶圖
+        if (Array.isArray(product.crystals)) {
+          product.crystals.forEach(src => {
+            const crystalImg = new Image();
+            crystalImg.src = src;
+          });
+        }
+      });
+    });
+  }, []);
+
   return (
     <>
       <NavBarWrapper variant="dark" />

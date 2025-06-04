@@ -19,6 +19,10 @@ export default function Product() {
     setIsFav(false);
   }, [seriesKey, productIndex]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [seriesKey, productIndex]);
+
   if (!product) return <div>商品不存在</div>;
 
   const handleFavClick = (e) => {
@@ -53,6 +57,28 @@ export default function Product() {
       index: productSeriesData[randomSeriesKey].products.findIndex(prod => prod.name === randomProduct.name),
     },
   ];
+
+  useEffect(() => {
+    // 預載推薦商品圖片
+    const preloadImages = () => {
+      const allSeries = Object.values(productSeriesData);
+      allSeries.forEach(series => {
+        series.products.forEach(product => {
+          const img = new Image();
+          img.src = product.image;
+  
+          if (Array.isArray(product.crystals)) {
+            product.crystals.forEach(src => {
+              const crystalImg = new Image();
+              crystalImg.src = src;
+            });
+          }
+        });
+      });
+    };
+  
+    preloadImages();
+  }, []);
 
   return (
     <>
