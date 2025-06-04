@@ -193,8 +193,41 @@ export default function Product() {
             </div>
           </div>
         </section>
+
+        {/* 推薦商品區 */}
+        <section className="p_collection">
+          <BgDark />
+          <h1 className="p_collection_title">✦&nbsp;&nbsp;Recommended&nbsp;&nbsp;✦</h1>
+
+          <div className="p_collection_products">
+            {recommendedProducts.map((item, idx) => (
+              <Link
+                to={`/Product/${item.seriesKey}/${item.index}`}
+                className="p_product_card"
+                key={idx}
+              >
+                <div className="p_product_img_wrap">
+                  {/* <div className="p_fav_icon" /> */}
+                  <img className="p_product_img" src={item.image} alt={item.name} />
+                </div>
+                <div className="p_product_info">
+                  <span className="p_product_name">{item.name}</span>
+                  <span className="p_product_price">{item.price}</span>
+                </div>
+                <div className="p_product_crystals">
+                  {item.crystals.map((src, i) => (
+                    <img key={i} className="ps_crystal_img" src={src} alt="水晶名稱" />
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
       </main>
-      <FooterTrn />
+
+      <footer className="p_footer">
+        <FooterTrn />
+      </footer>
     </>
   );
 }

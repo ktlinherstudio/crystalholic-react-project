@@ -302,13 +302,16 @@
 .price_adventure {
     color: #A5520D;
 }
+.pc_shadow_adventure {
+    box-shadow: 0 0 15px 0 rgba(255, 218, 179, 0.8);
+}
   
 /* 四季琉波背景 */
 .pc_bg_seasons {
     background:
       url(../images/S-Background/bg-noise-light.png),
       /* 左中 */ radial-gradient(circle 60vw at 10% 48%, rgba(196, 248, 255, 0.35) 0%, rgba(196, 248, 255, 0.00) 100%),
-      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%),
+      /* 左下 */ radial-gradient(circle 70vw at 7% 96%, rgb(177, 220, 194) 0%, rgba(196, 241, 214, 0.00) 100%),
       /* 上方 */ radial-gradient(circle 30vw at 75% 30%, rgba(196, 248, 255, 0.35) 0%, rgba(196, 248, 255, 0.00) 100%),
       /* 右上 */ radial-gradient(circle 30vw at 100% 38%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%),
       /* 右下 */ radial-gradient(circle 70vw at 75% 100%, rgb(196, 241, 214) 0%, rgba(196, 241, 214, 0.00) 100%);
@@ -325,6 +328,10 @@
 .price_seasons {
     color: #0D7A5F;
 }
+.pc_shadow_seasons {
+    box-shadow: 0 0 15px 0 rgba(196, 241, 214, 0.8);
+}
+
   
 /* 微醺晶釀背景 */
 .pc_bg_cocktail {
@@ -347,5 +354,8 @@
 }
 .price_cocktail {
     color: #BE3B16;
+}
+.pc_shadow_cocktail {
+    box-shadow: 0 0 15px 0 rgba(255, 206, 197, 0.8);
 }
   
