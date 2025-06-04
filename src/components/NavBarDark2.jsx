@@ -1,15 +1,23 @@
-import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
 import { useAuth } from '../context/AuthContext';
 import { useUI } from '../context/UIContext';
+
+/* 🆕 取得購物車內容 */
+import { useCart } from '../pages/Shopping/CartContext.jsx';
+
 import './NavBarDark2.css';
 
 export default function NavBarDark() {
   const { isLoggedIn, logout, user } = useAuth();
+  const { openMenu } = useUI();
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const { openMenu } = useUI();
+
+  /* 🆕 計算購物車總件數 */
+  const { cartItems } = useCart();
+  const totalQty = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   const handleMemberClick = () => {
     if (isLoggedIn) {
@@ -19,24 +27,32 @@ export default function NavBarDark() {
     }
   };
 
-  const handleLoginSuccess = () => {
-    setShowAuthModal(false);
-  };
+  const handleLoginSuccess = () => setShowAuthModal(false);
 
   return (
     <>
       <header id="navbar2">
-        <Link className="logo" to="/">
+        <Link className="logo2" to="/">
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
+
         <nav className="navigation2">
           <ul className="icon2">
             <li><a href="#" className="icon-search"></a></li>
-            <li>
+
+            {/* 🆕 購物車 icon + 數量徽章 */}
+            <li className="cart-li" style={{ position: 'relative' }}>
               <Link to="/ShoppingCart">
                 <img src="./images/S-NavBar/navicon_cart.svg" alt="Cart" />
+                {totalQty > 0 && (
+                  <span className="cart-badge">
+                    {totalQty > 99 ? '99+' : totalQty}
+                  </span>
+                )}
               </Link>
             </li>
+
+            {/* 會員區 */}
             <li style={{ position: 'relative' }}>
               <button className="member-button2" onClick={handleMemberClick}>
                 <a className="icon-member" href="#"></a>
@@ -54,11 +70,15 @@ export default function NavBarDark() {
                 </div>
               )}
             </li>
+
             <li>
-              <button className="icon-menu" onClick={() => {
-                console.log('✅ 漢堡選單點到了');
-                openMenu();
-              }}></button>
+              <button
+                className="icon-menu"
+                onClick={() => {
+                  console.log('✅ 漢堡選單點到了');
+                  openMenu();
+                }}
+              ></button>
             </li>
           </ul>
         </nav>

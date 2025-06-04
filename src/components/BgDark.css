@@ -37,7 +37,7 @@
       var(--gradientColor,.1) 100%),
 
     /* 7️⃣ 噪點材質圖 */
-    url(../images/S-Background/bg-noise-light.png),
+    /* url(../images/S-Background/bg-noise-light.png), */
 
     /* 8️⃣ 原本的線性漸層底色 */
     linear-gradient(40deg,var(--color-bg1),var(--color-bg2));
@@ -119,8 +119,10 @@
 /* ---------- noise overlay ---------- */
 .gradient-bg::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:1;
-  background:rgba(157,12,12,.18);
-  filter:url(#f);
+  background: url(../images/S-Background/noise-background.jpg);
+  opacity: .25;
+  /* background:rgba(157,12,12,.18);
+  filter:url(#f); */
   mix-blend-mode:multiply;
 }
 
