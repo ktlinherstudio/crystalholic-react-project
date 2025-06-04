@@ -14,11 +14,14 @@ import './css/index.css'
 import App from './App.jsx'
 // import React from 'react';
 
+import { CartProvider } from './pages/Shopping/CartContext.jsx';
 
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </StrictMode>,
 )

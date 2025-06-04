@@ -67,7 +67,8 @@
 /* ---------- 共用區 ----------  */
 /* 列表頭共用文字 */
 .cart_table_head,
-.cart_table_head span {
+.cart_table_head span,
+.cart_shopping_tip {
     /* 中文/思源黑體/內文1 */
     font-family: "Noto Sans TC";
     font-size: 1rem;/* 16px */
@@ -107,7 +108,7 @@
     overflow: hidden; /* 讓圓角不要被子元素溢出破壞 */
 
     gap: 0.625rem;/* 10px */
-    padding-bottom: 1.563rem;/* 25px */
+    padding-bottom: 0.625rem;/* 10px */
 }
 
 /* 列表 */

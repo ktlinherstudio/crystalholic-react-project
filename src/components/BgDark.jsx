@@ -30,14 +30,14 @@ export default function BgDark() {
                         </filter>
 
                         {/* 噪點 — ★ safari-fix ★ */}
-                        <filter id="f">
+                        {/* <filter id="f">
                             <feTurbulence type="fractalNoise"
                                 baseFrequency="0.8"  
                                 numOctaves="4"        
                                 seed="7"
                                 stitchTiles="stitch" />
                             <feColorMatrix type="saturate" values="0" />
-                        </filter>
+                        </filter> */}
                     </defs>
                 </svg>
                 <div className="gradients-container">

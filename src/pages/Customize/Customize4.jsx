@@ -564,6 +564,24 @@ export default function Customize4() {
   //特殊訂製需求
   const [customRequest, setCustomRequest] = useState('');
 
+  //右側按鈕點擊效果
+  const [activePanel, setActivePanel] = useState(null);
+  const handlePanelClick = (panelName) => {
+    // 強制重觸動畫：每次點擊都會先設 null 再設值
+    setOpenPanel(null);
+    setActivePanel(panelName); // 不要設 null，這樣 icon 還會亮
+    setTimeout(() => {
+      setOpenPanel(panelName);
+    }, 20); // 小延遲讓 React 有時間 unmount
+  };
+
+
+  //是否清除的modal
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const handleConfirmClear = () => {
+    handleClearBracelet();
+    setShowConfirmModal(false); // 關掉 modal
+  };
 
 
   return (
@@ -714,7 +732,10 @@ export default function Customize4() {
               });
             })()}
             <div className={style.iconBox1}>
-              <div className={style.btnDel} onClick={handleClearBracelet}></div>
+              <div
+                className={style.btnDel}
+                onClick={() => setShowConfirmModal(true)}
+              ></div>
               <div className={style.btnSave} onClick={handleSaveBracelet}></div>
             </div>
           </div>
@@ -723,31 +744,40 @@ export default function Customize4() {
               className={style.price}
               type="text"
               placeholder="價錢"
-              value={braceletPrice === 0 ? "自動計算價格" : `${braceletPrice} 元`}
+              value={braceletPrice === 0 ? "自動計算價格" : `NT$${braceletPrice}`}
               readOnly
             />
           </div>
         </div>
         <div className={style.iconBox2}>
           <div className={style.icon1Box}>
-            <div className={style.icon1} onClick={() => setOpenPanel("measure")}>
-              <div className={style.iconBtn1}></div><p>手圍測量</p>
+            <div className={style.icon1} onClick={() => handlePanelClick("measure")}>
+              <div className={`${style.iconBtn1} ${activePanel === "measure" ? style.active : ""}`}></div>
+              <p>手圍測量</p>
             </div>
             <hr className={style.line2} />
-            <div className={style.icon1} onClick={() => setOpenPanel("result")}>
-              <div className={style.iconBtn2}></div><p>測驗結果</p>
+
+            <div className={style.icon1} onClick={() => handlePanelClick("result")}>
+              <div className={`${style.iconBtn2} ${activePanel === "result" ? style.active : ""}`}></div>
+              <p>測驗結果</p>
             </div>
             <hr className={style.line2} />
-            <div className={style.icon1} onClick={() => setOpenPanel("wiki")}>
-              <div className={style.iconBtn3}></div><p>水晶百科</p>
+
+            <div className={style.icon1} onClick={() => handlePanelClick("wiki")}>
+              <div className={`${style.iconBtn3} ${activePanel === "wiki" ? style.active : ""}`}></div>
+              <p>水晶百科</p>
             </div>
             <hr className={style.line2} />
-            <div className={style.icon1} onClick={() => setOpenPanel("note")}>
-              <div className={style.iconBtn4}></div><p>注意事項</p>
+
+            <div className={style.icon1} onClick={() => handlePanelClick("note")}>
+              <div className={`${style.iconBtn4} ${activePanel === "note" ? style.active : ""}`}></div>
+              <p>注意事項</p>
             </div>
             <hr className={style.line2} />
-            <div className={style.icon1} onClick={() => setOpenPanel("custom")}>
-              <div className={style.iconBtn5}></div><p>特別訂製</p>
+
+            <div className={style.icon1} onClick={() => handlePanelClick("custom")}>
+              <div className={`${style.iconBtn5} ${activePanel === "custom" ? style.active : ""}`}></div>
+              <p>特別訂製</p>
             </div>
           </div>
 
@@ -765,7 +795,10 @@ export default function Customize4() {
               className={style.panelContent}
             >
               <div className={style.closeBtnWrapper}>
-                <button className={style.closeBtn} onClick={() => setOpenPanel(null)}>✕</button>
+                <button className={style.closeBtn} onClick={() => {
+                  setOpenPanel(null);
+                  setActivePanel(null);
+                }}>✕</button>
               </div>
 
               {openPanel === "measure" && (
@@ -953,7 +986,7 @@ export default function Customize4() {
                     />
 
                     <button
-                        className={style.wikiBtn}
+                      className={style.wikiBtn}
                       onClick={() => {
                         if (customRequest.trim()) {
                           alert("特別訂製需求已送出，我們將於五個工作天內與您聯繫！");
@@ -975,7 +1008,17 @@ export default function Customize4() {
           </div>
         )}
 
-
+{showConfirmModal && (
+  <div className={style.modalOverlay}>
+    <div className={style.modalContent}>
+      <p>確定要清除整條手鍊嗎？</p>
+      <div className={style.modalButtons}>
+        <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
+        <button onClick={() => setShowConfirmModal(false)}>取消</button>
+      </div>
+    </div>
+  </div>
+)}
       </main>
     </>
   )

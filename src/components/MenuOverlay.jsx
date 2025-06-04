@@ -5,6 +5,7 @@ import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useState } from 'react';
 import LoginRegisterModal from './LoginRegisterModal/LoginRegisterModal';
+import BgDarkBlock from './BgDarkBlock';
 
 export default function MenuOverlay() {
   const { isLoggedIn } = useAuth();
@@ -20,6 +21,7 @@ export default function MenuOverlay() {
     <>
       <div className={`menu-overlay ${isMenuOpen ? 'open' : ''}`}>
         <div className='menu-bg-img'>
+          <div className="menu-wrapper"><BgDarkBlock /></div>
           <div className="menu-panel">
             <span className="menu-closebtn" onClick={closeMenu}>
               <img src="./images/S-NavBar/navicon_closebgrbtn.svg" alt="close" />

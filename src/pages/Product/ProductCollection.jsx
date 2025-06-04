@@ -49,11 +49,30 @@ export default function ProductCollection() {
     }
   }, [activeSeries]);
 
-  useEffect (()=>{
-    const hash =window.location.hash?.replace('#', '');
+  useEffect(() => {
+    const hash = window.location.hash?.replace('#', '');
     if (hash && productSeriesData[hash]) {
       setActiveSeries(hash);
     }
+  }, []);
+
+  useEffect(() => {
+    // 預載每個系列的主圖與水晶圖
+    Object.values(productSeriesData).forEach(series => {
+      series.products.forEach(product => {
+        // 預載主圖
+        const img = new Image();
+        img.src = product.image;
+  
+        // 預載水晶圖
+        if (Array.isArray(product.crystals)) {
+          product.crystals.forEach(src => {
+            const crystalImg = new Image();
+            crystalImg.src = src;
+          });
+        }
+      });
+    });
   }, []);
 
   return (
@@ -64,7 +83,7 @@ export default function ProductCollection() {
         <section className="pc_icon_area" ref={iconAreaRef}>
           {/* 三角形指示器 */}
           <div
-            className="pc_triangle_indicator"
+            className={`pc_triangle_indicator triangle_${activeSeries}`}
             style={{ left: `${triangleX - 48}px` }}
           />
           {iconList.map(({ id, label, icon }) => (
@@ -81,7 +100,7 @@ export default function ProductCollection() {
         </section>
 
         {/* ─── 商品區 ─────────────────────────── */}
-        <section className="pc_product_area">
+        <section className={`pc_product_area pc_bg_${activeSeries}`}>
           <section className="pc_products">
             {productSeriesData[activeSeries]?.products.map((p, idx) => (
               <div
@@ -89,7 +108,7 @@ export default function ProductCollection() {
                 className="pc_product_card"
                 onClick={() => handleClickCard(activeSeries, idx)}
               >
-                <div className="pc_product_img_wrap">
+                <div className={`pc_product_img_wrap pc_shadow_${activeSeries}`}>
                   {/* <div
                     className={`pc_fav_icon ${favorites[idx] ? 'clicked' : ''}`}
                     onClick={e => toggleFavorite(e, idx)}
@@ -101,7 +120,7 @@ export default function ProductCollection() {
 
                 <div className="pc_product_info">
                   <span className="pc_product_name">{p.name}</span>
-                  <span className="pc_product_price">{p.price}</span>
+                  <span className={`pc_product_price price_${activeSeries}`}>{p.price}</span>
                 </div>
 
                 <div className="pc_product_crystals">
@@ -115,10 +134,12 @@ export default function ProductCollection() {
 
           {/* ─── 系列介紹 ─────────────────────── */}
           <section className="pc_product_introduce">
-            <h5>{productSeriesData[activeSeries].name}</h5>
+            <h5 className={`pc_intro_title pc_intro_title_${activeSeries}`}>
+              {productSeriesData[activeSeries].name}
+            </h5>
             <img
               className="pc_divider_line"
-              src="/images/Product/deco-divider_blue.png"
+              src={`/images/Product/deco-divider_${activeSeries}.svg`}
               alt=""
             />
             {productSeriesData[activeSeries].description.map((line, i) => (
