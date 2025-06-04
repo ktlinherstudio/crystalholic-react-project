@@ -701,8 +701,27 @@
     align-items: flex-start;
 }
 
+.panelInner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.panelHeader {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 1rem 1rem 0 1rem;
+}
+
+
 .panelContent {
     pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     /* ← 保留互動功能*/
     position: absolute;
     width: 18.75rem;
@@ -716,11 +735,33 @@
     backdrop-filter: blur(2px);
     padding: 0rem 1.2rem 2rem;
     animation: slideIn 0.3s ease forwards;
-    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #FFF #E4DEED;
 }
 
+.overlayContent {
+  flex: 1;
+  overflow-y: scroll; 
+  padding: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #fff #E4DEED;
+}
+
+.overlayContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overlayContent::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.overlayContent::-webkit-scrollbar-thumb {
+  background-color: #C3B7DD;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
 
 
 .panelTitle {

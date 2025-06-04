@@ -579,8 +579,17 @@ export default function Customize4() {
     setBraceletPrice(total); // 顯示在輸入欄位
   }, [braceletBeads, crystalPlacement, selectedMetalImage]);
 
-  // 生命靈數測驗結果導入推薦水晶
-  const lifePathNumber = 7;
+
+  //取得生命靈數結果導入推薦水晶
+  const [lifePathNumber, setLifePathNumber] = useState(null);
+
+  useEffect(() => {
+    const storedLifePath = sessionStorage.getItem('lifePathNumber');
+    if (storedLifePath) {
+      setLifePathNumber(Number(storedLifePath));
+    }
+  }, []);
+
 
   //特殊訂製需求
   const [customRequest, setCustomRequest] = useState('');
@@ -604,6 +613,16 @@ export default function Customize4() {
     setShowConfirmModal(false); // 關掉 modal
   };
 
+  //展開水晶百科分類
+  const [expandedCategories, setExpandedCategories] = useState([]);
+
+  const toggleCategory = (category) => {
+    setExpandedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
+  };
 
   return (
     <>
@@ -730,8 +749,8 @@ export default function Customize4() {
                     key={index}
                     onClick={() => handleBeadClick(index)}
                     className={`${isMetal ? style.pearlSmall : style.pearlBig} ${Array.isArray(selectedBeadIndexes) && selectedBeadIndexes.includes(index)
-                        ? style.selectedBead
-                        : ''
+                      ? style.selectedBead
+                      : ''
                       }`}
                     style={{
                       backgroundImage: crystalPlacement[index]
@@ -827,11 +846,12 @@ export default function Customize4() {
 
               {openPanel === "measure" && (
                 <div>
-                  <h2 className={style.panelTitle}>✦ 手圍測量 ✦</h2>
+                  <div className={style.panelHeader}>
+                    <h2 className={style.panelTitle}>✦ 手圍測量 ✦</h2>
+                    <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  </div>
 
-                  <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
                   <div className={style.overlayContent}>
-
                     <p>▸ 測量位置：手腕最細處</p>
                     <div>
                       <div style={{ display: "flex", alignItems: "center", marginBottom: "0.5rem" }}>
@@ -879,14 +899,15 @@ export default function Customize4() {
 
               {openPanel === "note" && (
                 <div className={style.panelInner}>
-                  <h2 className={style.panelTitle}>✦ 注意事項 ✦</h2>
-                  <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
-
+                  <div className={style.panelHeader}>
+                    <h2 className={style.panelTitle}>✦ 注意事項 ✦</h2>
+                    <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  </div>
                   <div className={style.overlayContent}>
                     <p>▸ 客製商品需 先付款 才會開始製作，請耐心等待製作時間約 5–7 個工作天。</p>
                     <p>▸ 實品顏色可能因 螢幕顯示設定 略有差異，請以實品為準。</p>
                     <p>▸ 如需修改手圍尺寸，將酌收材料與工本費，請事先聯繫客服確認是否可調整。</p>
-                    <p>▸ 天然水晶每顆顏色深淺與紋理皆不相同，無法指定。</p>
+                    <p>▸ 天然水晶每顆長得都不太一樣，顏色深淺、紋理都是大自然給的驚喜，沒辦法指定喔！</p>
                     <p>▸ 若有斷裂或非人為瑕疵，可於七日內聯繫我們。</p>
                     <p style={{ color: "#A67CEB" }}>
                       若需特殊設計／包裝／尺寸，請選擇「特別訂製」填寫說明
@@ -897,26 +918,26 @@ export default function Customize4() {
 
               {openPanel === "result" && (
                 <div className={style.panelInner}>
-                  <h2 className={style.panelTitle}>✦ 測驗結果 ✦</h2>
-                  <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  <div className={style.panelHeader}>
+                    <h2 className={style.panelTitle}>✦ 測驗結果 ✦</h2>
+                    <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  </div>
                   <div className={style.overlayContent}>
                     {!lifePathNumber ? (
-                      // 若尚未測驗，顯示前往測驗按鈕
                       <button
                         onClick={() => window.open('/numtest2', '_blank')}
-                        className={style.testButton}
+                        className={style.button}
+                        style={{ marginTop: "1.5rem" }}
                       >
-                        🔮 前往進行生命靈數測驗
+                        前往進行生命靈數測驗
                       </button>
                     ) : (
-                      // 有測驗結果，顯示對應資料
                       <>
                         <p>你的生命靈數是 <strong style={{ color: "#8750BF" }}>{lifePathNumber} 號人</strong>。</p>
-                        <p style={{ marginBottom: "1rem" }}>{resultCrystalMap[lifePathNumber].description}</p>
+                        <p style={{ marginBottom: "1rem" }}>{resultCrystalMap[lifePathNumber]?.description}</p>
 
                         <h3 className={style.panelTitle2}>✧ 推薦水晶 ✧</h3>
-
-                        {resultCrystalMap[lifePathNumber].crystals.map((crystal, index) => (
+                        {resultCrystalMap[lifePathNumber]?.crystals.map((crystal, index) => (
                           <div
                             key={index}
                             style={{
@@ -945,44 +966,76 @@ export default function Customize4() {
                           </div>
                         ))}
 
-
-
+                        <button
+                          className={style.button}
+                          style={{ marginTop: "1.5rem" }}
+                          onClick={() => {
+                            sessionStorage.removeItem("lifePathNumber");
+                            sessionStorage.removeItem("numtest2-completed");
+                            window.open("/numtest2", "_blank");
+                          }}
+                        >
+                          重新測驗
+                        </button>
                       </>
                     )}
-
                   </div>
                 </div>
               )}
+
               {openPanel === "wiki" && (
                 <div className={style.panelInner}>
-                  <h2 className={style.panelTitle}>✦ 水晶分類 ✦</h2>
-                  <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  <div className={style.panelHeader}>
+                    <h2 className={style.panelTitle}>✦ 水晶分類 ✦</h2>
+                    <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  </div>
                   <div className={style.overlayContent}>
                     {Object.entries(categorizedCrystalInfo).map(([category, crystals]) => (
-                      <div key={category}>
-                        <h3 className={style.panelTitle2}>✧ {category} ✧</h3>
-                        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", margin: "1rem 0" }}>
-                          {crystals.map((crystal, idx) => (
-                            <div key={idx} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                              <img
-                                src={crystal.image}
-                                alt={`${crystal.name} 圖片`}
-                                style={{
-                                  width: "3rem",
-                                  height: "3rem",
-                                  borderRadius: "999rem",
-                                  objectFit: "cover",
-                                }}
-                              />
-                              <div>
-                                <p style={{ margin: 0, fontWeight: 500, fontSize: 14, color: "#8750BF" }}>【{crystal.name}】</p>
-                                <p style={{ fontSize: "0.75rem", color: "#585858", paddingLeft: "0.5rem" }}>
-                                  {crystal.desc}
-                                </p>
-                              </div>
-                            </div>
-                          ))}
+                      <div key={category} style={{ marginBottom: "1.2rem" }}>
+                        <div
+                          onClick={() => toggleCategory(category)}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            cursor: "pointer",
+                            fontWeight: "600",
+                            color: "#8750BF",
+                            fontSize: "1rem",
+                            marginBottom: "0.3rem",
+                            fontFamily: "'Noto Sans TC', sans-serif",
+                            gap: "0.2rem",
+                            borderBottom: "1px solid #rgb(159, 116, 202)",
+                            paddingBottom:"0.5rem"
+                          }}
+                        >
+                          <span>{expandedCategories.includes(category) ? "▼" : "▶"}</span>
+                          ✧ {category} ✧
                         </div>
+
+                        {expandedCategories.includes(category) && (
+                          <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginLeft: "0.5rem" }}>
+                            {crystals.map((crystal, idx) => (
+                              <div key={idx} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+                                <img
+                                  src={crystal.image}
+                                  alt={`${crystal.name} 圖片`}
+                                  style={{
+                                    width: "3rem",
+                                    height: "3rem",
+                                    borderRadius: "999rem",
+                                    objectFit: "cover",
+                                  }}
+                                />
+                                <div>
+                                  <p style={{ margin: 0, fontWeight: 500, fontSize: 14, color: "#8750BF" }}>【{crystal.name}】</p>
+                                  <p style={{ fontSize: "0.75rem", color: "#585858", paddingLeft: "0.5rem" }}>
+                                    {crystal.desc}
+                                  </p>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
 
@@ -997,8 +1050,10 @@ export default function Customize4() {
               )}
               {openPanel === "custom" && (
                 <div className={style.panelInner}>
-                  <h2 className={style.panelTitle}>✦ 特別訂製 ✦</h2>
-                  <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  <div className={style.panelHeader}>
+                    <h2 className={style.panelTitle}>✦ 特別訂製 ✦</h2>
+                    <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
+                  </div>
                   <div className={style.overlayContent}>
                     <p style={{ marginBottom: "0.5rem" }}>請留下您的特殊訂製需求，我們將盡快聯繫您：</p>
 
@@ -1031,6 +1086,7 @@ export default function Customize4() {
             </div>
           </div>
         )}
+
 
         {showConfirmModal && (
           <div className={style.modalOverlay}>
