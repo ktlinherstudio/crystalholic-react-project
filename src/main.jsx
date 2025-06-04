@@ -1,7 +1,7 @@
 //先放套件才能把套件預設覆蓋掉
-bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ← 一定要加這行，才能啟用輪播功能！
+// bootstrap
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ← 一定要加這行，才能啟用輪播功能！
 
 // import Swiper JS
 // import Swiper from 'swiper';

@@ -43,7 +43,7 @@ export default function Cover() {
         const tarotDescriptions = [
         <div className="lbcontent">
             <h2 className="lbh2">沁藍之澗</h2>
-            <div><img src="./image/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -51,7 +51,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">金魚泡泡</h2>
-            <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -59,7 +59,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">沉睡王國的夢幻派對</h2>
-            <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -67,7 +67,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">北國雪森</h2>
-            <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -75,7 +75,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">薄荷之吻</h2>
-            <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -83,7 +83,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">極圈探險家</h2>
-            <div><img src="./image/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -92,12 +92,12 @@ export default function Cover() {
         ];
 
         const tarotImg = [
-        <img src="./images/HomePage/lbtc1.png" className="lbimg" alt="" />,
-        <img src="./images/HomePage/lbtc2.png" className="lbimg" alt="" />,
-        <img src="./images/HomePage/lbtc3.png" className="lbimg" alt="" />,
-        <img src="./images/HomePage/lbtc4.png" className="lbimg" alt="" />,
-        <img src="./images/HomePage/lbtc5.png" className="lbimg" alt="" />,
-        <img src="./images/HomePage/lbtc6.png" className="lbimg" alt="" />,
+        <img src="./images/HomePage/lbtc1.png" className="trimg" alt="" />,
+        <img src="./images/HomePage/lbtc2.png" className="trimg" alt="" />,
+        <img src="./images/HomePage/lbtc3.png" className="trimg" alt="" />,
+        <img src="./images/HomePage/lbtc4.png" className="trimg" alt="" />,
+        <img src="./images/HomePage/lbtc5.png" className="trimg" alt="" />,
+        <img src="./images/HomePage/lbtc6.png" className="trimg" alt="" />,
         ]
 
         const tarotBackImages = [
@@ -263,7 +263,7 @@ export default function Cover() {
                         <div className='lbborder1'>
                             <div className='lbborder2'>
                                 <button className="lightbox-close" onClick={closeLightbox}>×</button>
-                                <div>{tarotImg[selectedCardIndex]}</div>
+                                <div className='lbimg'>{tarotImg[selectedCardIndex]}</div>
                                 <div className="lightbox-text">{tarotDescriptions[selectedCardIndex]}</div>
                             </div>
                         </div>
@@ -290,20 +290,20 @@ export default function Cover() {
             </section>
 
             {/* 水晶小百科  */}
-            <section id="section-crystaldiscovery">
+             <section id="section-crystaldiscovery"> 
                 <div className="crystal-display">
                     <div className="circlebox">
                         {crystals.map((id, index) => (
                             <div className='circle' key={id}>
                                 {index === 0 ? (
                                     <div className='withbtn'>
-                                        <button id='circleup' onClick={handleUp}>
+                                        <button id='circledown' onClick={handleUp}>
                                             <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
                                         </button>
                                         <div>
                                             <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
                                         </div>
-                                        <button id='circledown' onClick={handleDown}>
+                                        <button id='circleup' onClick={handleDown}>
                                             <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
                                         </button>
                                     </div>
@@ -327,7 +327,7 @@ export default function Cover() {
                         {renderCrystalContent(currentCrystal)}
                     </div>
                 </div>
-            </section>
+            </section> 
             <BackToTopBtn />
 
             {/* 礦迷回饋 */}
@@ -430,7 +430,7 @@ export default function Cover() {
         </>
     )
 }
-
+ /*水晶小百科*/
 function renderCrystalContent(id) {
     const content = {
         'disc-kyanite': {
