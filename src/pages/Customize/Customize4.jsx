@@ -575,6 +575,15 @@ export default function Customize4() {
     }, 20); // 小延遲讓 React 有時間 unmount
   };
 
+
+  //是否清除的modal
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const handleConfirmClear = () => {
+    handleClearBracelet();
+    setShowConfirmModal(false); // 關掉 modal
+  };
+
+
   return (
     <>
       <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
@@ -723,7 +732,10 @@ export default function Customize4() {
               });
             })()}
             <div className={style.iconBox1}>
-              <div className={style.btnDel} onClick={handleClearBracelet}></div>
+              <div
+                className={style.btnDel}
+                onClick={() => setShowConfirmModal(true)}
+              ></div>
               <div className={style.btnSave} onClick={handleSaveBracelet}></div>
             </div>
           </div>
@@ -732,7 +744,7 @@ export default function Customize4() {
               className={style.price}
               type="text"
               placeholder="價錢"
-              value={braceletPrice === 0 ? "自動計算價格" : `${braceletPrice} 元`}
+              value={braceletPrice === 0 ? "自動計算價格" : `NT$${braceletPrice}`}
               readOnly
             />
           </div>
@@ -996,7 +1008,17 @@ export default function Customize4() {
           </div>
         )}
 
-
+{showConfirmModal && (
+  <div className={style.modalOverlay}>
+    <div className={style.modalContent}>
+      <p>確定要清除整條手鍊嗎？</p>
+      <div className={style.modalButtons}>
+        <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
+        <button onClick={() => setShowConfirmModal(false)}>取消</button>
+      </div>
+    </div>
+  </div>
+)}
       </main>
     </>
   )

@@ -151,6 +151,10 @@
     background: var(--color-primary4)
 }
 
+.button:hover {
+    background-color: #9763Ca;
+}
+
 .button.active {
     background-color: #6e3bbf;
 }
@@ -840,4 +844,87 @@
     font-family: "Noto Sans TC", sans-serif;
     font-size: 1rem;
     letter-spacing: 0.088rem;
+}
+
+
+/*是否刪除的彈窗*/
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    color: #8750BF;
+    text-align: center;
+    font-family: "Noto Sans TC";
+    font-size: 1.25rem;
+    /* 20px */
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    /* 150% 通常不需要單位 */
+    letter-spacing: 0.0625rem;
+    /* 1px */
+}
+
+.modalContent {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: popIn 0.25s ease;
+}
+
+.modalContent p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.modalButtons button {
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.modalButtons button:first-child {
+    background-color: #8750BF;
+    color: white;
+}
+
+.modalButtons button:first-child:hover {
+    background-color: #9763CA;
+}
+
+.modalButtons button:last-child {
+    background-color: #f0f0f0;
+    color: #6b6b6b;
+}
+
+.modalButtons button:last-child:hover {
+    background-color: #e0e0e0;
+}
+
+/* 彈出動畫 */
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
