@@ -26,7 +26,7 @@ export default function CustomizeInfoModal({ isOpen, onClose }) {
         <img src={`${base}images/Custom/deco-divider_purple.png`} alt="divider" />
         </div>
         <div className="customize-content">
-          <p><strong className='top'>1｜選擇水晶大小</strong><br />6mm 精緻、8mm 俐落，挑選你喜歡的尺寸。</p>
+          <p><strong className='top'>1｜選擇水晶大小</strong><br />8mm 精緻、10mm 俐落，挑選你喜歡的尺寸。</p>
           <p><strong className='top'>2｜確認手圍尺寸</strong><br />不確定怎麼量？<br />*右側欄有「手圍測量教學」可以參考唷！</p>
           <p><strong className='top'>3｜挑選手鍊配飾</strong><br />加點金屬配飾小細節，讓整體更完整也更有個人感。</p>
           <p><strong className='top'>4｜放上水晶</strong><br />點選手鍊上的位置，就能把喜歡的水晶套上去。<br />不同分類頁籤提供各種風格與色系的水晶，讓你慢慢探索～<br />不知道什麼水晶適合? <br />*右側欄有「測驗結果」與「水晶百科」可供參考唷！</p>
