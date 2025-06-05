@@ -29,7 +29,7 @@ export default function CustomizeInfoModal({ isOpen, onClose }) {
           <p><strong className='top'>1｜選擇水晶大小</strong><br />8mm 精緻、10mm 俐落，挑選你喜歡的尺寸。</p>
           <p><strong className='top'>2｜確認手圍尺寸</strong><br />不確定怎麼量？<br />*右側欄有「手圍測量教學」可以參考唷！</p>
           <p><strong className='top'>3｜挑選手鍊配飾</strong><br />加點金屬配飾小細節，讓整體更完整也更有個人感。</p>
-          <p><strong className='top'>4｜放上水晶</strong><br />點選手鍊上的位置，就能把喜歡的水晶套上去。<br />不同分類頁籤提供各種風格與色系的水晶，讓你慢慢探索～<br />不知道什麼水晶適合? <br />*右側欄有「測驗結果」與「水晶百科」可供參考唷！</p>
+          <p><strong className='top'>4｜放上水晶</strong><br />點選手鍊上的位置再點水晶，或是先點水晶再點位置，就能把喜歡的水晶套上去。<br />不同分類頁籤提供各種風格與色系的水晶，讓你慢慢探索～<br />不知道什麼水晶適合? <br />*右側欄有「測驗結果」與「水晶百科」可供參考唷！</p>
           <p><strong className='top'>5｜想換水晶？</strong><br />點一下手鍊上想置換的水晶位置，選擇一顆新的就可以囉～<br />或是點選「刪除鍵」，就能一鍵清除，重新設計！</p>
           <p><strong className='top'>6｜完成後記得儲存</strong><br />吿一段落就按下「儲存鍵」，別讓你的靈感溜走～</p>
           <p><strong className='top'>7｜取個名字吧！</strong><br />一條專屬手鍊，也該有一個專屬名字</p>
