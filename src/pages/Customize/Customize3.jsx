@@ -33,19 +33,31 @@ export default function Customize3() {
   // 取得推薦水晶（假設 resultCrystalMap[7].crystals 是陣列）
   const recommendedCrystals = resultCrystalMap[lifePathNumber]?.crystals.slice(0, 3); // 取前3顆
   //點擊後將推薦水晶存入 sessionStorage
-  const handleStartWithRecommend = () => {
-  if (selectedCrystal) {
-    sessionStorage.setItem('recommendedCrystal', JSON.stringify(selectedCrystal));
-    navigate('/Customize4');
-  } else {
-    alert('請先點選一條推薦手鍊！');
-  }
+  const handleStartWithoutRecommend = () => {
+  sessionStorage.removeItem('recommendedCrystal');
+  sessionStorage.removeItem('shouldApplyRecommend');
+  sessionStorage.setItem('designMode', 'custom'); // ✅ 加入這行
+  navigate('/Customize4');
 };
 
-  const handleStartWithoutRecommend = () => {
-    navigate('/Customize4');
-  };
+const handleStartWithRecommend = () => {
+  if (!selectedCrystal) {
+    alert('請先點選一條推薦手鍊！');
+    return;
+  }
 
+  sessionStorage.setItem('recommendedCrystal', JSON.stringify(selectedCrystal));
+  sessionStorage.setItem('shouldApplyRecommend', 'true');
+   sessionStorage.setItem('designMode', 'recommend'); 
+
+   // 預設金屬珠為 ball3
+  sessionStorage.setItem('recommendedMetalImage', './images/Custom/ball3.png');
+
+  navigate('/Customize4');
+};
+
+
+  
   const [selectedCrystal, setSelectedCrystal] = useState(null);
   const handleSelectCrystal = (crystal) => {
     setSelectedCrystal(crystal);

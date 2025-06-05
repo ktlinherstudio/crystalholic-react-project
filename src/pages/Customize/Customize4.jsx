@@ -1,8 +1,7 @@
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
-import { useEffect, useState, useMemo } from 'react';
-
+import { useEffect, useState, useMemo,useRef } from 'react';
 import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
 import { generateBraceletLayout, calculateRadius, calculateBeadAngles } from '../../utils/generateBraceletLayout';
@@ -11,62 +10,77 @@ import { resultCrystalMap } from '../../utils/resultCrystalMap';
 
 export default function Customize4() {
   const [showInfo, setShowInfo] = useState(true);
-  
 
-const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
+
+  const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
   const [wristSize, setWristSize] = useState(16);       // 手圍
   const [braceletBeads, setBraceletBeads] = useState([]);
   const [recommendedCrystal, setRecommendedCrystal] = useState([]);
-  
+  const hasSetDefaultMetal = useRef(false);
 
   useEffect(() => {
     setShowInfo(true);
   }, []);
 
   //套入推薦手鍊
- useEffect(() => {
+useEffect(() => {
   const stored = sessionStorage.getItem('recommendedCrystal');
-   console.log("sessionStorage 內容：", stored); 
-  if (stored) {
+  const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
+  const designMode = sessionStorage.getItem('designMode');
+
+  if (stored && shouldApply && designMode === 'recommend') {
     try {
       const crystal = JSON.parse(stored);
-      console.log("載入推薦水晶：", crystal);
-
       const layout = generateBraceletLayout(selectedSize, wristSize);
-      const filled = layout.map((item) => {
-        if (item === 'metal') return 'metal'; // 保持一致格式
-        return {
-          type: 'crystal',
-          image: crystal.image, // ✅ 正確：直接拿 image 字串
-        };
-      });
+      const filled = layout.map((item) =>
+        item === 'metal'
+          ? { type: 'metal' }
+          : { type: 'crystal', image: crystal.image }
+      );
 
       setBraceletBeads(filled);
       setCrystalPlacement(() => {
         const placement = {};
         filled.forEach((bead, i) => {
           if (bead.type === 'crystal') {
-            placement[i] = bead.image; // ✅ 確保是 image 字串
+            placement[i] = bead.image;
           }
         });
         return placement;
       });
+
+      // ✅ 同步設定金屬珠（可後續覆蓋）
+      const metalImage = './images/Custom/ball3.png';
+      const metalPrice = metalPrices[metalImage] || 0;
+      setSelectedMetalImage({ image: metalImage, price: metalPrice });
+
     } catch (e) {
-      console.error("解析推薦水晶失敗:", e);
+      console.error('解析推薦水晶失敗:', e);
     }
+  } else {
+    // 💥 清空推薦資料
+    sessionStorage.removeItem('recommendedCrystal');
+    sessionStorage.removeItem('shouldApplyRecommend');
+
+    const layout = generateBraceletLayout(selectedSize, wristSize);
+    const filled = layout.map((item) =>
+      item === 'metal'
+        ? { type: 'metal' }
+        : { type: 'crystal', image: undefined }
+    );
+
+    setBraceletBeads(filled);
+    setSelectedCrystal(null);
+    setSelectedMetalImage(null);
+    setCrystalPlacement({});
+    setSelectedBeadIndexes([]);
   }
 }, [selectedSize, wristSize]);
 
 
 
 
-  useEffect(() => {
-  const stored = sessionStorage.getItem('recommendedCrystal');
-  if (!stored) {
-    const newLayout = generateBraceletLayout(selectedSize, wristSize);
-    setBraceletBeads(newLayout);
-  }
-}, [selectedSize, wristSize]);
+
 
   const braceletRadius = useMemo(() => {
     return calculateRadius(wristSize) * 1.1;
@@ -207,6 +221,11 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
     "./images/Custom/ball5.png": 400,
     "./images/Custom/ball6.png": 300,
   };
+
+  const handleSelectMetal = (imgPath) => {
+  const price = metalPrices[imgPath] || 0;
+  setSelectedMetalImage({ image: imgPath, price });
+};
 
   const categorizedCrystalInfo = {
     "靈性直覺": [
@@ -563,11 +582,22 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
 
   //刪除按鈕 清空手鍊
   const handleClearBracelet = () => {
+    sessionStorage.removeItem('shouldApplyRecommend');
+
+    // 重建交錯 layout，但不附圖
+    const layout = generateBraceletLayout(selectedSize, wristSize);
+    const cleared = layout.map((item) =>
+      item === 'metal'
+        ? { type: 'metal' }
+        : { type: 'crystal', image: undefined }
+    );
+
+    setBraceletBeads(cleared);
     setCrystalPlacement({});
+    setSelectedBeadIndexes([]);
     setSelectedCrystal(null);
-    setSelectedBeadIndexes(null);
     setSelectedMetalImage(null);
-  }
+  };
 
   //儲存
   const [braceletName, setBraceletName] = useState('');
@@ -781,32 +811,39 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
             {(() => {
               let accumulatedAngle = 0;
               return braceletBeads.map((bead, index) => {
-                const isMetal = bead === "metal";
+                const isMetal = bead?.type === 'metal';
                 const size = isMetal ? 6 : selectedSize;
                 const angle = beadAngles[index];
                 const offset = (size * scale) / 2;
                 accumulatedAngle += angle;
+
                 return (
                   <span
                     key={index}
-                    onClick={() => handleBeadClick(index)}
-                    className={`${isMetal ? style.pearlSmall : style.pearlBig} ${Array.isArray(selectedBeadIndexes) && selectedBeadIndexes.includes(index)
+                    onClick={() => {
+                      if (!isMetal) handleBeadClick(index);
+                    }}
+                    className={`${isMetal ? style.pearlSmall : style.pearlBig} ${!isMetal &&
+                      Array.isArray(selectedBeadIndexes) &&
+                      selectedBeadIndexes.includes(index)
                       ? style.selectedBead
                       : ''
                       }`}
                     style={{
-                      backgroundImage: crystalPlacement[index]
-                        ? `url(${crystalPlacement[index]})`
-                        : isMetal && selectedMetalImage
-                          ? `url(${selectedMetalImage})`
-                          : undefined,
+                   backgroundImage: isMetal
+  ? selectedMetalImage?.image
+    ? `url(${selectedMetalImage.image})`
+    : undefined
+  : crystalPlacement[index]
+    ? `url(${crystalPlacement[index]})`
+    : undefined,
                       width: `${size * scale}px`,
                       height: `${size * scale}px`,
                       position: 'absolute',
                       top: '50%',
                       left: '50%',
                       borderRadius: '50%',
-                      transform: `rotate(${accumulatedAngle}deg)translate(${braceletRadius * scale}px)rotate(-${accumulatedAngle}deg)translate(-${offset}px, -${offset}px)`,
+                      transform: `rotate(${accumulatedAngle}deg) translate(${braceletRadius * scale}px) rotate(-${accumulatedAngle}deg) translate(-${offset}px, -${offset}px)`,
                       transformOrigin: '0 0',
                       backgroundSize: 'cover',
                       backgroundPosition: 'center',
@@ -815,6 +852,7 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
                   />
                 );
               });
+
             })()}
             <div className={style.iconBox1}>
               <div
@@ -968,7 +1006,7 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
                     {!lifePathNumber ? (
                       <button
                         onClick={() => window.open('/numtest2', '_blank')}
-                        className={style.button}
+                        className={style.wikiBtn}
                         style={{ marginTop: "1.5rem" }}
                       >
                         前往進行生命靈數測驗
@@ -1009,8 +1047,7 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
                         ))}
 
                         <button
-                          className={style.button}
-                          style={{ marginTop: "1.5rem" }}
+                          className={style.wikiBtn}
                           onClick={() => {
                             sessionStorage.removeItem("lifePathNumber");
                             sessionStorage.removeItem("numtest2-completed");
@@ -1047,7 +1084,7 @@ const [selectedSize, setSelectedSize] = useState(8);  // 水晶大小
                             fontFamily: "'Noto Sans TC', sans-serif",
                             gap: "0.2rem",
                             borderBottom: "1px solid #rgb(159, 116, 202)",
-                            paddingBottom:"0.5rem"
+                            paddingBottom: "0.5rem"
                           }}
                         >
                           <span>{expandedCategories.includes(category) ? "▼" : "▶"}</span>

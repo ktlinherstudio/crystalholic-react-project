@@ -60,11 +60,16 @@ export function calculateBeadAngles(beads, crystalSize) {
     crystalRatio: 1,
   };
 
+  // const beadDistances = beads.map((bead) =>
+  //   (bead === "metal"
+  //     ? metalSize * metalRatio
+  //     : crystalSize * crystalRatio) * compressionRatio
+  // );
   const beadDistances = beads.map((bead) =>
-    (bead === "metal"
-      ? metalSize * metalRatio
-      : crystalSize * crystalRatio) * compressionRatio
-  );
+  (bead?.type === "metal"
+    ? metalSize * metalRatio
+    : crystalSize * crystalRatio) * compressionRatio
+);
 
   const totalLength = beadDistances.reduce((sum, d) => sum + d, 0);
 
