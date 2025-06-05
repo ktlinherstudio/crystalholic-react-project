@@ -1,9 +1,13 @@
 import './FooterBgc.css'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import BgDarkBlock from '../components/BgDarkBlock'
 
 export default function FooterBgc() {
   return (
     <footer className="footerbgc">
+       <div className="footerbgc_bg">
+    <BgDarkBlock />
+  </div>
       <section className="footerbgc_info">
         {/* COMPANY */}
         <div className="footerbgc_company">

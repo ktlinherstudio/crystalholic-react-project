@@ -5,9 +5,9 @@
     right: 0;
     border-radius: 40px 40px 0 0;
     /* 背景材質 */
-    background-image:
+    /* background-image:
         linear-gradient(107deg, rgba(162, 105, 232, 0.95) -19.31%, rgba(66, 73, 212, 0.95) 169.85%),
-        url(../images/S-Background/noise-background.jpg);
+        url(../images/S-Background/noise-background.jpg); */
     padding: 35px 20px 0px;
     margin-top: auto;
     z-index: 1000;
@@ -15,6 +15,17 @@
     background-repeat: repeat;
     min-height: 305px;
     color: #FFFFFF;
+}
+
+.footerbgc_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  border-radius: 40px 40px 0 0;
 }
 
 .footerbgc_info,
