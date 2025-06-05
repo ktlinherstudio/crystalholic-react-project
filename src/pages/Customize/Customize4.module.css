@@ -859,6 +859,10 @@
     background-color: #6e3bbf;
     box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
 }
+.wikiBtn:active {
+     background-color: #6e3bbf;
+    box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
+}
 
 
 /*特別訂製*/

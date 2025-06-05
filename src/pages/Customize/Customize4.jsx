@@ -1,7 +1,7 @@
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
-import { useEffect, useState, useMemo,useRef } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
 import { generateBraceletLayout, calculateRadius, calculateBeadAngles } from '../../utils/generateBraceletLayout';
@@ -9,6 +9,9 @@ import { generateBraceletLayout, calculateRadius, calculateBeadAngles } from '..
 import { resultCrystalMap } from '../../utils/resultCrystalMap';
 
 export default function Customize4() {
+
+
+
   const [showInfo, setShowInfo] = useState(true);
 
 
@@ -23,77 +26,77 @@ export default function Customize4() {
   }, []);
 
   //套入推薦手鍊
-  const designMode = sessionStorage.getItem('designMode'); 
+  const designMode = sessionStorage.getItem('designMode');
   const [isInitialized, setIsInitialized] = useState(false);
 
-useEffect(() => {
-  const stored = sessionStorage.getItem('recommendedCrystal');
-  const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
-  const designMode = sessionStorage.getItem('designMode');
+  useEffect(() => {
+    const stored = sessionStorage.getItem('recommendedCrystal');
+    const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
+    const designMode = sessionStorage.getItem('designMode');
 
-  const layout = generateBraceletLayout(selectedSize, wristSize);
+    const layout = generateBraceletLayout(selectedSize, wristSize);
 
-  // 取得舊資料來保留
-  let oldPlacement = { ...crystalPlacement };
+    // 取得舊資料來保留
+    let oldPlacement = { ...crystalPlacement };
 
-  let filled;
-  if (stored && shouldApply && designMode === 'recommend') {
-    try {
-      const crystal = JSON.parse(stored);
+    let filled;
+    if (stored && shouldApply && designMode === 'recommend') {
+      try {
+        const crystal = JSON.parse(stored);
+        filled = layout.map((item, i) => {
+          if (item === 'metal') return { type: 'metal' };
+          return {
+            type: 'crystal',
+            image: crystal.image,
+          };
+        });
+
+        // 套入推薦水晶圖
+        const placement = {};
+        filled.forEach((bead, i) => {
+          if (bead.type === 'crystal') {
+            placement[i] = bead.image;
+          }
+        });
+
+        setCrystalPlacement(placement);
+
+        const metalImage = './images/Custom/ball3.png';
+        setSelectedMetalImage(metalImage);
+
+      } catch (e) {
+        console.error('解析推薦水晶失敗:', e);
+        filled = layout.map((item) =>
+          item === 'metal' ? { type: 'metal' } : { type: 'crystal', image: undefined }
+        );
+        setCrystalPlacement({});
+      }
+    } else {
+      sessionStorage.removeItem('recommendedCrystal');
+      sessionStorage.removeItem('shouldApplyRecommend');
+
+      // 🎯 自由設計，保留舊的水晶圖（index 對得上的話）
       filled = layout.map((item, i) => {
         if (item === 'metal') return { type: 'metal' };
         return {
           type: 'crystal',
-          image: crystal.image,
+          image: oldPlacement[i] || undefined,
         };
       });
 
-      // 套入推薦水晶圖
-      const placement = {};
+      // 更新保留後的 crystalPlacement
+      const newPlacement = {};
       filled.forEach((bead, i) => {
-        if (bead.type === 'crystal') {
-          placement[i] = bead.image;
+        if (bead.type === 'crystal' && bead.image) {
+          newPlacement[i] = bead.image;
         }
       });
 
-      setCrystalPlacement(placement);
-
-      const metalImage = './images/Custom/ball3.png';
-      setSelectedMetalImage(metalImage);
-
-    } catch (e) {
-      console.error('解析推薦水晶失敗:', e);
-      filled = layout.map((item) =>
-        item === 'metal' ? { type: 'metal' } : { type: 'crystal', image: undefined }
-      );
-      setCrystalPlacement({});
+      setCrystalPlacement(newPlacement);
     }
-  } else {
-    sessionStorage.removeItem('recommendedCrystal');
-    sessionStorage.removeItem('shouldApplyRecommend');
 
-    // 🎯 自由設計，保留舊的水晶圖（index 對得上的話）
-    filled = layout.map((item, i) => {
-      if (item === 'metal') return { type: 'metal' };
-      return {
-        type: 'crystal',
-        image: oldPlacement[i] || undefined,
-      };
-    });
-
-    // 更新保留後的 crystalPlacement
-    const newPlacement = {};
-    filled.forEach((bead, i) => {
-      if (bead.type === 'crystal' && bead.image) {
-        newPlacement[i] = bead.image;
-      }
-    });
-
-    setCrystalPlacement(newPlacement);
-  }
-
-  setBraceletBeads(filled);
-}, [selectedSize, wristSize]);
+    setBraceletBeads(filled);
+  }, [selectedSize, wristSize]);
 
 
 
@@ -239,10 +242,10 @@ useEffect(() => {
     "./images/Custom/ball6.png": 300,
   };
 
-//   const handleSelectMetal = (imgPath) => {
-//   const price = metalPrices[imgPath] || 0;
-//   setSelectedMetalImage({ image: imgPath, price });
-// };
+  //   const handleSelectMetal = (imgPath) => {
+  //   const price = metalPrices[imgPath] || 0;
+  //   setSelectedMetalImage({ image: imgPath, price });
+  // };
 
   const categorizedCrystalInfo = {
     "靈性直覺": [
@@ -649,24 +652,24 @@ useEffect(() => {
 
 
   //計算價格
- useEffect(() => {
-  let total = 0;
+  useEffect(() => {
+    let total = 0;
 
-  // 計算水晶價格
-  braceletBeads.forEach((bead, index) => {
-    if (crystalPlacement[index]) {
-      const price = crystalPrices[crystalPlacement[index]] || 0;
-      total += price;
+    // 計算水晶價格
+    braceletBeads.forEach((bead, index) => {
+      if (crystalPlacement[index]) {
+        const price = crystalPrices[crystalPlacement[index]] || 0;
+        total += price;
+      }
+    });
+
+    // 加上金屬珠價格（selectedMetalImage 是字串）
+    if (selectedMetalImage) {
+      total += metalPrices[selectedMetalImage] || 0;
     }
-  });
 
-  // 加上金屬珠價格（selectedMetalImage 是字串）
-  if (selectedMetalImage) {
-    total += metalPrices[selectedMetalImage] || 0;
-  }
-
-  setBraceletPrice(total);
-}, [braceletBeads, crystalPlacement, selectedMetalImage]);
+    setBraceletPrice(total);
+  }, [braceletBeads, crystalPlacement, selectedMetalImage]);
 
 
   //取得生命靈數結果導入推薦水晶
@@ -847,13 +850,13 @@ useEffect(() => {
                       : ''
                       }`}
                     style={{
-                backgroundImage: isMetal
-  ? selectedMetalImage
-    ? `url(${selectedMetalImage})`
-    : undefined
-  : crystalPlacement[index]
-    ? `url(${crystalPlacement[index]})`
-    : undefined,
+                      backgroundImage: isMetal
+                        ? selectedMetalImage
+                          ? `url(${selectedMetalImage})`
+                          : undefined
+                        : crystalPlacement[index]
+                          ? `url(${crystalPlacement[index]})`
+                          : undefined,
                       width: `${size * scale}px`,
                       height: `${size * scale}px`,
                       position: 'absolute',
@@ -1022,7 +1025,7 @@ useEffect(() => {
                   <div className={style.overlayContent}>
                     {!lifePathNumber ? (
                       <button
-                        onClick={() => window.open('/numtest2', '_blank')}
+                        onClick={() => window.open('#/numtest2', '_blank')}
                         className={style.wikiBtn}
                         style={{ marginTop: "1.5rem" }}
                       >
@@ -1068,7 +1071,7 @@ useEffect(() => {
                           onClick={() => {
                             sessionStorage.removeItem("lifePathNumber");
                             sessionStorage.removeItem("numtest2-completed");
-                            window.open("/numtest2", "_blank");
+                            window.open('#/numtest2', '_blank');
                           }}
                         >
                           重新測驗
@@ -1136,7 +1139,7 @@ useEffect(() => {
                     ))}
 
                     <button
-                      onClick={() => window.open('/KnowledgeCrystal')}
+                      onClick={() => window.open('#/KnowledgeCrystal', '_blank')}
                       className={style.wikiBtn}
                     >
                       前往水晶小百科查看更多
