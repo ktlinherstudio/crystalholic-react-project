@@ -5,7 +5,7 @@ import FooterTrn from '../../components/FooterTrn';
 import '../../components/BgLight.css';
 import BgDark from '../../components/BgDark';
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import productSeriesData from './productSeriesData';
 import { useCart } from '../Shopping/CartContext'; // 🛒 加入購物車功能
 
@@ -19,6 +19,7 @@ export default function Product() {
   const [beadSize, setBeadSize] = useState('6');
   const [wristSize, setWristSize] = useState('14');
   const { addToCart } = useCart(); // 🛒 呼叫購物車方法
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     setIsFav(false);
@@ -103,7 +104,8 @@ export default function Product() {
 
   const handleBuyNow = () => {
     handleAddToCart();
-    window.location.href = '/#/ShoppingCart';
+    // window.location.href = '/#/ShoppingCart';
+    navigate('/ShoppingCart');
   };
 
   return (
@@ -191,7 +193,7 @@ export default function Product() {
               {/* 購物按鈕 */}
               <div className="p_product_buy">
                 <button className="p_btn_cart" onClick={handleAddToCart}>加入購物車</button>
-                <button className="button" onClick={handleBuyNow}>立即購買</button>
+                <button className="p_btn_buy" onClick={handleBuyNow}>立即購買</button>
               </div>
             </div>
           </div>
