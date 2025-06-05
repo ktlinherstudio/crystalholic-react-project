@@ -150,8 +150,12 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-}
 
+    color: #585858;
+}
+.cart_product_info>p:hover{
+    color: #8750BF;
+}
 .cart_product_info img {
     width: 6.25rem;/* 100px */
     height: 6.25rem;
