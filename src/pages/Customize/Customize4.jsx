@@ -23,6 +23,8 @@ export default function Customize4() {
   }, []);
 
   //套入推薦手鍊
+  const designMode = sessionStorage.getItem('designMode'); 
+
 useEffect(() => {
   const stored = sessionStorage.getItem('recommendedCrystal');
   const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
@@ -51,8 +53,7 @@ useEffect(() => {
 
       // ✅ 同步設定金屬珠（可後續覆蓋）
       const metalImage = './images/Custom/ball3.png';
-      const metalPrice = metalPrices[metalImage] || 0;
-      setSelectedMetalImage({ image: metalImage, price: metalPrice });
+      setSelectedMetalImage(metalImage);
 
     } catch (e) {
       console.error('解析推薦水晶失敗:', e);
@@ -222,10 +223,10 @@ useEffect(() => {
     "./images/Custom/ball6.png": 300,
   };
 
-  const handleSelectMetal = (imgPath) => {
-  const price = metalPrices[imgPath] || 0;
-  setSelectedMetalImage({ image: imgPath, price });
-};
+//   const handleSelectMetal = (imgPath) => {
+//   const price = metalPrices[imgPath] || 0;
+//   setSelectedMetalImage({ image: imgPath, price });
+// };
 
   const categorizedCrystalInfo = {
     "靈性直覺": [
@@ -632,24 +633,24 @@ useEffect(() => {
 
 
   //計算價格
-  useEffect(() => {
-    let total = 0;
+ useEffect(() => {
+  let total = 0;
 
-    // 計算所有水晶價格（只有有放進手鍊裡的才算）
-    braceletBeads.forEach((bead, index) => {
-      if (crystalPlacement[index]) {
-        const price = crystalPrices[crystalPlacement[index]] || 0;
-        total += price;
-      }
-    });
-
-    // 加上金屬配飾價格
-    if (selectedMetalImage) {
-      total += metalPrices[selectedMetalImage] || 0;
+  // 計算水晶價格
+  braceletBeads.forEach((bead, index) => {
+    if (crystalPlacement[index]) {
+      const price = crystalPrices[crystalPlacement[index]] || 0;
+      total += price;
     }
+  });
 
-    setBraceletPrice(total); // 顯示在輸入欄位
-  }, [braceletBeads, crystalPlacement, selectedMetalImage]);
+  // 加上金屬珠價格（selectedMetalImage 是字串）
+  if (selectedMetalImage) {
+    total += metalPrices[selectedMetalImage] || 0;
+  }
+
+  setBraceletPrice(total);
+}, [braceletBeads, crystalPlacement, selectedMetalImage]);
 
 
   //取得生命靈數結果導入推薦水晶
@@ -830,9 +831,9 @@ useEffect(() => {
                       : ''
                       }`}
                     style={{
-                   backgroundImage: isMetal
-  ? selectedMetalImage?.image
-    ? `url(${selectedMetalImage.image})`
+                backgroundImage: isMetal
+  ? selectedMetalImage
+    ? `url(${selectedMetalImage})`
     : undefined
   : crystalPlacement[index]
     ? `url(${crystalPlacement[index]})`
