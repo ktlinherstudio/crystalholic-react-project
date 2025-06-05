@@ -139,7 +139,7 @@ export default function ProductCollection() {
             </h5>
             <img
               className="pc_divider_line"
-              src={`/images/Product/deco-divider_${activeSeries}.svg`}
+              src={`./images/Product/deco-divider_${activeSeries}.svg`}
               alt=""
             />
             {productSeriesData[activeSeries].description.map((line, i) => (
