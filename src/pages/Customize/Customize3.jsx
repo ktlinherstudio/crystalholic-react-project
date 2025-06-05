@@ -51,8 +51,7 @@ const handleStartWithRecommend = () => {
    sessionStorage.setItem('designMode', 'recommend'); 
 
    // 預設金屬珠為 ball3
-  const metalImage = `${import.meta.env.BASE_URL}images/Custom/ball3.png`;
-sessionStorage.setItem('recommendedMetalImage', metalImage);
+  sessionStorage.setItem('recommendedMetalImage', './images/Custom/ball3.png');
 
   navigate('/Customize4');
 };
