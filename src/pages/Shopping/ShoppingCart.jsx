@@ -80,10 +80,14 @@ export default function ShoppingCart() {
               {(showAllItems ? cartItems : cartItems.slice(0, 3)).map((item, idx) => (
                 <div className="cart_table_row" key={`${item.name}-${idx}`}>
                   {/* 商品縮圖＋名稱 */}
-                  <div className="cart_product_info">
+                  <Link
+                    to={`/Product/${item.seriesKey}/${item.productIndex}`}
+                    className="cart_product_info"
+                    style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
                     <img src={item.image} alt={item.name} />
                     <p>{item.name}</p>
-                  </div>
+                  </Link>
                   {/* 尺寸 */}
                   <div className="cart_product_size">
                     <p>串珠 {item.size}<br />手圍 {item.wrist}</p>
@@ -124,7 +128,7 @@ export default function ShoppingCart() {
 
               {/* 繼續購物／展開清單提示（合併為一句） */}
               {cartItems.length > 3 && (
-                <div className="cart_shopping_tip">
+                <div className="cart_toggle_btn">
                   <button
                     className="cart_continue_shopping"
                     onClick={() => setShowAllItems(!showAllItems)}
@@ -166,18 +170,24 @@ export default function ShoppingCart() {
                   <label>
                     *送貨方式
                     <select required>
-                      <option>7-11 取貨付款</option>
-                      <option>7-11 取貨不付款</option>
-                      <option>黑貓宅配</option>
+                      <option>宅配（貨到付款）</option>
+                      <option>郵局（貨到付款）</option>
                     </select>
                   </label>
-                  <label>
-                    *取貨門市
+                  {/* <label>
+                    *送貨地址
                     <select required>
-                      <option>華山門市</option>
-                      <option>北車門市</option>
                       <option>詳細地址</option>
                     </select>
+                  </label> */}
+                  <label htmlFor="詳細地址">
+                    *送貨地址
+                    <input
+                      id="address"
+                      type="text"
+                      placeholder="請輸入郵遞區號、詳細地址"
+                      required
+                    />
                   </label>
                 </div>
               </form>
@@ -216,13 +226,22 @@ export default function ShoppingCart() {
                       required
                     />
                   </label>
-                  <label>
+                  {/* <label>
                     *發票資訊
                     <select required>
                       <option>手機載具</option>
-                      <option>(公司)統一編號</option>
+                      <option>統一編號</option>
                       <option>捐贈發票</option>
                     </select>
+                  </label> */}
+                  <label htmlFor="發票資訊">
+                    *發票資訊
+                    <input
+                      id="bill"
+                      type="text"
+                      placeholder="請輸入載具或統一編號"
+                      required
+                    />
                   </label>
                 </div>
               </form>

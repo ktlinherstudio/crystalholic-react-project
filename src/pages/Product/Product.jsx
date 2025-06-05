@@ -12,7 +12,7 @@ import { useCart } from '../Shopping/CartContext'; // 🛒 加入購物車功能
 export default function Product() {
   const { seriesKey, productIndex } = useParams();
   const series = productSeriesData[seriesKey];
-  const product = series?.products?.[productIndex];
+  const product = series?.products?.[Number(productIndex)];
 
   const [isFav, setIsFav] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -86,6 +86,7 @@ export default function Product() {
   }, []);
 
   const handleAddToCart = () => {
+    const currentIndex = series?.products.findIndex(p => p.name === product.name);
     // 將價格轉成數字方便計算
     const priceNum = Number(product.price.replace(/[^\d]/g, '')); // 🆕
     addToCart({
@@ -95,6 +96,8 @@ export default function Product() {
       quantity,
       size: `${beadSize}mm`,
       wrist: `${wristSize}cm`,
+      seriesKey,
+      productIndex: currentIndex
     });
   };
 
