@@ -1,7 +1,7 @@
 import './KnowledgeCleanse.css';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn'
-import BgDark from '../../components/BgDark'
+import BgDarkBlock from '../../components/BgDarkBlock'
 import '../../css/fonts.css';
 const base = import.meta.env.BASE_URL;
 
@@ -9,7 +9,7 @@ export default function KnowledgeCleanse() {
   return (
     <div className="font-style">
       <div className="nc-page">
-        <div className="nc-background"><BgDark /></div>
+        <div className="nc-background"><BgDarkBlock /></div>
         <NavBarWrapper variant="dark" />
         <section className="content-nc" id='content-nc'>
           <div className="left-title">
