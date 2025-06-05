@@ -24,60 +24,76 @@ export default function Customize4() {
 
   //套入推薦手鍊
   const designMode = sessionStorage.getItem('designMode'); 
+  const [isInitialized, setIsInitialized] = useState(false);
 
 useEffect(() => {
   const stored = sessionStorage.getItem('recommendedCrystal');
   const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
   const designMode = sessionStorage.getItem('designMode');
 
+  const layout = generateBraceletLayout(selectedSize, wristSize);
+
+  // 取得舊資料來保留
+  let oldPlacement = { ...crystalPlacement };
+
+  let filled;
   if (stored && shouldApply && designMode === 'recommend') {
     try {
       const crystal = JSON.parse(stored);
-      const layout = generateBraceletLayout(selectedSize, wristSize);
-      const filled = layout.map((item) =>
-        item === 'metal'
-          ? { type: 'metal' }
-          : { type: 'crystal', image: crystal.image }
-      );
-
-      setBraceletBeads(filled);
-      setCrystalPlacement(() => {
-        const placement = {};
-        filled.forEach((bead, i) => {
-          if (bead.type === 'crystal') {
-            placement[i] = bead.image;
-          }
-        });
-        return placement;
+      filled = layout.map((item, i) => {
+        if (item === 'metal') return { type: 'metal' };
+        return {
+          type: 'crystal',
+          image: crystal.image,
+        };
       });
 
-      // ✅ 同步設定金屬珠（可後續覆蓋）
+      // 套入推薦水晶圖
+      const placement = {};
+      filled.forEach((bead, i) => {
+        if (bead.type === 'crystal') {
+          placement[i] = bead.image;
+        }
+      });
+
+      setCrystalPlacement(placement);
+
       const metalImage = './images/Custom/ball3.png';
       setSelectedMetalImage(metalImage);
 
     } catch (e) {
       console.error('解析推薦水晶失敗:', e);
+      filled = layout.map((item) =>
+        item === 'metal' ? { type: 'metal' } : { type: 'crystal', image: undefined }
+      );
+      setCrystalPlacement({});
     }
   } else {
-    // 💥 清空推薦資料
     sessionStorage.removeItem('recommendedCrystal');
     sessionStorage.removeItem('shouldApplyRecommend');
 
-    const layout = generateBraceletLayout(selectedSize, wristSize);
-    const filled = layout.map((item) =>
-      item === 'metal'
-        ? { type: 'metal' }
-        : { type: 'crystal', image: undefined }
-    );
+    // 🎯 自由設計，保留舊的水晶圖（index 對得上的話）
+    filled = layout.map((item, i) => {
+      if (item === 'metal') return { type: 'metal' };
+      return {
+        type: 'crystal',
+        image: oldPlacement[i] || undefined,
+      };
+    });
 
-    setBraceletBeads(filled);
-    setSelectedCrystal(null);
-    setSelectedMetalImage(null);
-    setCrystalPlacement({});
-    setSelectedBeadIndexes([]);
+    // 更新保留後的 crystalPlacement
+    const newPlacement = {};
+    filled.forEach((bead, i) => {
+      if (bead.type === 'crystal' && bead.image) {
+        newPlacement[i] = bead.image;
+      }
+    });
+
+    setCrystalPlacement(newPlacement);
   }
-}, [selectedSize, wristSize]);
 
+  setBraceletBeads(filled);
+}, [selectedSize, wristSize]);
 
 
 
