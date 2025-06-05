@@ -83,8 +83,7 @@ export default function ShoppingCart() {
                   <Link
                     to={`/Product/${item.seriesKey}/${item.productIndex}`}
                     className="cart_product_info"
-                    style={{ textDecoration: 'none', color: 'inherit' }}
-                  >
+                    >
                     <img src={item.image} alt={item.name} />
                     <p>{item.name}</p>
                   </Link>

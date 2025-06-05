@@ -270,8 +270,7 @@
     gap: 1rem;
 }
 
-.p_product_qty .p_left,
-.p_product_qty .p_right{
+.p_left,.p_right{
     border-radius: 999px;
     border: 1px solid #8750BF;
     background-color: #8750BF;
@@ -279,6 +278,11 @@
     width: 2.5rem;
     color: #FFF;
 }
+.p_left:active,.p_right:active {
+  background-color: #684581;
+  border: 1px solid #684581;
+}
+
 
 .p_product_qty .p_center{
     border-radius: 999px;
