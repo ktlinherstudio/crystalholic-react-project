@@ -37,10 +37,10 @@ export default function Cover() {
     };
 
     /*tarotcard*/
-        const [lightboxOpen, setLightboxOpen] = useState(false);
-        const [hoveredCard, setHoveredCard] = useState(null);
-        const [selectedCardIndex, setSelectedCardIndex] = useState(null);
-        const tarotDescriptions = [
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [hoveredCard, setHoveredCard] = useState(null);
+    const [selectedCardIndex, setSelectedCardIndex] = useState(null);
+    const tarotDescriptions = [
         <div className="lbcontent">
             <h2 className="lbh2">沁藍之澗</h2>
             <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
@@ -89,39 +89,39 @@ export default function Cover() {
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
             <button className="lbbtn">看看手鍊</button>
         </div>
-        ];
+    ];
 
-        const tarotImg = [
+    const tarotImg = [
         <img src="./images/HomePage/lbtc1.png" className="trimg" alt="" />,
         <img src="./images/HomePage/lbtc2.png" className="trimg" alt="" />,
         <img src="./images/HomePage/lbtc3.png" className="trimg" alt="" />,
         <img src="./images/HomePage/lbtc4.png" className="trimg" alt="" />,
         <img src="./images/HomePage/lbtc5.png" className="trimg" alt="" />,
         <img src="./images/HomePage/lbtc6.png" className="trimg" alt="" />,
-        ]
+    ]
 
-        const tarotBackImages = [
+    const tarotBackImages = [
         "./images/HomePage/lbtc1.png",
         "./images/HomePage/lbtc2.png",
         "./images/HomePage/lbtc3.png",
         "./images/HomePage/lbtc4.png",
         "./images/HomePage/lbtc5.png",
         "./images/HomePage/lbtc6.png",
-        ];
+    ];
 
 
     const handleCardClick = (index) => {
-            setSelectedCardIndex(index);
+        setSelectedCardIndex(index);
         setLightboxOpen(true);
     };
 
     const closeLightbox = () => {
-            setLightboxOpen(false);
+        setLightboxOpen(false);
         setSelectedCardIndex(null);
     };
 
-    /*水晶小百科*/ 
-        const [crystals, setCrystals] = useState([
+    /*水晶小百科*/
+    const [crystals, setCrystals] = useState([
         'disc-kyanite',
         'disc-amethyst',
         'disc-sunstone',
@@ -185,14 +185,15 @@ export default function Cover() {
 
                     <div className="cover-box">
                         <span><img src="./images/HomePage/deco-diamond.svg" className="deco1" alt="" /></span>
-                        <h2>
+                        <h2 id='coverh2'>
                             <span className="cover1">匠心嚴選 靈韻手作</span>
                             <span className="cover2">打造專屬你的能量水晶</span>
                         </h2>
                         <span><img src="./images/HomePage/deco-diamond.svg" className="deco2" alt="" /></span>
                         <span><img src="./images/HomePage/deco-diamond.svg" className="deco3" alt="" /></span>
-                        <span>
-                            <img src="./images/HomePage/scroll.svg" className="scroll" alt="" />
+                        <span className='scrollbox'>
+                            <img src="./images/HomePage/scroll1.svg" className="scroll1" alt="" />
+                            <img src="./images/HomePage/scroll2.svg" className="scroll2" alt="" />
                         </span>
                     </div>
                 </motion.section>
@@ -227,7 +228,6 @@ export default function Cover() {
                     <h2 id="tarot-title">憑直覺抽一張吧</h2>
                     <span className="dimond-right"><img src="./images/HomePage/deco-diamond-right.svg" alt="" /></span>
                 </div>
-
                 <div id="tarotcard-box">
                     {tarotDescriptions.map((desc, index) => (
                         <div key={index} className="Rcard">
@@ -252,7 +252,7 @@ export default function Cover() {
                         </div>
                     ))}
                 </div>
-                <div>
+                <div id='tcbtn'>
                     <Link to="/ProductCollection" id="tarotcard-btn">所有商品</Link>
                 </div>
             </section>
@@ -290,30 +290,55 @@ export default function Cover() {
             </section>
 
             {/* 水晶小百科  */}
-             <section id="section-crystaldiscovery"> 
+            <section id="section-crystaldiscovery">
+                {/* 版2 */}
                 <div className="crystal-display">
+                    <div className="circlebox">
+                        {crystals.map((id) => (
+                            <div className='circle' key={id}>
+                                <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
+                            </div>
+                        ))}
+                    </div>
+                    {/* <div id='crystalbtn'> */}
+                    <div className='ver4'>
+                        <button id='circleup' onClick={handleUp}>
+                            <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
+                        </button>
+                        <button id='circledown' onClick={handleDown}>
+                            <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
+                        </button>
+                    </div>
+                    {/* </div> */}
+                </div>
+
+                {/* 版1 */}
+                {/* <div className="crystal-display">
                     <div className="circlebox">
                         {crystals.map((id, index) => (
                             <div className='circle' key={id}>
-                                {index === 0 ? (
+                                {index === 0 ?
+                                 (
                                     <div className='withbtn'>
-                                        <button id='circledown' onClick={handleUp}>
+                                        <button id='circleup' onClick={handleUp}>
                                             <img src="./images/HomePage/icon_btn_down.ico.svg" alt="" />
                                         </button>
                                         <div>
                                             <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
                                         </div>
-                                        <button id='circleup' onClick={handleDown}>
+                                        <button id='circledown' onClick={handleDown}>
                                             <img src="./images/HomePage/icon_btn_up.ico.svg" alt="" />
                                         </button>
                                     </div>
-                                ) : (
+                                ) 
+                                :
+                                 (
                                     <img src={`./images/HomePage/covercrystal/${crystalImages[id]}`} id={id} alt="" />
                                 )}
                             </div>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* 顯示對應水晶資訊 */}
                 <div className="section-crystaldiscovery">
@@ -327,7 +352,7 @@ export default function Cover() {
                         {renderCrystalContent(currentCrystal)}
                     </div>
                 </div>
-            </section> 
+            </section>
             <BackToTopBtn />
 
             {/* 礦迷回饋 */}
@@ -430,7 +455,7 @@ export default function Cover() {
         </>
     )
 }
- /*水晶小百科*/
+/*水晶小百科*/
 function renderCrystalContent(id) {
     const content = {
         'disc-kyanite': {

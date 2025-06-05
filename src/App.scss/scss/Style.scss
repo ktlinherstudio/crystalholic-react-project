@@ -407,10 +407,6 @@ body {
 //     }
 // }
 
-// #color {
-//     background-color: #484351; //做RWD用
-// }
-
 .coverbg {
     // background-color: #484351; //做RWD用
     // border: #fff 5px solid; //做RWD用
@@ -576,9 +572,13 @@ body {
             }
         }
 
-        h2 {
+        #coverh2 {
             color: #FFF;
-            font-size: 24px;
+            font-size: 1.5rem; //24px;
+
+            @media ($media-sm) {
+                font-size: 1.375rem; //24px;
+            }
 
             span {
                 font-family: 'LXGW WenKai Mono TC';
@@ -588,7 +588,7 @@ body {
             }
 
             .cover1 {
-                font-size: 24px;
+                // font-size: 24px;
                 writing-mode: vertical-rl;
                 width: 44px;
                 height: 324px;
@@ -596,6 +596,12 @@ body {
                 position: absolute;
                 left: 43.4%;
                 top: 16.1%;
+
+                @media ($media-xxlg-up) {
+                    //1680 & 1920
+                    top: 23.1%;
+
+                }
 
                 @media ($media-xlg-h) {
                     left: 40.4%;
@@ -616,7 +622,7 @@ body {
 
 
             .cover2 {
-                font-size: 24px;
+                // font-size: 24px;
                 writing-mode: vertical-rl;
                 width: 44px;
                 height: 324px;
@@ -624,6 +630,12 @@ body {
                 position: absolute;
                 left: 52.7%;
                 top: 28.6%;
+
+                @media ($media-xxlg-up) {
+                    //1680 & 1920
+                    top: 33.1%;
+
+                }
 
                 @media ($media-xlg-h) {
                     left: 53.4%;
@@ -696,31 +708,56 @@ body {
             }
         }
 
-        .scroll {
-            //動畫
-            animation: Afterdelay 5s ease-in 5s forwards,
-                floatY 0.8s ease-in-out infinite;
-
-            width: 28.5px;
-            height: 97.1px;
-            // 定位
+        .scrollbox {
             position: absolute;
-            left: 49%;
-            top: 72.8%;
+            top: 81%;
+            left: 50%;
 
-            @media ($media-lg) {
-                left: 50%;
-                top: 76.1%;
-            }
-
-            @media ($media-md) {
-                left: 50%;
-                top: 84%;
-            }
-
+            // position: relative;
             @media ($media-sm) {
-                left: 50%;
                 top: 81%;
+                left: 50%;
+            }
+
+            .scroll1 {
+                width: 28.5px;
+                height: 97.1px;
+
+                position: relative;
+                // position: absolute;
+                // left: 49%;
+                // top: 79.8%;
+            }
+
+            .scroll2 {
+                //動畫
+                animation: Afterdelay 5s ease-in 5s forwards,
+                    floatY 0.8s ease-in-out infinite;
+
+                width: 28.5px;
+                height: 97.1px;
+                // 定位
+                position: absolute;
+                // left: 49%;
+                // top: 72.8%;
+                left: 2%;
+                top: -59%;
+
+                @media ($media-lg) {
+                    //pro 直 / mini橫
+                    left: 0%;
+                    top: -57.9%;
+                }
+
+                @media ($media-md) {
+                    left: 0%;
+                    top: -53%;
+                }
+
+                @media ($media-sm) {
+                    left: 0%;
+                    top: -53%;
+                }
             }
         }
 
@@ -785,10 +822,10 @@ body {
                 width: 180px;
             }
 
-            // @media ($media-sm) {
-            //     width: 299px;
-            //     height: 587px;
-            // }
+            @media ($media-sm) {
+                width: 100px;
+                height: 587px;
+            }
 
         }
 
@@ -803,6 +840,10 @@ body {
 
             @media ($media-md) {
                 margin-top: 50%;
+            }
+
+            @media ($media-sm) {
+                margin-top: 96%;
             }
 
             a {
@@ -820,11 +861,11 @@ body {
                     height: 346.82px;
                 }
 
-                // @media ($media-sm) {
-                //     //還沒改
-                //     left: 12%;
-                //     top: 35%;
-                // }
+                @media ($media-sm) {
+                    //還沒改
+                    width: 62.49px;
+                    height: 346.82px;
+                }
             }
         }
 
@@ -951,7 +992,7 @@ body {
 
 /* 憑直覺抽一張--燈箱效果*/
 #section-tarotcard {
-    // border: #e22121 5px solid;
+    border: #e22121 5px solid;
     // background-color: rgba(44, 46, 144, 1);
     width: 100%;
     height: 100vh;
@@ -969,12 +1010,14 @@ body {
         font-size: 1.5rem; // 24px
         width: 27.5%; // 344px;
         // height: 5%; // 42px
-        margin-top: 5%;
+        margin-top: 1%;
         margin-bottom: 5%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 15%;
+        z-index: 2;
+
 
         //     @media ($media-lg) {
         //         // font-size: 1.5rem; // 24px
@@ -1000,21 +1043,19 @@ body {
     }
 
     #tarotcard-box {
+        // border: #68e221 10px solid;
         // width: 1279;
         // height: 427px;
         // border: 1px solid white; 
-        z-index: 1;
         display: flex;
         justify-content: center;
-        align-content: center;
         width: 100%;
-        height: 50%;
+        height:51%;
         padding-left: 4%;
 
         @media ($media-xlg-h) {
             padding-left: 10%;
             // margin-top: 25%;
-
         }
 
 
@@ -1025,12 +1066,10 @@ body {
 
         @media ($media-md) {
             padding-left: 4%;
-
         }
 
         @media ($media-sm) {
             padding-left: 4%;
-
         }
 
 
@@ -1038,7 +1077,7 @@ body {
         .Rcard {
             // border: #2fcf3d 2px solid;
             width: 18%;
-            height: 100%;
+            // height: 100%;
             margin-left: -5%;
 
             transform: rotate(-12deg);
@@ -1055,7 +1094,7 @@ body {
         .card-inner {
             // border: #cf2f2f 2px solid;
             width: 100%;
-            height: 100%;
+            // height: 0%;
             position: relative;
             transition: transform 0.8s;
             transform-style: preserve-3d;
@@ -1063,7 +1102,7 @@ body {
             perspective: 1000px;
 
             @media ($media-lg) {
-                height: 45%;
+                // height: 45%;
             }
         }
 
@@ -1076,7 +1115,7 @@ body {
         .card-back {
             position: absolute;
             width: 100%;
-            height: 100%;
+            // height: 100%;
             backface-visibility: hidden;
             border-radius: 0.75rem;
             overflow: hidden;
@@ -1161,32 +1200,39 @@ body {
 
     }
 
-    #tarotcard-btn {
-        width: 283px;
-        height: 70px;
-        // padding: 20px 100px;
-        margin-top: 20%;
-        margin-bottom: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    #tcbtn {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        z-index: 2;
 
-        /*樣式*/
-        color: #8750BF;
-        background-color: transparent;
-        border-radius: 1000px;
-        border: 2px solid #8750BF;
-        backdrop-filter: blur(2px);
-        font-size: 1.25rem;
+        #tarotcard-btn {
+            width: 283px;
+            height: 70px;
+            // padding: 20px 90px;
+            margin-top: 15%;
+            // margin-bottom: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /*樣式*/
+            color: #8750BF;
+            background-color: transparent;
+            border-radius: 1000px;
+            border: 2px solid #8750BF;
+            backdrop-filter: blur(2px);
+            font-size: 1.25rem;
 
-        &:hover {
-            color: #ffffff;
-            background-color: rgb(135, 80, 191);
-        }
+            &:hover {
+                color: #ffffff;
+                background-color: rgb(135, 80, 191);
+            }
 
-        @media ($media-lg) {
-            margin-top: 13.5vh;
-            margin-bottom: 5vh;
+            @media ($media-lg) {
+                margin-top: 13.5vh;
+                margin-bottom: 5vh;
+            }
         }
     }
 }
@@ -1288,6 +1334,12 @@ body {
                 .lbimg {
                     width: 45%;
                     margin: 0 0 0 4%;
+
+                    @media ($media-xxlg) {
+                        //1920
+                        width: 38%;
+                        margin: 0 0 0 7%;
+                    }
 
                     @media ($media-lg-h) {
                         //ipad mini橫向
@@ -1641,16 +1693,11 @@ body {
         /*版2*/
         margin-right: 10%;
 
-        /*要留的RWD，需要再調整*/
-        // @media ($media-xlg-h) {
-        //     //**
-        //     margin-right: 34%;
-        // }
 
-        // @media ($media-lg-up) {
-        //     margin-right: 34%;
-        // }
-        /****************************************/
+        @media ($media-xxlg-up) {
+            margin-right: 0%;
+            margin-left: 12%;
+        }
 
         @media ($media-lg) {
             // pro 直 1025
@@ -1907,6 +1954,16 @@ body {
             left: 20%;
             top: 47%;
 
+            @media ($media-xxlg) {
+                //1920
+                left: 3%;
+            }
+
+            @media ($media-xxlg-up-h) {
+                //1680
+                left: 9%;
+            }
+
             @media ($media-xlg-h) {
                 //ipad air 橫向
                 gap: 45%;
@@ -1988,6 +2045,10 @@ body {
     align-items: center;
     justify-items: center;
     gap: 35px;
+
+    @media ($media-xxlg-up) {
+        margin-left: -3%;
+    }
 
     @media ($media-xlg-h) {
         //ipad mini爆
@@ -2492,42 +2553,42 @@ body {
 
 /*codepen*/
 #carousel {
-  position: absolute;
-  height: 200px;
-  width: 810px;
-  margin: auto;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+    position: absolute;
+    height: 200px;
+    width: 810px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 
 .arrow {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  text-align: center;
-  font-size: 25px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 20px;
-  color: #228291;
-  line-height: 30px;
-  margin-top: 85px;
-  z-index: 1000;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #228291;
+    line-height: 30px;
+    margin-top: 85px;
+    z-index: 1000;
 }
 
 .arrow-right {
-  left: 780px;
+    left: 780px;
 }
 
 .item {
-  text-align: center;
-  color: white;
-  font-size: 40px;
-  position: absolute;
-  transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    transition: height 1s, width 1s, left 1s, margin-top 1s, line-height 1s, background-color 1s;
 }
 
 $level2-height: 150px;
@@ -2544,131 +2605,131 @@ $level1-left: 180px;
 $level2-left: 50px;
 
 .level-2 {
-  height:100px;
-  width:100px;
-  line-height: $level2-height;
-  background-color: #6796E5;
-  left: $level-2-left;
-//   margin-top: 25px;
+    height: 100px;
+    width: 100px;
+    line-height: $level2-height;
+    background-color: #6796E5;
+    left: $level-2-left;
+    //   margin-top: 25px;
 }
 
 .level-1 {
-height:100px;
-  width:100px;  
-  line-height: $level1-height;
-  background-color: #6796E5;
-  left: $level-1-left;
-//   margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    left: $level-1-left;
+    //   margin-top: 10px;
 }
 
 .level0 {
-  height:100px;
-  width:100px;
-  line-height: $level0-height;
-  background-color: #6796E5;
-  left: $level0-left;
+    height: 100px;
+    width: 100px;
+    line-height: $level0-height;
+    background-color: #6796E5;
+    left: $level0-left;
 }
 
 .level1 {
-  height:100px;
-  width:100px;
-  line-height: $level1-height;
-  background-color: #6796E5;
-//   margin-top: 10px;
-  left: $level1-left;
+    height: 100px;
+    width: 100px;
+    line-height: $level1-height;
+    background-color: #6796E5;
+    //   margin-top: 10px;
+    left: $level1-left;
 }
 
 .level2 {
- height:100px;
-  width:100px;
-  line-height: $level2-height;
-  background-color: #6796E5;
-//   margin-top: 25px;
-  left: $level2-left;
+    height: 100px;
+    width: 100px;
+    line-height: $level2-height;
+    background-color: #6796E5;
+    //   margin-top: 25px;
+    left: $level2-left;
 }
 
 .left-enter {
-  opacity: 0;
-  left: 30px;
-  height: 120px;
-  width: 90px;
-  line-height: 120px;
-//   margin-top: 40px;
+    opacity: 0;
+    left: 30px;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    //   margin-top: 40px;
 }
 
 .left-enter.left-enter-active {
-  opacity: 1;
-  left: $level2-left;
-  height: $level2-height;
-  width: $level2-width;
-  line-height: $level2-height;
-//   margin-top: 25px;
-  transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    opacity: 1;
+    left: $level2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    //   margin-top: 25px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
 }
 
 .left-leave {
-  opacity: 1;
-  left: $level-2-left;
-  height: $level2-height;
-  width: $level2-width;
-  line-height: $level2-height;
-//   margin-top: 25px;
+    opacity: 1;
+    left: $level-2-left;
+    height: $level2-height;
+    width: $level2-width;
+    line-height: $level2-height;
+    //   margin-top: 25px;
 }
 
 .left-leave.left-leave-active {
-  left: 900px;
-  opacity: 0;
-  height: 120px;
-  width: 90px;
-  line-height: 120px;
-//   margin-top: 40px;
-  transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    left: 900px;
+    opacity: 0;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    //   margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
 }
 
 .right-enter {
-  opacity: 0;
-  left: 900px;
-  height: 120px;
-  width: 90px;
-  line-height: 120px;
-//   margin-top: 40px;
+    opacity: 0;
+    left: 900px;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    //   margin-top: 40px;
 }
 
 .right-enter.right-enter-active {
-  left: $level-2-left;
-  opacity: 1;
-  height: $level2-height;
-//   margin-top: 25px;
-  line-height: $level2-height;
-  width: $level2-width;
-  transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    left: $level-2-left;
+    opacity: 1;
+    height: $level2-height;
+    //   margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
 }
 
 .right-leave {
-  left: $level2-left;
-  height: $level2-height;
-  opacity: 1;
-//   margin-top: 25px;
-  line-height: $level2-height;
-  width: $level2-width;
+    left: $level2-left;
+    height: $level2-height;
+    opacity: 1;
+    //   margin-top: 25px;
+    line-height: $level2-height;
+    width: $level2-width;
 }
 
 .right-leave.right-leave-active {
-  left: 30px;
-  opacity: 0;
-  height: 120px;
-  width: 90px;
-  line-height: 120px;
-//   margin-top: 40px;
-  transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
+    left: 30px;
+    opacity: 0;
+    height: 120px;
+    width: 90px;
+    line-height: 120px;
+    //   margin-top: 40px;
+    transition: left 1s, opacity 1s, height 1s, width 1s, margin-top 1s, line-height 1s;
 }
 
 .noselect {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
