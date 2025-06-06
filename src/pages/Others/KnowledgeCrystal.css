@@ -317,7 +317,7 @@ hr {
 
 .arc-k-wrapper {
   clip-path: ellipse(130% 100% at 50% 100%);
-  max-height: 1640px;
+  max-height: 2000px;
 }
 
 /* ==========大手機或平板橫向（820px 以下） ========== */
@@ -367,7 +367,7 @@ hr {
   }
 
   .arc-k-wrapper {
-    max-height: 1000px;
+    max-height: 1800px;
   }
 }
 
