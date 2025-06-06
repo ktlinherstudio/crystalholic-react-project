@@ -279,8 +279,14 @@
     background: #A67CEB;
 }
 
-.button2-j:hover{
+.button1-j:hover,.button2-j:hover{
     background-color: #9764ca;
+    color: #fff;
+}
+
+.button1-j:active,.button2-j:active {
+    background-color: #6E3BBF;
+    color: #fff;
 }
 
 

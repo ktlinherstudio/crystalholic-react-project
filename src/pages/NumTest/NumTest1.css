@@ -105,6 +105,9 @@
     background-color: #9763Ca;
 }
 
+.num1-button:active {
+    background-color: #6E3BBF;
+}
 /* ========================================================= */
 /* ---------- RWD 斷點：≤ 1024px ---------- */
 @media (max-width: 1024px) {

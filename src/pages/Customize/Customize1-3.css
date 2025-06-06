@@ -151,6 +151,11 @@
     background-color: #9763Ca;
 }
 
+.button1:active,
+.button2:active {
+    background-color: #6E3BBF;
+}
+
 .button1 {
     padding: 1px 6px;
     width: 340px;

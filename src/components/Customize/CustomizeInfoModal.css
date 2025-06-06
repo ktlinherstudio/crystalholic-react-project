@@ -129,18 +129,11 @@
 }
 
 .customize-close:hover {
-    display: block;
-    margin: 35px auto 0;
-    padding: 10px 40px;
-    font-size: 16px;
-    border-radius: 999px;
-    border: #8750bf solid 1px;
+    background-color: #9763Ca;
+    color: #fff;
+}
+
+.customize-close:active {
     background-color: #8750bf;
     color: #fff;
-    cursor: pointer;
-    font-family: "Noto Sans TC";
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 1.6px;
-    text-align: center;
 }

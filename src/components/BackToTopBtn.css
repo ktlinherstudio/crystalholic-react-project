@@ -20,6 +20,9 @@
 .back-to-top-btn:hover {
   transform: scale(1.1);
 }
+.back-to-top-btn:active {
+  transform: scale(1.1);
+}
 
 .back-to-top-img {
   width: 100%;
