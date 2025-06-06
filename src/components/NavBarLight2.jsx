@@ -32,12 +32,12 @@ export default function NavBarLight() {
   return (
     <>
       <header id="navbar">
-        <Link className="logo" to="/">
+        <Link className="logo1" to="/">
           <img src="./images/S-NavBar/logotext_nav2.svg" alt="首頁" />
         </Link>
 
         <nav className="navigation">
-          <ul className="icon">
+          <ul className="icon1">
             <li>
               <a href="#"><img src="./images/S-NavBar/navicon_search.svg" alt="Search" /></a>
             </li>
