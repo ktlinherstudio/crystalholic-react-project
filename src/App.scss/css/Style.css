@@ -235,18 +235,29 @@ body {
 @media ((max-width:1367px) and (min-height:820px)) {
   .coverbg .bgdark2 {
     height: 71vh;
-    top: 483.6vh;
+    top: 385.6vh;
   }
 }
 @media (max-width:1025px) {
   .coverbg .bgdark2 {
     height: 72.5vh;
-    top: 485.6vh;
+    top: 387.6vh;
+  }
+}
+@media ((max-width:1025px) and (max-height:769px)) {
+  .coverbg .bgdark2 {
+    height: 72.5vh;
+    top: 380.6vh;
   }
 }
 
 /*coverfooter*/
 @media ((max-width:1367px) and (min-height:820px)) {
+  .coverfooter {
+    display: none;
+  }
+}
+@media ((max-width:1025px) and (max-height:769px)) {
   .coverfooter {
     display: none;
   }
@@ -583,6 +594,12 @@ body {
     top: 40%;
   }
 }
+@media (max-width:640px) {
+  .section-starttest .startbox1 .bling {
+    width: 155.82px;
+    top: 44%;
+  }
+}
 .section-starttest .startbox1 .numbg {
   width: 1127.82px;
   height: 707.42px;
@@ -612,6 +629,13 @@ body {
     height: 707.42px;
     left: -20.7%;
     top: 30.7%;
+  }
+}
+@media (max-width:640px) {
+  .section-starttest .startbox1 .numbg {
+    width: 340.82px;
+    left: -13%;
+    top: 39%;
   }
 }
 .section-starttest .startbox2 {
@@ -652,10 +676,52 @@ body {
     padding-top: 20px;
   }
 }
-.section-starttest .startbox2 .scroll2 {
-  animation: Afterdelay 10s ease-in 10s forwards, floatY-s 0.8s ease-in-out infinite;
-  width: 28.5px;
-  height: 97.1px;
+@media (max-width:640px) {
+  .section-starttest .startbox2 p {
+    font-size: 1rem;
+  }
+}
+.section-starttest .startbox2 .scrollbox2 {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+}
+@media (max-width:640px) {
+  .section-starttest .startbox2 .scrollbox2 {
+    top: 81%;
+    left: 50%;
+  }
+}
+.section-starttest .startbox2 .scrollbox2 .scroll3 {
+  width: 32px;
+  height: 109px;
+  position: relative;
+}
+.section-starttest .startbox2 .scrollbox2 .scroll4 {
+  animation: Afterdelay 5s ease-in 5s forwards, floatY 0.8s ease-in-out infinite;
+  width: 31px;
+  height: 109px;
+  position: absolute;
+  left: 2%;
+  top: -59%;
+}
+@media (max-width:1025px) {
+  .section-starttest .startbox2 .scrollbox2 .scroll4 {
+    left: 0%;
+    top: -57.9%;
+  }
+}
+@media (max-width:820px) {
+  .section-starttest .startbox2 .scrollbox2 .scroll4 {
+    left: 0%;
+    top: -53%;
+  }
+}
+@media (max-width:640px) {
+  .section-starttest .startbox2 .scrollbox2 .scroll4 {
+    left: 0%;
+    top: -53%;
+  }
 }
 
 /*憑直覺抽一張吧*/
@@ -683,6 +749,26 @@ body {
   gap: 15%;
   z-index: 2;
 }
+@media ((max-width:1367px) and (min-height:820px)) {
+  #section-tarotcard #tarotcard-title {
+    width: 28.5%;
+    margin-top: 4%;
+    margin-bottom: 9%;
+  }
+}
+@media (max-width:1025px) {
+  #section-tarotcard #tarotcard-title {
+    width: 43.5%;
+    margin-top: 4%;
+    margin-bottom: 20%;
+  }
+}
+@media ((max-width:1025px) and (max-height:769px)) {
+  #section-tarotcard #tarotcard-title {
+    width: 33%;
+    margin-bottom: 9%;
+  }
+}
 #section-tarotcard #tarotcard-title .dimond-left {
   width: 7%;
 }
@@ -698,14 +784,24 @@ body {
   /*旋轉效果用(還在研究)*/
   /*最原始沒有翻牌效果*/
 }
+@media ((max-width:1367px) and (min-height:1024px)) {
+  #section-tarotcard #tarotcard-box {
+    height: 36%;
+  }
+}
 @media ((max-width:1367px) and (min-height:820px)) {
   #section-tarotcard #tarotcard-box {
-    padding-left: 10%;
+    height: 39%;
   }
 }
 @media (max-width:1025px) {
   #section-tarotcard #tarotcard-box {
-    padding-left: 12%;
+    height: 20%;
+  }
+}
+@media ((max-width:1025px) and (max-height:769px)) {
+  #section-tarotcard #tarotcard-box {
+    height: 37%;
   }
 }
 @media (max-width:820px) {
@@ -779,10 +875,24 @@ body {
   color: #ffffff;
   background-color: rgb(135, 80, 191);
 }
+@media ((max-width:1367px) and (min-height:820px)) {
+  #section-tarotcard #tcbtn #tarotcard-btn {
+    margin-top: 35%;
+  }
+}
+@media ((max-width:1367px) and (min-height:1024px)) {
+  #section-tarotcard #tcbtn #tarotcard-btn {
+    margin-top: 42%;
+  }
+}
 @media (max-width:1025px) {
   #section-tarotcard #tcbtn #tarotcard-btn {
-    margin-top: 13.5vh;
-    margin-bottom: 5vh;
+    margin-top: 60%;
+  }
+}
+@media ((max-width:1025px) and (max-height:769px)) {
+  #section-tarotcard #tcbtn #tarotcard-btn {
+    margin-top: 25%;
   }
 }
 
@@ -1137,6 +1247,7 @@ body {
 
 /*水晶小百科*/
 #section-crystaldiscovery {
+  border: #e9df70 5px solid;
   width: 100%;
   height: 100vh;
   color: #8750BF;
@@ -1269,7 +1380,7 @@ body {
 @media (max-width:820px) {
   #section-crystaldiscovery .crystal-display .circlebox {
     position: absolute;
-    top: 38%;
+    top: 35%;
     left: 6%;
     transform: rotate(90deg);
   }
@@ -1343,24 +1454,6 @@ body {
 #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(10) {
   transform: rotate(270deg) translate(280px) rotate(-270deg);
 }
-@media (max-width:1365px) {
-  #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(10) {
-    width: 125px;
-    height: 125px;
-  }
-}
-@media (max-width:1025px) {
-  #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(10) {
-    width: 125px;
-    height: 125px;
-  }
-}
-@media (max-width:820px) {
-  #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(10) {
-    width: 95px;
-    height: 95px;
-  }
-}
 #section-crystaldiscovery .crystal-display .circlebox .circle:nth-child(11) {
   transform: rotate(300deg) translate(280px) rotate(-300deg);
 }
@@ -1409,7 +1502,7 @@ body {
     align-items: center;
     gap: 53%;
     left: 0%;
-    top: 45%;
+    top: 46.5%;
   }
 }
 @media ((max-width:1025px) and (max-height:769px)) {
@@ -1441,8 +1534,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 45%;
-    left: 0%;
-    top: 28%;
+    top: 27%;
   }
 }
 #section-crystaldiscovery #crystalbtn {

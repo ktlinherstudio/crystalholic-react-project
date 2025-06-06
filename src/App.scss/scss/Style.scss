@@ -478,13 +478,20 @@ body {
         left: 0;
 
         @media ($media-xlg-h) {
+            //pro / air 橫向
             height: 71vh;
-            top: 483.6vh;
+            top: 385.6vh;
         }
 
         @media ($media-lg) {
+            //pro/ air/ mini  直向
             height: 72.5vh;
-            top: 485.6vh;
+            top: 387.6vh;
+        }
+
+        @media ($media-lg-h) {
+            height: 72.5vh;
+            top: 380.6vh;
         }
 
         // z-index: 1;
@@ -512,6 +519,10 @@ body {
 /*coverfooter*/
 .coverfooter {
     @media ($media-xlg-h) {
+        display: none;
+    }
+
+    @media ($media-lg-h) {
         display: none;
     }
 
@@ -735,7 +746,7 @@ body {
                     floatY 0.8s ease-in-out infinite;
 
                 width: 31px;
-                height:109px;
+                height: 109px;
                 // 定位
                 position: absolute;
                 // left: 49%;
@@ -886,10 +897,10 @@ body {
                 top: 40%;
             }
 
-            // @media ($media-sm) {
-            //     left: 12%;
-            //     top: 35%;
-            // }
+            @media ($media-sm) {
+                width: 155.82px;
+                top: 44%;
+            }
 
         }
 
@@ -924,10 +935,11 @@ body {
                 top: 30.7%;
             }
 
-            // @media ($media-sm) {
-            //     left: 12%;
-            //     top: 35%;
-            // }
+            @media ($media-sm) {
+                width:340.82px;
+                left: -13%;
+                top: 39%;
+            }
         }
     }
 
@@ -970,20 +982,65 @@ body {
             @media ($media-xlg-h) {
                 padding-top: 20px;
             }
+
+            @media ($media-sm) {
+                font-size: 1rem;
+
+            }
         }
 
-        .scroll2 {
-            //動畫
-            animation: Afterdelay 10s ease-in 10s forwards,
-                floatY-s 0.8s ease-in-out infinite;
-            width: 28.5px;
-            height: 97.1px;
-        }
+        .scrollbox2 {
+            position: absolute;
+            top: 84%;
+            left: 50%;
 
-        // img {
-        //     width: 28.5px;
-        //     height: 97.1px;
-        // }
+            // position: relative;
+            @media ($media-sm) {
+                top: 81%;
+                left: 50%;
+            }
+
+            .scroll3 {
+                width: 32px;
+                height: 109px;
+
+                position: relative;
+                // position: absolute;
+                // left: 49%;
+                // top: 79.8%;
+            }
+
+            .scroll4 {
+                //動畫
+                animation: Afterdelay 5s ease-in 5s forwards,
+                    floatY 0.8s ease-in-out infinite;
+
+                width: 31px;
+                height: 109px;
+                // 定位
+                position: absolute;
+                // left: 49%;
+                // top: 72.8%;
+                left: 2%;
+                top: -59%;
+
+                @media ($media-lg) {
+                    //pro 直 / mini橫
+                    left: 0%;
+                    top: -57.9%;
+                }
+
+                @media ($media-md) {
+                    left: 0%;
+                    top: -53%;
+                }
+
+                @media ($media-sm) {
+                    left: 0%;
+                    top: -53%;
+                }
+            }
+        }
     }
 }
 
@@ -1019,17 +1076,32 @@ body {
         z-index: 2;
 
 
-        //     @media ($media-lg) {
-        //         // font-size: 1.5rem; // 24px
-        //         width: 43.5%; // 344px;
-        //         margin-top: 5vh;
-        //         margin-bottom: 13.5vh;
-        //     }
+        // @media ($media-xlg-h-pro) {
+        //     //pro橫向
+        //     margin-top: 4%;
+        //     margin-bottom: 9%;
+        // }
 
-        //     @media ($media-md) {
-        //         margin-top: 8.7vh; //70px
-        //         margin-bottom: 7.5vh; //60px
-        //     }
+        @media ($media-xlg-h) {
+            //pro/ air 橫向
+            width: 28.5%;
+            margin-top: 4%;
+            margin-bottom: 9%;
+
+        }
+
+        @media ($media-lg) {
+            //pro / air / mini 直向
+            width: 43.5%;
+            margin-top: 4%;
+            margin-bottom: 20%;
+        }
+
+        @media ($media-lg-h) {
+            //mini 橫
+            width: 33%;
+            margin-bottom: 9%;
+        }
 
         .dimond-left {
             width: 7%; // 22px;
@@ -1050,21 +1122,31 @@ body {
         display: flex;
         justify-content: center;
         width: 100%;
-        height:51%;
+        height: 51%;
         padding-left: 4%;
 
-        @media ($media-xlg-h) {
-            padding-left: 10%;
-            // margin-top: 25%;
+        @media ($media-xlg-h-pro) {
+            // pro 橫向
+            height: 36%;
         }
 
+        @media ($media-xlg-h) {
+            //pro / air 橫
+            height: 39%;
+        }
 
         @media ($media-lg) {
-            padding-left: 12%;
-            // margin-top: 27%;
+            //pro 直向
+            height: 20%;
+        }
+
+        @media ($media-lg-h) {
+            //mini橫向
+            height: 37%;
         }
 
         @media ($media-md) {
+            //air / mini 直向
             padding-left: 4%;
         }
 
@@ -1229,9 +1311,24 @@ body {
                 background-color: rgb(135, 80, 191);
             }
 
+            @media ($media-xlg-h) {
+                // air 橫向
+                margin-top: 35%;
+            }
+
+            @media ($media-xlg-h-pro) {
+                //pro 橫向
+                margin-top: 42%;
+            }
+
             @media ($media-lg) {
-                margin-top: 13.5vh;
-                margin-bottom: 5vh;
+                //pro /air /mini 直
+                margin-top: 60%;
+            }
+
+            @media ($media-lg-h) {
+                //mini 橫
+                margin-top: 25%;
             }
         }
     }
@@ -1645,7 +1742,7 @@ body {
 
 /*水晶小百科*/
 #section-crystaldiscovery {
-    // border: #e9df70 5px solid;
+    border: #e9df70 5px solid;
 
     width: 100%;
     height: 100vh;
@@ -1799,7 +1896,7 @@ body {
             @media ($media-md) {
                 //mini 直 820
                 position: absolute;
-                top: 38%;
+                top: 35%;
                 left: 6%;
                 transform: rotate(90deg);
             }
@@ -1912,24 +2009,24 @@ body {
             .circle:nth-child(10) {
                 transform: rotate(270deg) translate(280px) rotate(-270deg);
 
-                @media ($media-xlg-up) {
-                    width: 125px;
-                    height: 125px;
-                }
+                // @media ($media-xlg-up) {
+                //     width: 125px;
+                //     height: 125px;
+                // }
 
-                @media ($media-lg) {
-                    // position: static;
-                    // transform: unset;
-                    width: 125px;
-                    height: 125px;
-                }
+                // @media ($media-lg) {
+                //     // position: static;
+                //     // transform: unset;
+                //     width: 125px;
+                //     height: 125px;
+                // }
 
-                @media ($media-md) {
-                    // position: static;
-                    // transform: unset;
-                    width: 95px;
-                    height: 95px;
-                }
+                // @media ($media-md) {
+                //     // position: static;
+                //     // transform: unset;
+                //     width: 95px;
+                //     height: 95px;
+                // } 
             }
 
             .circle:nth-child(11) {
@@ -1987,7 +2084,7 @@ body {
                 align-items: center;
                 gap: 53%;
                 left: 0%;
-                top: 45%;
+                top: 46.5%;
             }
 
             @media ($media-lg-h) {
@@ -2014,15 +2111,15 @@ body {
 
             @media ($media-md) {
                 //mini 直 820
+                // width: 100%;
                 height: 93%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 45%;
-                left: 0%;
-                top: 28%;
-
+                // left: 0%;
+                top: 27%;
             }
         }
     }
@@ -2735,4 +2832,7 @@ $level2-left: 50px;
 
 
 /*RWD*/
-//bgdark2  ipad air/pro 橫向 要調整
+//bgdark2  ipad air/pro 橫向 要調整 //完成
+//cover
+//tarotcard 
+//小百科

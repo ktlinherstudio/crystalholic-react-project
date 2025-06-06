@@ -215,7 +215,10 @@ export default function Cover() {
                     </div>
                     <div className="startbox2">
                         <p>讓水晶傾聽心聲，編織你獨一無二的手鍊。</p>
-                        <div><img src="./images/HomePage/scroll.svg" className="scroll2" alt="" /></div>
+                        <span className='scrollbox2'>
+                            <img src="./images/HomePage/scroll1.svg" className="scroll3" alt="" />
+                            <img src="./images/HomePage/scroll2.svg" className="scroll4" alt="" />
+                        </span>
                     </div>
                 </motion.section>
             </div>
