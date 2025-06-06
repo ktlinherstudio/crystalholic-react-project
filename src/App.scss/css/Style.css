@@ -444,14 +444,14 @@ body {
   }
 }
 .ch-cover .cover-box .scrollbox .scroll1 {
-  width: 28.5px;
-  height: 97.1px;
+  width: 32px;
+  height: 109px;
   position: relative;
 }
 .ch-cover .cover-box .scrollbox .scroll2 {
   animation: Afterdelay 5s ease-in 5s forwards, floatY 0.8s ease-in-out infinite;
-  width: 28.5px;
-  height: 97.1px;
+  width: 31px;
+  height: 109px;
   position: absolute;
   left: 2%;
   top: -59%;
