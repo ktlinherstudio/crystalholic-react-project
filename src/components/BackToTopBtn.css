@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   justify-content: flex-end; /* 向右對齊 */
-  margin: -100px 60px 40px auto;
+  margin: -90px 80px 40px auto;
   z-index: 88;
 }
 
