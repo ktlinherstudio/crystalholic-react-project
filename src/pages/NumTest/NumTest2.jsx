@@ -3,6 +3,7 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import { useRef, useState } from 'react';
 import '../../components/BgLight.css';
 import BgLightAni from '../../components/BgLightAni';
+import CopyrightNotice from '../../components/CopyrightNotice'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -54,6 +55,7 @@ import { useNavigate } from 'react-router-dom';
     return (
       <>
         <NavBarWrapper variant="dark" />
+         <div className='copyrightNotice'>
         <main className="numtest2" style={{ position: 'relative', overflow: 'hidden' }}>
         <BgLightAni/>
         {/* <main className="numtest2"> */}
@@ -133,6 +135,8 @@ import { useNavigate } from 'react-router-dom';
             </button>
           </section>
         </main>
+        <CopyrightNotice />
+        </div>
       </>
     );
   }

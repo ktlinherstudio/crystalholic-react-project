@@ -121,6 +121,15 @@
   color: #8750BF;
 }
 
+.en-font {
+  font-family: 'Lora';
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+}
+
 .text-content p,
 .text-content ul {
   font-family: 'Noto Sans TC';
@@ -229,13 +238,21 @@
   }
 
   .about-hero-description {
-    font-size: 16px;
-    max-width: 440px;
+    font-size: 14px;
+    max-width: 390px;
   }
 
   .text-content .line {
     max-width: 410px;
   }
+  .beauty-spirituality .content,
+.quality-guarantee .content {
+  padding: 40px 40px;
+}
+
+.life-crystal .content {
+  padding: 40px 40px;
+}
 
   .text {
     width: 100%;

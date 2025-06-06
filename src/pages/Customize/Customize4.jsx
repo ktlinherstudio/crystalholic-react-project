@@ -1,6 +1,7 @@
 import style from './Customize4.module.css'
 import '../../components/NumTestBg.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
+import CopyrightNotice from '../../components/CopyrightNotice'
 import { useEffect, useState, useMemo, useRef } from 'react';
 import CustomizeInfoModal from '../../components/Customize/CustomizeInfoModal';
 
@@ -720,6 +721,7 @@ export default function Customize4() {
     <>
       <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
       <NavBarWrapper variant="dark" />
+
       <main className={style.index}>
         <div className={style.preload} />
         <div className={style.boxs}>
@@ -1199,6 +1201,8 @@ export default function Customize4() {
           </div>
         )}
       </main>
+      <CopyrightNotice />
+
     </>
   )
 }

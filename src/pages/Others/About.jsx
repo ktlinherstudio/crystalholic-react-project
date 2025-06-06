@@ -98,7 +98,7 @@ export default function About() {
             <div className="content">
               <div className="text">
                 <div className="text-content">
-                  <h2 className="title">Crystalholic的品質保證</h2>
+                  <h2 className="title"><span className="en-font"> Crystalholic</span>的品質保證</h2>
                   <img
                     src={`${base}images/About/deco-divider_purple.svg`}
                     alt="divider"

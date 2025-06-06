@@ -490,7 +490,7 @@
     border-radius: 0.938rem;
     background: rgb(255, 255, 255, 225);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
-    z-index: 1000;
+    z-index: 3;
 }
 
 .icon1Box {
@@ -708,7 +708,7 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.95); 
+    background: rgba(255, 255, 255, 0.95);
     padding: 1rem 1rem 0 1rem;
 }
 
@@ -736,27 +736,27 @@
 }
 
 .overlayContent {
-  flex: 1;
-  overflow-y: scroll; 
-  padding: 1rem;
-  scrollbar-width: thin;
-  scrollbar-color: #fff #E4DEED;
+    flex: 1;
+    overflow-y: scroll;
+    padding: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #fff #E4DEED;
 }
 
 .overlayContent::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 .overlayContent::-webkit-scrollbar-track {
-  background: transparent;
-  border-radius: 999px;
+    background: transparent;
+    border-radius: 999px;
 }
 
 .overlayContent::-webkit-scrollbar-thumb {
-  background-color: #C3B7DD;
-  border-radius: 999px;
-  border: 2px solid transparent;
-  background-clip: content-box;
+    background-color: #C3B7DD;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
 }
 
 
@@ -859,8 +859,9 @@
     background-color: #6e3bbf;
     box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
 }
+
 .wikiBtn:active {
-     background-color: #6e3bbf;
+    background-color: #6e3bbf;
     box-shadow: 0 0 6px rgba(135, 80, 191, 0.5);
 }
 
@@ -956,6 +957,7 @@
 .modalButtons button:last-child:hover {
     background-color: #e0e0e0;
 }
+
 
 /* 彈出動畫 */
 @keyframes popIn {

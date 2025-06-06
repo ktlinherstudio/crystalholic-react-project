@@ -10,15 +10,15 @@ export function createStarsBackground(container) {
     pointer-events: none;
   `;
 
-  const DPR = window.devicePixelRatio || 1; /* ★ changed ★ */
+  const DPR = window.devicePixelRatio || 1; 
 
   function resize() {
     const { width, height } = container.getBoundingClientRect();
-    canvas.width = width * DPR;      /* ★ changed ★ */
-    canvas.height = height * DPR;    /* ★ changed ★ */
+    canvas.width = width * DPR;      
+    canvas.height = height * DPR;    
     canvas.style.width = `${width}px`;
     canvas.style.height = `${height}px`;
-    ctx.scale(DPR, DPR);             /* ★ changed ★ */
+    ctx.scale(DPR, DPR);             
   }
 
   const ctx = canvas.getContext('2d');
@@ -26,19 +26,19 @@ export function createStarsBackground(container) {
 
   /* 縮減星星數量 ↓ */
   const stars = [];
-  const numStars = 120;              /* ★ changed ★ */
+  const numStars = 120;              
   for (let i = 0; i < numStars; i++) {
     stars.push({
       x: Math.random() * canvas.width / DPR,
       y: Math.random() * canvas.height / DPR,
-      r: Math.random() * 1.5 + 0.5,
+      r: Math.random() * 1.5 + 0.5,   /* 星星大小調整 */
       a: Math.random(),
-      d: Math.random() * 0.02 + 0.005,
+      d: Math.random() * 0.035 + 0.009,  /* 星星閃爍速度 */
     });
   }
 
   /* 30 fps throttle ↓ */
-  let last = 0;                      /* ★ changed ★ */
+  let last = 0;                      
   function draw(now) {
     if (now - last < 33) { requestAnimationFrame(draw); return; }
     last = now;

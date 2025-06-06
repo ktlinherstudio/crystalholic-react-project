@@ -158,9 +158,12 @@
   cursor: pointer;
   line-height: 22px;
 }
-
 .submit-button:hover {
-  background: #684581;
+  background: #9763Ca;
+}
+
+.submit-button:active {
+  background: #6E3BBF;
 }
 
 .birthday {

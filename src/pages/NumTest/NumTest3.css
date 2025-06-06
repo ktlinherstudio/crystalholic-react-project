@@ -279,8 +279,14 @@
     background: #A67CEB;
 }
 
-.button2-j:hover{
+.button1-j:hover,.button2-j:hover{
     background-color: #9764ca;
+    color: #fff;
+}
+
+.button1-j:active,.button2-j:active {
+    background-color: #6E3BBF;
+    color: #fff;
 }
 
 
@@ -358,7 +364,11 @@
 }
 
 
-
+.copyrightNotice {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* RWD 斷點： ≤ 1024 */
 @media (max-width: 1024px) {
