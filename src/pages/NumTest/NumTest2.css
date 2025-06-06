@@ -172,6 +172,11 @@
 .num2-button:active {
     background-color: #6E3BBF;
 }
+.copyrightNotice {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 /* ========================================================= */
 /* ---------- RWD 斷點：≤ 1024px ---------- */
 @media (max-width: 1024px) {
