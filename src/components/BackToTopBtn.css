@@ -29,3 +29,10 @@
   height: 100%;
   object-fit: contain;
 }
+
+
+@media screen and (max-width: 640px) {
+.back-to-top-block {
+  margin: -80px 20px 40px auto;
+}
+}

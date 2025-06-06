@@ -245,6 +245,14 @@
   .text-content .line {
     max-width: 410px;
   }
+  .beauty-spirituality .content,
+.quality-guarantee .content {
+  padding: 40px 40px;
+}
+
+.life-crystal .content {
+  padding: 40px 40px;
+}
 
   .text {
     width: 100%;
