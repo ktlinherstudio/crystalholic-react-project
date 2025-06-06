@@ -283,6 +283,7 @@
 
     .moon-title {
         font-size: 16px;
+        width: 80%;
     }
 
     .moon-bg {
@@ -300,5 +301,6 @@
     .ol-moon-list,
     .ul-moon-list {
         font-size: 14px;
+        width: 80%;
     }
 }
