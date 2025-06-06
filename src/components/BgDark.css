@@ -2,14 +2,16 @@
 :root{
   --color-bg1:#b493ee;
   --color-bg2:#420f99;
-  --color1:66 73 212;
+  /* --color1: 66 73 212; */
+  --color1: 22 24 135;
   --color2:0 3 70;
-  --color3:36 40 105;
-  --color4:66 73 212;
+  /* --color3:36 40 105; */
+  --color3:58 35 177;
+  /* --color4:66 73 212; */
+  --color4:247 66 229;
   --color5:180 147 238;
   --color-interactive:19 0 129;
-  --gradientColor:rgb(131, 46, 228);
-  /* --gradientColor:rgb(228, 46, 46); */
+  --gradientColor: rgb(131, 46, 228);
 
   --circle-size:120%;
   --blending:hard-light;
@@ -95,7 +97,7 @@
 }
 
 .gradient-bg .g4{
-  background:radial-gradient(circle,rgba(var(--color4)/.7) 0,transparent 50%) no-repeat;
+  background:radial-gradient(circle,rgba(var(--color4)/.3) 0,transparent 50%) no-repeat;
   width:var(--circle-size);height:var(--circle-size);
   top:calc(50% - var(--circle-size)/2);left:calc(50% - var(--circle-size)/2);
   transform-origin:calc(50% - 200px);

@@ -3,16 +3,15 @@ import NavBarWrapper from '../../components/NavBarWrapper';
 import BgDark from '../../components/BgDark';
 import FooterTrn from '../../components/FooterTrn';
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import productSeriesData from './productSeriesData';
 
 export default function ProductCollection() {
-  /* --- React states ---------------------------------------------------- */
   const [activeSeries, setActiveSeries] = useState('blue');
   const [favorites, setFavorites] = useState({});
   const [triangleX, setTriangleX] = useState(0);
 
-  /* --- refs ------------------------------------------------------------ */
+  const location = useLocation();
   const iconRefs = useRef({});
   const iconAreaRef = useRef(null);
 
@@ -26,12 +25,6 @@ export default function ProductCollection() {
     { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_procat-cocktail.svg' }
   ];
 
-  /* --- 點擊收藏 -------------------------------------------------------- */
-  // const toggleFavorite = (e, idx) => {
-  //   e.preventDefault();
-  //   e.stopPropagation();
-  //   setFavorites(prev => ({ ...prev, [idx]: !prev[idx] }));
-  // };
 
   /* --- 點擊商品卡片導頁 ---------------------------------------------- */
   const handleClickCard = (seriesKey, productIndex) => {
@@ -50,11 +43,11 @@ export default function ProductCollection() {
   }, [activeSeries]);
 
   useEffect(() => {
-    const hash = window.location.hash?.replace('#', '');
+    const hash = location.hash?.replace('#', '');
     if (hash && productSeriesData[hash]) {
       setActiveSeries(hash);
     }
-  }, []);
+  }, [location.hash]);
 
   useEffect(() => {
     // 預載每個系列的主圖與水晶圖
