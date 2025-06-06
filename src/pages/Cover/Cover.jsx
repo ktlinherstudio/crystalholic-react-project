@@ -353,7 +353,7 @@ export default function Cover() {
                     </div>
                 </div>
             </section>
-            <BackToTopBtn />
+           
 
             {/* 礦迷回饋 */}
             <section id="section-feedback">
@@ -451,6 +451,7 @@ export default function Cover() {
                     <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
                 </div>
             </section>
+             <BackToTopBtn />
             <div className="coverfooter"><FooterTrn /></div>
         </>
     )

@@ -154,7 +154,7 @@ export default function Cover() {
                     </div>
                 </div>
             </section>
-             <BackToTopBtn />
+            
 
             {/* 礦迷回饋 */}
             <section id="section-feedback">
@@ -251,14 +251,12 @@ export default function Cover() {
                     </div>
                     <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
                 </div>
-            </section>
+            </section> 
+            <BackToTopBtn />
             <div className="coverfooter"><FooterTrn /></div>
         </>
     )
 }
-
-
-
 
 {/* jquery CDN 要先執行 */ }
 < script src="https://code.jquery.com/jquery-3.7.1.min.js"
