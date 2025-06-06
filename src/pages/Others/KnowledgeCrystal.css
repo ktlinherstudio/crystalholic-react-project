@@ -380,17 +380,19 @@ hr {
 @media screen and (max-width: 640px) {
   .category-k {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     font-size: 14px;
 
   }
 
   .crystal-k {
     margin-bottom: -150px;
+    margin-top: -50px;
   }
 
   .crystal-k h1 {
-    font-size: 72px;
+    font-size: 40px;
+    font-weight: 500;
   }
 
   .crystal-k-img {
