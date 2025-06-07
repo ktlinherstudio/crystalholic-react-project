@@ -19,10 +19,10 @@ export default function ProductCollection() {
 
   /* ---  icon 清單（id 必須對應資料檔 key） ----------------------------- */
   const iconList = [
-    { id: 'blue', label: '澄語之藍', icon: './images/Product/icon_blue.svg' },
-    { id: 'adventure', label: '秘境探光', icon: './images/Product/icon_adventure.svg' },
-    { id: 'seasons', label: '四季琉波', icon: './images/Product/icon_seasons.svg' },
-    { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_cocktail.svg' }
+    { id: 'blue', label: '澄語之藍', icon: './images/Product/icon_blue.svg',iconActive: './images/Product/icon_blue_click.svg' },
+    { id: 'adventure', label: '秘境探光', icon: './images/Product/icon_adventure.svg',iconActive: './images/Product/icon_adventure_click.svg' },
+    { id: 'seasons', label: '四季琉波', icon: './images/Product/icon_seasons.svg',iconActive: './images/Product/icon_seasons_click.svg' },
+    { id: 'cocktail', label: '微醺晶釀', icon: './images/Product/icon_cocktail.svg',iconActive: './images/Product/icon_cocktail_click.svg' }
   ];
 
 
@@ -79,14 +79,14 @@ export default function ProductCollection() {
             className={`pc_triangle_indicator triangle_${activeSeries}`}
             style={{ left: `${triangleX - 48}px` }}
           />
-          {iconList.map(({ id, label, icon }) => (
+          {iconList.map(({ id, label, icon, iconActive }) => (
             <div
               key={id}
               className={`pc_icon_item ${activeSeries === id ? 'pc_active' : ''}`}
               onClick={() => setActiveSeries(id)}
               ref={el => (iconRefs.current[id] = el)}
             >
-              <img src={icon} alt={label} />
+              <img src={activeSeries === id ? iconActive : icon} alt={label} />
               <span>{label}</span>
             </div>
           ))}

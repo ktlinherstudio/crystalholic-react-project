@@ -1,5 +1,4 @@
 
-
 const productSeriesData = {
   blue: {
     name: "澄語之藍",
