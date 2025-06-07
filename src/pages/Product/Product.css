@@ -89,10 +89,8 @@
 
 /* 商品照 (左側) */
 .p_product_img_left{
-
-
     flex: 1 0 42%;          /* 在左右雙欄中占約 42% */
-    max-width: 32rem;       /* ≈512 px；桌機上限 */
+    max-width: 35rem; 
     aspect-ratio: 25 / 27; 
 }
 

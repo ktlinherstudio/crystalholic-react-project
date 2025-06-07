@@ -26,7 +26,7 @@ const productSeriesData = {
         ]
       },
       {
-        name: "沈睡王國的夢幻派對",
+        name: "沈睡王國",
         price: "NT$1,680",
         image: "./images/S-CrystalBracelet/product_blue_party.jpg",
         description: [
@@ -94,7 +94,7 @@ const productSeriesData = {
         ]
       },
       {
-        name: "乘風破浪的你",
+        name: "乘風破浪",
         price: "NT$2,380",
         image: "./images/S-CrystalBracelet/product_adventure_wave.jpg",
         description: [
@@ -230,7 +230,7 @@ const productSeriesData = {
         ]
       },
       {
-        name: "薩提爾的獨酌",
+        name: "薩提爾獨酌",
         price: "NT$2,380",
         image: "./images/S-CrystalBracelet/product_cocktail_whisky.jpg",
         description: [
