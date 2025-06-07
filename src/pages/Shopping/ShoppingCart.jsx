@@ -15,21 +15,24 @@ import { TW_COUNTIES, genStores } from './twDistricts';
 /* ───────────────────────────────────────────── */
 /* DeliveryOptions 元件                           */
 /* ───────────────────────────────────────────── */
-function DeliveryOptions({ onPlaceChange }) {
+function DeliveryOptions({
+  onPlaceChange,
+  onMethodChange,           // 🆕 讓父層同步獲得配送方式
+}) {
   /* ---------- state ---------- */
-  const [place, setPlace] = useState('台灣');
+  const [place, setPlace]   = useState('台灣');
   const [method, setMethod] = useState('宅配（貨到付款）');
   const [county, setCounty] = useState('');
   const [stores, setStores] = useState([]);
-  const [store, setStore] = useState('');
-  const [zip, setZip] = useState('');
+  const [store, setStore]   = useState('');
+  const [zip, setZip]       = useState('');
   const [address, setAddress] = useState('');
   const [country, setCountry] = useState('');
 
   /* ---------- 地點／方式變動 ---------- */
   useEffect(() => {
     if (place === '海外') {
-      setMethod('DHL國際快遞（關稅另計）');
+      setMethod('國際快遞（關稅另計）');
       setCounty('');
       setStore('');
       setZip('');
@@ -39,6 +42,7 @@ function DeliveryOptions({ onPlaceChange }) {
       setStore('');
     }
     onPlaceChange?.(place);
+    onMethodChange?.(method);      // 🆕 回傳目前配送方式
   }, [place, method]);
 
   /* ---------- 縣市變動 → 產生門市 ---------- */
@@ -92,7 +96,7 @@ function DeliveryOptions({ onPlaceChange }) {
         )}
         {place === '海外' && (
           <label>*送貨方式
-            <input value="DHL國際快遞（關稅另計）" disabled />
+            <input value="國際快遞（關稅另計）" disabled />
           </label>
         )}
 
@@ -187,7 +191,6 @@ function DeliveryOptions({ onPlaceChange }) {
   );
 }
 
-
 /* ───────────────────────────────────────────── */
 /* ShoppingCart 主元件                            */
 /* ───────────────────────────────────────────── */
@@ -198,14 +201,18 @@ export default function ShoppingCart() {
   const { showAuthModal, openAuthModal, closeAuthModal } = useUI();
 
   /* 展開控制 */
-  const [showAllItems, setShowAllItems] = useState(false);
-  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
-  const [readyToCheckout, setReadyToCheckout] = useState(false);
+  const [showAllItems, setShowAllItems]         = useState(false);
+  const [showSuccessMsg, setShowSuccessMsg]     = useState(false);
+  const [readyToCheckout, setReadyToCheckout]   = useState(false);
 
   /* 收件人 & 發票 */
-  const [placeState, setPlaceState] = useState('台灣');
-  const [invoiceType, setInvoiceType] = useState('');
-  const [invoiceValue, setInvoiceValue] = useState('');
+  const [placeState,     setPlaceState]     = useState('台灣');
+  const [invoiceType,    setInvoiceType]    = useState('');
+  const [invoiceValue,   setInvoiceValue]   = useState('');
+
+  /* 🆕 配送方式 & 優惠碼 */
+  const [deliveryMethod, setDeliveryMethod] = useState('宅配（貨到付款）'); // 由 DeliveryOptions 直接更新
+  const [couponCode,     setCouponCode]     = useState('');                // 使用者輸入的代碼
 
   const navigate = useNavigate();
 
@@ -232,11 +239,22 @@ export default function ShoppingCart() {
     (acc, item) => acc + item.price * item.quantity,
     0
   );
-  const shipping = subtotal ? 70 : 0;
-  const total = subtotal + shipping;
+
+  // 🆕 運費費率表
+  const SHIPPING_FEE = {
+    '宅配（貨到付款）':       130,
+    '7-ELEVEN（貨到付款）':   60,
+    '全家（貨到付款）':       60,
+    '國際快遞（關稅另計）':   350,
+  };
+
+  const shipping = subtotal ? (SHIPPING_FEE[deliveryMethod] ?? 0) : 0;    // 🆕
+  const discount = couponCode.trim().toLowerCase() === 'crystalholic' ? 100 : 0; // 🆕
+
+  const total = subtotal + shipping - discount; // 🆕
   const formatCurrency = (num) => `NT$${num.toLocaleString('zh-TW')}`;
 
-  /* 發票 placeholder */
+  /* 發票 placeholder & label */
   const invoicePlaceholder =
     invoiceType === '個人發票'
       ? '例如：/ABCD123'
@@ -245,7 +263,6 @@ export default function ShoppingCart() {
       : invoiceType === '捐贈發票'
       ? '例如：09958'
       : '';
-  /* 🆕 發票 label（動態標題文字） */
   const invoiceLabel =
     invoiceType === '個人發票'
       ? '*手機條碼載具'
@@ -385,7 +402,10 @@ export default function ShoppingCart() {
             {/* 送貨 & 收件表單 */}
             <section className="cart_info_area">
               {/* 送貨及付款方式 */}
-              <DeliveryOptions onPlaceChange={setPlaceState} />
+              <DeliveryOptions
+                onPlaceChange={setPlaceState}
+                onMethodChange={setDeliveryMethod}  /* 🆕 */
+              />
 
               {/* 收件人資料 */}
               <form className="cart_info_card">
@@ -505,12 +525,29 @@ export default function ShoppingCart() {
                   <span>運費：</span>
                   <span>{formatCurrency(shipping)}</span>
                 </li>
+
+                {/* 🆕 優惠輸入 */}
                 <li>
                   <label htmlFor="coupon">
-                    優惠券代碼：
-                    <input id="coupon" type="text" placeholder="請輸入代碼" />
+                    優惠代碼：
+                    <input
+                      id="coupon"
+                      type="text"
+                      placeholder="請輸入代碼"
+                      value={couponCode}
+                      onChange={(e) => setCouponCode(e.target.value)}
+                    />
                   </label>
                 </li>
+
+                {/* 🆕 折扣列（僅輸入正確代碼時顯示） */}
+                {discount > 0 && (
+                  <li className="cart_discount">
+                    <span>優惠折抵：</span>
+                    <span>-{formatCurrency(discount)}</span>
+                  </li>
+                )}
+
                 <hr />
                 <li className="cart_total">
                   <span>合計：</span>
