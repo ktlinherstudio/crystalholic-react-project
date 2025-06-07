@@ -212,7 +212,6 @@ export default function Product() {
                 key={idx}
               >
                 <div className="p_product_img_wrap">
-                  {/* <div className="p_fav_icon" /> */}
                   <img className="p_product_img" src={item.image} alt={item.name} />
                 </div>
                 <div className="p_product_info">

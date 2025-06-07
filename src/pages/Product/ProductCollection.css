@@ -8,7 +8,6 @@
     display:flex;
     flex-direction:column; 
 }
-/* 主要內容區 */
 
 /* ─── 系列 icon 區 ─────────────────────────────── */
 .pc_icon_area {
@@ -39,6 +38,8 @@
 .pc_icon_item img {
   width: 7rem;
   height: 7rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
 }
 .pc_icon_item.pc_active img {
   border: none;
@@ -145,34 +146,6 @@
     height: 100%;
     object-fit: cover;
 }
-
-/* 收藏 icon 的三種狀態 */
-/* .pc_fav_icon {
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    cursor: pointer;
-  
-    background-image: url('/images/Product/btn-fav.svg'); 
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  
-    transition: background-image 0.2s ease;
-} */
-  
-/* hover 狀態（僅當未收藏） */
-/* .pc_fav_icon.hover:not(.clicked) {
-    background-image: url('/images/Product/btn-fav-hover.svg'); 
-} */
-  
-/* 點擊收藏後 */
-/* .pc_fav_icon.clicked {
-    background-image: url('/images/Product/btn-fav-click.svg'); 
-} */
-
 /* 商品資訊 */
 .pc_product_info {
     display: flex;

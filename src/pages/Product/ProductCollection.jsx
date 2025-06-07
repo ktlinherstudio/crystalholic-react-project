@@ -102,12 +102,6 @@ export default function ProductCollection() {
                 onClick={() => handleClickCard(activeSeries, idx)}
               >
                 <div className={`pc_product_img_wrap pc_shadow_${activeSeries}`}>
-                  {/* <div
-                    className={`pc_fav_icon ${favorites[idx] ? 'clicked' : ''}`}
-                    onClick={e => toggleFavorite(e, idx)}
-                    onMouseEnter={e => e.currentTarget.classList.add('hover')}
-                    onMouseLeave={e => e.currentTarget.classList.remove('hover')}
-                  /> */}
                   <img className="pc_product_img" src={p.image} alt={p.name} />
                 </div>
 
