@@ -2,21 +2,15 @@ import characterData from './characterData';
 
 import './NumTest3.css';
 import '../../components/NumTestBg.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import productSeriesData from '../Product/productSeriesData';
 import NavBarWrapper from '../../components/NavBarWrapper';
-import CopyrightNotice from '../../components/CopyrightNotice'
+import CopyrightNotice from '../../components/CopyrightNotice';
 import { useEffect, useState } from 'react';
-
-
-
-// 生命靈數資料
-
-
-
 
 export default function NumTest3() {
     const navigate = useNavigate();
-    const location = useLocation();  //⭐️新增
+    const location = useLocation();
     const [lifeNumber, setLifeNumber] = useState(1);
 
     useEffect(() => {
@@ -31,8 +25,21 @@ export default function NumTest3() {
 
     const data = characterData[lifeNumber];
 
+    // ✅ 手鍊圖片對應商品頁資料（手動對照）
+    const braceletImageToProduct = {
+        './images/Numtest/bracelet/bracelet1.png': { seriesKey: 'adventure', productIndex: 2 }, // 極圈探險家
+        './images/Numtest/bracelet/bracelet2.png': { seriesKey: 'seasons', productIndex: 0 },   // 柔光初生
+        './images/Numtest/bracelet/bracelet3.png': { seriesKey: 'blue', productIndex: 2 },      // 金魚泡泡
+        './images/Numtest/bracelet/bracelet4.png': { seriesKey: 'seasons', productIndex: 2 },   // 靜謐雪森
+    };
 
-
+    // ✅ 點擊跳轉函式
+    const handleBraceletClick = () => {
+        const path = braceletImageToProduct[data.bracelet];
+        if (path) {
+            navigate(`/Product/${path.seriesKey}/${path.productIndex}`);
+        }
+    };
 
     return (
         <>
@@ -139,11 +146,9 @@ export default function NumTest3() {
                                     <div className="star-box">
                                         <img className="star" src="./images/Numtest/star.png" alt="" />
                                     </div>
-                                    <Link to="/Product">
-                                        <div className="bracelet-box">
-                                            <img className="bracelet" src={data.bracelet} alt="bracelet" />
-                                        </div>
-                                    </Link>
+                                    <div className="bracelet-box" onClick={handleBraceletClick}>
+                                        <img className="bracelet" src={data.bracelet} alt="bracelet" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
