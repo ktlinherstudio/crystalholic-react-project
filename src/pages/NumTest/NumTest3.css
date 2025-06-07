@@ -26,7 +26,8 @@
     align-items: center;
     max-width: 80%;
     /* margin: 0 auto; */
-    margin: 0 5%;  /* 左邊圖片本身左右有空白 */
+    margin: 0 8%;
+    /* 左邊圖片本身左右有空白 */
     gap: 4%;
     /* flex: 1; */
 
@@ -57,7 +58,7 @@
     max-width: 90%;
     padding: 0.5rem;
     box-sizing: border-box;
-    margin-bottom: -5%;
+    /* margin-bottom: -5%; */
     /* background-color: green; */
     z-index: 1;
 }
@@ -70,7 +71,7 @@
 }
 
 .imgp-p0 {
-    width: 100%;
+    width: 85%;
     height: auto;
     display: block;
     object-fit: contain;
@@ -86,7 +87,7 @@
 
 /* 右側 */
 #right {
-    min-width: 65%;
+    min-width: 60%;
     display: flex;
     flex-direction: column;
     /* border: 5px solid blue; */
@@ -229,13 +230,28 @@
 
 /* 手鍊 */
 .bracelet {
-    width: 11.25rem;
+    /* width: 11.25rem; */
+    display: block;
+    margin: auto;
+    width: 93%;
+    transition: transform 0.25s ease;   
+}
+
+.bracelet:hover {
+    /* width: 12rem; */
+    /* width: 100%; */
+    /* animation: zoomIn 0.25s forwards ease; */
+    transform: scale(1.08);
 }
 
 .bracelet-box {
     position: relative;
     z-index: 99;
     cursor: pointer;
+    width: 12rem;
+    height: 8rem;
+    /* width: 12rem;
+    height: 8rem; */
 }
 
 .star-box {
@@ -279,12 +295,14 @@
     background: #A67CEB;
 }
 
-.button1-j:hover,.button2-j:hover{
+.button1-j:hover,
+.button2-j:hover {
     background-color: #9764ca;
     color: #fff;
 }
 
-.button1-j:active,.button2-j:active {
+.button1-j:active,
+.button2-j:active {
     background-color: #6E3BBF;
     color: #fff;
 }
@@ -370,6 +388,8 @@
     min-height: 100vh;
 }
 
+
+
 /* RWD 斷點： ≤ 1024 */
 @media (max-width: 1024px) {
 
@@ -436,6 +456,7 @@
     #box2 {
         margin-bottom: 2.5rem;
     }
+
     #button-box {
         margin-bottom: 7%;
     }
