@@ -424,8 +424,12 @@
     height: 44px;
     cursor: pointer;
   }
-  .menu-search-icon:hover{
-    background-color: #684581;
+ 
+   .menu-search-icon:hover{
+    background-color: #9763ca;
+  }
+   .menu-search-icon:active{
+    background-color: #6e3bbf;
   }
 }
 
