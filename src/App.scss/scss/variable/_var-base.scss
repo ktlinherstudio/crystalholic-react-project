@@ -1,7 +1,7 @@
 //RWD斷點  @media()
 $media-xxlg: "min-width:1919px"; //1920
 $media-xxlg-up: "min-width:1680px"; //1680 & 1920 可以共用的頁面用這個 cover1
-$media-xxlg-up-h: "(min-width:1680px) and (max-height:1050px)"; //1680 小百科
+$media-xxlg-up-h: "(min-width:1680px) and (max-height:1051px)"; //1680 小百科
 $media-xlg-up: "max-width:1365px";  //iPad Air 1180*820(橫向) /iPad Mini 1024*768(橫向) iPad Pro 1024*1366(直向)
 $media-xlg-h: "(max-width:1367px)  and (min-height:820px)";  //iPad Air1180*820 /pro 1366*1024(橫向) *cover1用*
 $media-xlg-h-pro: "(max-width:1367px)  and (min-height:1024px)";  //ipad pro 1366*1024(橫向) *cover1用*

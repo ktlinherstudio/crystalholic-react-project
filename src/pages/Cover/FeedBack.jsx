@@ -48,7 +48,8 @@ const feedbacks = [
     reviewImg: './images/HomePage/img-feedback.jpg',
     stars: 5,
     content: '品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。'
-  },{
+  },
+  {
     id: 8,
     memberImg: './images/HomePage/img-feedbackmenber.jpg',
     reviewImg: './images/HomePage/img-feedback.jpg',
