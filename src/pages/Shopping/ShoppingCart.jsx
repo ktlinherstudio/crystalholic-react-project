@@ -377,9 +377,9 @@ export default function ShoppingCart() {
 
               {/* 展開／收合 */}
               {cartItems.length > 3 && (
-                <div className="cart_toggle_btn">
+                <div className="cart_toggle">
                   <button
-                    className="cart_continue_shopping"
+                    className="cart_toggle_btn"
                     onClick={() => setShowAllItems(!showAllItems)}
                   >
                     {showAllItems
