@@ -138,6 +138,89 @@ header ul {
   cursor: pointer;
 }
 
+ /* 🔍 原本的搜尋按鈕（展開時會消失） */
+.search-btn {
+  all: unset;
+  cursor: pointer;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 展開的搜尋匡容器 */
+.navbar-searchbox {
+  position: absolute;
+  top: 12px;
+  right: 200px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 260px;
+  padding: 6px 12px 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateX(20px) scaleX(0);
+  transform-origin: right center;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 98;
+}
+
+/* 顯示動畫 */
+.navbar-searchbox.show {
+  opacity: 1;
+  transform: translateX(0) scaleX(1);
+  pointer-events: auto;
+}
+
+/* 輸入框本體 */
+.navbar-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: 'Noto Sans TC';
+  background: transparent;
+  color: #333;
+  padding: 4px 0;
+  border-bottom: 1px solid transparent;
+  transition: border 0.2s ease;
+}
+
+/* Hover/Focus 效果 */
+.navbar-searchbox:hover .navbar-search-input,
+.navbar-search-input:focus {
+  border-bottom: 1px solid #8750bf;
+}
+
+/* 內嵌的搜尋 icon 按鈕 */
+.search-inner-btn {
+  all: unset;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-inner-btn img {
+  width: 34px;
+  height: 34px;
+}
+
+/* RWD：小螢幕不顯示 */
+@media screen and (max-width: 1024px) {
+  .navbar-searchbox {
+    display: none;
+  }
+}
+
+
 
 
 @media screen and (max-width: 1024px) {
