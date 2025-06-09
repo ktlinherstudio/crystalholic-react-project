@@ -11,6 +11,8 @@ import { useState, useEffect } from 'react';
 import { useCart } from './CartContext';
 import { Link, useNavigate } from 'react-router-dom';
 import { TW_COUNTIES, genStores } from './twDistricts';
+import FinishedWindow from './FinishedWindow';
+
 
 /* ───────────────────────────────────────────── */
 /* DeliveryOptions 元件                           */
@@ -639,14 +641,7 @@ export default function ShoppingCart() {
         </section>
 
         {/* 結帳完成彈窗 */}
-        {showSuccessMsg && (
-          <div className="checkout-success-modal">
-            <div className="success-content">
-              <h3>✦ 結帳完成 ✦</h3>
-              <p>商品即將出貨，感謝您的購買</p>
-            </div>
-          </div>
-        )}
+        {showSuccessMsg && <FinishedWindow start={true} />}
 
         {/* 登入 / 註冊 Modal */}
         <LoginRegisterModal
