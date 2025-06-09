@@ -77,6 +77,8 @@ const metalImages = [
     "./images/Custom/ball5.png",
     "./images/Custom/ball6.png"
 ];
+
+
 export default function Customize1() {
     const navigate = useNavigate();
 
@@ -88,10 +90,32 @@ export default function Customize1() {
                 img.src = url;
             });
         };
-        const crystalImages = Object.values(crystalData).flat();
-        const allImages = [...new Set([...crystalImages, ...metalImages])];
-        preloadImages(allImages);
+
+        const crystalImages = Object.values(crystalData).flat(); // e.g. {放鬆冥想: [...], 專注工作: [...], ...}
+        const allCrystalMetalImages = [...new Set([...crystalImages, ...metalImages])];
+
+        const cssImageUrls = [
+            './images/noisy-background.jpg',
+            './images/Custom/btn_del.svg',
+            './images/Custom/btn_del_hover.svg',
+            './images/Custom/btn_save.svg',
+            './images/Custom/btn_save_hover.svg',
+            './images/Custom/btn_size_tool.svg',
+            './images/Custom/btn_size_tool_hover.svg',
+            './images/Custom/btn_ans_tool.svg',
+            './images/Custom/btn_ans_tool_hover.svg',
+            './images/Custom/btn_knowl_tool.svg',
+            './images/Custom/btn_knowl_tool_hover.svg',
+            './images/Custom/btn_note_tool.svg',
+            './images/Custom/btn_note_tool_hover.svg',
+            './images/Custom/btn_dum_tool.svg',
+            './images/Custom/btn_dum_tool_hover.svg'
+        ];
+
+        const allPreloadImages = [...allCrystalMetalImages, ...cssImageUrls];
+        preloadImages(allPreloadImages);
     }, []);
+
 
     const handleClick = () => {
         const hasCompletedNumTest2 = sessionStorage.getItem('numtest2-completed') === 'true';
