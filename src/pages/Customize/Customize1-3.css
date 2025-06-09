@@ -168,6 +168,26 @@
     height: 56px;
 }
 
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #A67CEB;
+  color: #A67CEB;
+}
+
+/* hover 效果 */
+.btn-outline:hover {
+  background-color:#9763Ca;
+  border-color: #9763Ca;
+  color: white;
+}
+
+/* 點擊效果 */
+.btn-outline:active {
+  background-color: #6E3BBF;
+  border-color: #6E3BBF;
+  color: white;
+}
 .background-1 {
     /* border: 3px solid #83000b; */
     position: absolute;

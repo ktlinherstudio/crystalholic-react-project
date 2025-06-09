@@ -82,7 +82,7 @@ const handleStartWithRecommend = () => {
               <h2>
                 <img src="/images/Custom/line_left.svg" alt="" />
                 {lifePathNumber && (
-                  <p className="sub-title">你的生命靈數是 {lifePathNumber} 號，點擊一條手鍊開始設計</p>
+                  <p className="sub-title">點擊一條推薦手鍊</p>
                 )}
                 <img src="/images/Custom/line_right.svg" alt="" />
               </h2>
@@ -165,8 +165,8 @@ const handleStartWithRecommend = () => {
           {/* 按鈕 */}
           <div className="button-box3">
 
-            <button className="button2" onClick={handleStartWithoutRecommend}>
-              自由設計
+            <button className="button2 btn-outline" onClick={handleStartWithoutRecommend}>
+              自己設計
             </button>
             <button className="button2" onClick={handleStartWithRecommend}>
               套用推薦

@@ -126,7 +126,6 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-lilac-amethyst.png",
       "./images/S-CrystalSingle/crystal-pinkquartz.png",
       "./images/S-CrystalSingle/crystal-rosequartz.png",
-      "./images/S-CrystalSingle/crystal-pinkquartz.png",
       "./images/S-CrystalSingle/crystal-golden-strawberry-quartz.png",
       "./images/S-CrystalSingle/crystal-rubellite.png",
       "./images/S-CrystalSingle/crystal-rhodochrosite.png",
@@ -140,7 +139,6 @@ export default function Customize4() {
       "./images/S-CrystalSingle/crystal-goldobsidian.png",
       "./images/S-CrystalSingle/crystal-blacktourmaline.png",
       "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
-      "./images/S-CrystalSingle/crystal-blackobsidian.png",
       "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
       "./images/S-CrystalSingle/crystal-hematite.png",
       "./images/S-CrystalSingle/crystal-rhodochrosite.png",
@@ -408,55 +406,62 @@ export default function Customize4() {
       }
     ],
     "能量防護": [
-      {
-        name: "黑曜石",
-        en: "Black Obsidian",
-        image: "./images/S-CrystalSingle/crystal-blackobsidian.png",
-        desc: "吸收負能量，強化保護場域。"
-      },
-      {
-        name: "金曜石",
-        en: "Gold Obsidian",
-        image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
-        desc: "提升直覺與防護能量。"
-      },
-      {
-        name: "黑碧璽",
-        en: "Black Tourmaline",
-        image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
-        desc: "穩定情緒與防止負能量入侵。"
-      },
-      {
-        name: "雪花黑曜石",
-        en: "Snowflake Obsidian",
-        image: "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
-        desc: "淨化內在陰影，帶來清晰與平衡。"
-      },
-      {
-        name: "黑銀曜石",
-        en: "Silver Sheen Obsidian",
-        image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
-        desc: "保護靈性空間，協助自我認識。"
-      },
-      {
-        name: "黑鐵礦",
-        en: "Hematite",
-        image: "./images/S-CrystalSingle/crystal-hematite.png",
-        desc: "強化精神穩定性與實際行動力。"
-      },
-      {
-        name: "龍血石",
-        en: "Bloodstone",
-        image: "./images/S-CrystalSingle/crystal-bloodstone.png",
-        desc: "促進勇氣與身心淨化。"
-      },
-      {
-        name: "硨磲石",
-        en: "Tridacna",
-        image: "./images/S-CrystalSingle/crystal-tridacna.png",
-        desc: "帶來純淨能量，清除雜念與焦慮。"
-      }
-    ],
+  {
+    name: "黑曜石",
+    en: "Black Obsidian",
+    image: "./images/S-CrystalSingle/crystal-blackobsidian.png",
+    desc: "吸收負能量，強化保護場域。"
+  },
+  {
+    name: "金曜石",
+    en: "Gold Obsidian",
+    image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
+    desc: "提升直覺與防護能量。"
+  },
+  {
+    name: "黑碧璽",
+    en: "Black Tourmaline",
+    image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
+    desc: "穩定情緒與防止負能量入侵。"
+  },
+  {
+    name: "雪花黑曜石",
+    en: "Snowflake Obsidian",
+    image: "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
+    desc: "淨化內在陰影，帶來清晰與平衡。"
+  },
+  {
+    name: "黑銀曜石",
+    en: "Silver Sheen Obsidian",
+    image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
+    desc: "保護靈性空間，協助自我認識。"
+  },
+  {
+    name: "黑鐵礦",
+    en: "Hematite",
+    image: "./images/S-CrystalSingle/crystal-hematite.png",
+    desc: "強化精神穩定性與實際行動力。"
+  },
+  {
+    name: "紅紋石",
+    en: "Rhodochrosite",
+    image: "./images/S-CrystalSingle/crystal-rhodochrosite.png",
+    desc: "安撫情緒創傷，建立柔韌的能量防線。"
+  },
+  {
+    name: "龍血石",
+    en: "Bloodstone",
+    image: "./images/S-CrystalSingle/crystal-bloodstone.png",
+    desc: "促進勇氣與身心淨化。"
+  },
+  {
+    name: "硨磲石",
+    en: "Tridacna",
+    image: "./images/S-CrystalSingle/crystal-tridacna.png",
+    desc: "帶來純淨能量，清除雜念與焦慮。"
+  }
+]
+,
     "放鬆冥想": [
       {
         name: "粉方解石",
