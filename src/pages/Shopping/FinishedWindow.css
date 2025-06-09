@@ -21,7 +21,7 @@
   box-shadow: 0px 0px 30px 0px rgba(233, 166, 160, 0.20);
   width: 450px;
   height: 300px;
-  animation: fadeIn 0.3s ease-in-out;
+  animation: finishedWindow_fadeIn 0.3s ease-in-out;
 
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
   border-radius: 50%;
   width: 90px;
   height: 90px;
-  animation: spin 1s linear infinite;
+  animation: finishedWindow_spin 1s linear infinite;
 }
 .order_loading_text {
   display: flex;
@@ -147,6 +147,7 @@
   letter-spacing: 0.1rem;
   color: #fff;
 
+  cursor: pointer;
 }
 .back_home_btn:hover {
   background-color: #9763Ca;
@@ -155,12 +156,12 @@
   background-color: #6E3BBF;
 }
 
-@keyframes spin {
+@keyframes finishedWindow_spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-@keyframes fadeIn {
+@keyframes finishedWindow_fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
