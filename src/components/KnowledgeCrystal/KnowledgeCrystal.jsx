@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../pages/Others/KnowledgeCrystal.css';
 import NavBarWrapper from '../NavBarWrapper';
 import FooterTrn from '../FooterTrn';
@@ -6,8 +6,19 @@ import BgDarkBlock from '../BgDarkBlock';
 import '../../css/fonts.css';
 import BackToTopBtn from '../BackToTopBtn';
 import crystalsData from './CrystalData'
+import usePreloadCrystals from '../../hooks/usePreloadCrystals';
+
+
+
+
 
 export default function CrystalPage() {
+    const preloadCrystals = usePreloadCrystals();
+
+    useEffect(() => {
+        preloadCrystals(); // ✅ 開始預載入所有圖片
+    }, []);
+
 
     const [currentCategory, setCurrentCategory] = useState("靈性直覺");
     const [currentIndex, setCurrentIndex] = useState(0);

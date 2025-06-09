@@ -23,58 +23,58 @@ export default function Customize4() {
   const hasSetDefaultMetal = useRef(false);
 
   useEffect(() => {
-  const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
-  const designMode = sessionStorage.getItem('designMode');
-  const crystalImage = sessionStorage.getItem('selectedCrystalImage');
-  const metalImage = sessionStorage.getItem('selectedMetalImage');
-  console.log('🔥 進來 Customize4，圖片路徑：');
-  console.log('crystalImage:', crystalImage);
-  console.log('metalImage:', metalImage);
+    const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
+    const designMode = sessionStorage.getItem('designMode');
+    const crystalImage = sessionStorage.getItem('selectedCrystalImage');
+    const metalImage = sessionStorage.getItem('selectedMetalImage');
+    console.log('🔥 進來 Customize4，圖片路徑：');
+    console.log('crystalImage:', crystalImage);
+    console.log('metalImage:', metalImage);
 
-  const layout = generateBraceletLayout(selectedSize, wristSize);
-  const oldPlacement = { ...crystalPlacement };
-  let filled;
+    const layout = generateBraceletLayout(selectedSize, wristSize);
+    const oldPlacement = { ...crystalPlacement };
+    let filled;
 
-  if (shouldApply && designMode === 'recommend' && crystalImage && metalImage) {
-   console.log('🧩 進入推薦流程 useEffect');
-    // ✅ 推薦模式下：套用整條同一張水晶圖
-    filled = layout.map((item) =>
-      item === 'metal'
-        ? { type: 'metal' }
-        : { type: 'crystal', image: crystalImage }
-    );
+    if (shouldApply && designMode === 'recommend' && crystalImage && metalImage) {
+      console.log('🧩 進入推薦流程 useEffect');
+      // ✅ 推薦模式下：套用整條同一張水晶圖
+      filled = layout.map((item) =>
+        item === 'metal'
+          ? { type: 'metal' }
+          : { type: 'crystal', image: crystalImage }
+      );
 
-    const placement = {};
-    filled.forEach((bead, i) => {
-      if (bead.type === 'crystal') {
-        placement[i] = bead.image;
-      }
-    });
+      const placement = {};
+      filled.forEach((bead, i) => {
+        if (bead.type === 'crystal') {
+          placement[i] = bead.image;
+        }
+      });
 
-    setCrystalPlacement(placement);
-    setSelectedMetalImage(metalImage);
-  } else {
-    // ✅ 自由模式，保留原本的水晶圖配置
-    filled = layout.map((item, i) => {
-      if (item === 'metal') return { type: 'metal' };
-      return {
-        type: 'crystal',
-        image: oldPlacement[i] || undefined,
-      };
-    });
+      setCrystalPlacement(placement);
+      setSelectedMetalImage(metalImage);
+    } else {
+      // ✅ 自由模式，保留原本的水晶圖配置
+      filled = layout.map((item, i) => {
+        if (item === 'metal') return { type: 'metal' };
+        return {
+          type: 'crystal',
+          image: oldPlacement[i] || undefined,
+        };
+      });
 
-    const newPlacement = {};
-    filled.forEach((bead, i) => {
-      if (bead.type === 'crystal' && bead.image) {
-        newPlacement[i] = bead.image;
-      }
-    });
+      const newPlacement = {};
+      filled.forEach((bead, i) => {
+        if (bead.type === 'crystal' && bead.image) {
+          newPlacement[i] = bead.image;
+        }
+      });
 
-    setCrystalPlacement(newPlacement);
-  }
+      setCrystalPlacement(newPlacement);
+    }
 
-  setBraceletBeads(filled);
-}, [selectedSize, wristSize]);
+    setBraceletBeads(filled);
+  }, [selectedSize, wristSize]);
 
 
 
@@ -406,62 +406,62 @@ export default function Customize4() {
       }
     ],
     "能量防護": [
-  {
-    name: "黑曜石",
-    en: "Black Obsidian",
-    image: "./images/S-CrystalSingle/crystal-blackobsidian.png",
-    desc: "吸收負能量，強化保護場域。"
-  },
-  {
-    name: "金曜石",
-    en: "Gold Obsidian",
-    image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
-    desc: "提升直覺與防護能量。"
-  },
-  {
-    name: "黑碧璽",
-    en: "Black Tourmaline",
-    image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
-    desc: "穩定情緒與防止負能量入侵。"
-  },
-  {
-    name: "雪花黑曜石",
-    en: "Snowflake Obsidian",
-    image: "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
-    desc: "淨化內在陰影，帶來清晰與平衡。"
-  },
-  {
-    name: "黑銀曜石",
-    en: "Silver Sheen Obsidian",
-    image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
-    desc: "保護靈性空間，協助自我認識。"
-  },
-  {
-    name: "黑鐵礦",
-    en: "Hematite",
-    image: "./images/S-CrystalSingle/crystal-hematite.png",
-    desc: "強化精神穩定性與實際行動力。"
-  },
-  {
-    name: "紅紋石",
-    en: "Rhodochrosite",
-    image: "./images/S-CrystalSingle/crystal-rhodochrosite.png",
-    desc: "安撫情緒創傷，建立柔韌的能量防線。"
-  },
-  {
-    name: "龍血石",
-    en: "Bloodstone",
-    image: "./images/S-CrystalSingle/crystal-bloodstone.png",
-    desc: "促進勇氣與身心淨化。"
-  },
-  {
-    name: "硨磲石",
-    en: "Tridacna",
-    image: "./images/S-CrystalSingle/crystal-tridacna.png",
-    desc: "帶來純淨能量，清除雜念與焦慮。"
-  }
-]
-,
+      {
+        name: "黑曜石",
+        en: "Black Obsidian",
+        image: "./images/S-CrystalSingle/crystal-blackobsidian.png",
+        desc: "吸收負能量，強化保護場域。"
+      },
+      {
+        name: "金曜石",
+        en: "Gold Obsidian",
+        image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
+        desc: "提升直覺與防護能量。"
+      },
+      {
+        name: "黑碧璽",
+        en: "Black Tourmaline",
+        image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
+        desc: "穩定情緒與防止負能量入侵。"
+      },
+      {
+        name: "雪花黑曜石",
+        en: "Snowflake Obsidian",
+        image: "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
+        desc: "淨化內在陰影，帶來清晰與平衡。"
+      },
+      {
+        name: "黑銀曜石",
+        en: "Silver Sheen Obsidian",
+        image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
+        desc: "保護靈性空間，協助自我認識。"
+      },
+      {
+        name: "黑鐵礦",
+        en: "Hematite",
+        image: "./images/S-CrystalSingle/crystal-hematite.png",
+        desc: "強化精神穩定性與實際行動力。"
+      },
+      {
+        name: "紅紋石",
+        en: "Rhodochrosite",
+        image: "./images/S-CrystalSingle/crystal-rhodochrosite.png",
+        desc: "安撫情緒創傷，建立柔韌的能量防線。"
+      },
+      {
+        name: "龍血石",
+        en: "Bloodstone",
+        image: "./images/S-CrystalSingle/crystal-bloodstone.png",
+        desc: "促進勇氣與身心淨化。"
+      },
+      {
+        name: "硨磲石",
+        en: "Tridacna",
+        image: "./images/S-CrystalSingle/crystal-tridacna.png",
+        desc: "帶來純淨能量，清除雜念與焦慮。"
+      }
+    ]
+    ,
     "放鬆冥想": [
       {
         name: "粉方解石",
@@ -590,7 +590,7 @@ export default function Customize4() {
 
     // 重建交錯 layout，但不附圖
     const layout = generateBraceletLayout(selectedSize, wristSize);
-    console.log('🧵 layout:', layout); 
+    console.log('🧵 layout:', layout);
     const cleared = layout.map((item) =>
       item === 'metal'
         ? { type: 'metal' }
@@ -822,7 +822,7 @@ export default function Customize4() {
                 const angle = beadAngles[index];
                 const offset = (size * scale) / 2;
                 accumulatedAngle += angle;
-console.log("🎨 crystalPlacement[", index, "]:", crystalPlacement[index]);
+                console.log("🎨 crystalPlacement[", index, "]:", crystalPlacement[index]);
 
                 return (
                   <span

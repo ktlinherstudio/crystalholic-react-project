@@ -90,7 +90,7 @@ const crystalsData = {
             name: "彼得石",
             englishName: "Pietersite",
             image: `${base}images/S-CrystalSingle/crystal-pietersite.png`,
-            description: "彼得石是一種擁有閃電光澤的神秘寶石，被稱為「風暴之石」，象徵快速變化中的穩定與靈性覺醒。其獨特的色彩流動如同上帝潑灑的油畫筆觸，在每一個角度都映照出宇宙深處的神聖秩序與變化之美，是連結高我與直覺能量的強力工具。",
+            description: "彼得石是一種擁有閃電光澤的寶石，被稱為風暴之石，其紋理有上帝的油畫之美名，象徵快速變化中的穩定與靈性覺醒。",
             effects: "直覺啟動：強化靈視與洞察，打開第三眼能量。\n意識轉化：協助面對內在變動與靈性重整。\n夢境連結：提升夢境解析與潛意識探索能力。",
             suitableFor: "正在經歷人生轉變或內在整合的人。\n希望快速強化靈性感知與直覺能力的使用者。",
             recommended: [
@@ -440,7 +440,7 @@ const crystalsData = {
             name: "海藍寶",
             englishName: "Aquamarine",
             image: `${base}images/S-CrystalSingle/crystal-aquamarine.png`,
-            description: "海藍寶是一種清澈淡藍色的水晶，被譽為溝通與智慧之石，能幫助清晰表達、釐清思緒並減少焦慮，是高效工作與演講表達的能量支持。",
+            description: "海藍寶是一種清澈淡藍色的晶體，被譽為溝通與智慧之石，幫助清晰表達、釐清思緒並減少焦慮。",
             effects: "清晰溝通：增強語言表達與邏輯思路。\n情緒安定：減少緊張感、提升理性與穩定力。\n靈感流動：協助釐清內心聲音與直觀反應。",
             suitableFor: "需要進行簡報、表達、會議協調與溝通對談者。\n容易緊張、腦袋混亂或臨場反應不佳者。",
             recommended: [
@@ -714,7 +714,7 @@ const crystalsData = {
             name: "金曜石",
             englishName: "Gold Obsidian",
             image: "./images/S-CrystalSingle/crystal-goldobsidian.png",
-            description: "金曜石是一種擁有金色光澤的黑曜石，象徵光明照進黑暗，能深入潛意識協助轉化陰影與建立能量防護罩，是極具力量的靈性護盾。",
+            description: "金曜石象徵光明照進黑暗，能深入潛意識協助轉化陰影與建立能量防護罩，是極具力量的靈性護盾。",
             effects: "能量防護：建立氣場屏障，隔絕負面能量干擾。\n陰影整合：協助面對潛藏情緒與未解的內在議題。\n穩定地氣：提供實際支持感與穩定的安全基礎。",
             suitableFor: "需要防護外界干擾或負能量的人。\n正在做內在探索、陰影整合或轉化療癒者。",
             recommended: [
@@ -742,7 +742,7 @@ const crystalsData = {
             name: "黑碧璽",
             englishName: "Tourmaline",
             image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
-            description: "黑碧璽是最具能量防護力的水晶之一，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
+            description: "黑碧璽是最具能量防護力的水晶，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
             effects: "氣場防護：建立能量屏障，防止外界干擾與情緒吸附。\n情緒穩定：減緩緊張、焦慮與能量混亂。\n地氣連結：強化根部穩定感，提升內在安全與行動力。",
             suitableFor: "長期處於人際壓力或能量混亂環境的人。\n敏感體質、易受影響、情緒容易失衡者。",
             recommended: [
@@ -809,7 +809,7 @@ const crystalsData = {
             name: "黑鐵礦",
             englishName: "Hematite",
             image: "./images/S-CrystalSingle/crystal-hematite.png",
-            description: "黑鐵礦是富含金屬光澤的礦石，以強大的地氣與穩定能量著稱。它能協助集中注意力、排除負能量，並加強身體與地面的連結感，是經典的防護與接地型水晶。",
+            description: "黑鐵礦帶有金屬光澤，以強大的地氣與穩定能量著稱。有助集中注意力、排除負能量，並加強身體與地面的連結感",
             effects: "地氣穩定：強化根部連結與行動實踐。\n防護結界：隔離外界情緒干擾與負面投射。\n專注定心：清除雜念並提升專注執行力。",
             suitableFor: "易焦慮、能量浮動大、難以集中精神的人。\n需要穩定根基與保護氣場的療癒師與職場工作者。",
             recommended: [
@@ -950,7 +950,7 @@ const crystalsData = {
             name: "茶晶",
             englishName: "Smoky Quartz",
             image: "./images/S-CrystalSingle/crystal-smokyquartz.png",
-            description: "茶晶是一種帶有灰棕色調的水晶，以其強大的穩定與排毒能量聞名。它能協助排出負面情緒與雜念，並穩固內在信念，是高壓生活中的守護石。",
+            description: "茶晶是一種灰棕色調的水晶，以穩定與排毒聞名。它能協助排出負面情緒與雜念，穩固內在信念，是高壓生活的守護石。",
             effects: "能量釋放：協助釋放壓力、恐懼與焦慮。\n磁場穩定：穩定身心靈氣場，帶來踏實感。\n負能清理：清除體內累積的情緒毒素與雜亂能量。",
             suitableFor: "壓力過大、情緒容易累積或經常處於忙碌環境中的人。\n需要地氣與穩定支撐的人。",
             recommended: [
@@ -1030,7 +1030,7 @@ const crystalsData = {
             name: "方鈉石",
             englishName: "Hackmanite",
             image: "./images/S-CrystalSingle/crystal-hackmanite.png",
-            description: "方鈉石是一種稀有的變色水晶，帶有淡紫或灰紫色調，擁有溫和而神秘的能量，能協助釋放潛藏情緒與促進內在清理，適合深度冥想與靜心修行使用。",
+            description: "方鈉石是稀有的變色水晶，帶有淡紫或灰紫色調，溫和而神秘，能協助釋放情緒與促進內在清理，有助深度冥想與靜心。",
             effects: "潛意識釋放：幫助釐清壓抑情緒與內在糾結。\n能量清理：提升靈性頻率，帶來內在明晰。\n深度冥想：支援靜心時的情緒療癒與覺察。",
             suitableFor: "想深入療癒內在、釋放情緒結構與進入靜心狀態的使用者。",
             recommended: [
@@ -1058,7 +1058,7 @@ const crystalsData = {
             name: "粉方解石",
             englishName: "Pink Calcite",
             image: "./images/S-CrystalSingle/crystal-pinkcalcite.png",
-            description: "粉方解石是一種溫柔的水晶，具備強大的心輪療癒能量，適合用於釋放情感創傷、進行自我寬容練習，協助冥想時達到溫柔穩定的能場狀態。",
+            description: "粉方解石是一種溫柔的水晶，具備心輪療癒能量，適用於釋放情感創傷、自我寬容，協助冥想時達到溫柔穩定的狀態。",
             effects: "情緒療癒：撫慰傷痛、建立自我寬容。\n心輪淨化：釋放過去的情緒殘留與創傷。\n放鬆安撫：協助冥想時放鬆並感受到安全感。",
             suitableFor: "需要內在修復、處於心靈脆弱狀態或渴望被溫柔包覆的人。",
             recommended: [

@@ -3,10 +3,95 @@ import '../../components/Bglight.css'
 import NavBarWrapper from '../../components/NavBarWrapper';
 import CopyrightNotice from '../../components/CopyrightNotice'
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
 
+// Customize4 預設會用到的所有水晶與金屬珠圖片
+const crystalData = {
+    靈性直覺: [
+        "./images/S-CrystalSingle/crystal-kyanite.png",
+        "./images/S-CrystalSingle/crystal-labradorite.png",
+        "./images/S-CrystalSingle/crystal-lapislazuli.png",
+        "./images/S-CrystalSingle/crystal-sodalite.png",
+        "./images/S-CrystalSingle/crystal-bluecalcite.png",
+        "./images/S-CrystalSingle/crystal-pietersite.png",
+        "./images/S-CrystalSingle/crystal-tanzanite.png",
+        "./images/S-CrystalSingle/crystal-amethyst.png",
+        "./images/S-CrystalSingle/crystal-albite.png",
+        "./images/S-CrystalSingle/crystal-moonstone.png",
+        "./images/S-CrystalSingle/crystal-clearquartz.png"
+    ],
+    專注工作: [
+        "./images/S-CrystalSingle/crystal-citrine.png",
+        "./images/S-CrystalSingle/crystal-rutile-quartz.png",
+        "./images/S-CrystalSingle/crystal-aquamarine.png",
+        "./images/S-CrystalSingle/crystal-sodalite.png",
+        "./images/S-CrystalSingle/crystal-purplefluorite.png",
+        "./images/S-CrystalSingle/crystal-fluorite.png",
+        "./images/S-CrystalSingle/crystal-hawkseye.png",
+        "./images/S-CrystalSingle/crystal-tigerseye.png",
+        "./images/S-CrystalSingle/crystal-green-phantom.png",
+        "./images/S-CrystalSingle/crystal-carnelian.png"
+    ],
+    愛與人際: [
+        "./images/S-CrystalSingle/crystal-iolite.png",
+        "./images/S-CrystalSingle/crystal-lilac-amethyst.png",
+        "./images/S-CrystalSingle/crystal-pinkquartz.png",
+        "./images/S-CrystalSingle/crystal-rosequartz.png",
+        "./images/S-CrystalSingle/crystal-golden-strawberry-quartz.png",
+        "./images/S-CrystalSingle/crystal-rubellite.png",
+        "./images/S-CrystalSingle/crystal-rhodochrosite.png",
+        "./images/S-CrystalSingle/crystal-carnelian.png",
+        "./images/S-CrystalSingle/crystal-garnet.png",
+        "./images/S-CrystalSingle/crystal-oceanjasper.png"
+    ],
+    能量防護: [
+        "./images/S-CrystalSingle/crystal-blackobsidian.png",
+        "./images/S-CrystalSingle/crystal-goldobsidian.png",
+        "./images/S-CrystalSingle/crystal-blacktourmaline.png",
+        "./images/S-CrystalSingle/crystal-snowflakeobsidian.png",
+        "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
+        "./images/S-CrystalSingle/crystal-hematite.png",
+        "./images/S-CrystalSingle/crystal-rhodochrosite.png",
+        "./images/S-CrystalSingle/crystal-bloodstone.png",
+        "./images/S-CrystalSingle/crystal-tridacna.png"
+    ],
+    放鬆冥想: [
+        "./images/S-CrystalSingle/crystal-pinkcalcite.png",
+        "./images/S-CrystalSingle/crystal-amethyst.png",
+        "./images/S-CrystalSingle/crystal-iolite.png",
+        "./images/S-CrystalSingle/crystal-hackmanite.png",
+        "./images/S-CrystalSingle/crystal-celestite.png",
+        "./images/S-CrystalSingle/crystal-angelite.png",
+        "./images/S-CrystalSingle/crystal-sunstone.png",
+        "./images/S-CrystalSingle/crystal-smokyquartz.png",
+        "./images/S-CrystalSingle/crystal-greenfluorite.png",
+        "./images/S-CrystalSingle/crystal-silversheenobsidian.png"
+    ]
+};
 
+const metalImages = [
+    "./images/Custom/ball1.png",
+    "./images/Custom/ball2.png",
+    "./images/Custom/ball3.png",
+    "./images/Custom/ball4.png",
+    "./images/Custom/ball5.png",
+    "./images/Custom/ball6.png"
+];
 export default function Customize1() {
     const navigate = useNavigate();
+
+    // Customize4 預設會用到的所有水晶與金屬珠圖片
+    useEffect(() => {
+        const preloadImages = (urls) => {
+            urls.forEach((url) => {
+                const img = new Image();
+                img.src = url;
+            });
+        };
+        const crystalImages = Object.values(crystalData).flat();
+        const allImages = [...new Set([...crystalImages, ...metalImages])];
+        preloadImages(allImages);
+    }, []);
 
     const handleClick = () => {
         const hasCompletedNumTest2 = sessionStorage.getItem('numtest2-completed') === 'true';
