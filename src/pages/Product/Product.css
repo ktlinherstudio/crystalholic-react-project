@@ -111,7 +111,7 @@
     height: 3rem;
     cursor: pointer;
   
-    background-image: url('/images/Product/btn-fav.svg'); 
+    background-image: url(../images/Product/btn-fav.svg); 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -120,11 +120,11 @@
 }
   
 .p_fav_icon.hover:not(.clicked) {
-    background-image: url('/images/Product/btn-fav-hover.svg'); 
+    background-image: url(../images/Product/btn-fav-hover.svg); 
 }
   
 .p_fav_icon.clicked {
-    background-image: url('/images/Product/btn-fav-click.svg'); 
+    background-image: url(../images/Product/btn-fav-click.svg); 
 }
 
 /* 商品介紹 (右側) */
