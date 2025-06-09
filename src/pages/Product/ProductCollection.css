@@ -16,8 +16,7 @@
     align-items: center;
 
     gap: clamp(2rem, 4.5vw, 6.25rem);
-    position: relative;  /* 給 z-index 用 */
-    z-index: 1;          /* 放在下層 */
+    position: relative; 
 
     margin: 6rem 0;
 }
@@ -77,7 +76,6 @@
     /* background:url(../images/S-Background/bg-noise-light.png),#DCEFEF; */
     clip-path:polygon(50% 0%,100% 100%,0% 100%);
     transition:left .4s ease;  
-    z-index:2;
     pointer-events:none;
 
     /* background: none;
@@ -94,33 +92,31 @@
     align-items: center;
 
     position: relative; /* 給 z-index 用 */
-    z-index: 3;         /* 蓋在 .pc_icon_area 上 */
+    z-index: 1;         /* 蓋在 .pc_icon_area 上 */
 }
 
-/* ─── 商品們 ─────────────────────────────────── */
+/* ----系列商品---- */
 .pc_products {
     display: flex;
     justify-content: center;
     gap: clamp(1.25rem, 5vw, 3rem);
     margin-bottom: 5rem;/* 80px */
-
-    width: 80%;
+    width: 85%;
 }
 
+/* 單張商品卡 */
 .pc_product_card {
-    flex:1 1 16rem; /* 256px 寬，可縮放 */
+    width: 28%;
+    /* flex:1 1 16rem; */
     max-width:20rem;
     cursor: pointer;
 }
 
 /* 商品照 */
 .pc_product_img_wrap {
-    /* position: relative; */
-
     border-radius: 20px;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 15px 0px rgba(209, 235, 240, 0.80);
-
     overflow: hidden;
 
     margin-bottom: 1.25rem;/* 20px */
@@ -209,7 +205,7 @@
     display: inline; 
 }
 .pc_footer{
-    /* width: 100%; */
+    width: 100%;
     position: relative;
 
     clip-path: ellipse(70% 100% at 50% 100%);
@@ -217,7 +213,7 @@
 
     margin-top:-10rem; 
 
-    z-index: 999;
+    z-index: 2;
 }
 
 /* ----- 商品對話框＋三角型 各系列顏色 ----- */

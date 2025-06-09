@@ -224,8 +224,78 @@ export default function ShoppingCart() {
     }
   }, [isLoggedIn, readyToCheckout]);
 
+  /* 🆕 全域事件委派 → 清除錯誤 */
+  useEffect(() => {
+    const clearError = (e) => {
+      const el = e.target;
+      if (el.classList.contains('error')) {
+        el.classList.remove('error');
+
+        const label = el.closest('label');
+        if (label) {
+          const msg = label.querySelector('.error-msg');
+          if (msg) label.removeChild(msg);
+        }
+
+        // 若所有錯誤都已清除，隱藏表單總體錯誤提示（若你有放）
+        if (!document.querySelector('.cart_options_area .error')) {
+          const generalMsg = document.getElementById('form-error-msg');
+          if (generalMsg) generalMsg.style.display = 'none';
+        }
+      }
+    };
+
+    // 捕獲階段監聽，確保動態新增的欄位也能被偵測
+    document.addEventListener('input', clearError, true);
+    document.addEventListener('focusin', clearError, true);
+
+    return () => {
+      document.removeEventListener('input', clearError, true);
+      document.removeEventListener('focusin', clearError, true);
+    };
+  }, []); // 只需掛一次即可
+
+  /* 結帳驗證 */
   const handleCheckout = () => {
     if (!cartItems.length) return;
+
+    // 先重設所有既有錯誤
+    document.querySelectorAll('.error').forEach(el => {
+      el.classList.remove('error');
+      const label = el.closest('label');
+      if (label) {
+        const msg = label.querySelector('.error-msg');
+        if (msg) label.removeChild(msg);
+      }
+    });
+
+    let firstError = null;
+    const requiredFields = Array.from(
+      document.querySelectorAll('.cart_options_area input, .cart_options_area select')
+    ).filter(el => !el.disabled && el.hasAttribute('required'));
+
+    requiredFields.forEach(el => {
+      if (!el.value.trim()) {
+        el.classList.add('error');
+
+        // 若同 label 已經有錯誤訊息就不重複加
+        const label = el.closest('label');
+        if (label && !label.querySelector('.error-msg')) {
+          const msg = document.createElement('div');
+          msg.className = 'error-msg';
+          msg.textContent = '！此為必填';
+          label.appendChild(msg);
+        }
+
+        if (!firstError) firstError = el;
+      }
+    });
+
+    if (firstError) {
+      firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
     if (!isLoggedIn) {
       openAuthModal();
       setReadyToCheckout(true);
@@ -377,9 +447,9 @@ export default function ShoppingCart() {
 
               {/* 展開／收合 */}
               {cartItems.length > 3 && (
-                <div className="cart_toggle_btn">
+                <div className="cart_toggle">
                   <button
-                    className="cart_continue_shopping"
+                    className="cart_toggle_btn"
                     onClick={() => setShowAllItems(!showAllItems)}
                   >
                     {showAllItems
@@ -556,7 +626,7 @@ export default function ShoppingCart() {
                   </span>
                 </li>
               </ul>
-
+              
               <button
                 className="cart_btn_checkout"
                 onClick={handleCheckout}

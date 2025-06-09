@@ -1,13 +1,282 @@
 import { Link } from 'react-router-dom'
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { div } from 'framer-motion/client';
 
 import BgDark from '../../components/BgDark'
-// import { AnimatePresence, motion, useAnimation } from 'framer-motion';
 import NavBarWrapper from '../../components/NavBarWrapper';
 import FooterTrn from '../../components/FooterTrn';
 import '../../App.scss/css/Style.min.css'
 import BackToTopBtn from '../../components/BackToTopBtn'
+
+/*feedback*/
+const slides = [
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>手鍊戴起來超美，真的讓我越來越相信水晶的能量！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>手鍊戴起來超美，真的讓我越來越相信水晶的能量！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+        </div>
+    </div>,
+    <div className="feedback">
+        <div className="review-pic">
+
+            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+        </div>
+        <div className="feedback-left">
+            {/* 水晶5星評價 */}
+            <div className="fdstar-box">
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+            </div>
+            {/* 回饋內文 */}
+            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+        </div>
+    </div>
+];
 
 export default function Cover() {
     /*COVER1&2*/
@@ -163,8 +432,6 @@ export default function Cover() {
 
     const currentCrystal = crystals[0];
 
-    /** */
-
     return (
         <>
             {/* 背景 */}
@@ -175,7 +442,7 @@ export default function Cover() {
             {/* menu bar*/}
             <NavBarWrapper variant="light" />
 
-            {/* 封面1  */}
+            {/* 封面1+2  */}
             <div className="covercontainer" onWheel={handleWheel}>
                 <motion.section className="ch-cover"
                     // onWheel={handleWheel}
@@ -356,7 +623,6 @@ export default function Cover() {
                     </div>
                 </div>
             </section>
-           
 
             {/* 礦迷回饋 */}
             <section id="section-feedback">
@@ -367,94 +633,33 @@ export default function Cover() {
                         <span>礦迷回饋</span>
                     </div>
                     <span><img src="./images/HomePage/deco-right.svg" alt="" /></span>
-                    {/* span.image裝飾要設定長寬嗎  */}
                 </header>
-                <div className="feedback-box">
-                    <span className="feedback-arrowleft"><img src="./images/HomePage/icon_arrow_left.ico.svg" alt="" /></span>
-                    <div className="feedback">
-                        <div className="review-pic">
 
-                            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-                            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-                        </div>
-                        <div className="feedback-left">
-                            {/* 水晶5星評價 */}
-                            <div className="fdstar-box">
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                            </div>
-                            {/* 回饋內文 */}
-                            <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                        </div>
+                <div className='fdbk'>
+                    <div className="feedback-container">
+                        <Swiper
+                            slidesPerView="auto"
+                            modules={[Navigation]}
+                            navigation
+                            spaceBetween={20}
+                            breakpoints={{
+                                320: { slidesPerView: 1 },
+                                640: { slidesPerView: 2 },
+                                1024: { slidesPerView: 3 },
+                                1280: { slidesPerView: 4 },
+                            }}
+                            className="feedback-swiper"
+                        >
+                            {slides.map((content, index) => (
+                                <SwiperSlide key={index}>
+                                    <div className="feedback-box">{content}</div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
-                    <div className="feedback">
-                        <div className="review-pic">
-
-                            <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-                            <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-                        </div>
-                        <div className="feedback-left">
-                            {/* 水晶5星評價 */}
-                            <div className="fdstar-box">
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                            </div>
-                            {/* 回饋內文  */}
-                            <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                        </div>
-                    </div>
-                    <div className="feedback">
-                        <div className="review-pic">
-
-                            <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-                            <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-                        </div>
-                        <div className="feedback-left">
-                            {/* 水晶5星評價  */}
-                            <div className="fdstar-box">
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                            </div>
-                            {/* 回饋內文  */}
-                            <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                        </div>
-                    </div>
-                    <div className="feedback">
-                        <div className="review-pic">
-
-                            <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-                            <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-                        </div>
-                        <div className="feedback-left">
-                            {/* 水晶5星評價  */}
-                            <div className="fdstar-box">
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                            </div>
-                            {/* 回饋內文  */}
-                            <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
-                        </div>
-                    </div>
-                    <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
                 </div>
             </section>
-             <BackToTopBtn />
+            <BackToTopBtn />
             <div className="coverfooter"><FooterTrn /></div>
         </>
     )
@@ -733,7 +938,6 @@ function renderCrystalContent(id) {
 
 
 
-
 {/* jquery CDN 要先執行 */ }
 < script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" ></script >
@@ -741,4 +945,98 @@ function renderCrystalContent(id) {
 < script src="./js/script.js" ></script >
 
 
+{/* <section id="section-feedback">
+                <header className="feedback-displaytitle">
+                    <span><img src="./images/HomePage/deco-left.svg" alt="" /></span>
+                    <div id="fbtitle">
+                        <span>Feedback</span>
+                        <span>礦迷回饋</span>
+                    </div>
+                    <span><img src="./images/HomePage/deco-right.svg" alt="" /></span>
+                    {/* span.image裝飾要設定長寬嗎  */}
+// </header>
+//   <div className="feedback-box">
+//                     <span className="feedback-arrowleft"><img src="./images/HomePage/icon_arrow_left.ico.svg" alt="" /></span>
+//                     <div className="feedback">
+//                         <div className="review-pic">
 
+//                             <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+//                             <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+//                         </div>
+//                         <div className="feedback-left">
+//                             {/* 水晶5星評價 */}
+//                             <div className="fdstar-box">
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                             </div>
+//                             {/* 回饋內文 */}
+//                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
+//                         </div>
+//                     </div>
+//                     <div className="feedback">
+//                         <div className="review-pic">
+
+//                             <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+//                             <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+//                         </div>
+//                         <div className="feedback-left">
+//                             {/* 水晶5星評價 */}
+//                             <div className="fdstar-box">
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                             </div>
+//                             {/* 回饋內文  */}
+//                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
+//                         </div>
+//                     </div>
+//                     <div className="feedback">
+//                         <div className="review-pic">
+
+//                             <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+//                             <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+//                         </div>
+//                         <div className="feedback-left">
+//                             {/* 水晶5星評價  */}
+//                             <div className="fdstar-box">
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                             </div>
+//                             {/* 回饋內文  */}
+//                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
+//                         </div>
+//                     </div>
+//                     <div className="feedback">
+//                         <div className="review-pic">
+
+//                             <span><img src="./images/HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+//                             <span><img src="./images/HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+//                         </div>
+//                         <div className="feedback-left">
+//                             {/* 水晶5星評價  */}
+//                             <div className="fdstar-box">
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+//                             </div>
+//                             {/* 回饋內文  */}
+//                             <p>已經跟闆娘買過三次了，都靠水晶的能量撐過低潮期，看到美美的水晶，心情就很好</p>
+//                         </div>
+//                     </div>
+//                     <span className="feedback-arrowright"><img src="./images/HomePage/icon_arrow_right.ico.svg" alt="" /></span>
+//                 </div>
+//  </section>  */}

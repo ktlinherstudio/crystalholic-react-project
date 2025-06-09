@@ -18,6 +18,7 @@ import CoverTest0528 from './pages/Cover/CoverTest0528';
 import TarotCard0528 from './pages/Cover/TarotCard0528';
 import TarotCard0529 from './pages/Cover/TarotCard0529';
 import FeedBack from './pages/Cover/FeedBack';
+import FeedBackSW from './pages/Cover/FeedBackSW';
 import FeedBackCarousel from './pages/Cover/FeedbackCarousel';
 import Disco from './pages/Cover/Disco';
 import DiscoAnima from './pages/Cover/DiscoAnima';
@@ -58,6 +59,7 @@ export default function App() {
                 <Route path="/TarotCard0528" element={<TarotCard0528 />} />
                 <Route path="/TarotCard0529" element={<TarotCard0529 />} />
                 <Route path="/FeedBack" element={<FeedBack />} />
+                <Route path="/FeedBackSW" element={<FeedBackSW />} />
                 <Route path="/FeedBackCarousel" element={<FeedBackCarousel />} />
                 <Route path="/Disco" element={<Disco />} />
                 <Route path="/DiscoAnima" element={<DiscoAnima />} />
