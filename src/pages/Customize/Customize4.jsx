@@ -23,81 +23,59 @@ export default function Customize4() {
   const hasSetDefaultMetal = useRef(false);
 
   useEffect(() => {
-    setShowInfo(true);
-  }, []);
-
-  //套入推薦手鍊
+  const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
   const designMode = sessionStorage.getItem('designMode');
-  const [isInitialized, setIsInitialized] = useState(false);
+  const crystalImage = sessionStorage.getItem('selectedCrystalImage');
+  const metalImage = sessionStorage.getItem('selectedMetalImage');
+  console.log('🔥 進來 Customize4，圖片路徑：');
+  console.log('crystalImage:', crystalImage);
+  console.log('metalImage:', metalImage);
 
-  useEffect(() => {
-    const stored = sessionStorage.getItem('recommendedCrystal');
-    const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
-    const designMode = sessionStorage.getItem('designMode');
+  const layout = generateBraceletLayout(selectedSize, wristSize);
+  const oldPlacement = { ...crystalPlacement };
+  let filled;
 
-    const layout = generateBraceletLayout(selectedSize, wristSize);
+  if (shouldApply && designMode === 'recommend' && crystalImage && metalImage) {
+   console.log('🧩 進入推薦流程 useEffect');
+    // ✅ 推薦模式下：套用整條同一張水晶圖
+    filled = layout.map((item) =>
+      item === 'metal'
+        ? { type: 'metal' }
+        : { type: 'crystal', image: crystalImage }
+    );
 
-    // 取得舊資料來保留
-    let oldPlacement = { ...crystalPlacement };
-
-    let filled;
-    if (stored && shouldApply && designMode === 'recommend') {
-      try {
-        const crystal = JSON.parse(stored);
-        filled = layout.map((item, i) => {
-          if (item === 'metal') return { type: 'metal' };
-          return {
-            type: 'crystal',
-            image: crystal.image,
-          };
-        });
-
-        // 套入推薦水晶圖
-        const placement = {};
-        filled.forEach((bead, i) => {
-          if (bead.type === 'crystal') {
-            placement[i] = bead.image;
-          }
-        });
-
-        setCrystalPlacement(placement);
-
-        const metalImage = './images/Custom/ball3.png';
-        setSelectedMetalImage(metalImage);
-
-      } catch (e) {
-        console.error('解析推薦水晶失敗:', e);
-        filled = layout.map((item) =>
-          item === 'metal' ? { type: 'metal' } : { type: 'crystal', image: undefined }
-        );
-        setCrystalPlacement({});
+    const placement = {};
+    filled.forEach((bead, i) => {
+      if (bead.type === 'crystal') {
+        placement[i] = bead.image;
       }
-    } else {
-      sessionStorage.removeItem('recommendedCrystal');
-      sessionStorage.removeItem('shouldApplyRecommend');
+    });
 
-      // 🎯 自由設計，保留舊的水晶圖（index 對得上的話）
-      filled = layout.map((item, i) => {
-        if (item === 'metal') return { type: 'metal' };
-        return {
-          type: 'crystal',
-          image: oldPlacement[i] || undefined,
-        };
-      });
+    setCrystalPlacement(placement);
+    setSelectedMetalImage(metalImage);
+  } else {
+    // ✅ 自由模式，保留原本的水晶圖配置
+    filled = layout.map((item, i) => {
+      if (item === 'metal') return { type: 'metal' };
+      return {
+        type: 'crystal',
+        image: oldPlacement[i] || undefined,
+      };
+    });
 
-      // 更新保留後的 crystalPlacement
-      const newPlacement = {};
-      filled.forEach((bead, i) => {
-        if (bead.type === 'crystal' && bead.image) {
-          newPlacement[i] = bead.image;
-        }
-      });
+    const newPlacement = {};
+    filled.forEach((bead, i) => {
+      if (bead.type === 'crystal' && bead.image) {
+        newPlacement[i] = bead.image;
+      }
+    });
 
-      setCrystalPlacement(newPlacement);
-    }
+    setCrystalPlacement(newPlacement);
+  }
 
-    setBraceletBeads(filled);
-  }, [selectedSize, wristSize]);
+  setBraceletBeads(filled);
+}, [selectedSize, wristSize]);
+
 
 
 
@@ -607,6 +585,7 @@ export default function Customize4() {
 
     // 重建交錯 layout，但不附圖
     const layout = generateBraceletLayout(selectedSize, wristSize);
+    console.log('🧵 layout:', layout); 
     const cleared = layout.map((item) =>
       item === 'metal'
         ? { type: 'metal' }
@@ -838,6 +817,7 @@ export default function Customize4() {
                 const angle = beadAngles[index];
                 const offset = (size * scale) / 2;
                 accumulatedAngle += angle;
+console.log("🎨 crystalPlacement[", index, "]:", crystalPlacement[index]);
 
                 return (
                   <span

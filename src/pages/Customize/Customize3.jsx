@@ -32,30 +32,35 @@ export default function Customize3() {
   const [hoveredBracelet, setHoveredBracelet] = useState(null);
   const [selectedBracelet, setSelectedBracelet] = useState(null);
   // 取得推薦水晶（假設 resultCrystalMap[7].crystals 是陣列）
-  const recommendedCrystals = resultCrystalMap[lifePathNumber]?.crystals.slice(0, 3); // 取前3顆
-  //點擊後將推薦水晶存入 sessionStorage
-  const handleStartWithoutRecommend = () => {
-    sessionStorage.removeItem('recommendedCrystal');
-    sessionStorage.removeItem('shouldApplyRecommend');
-    sessionStorage.setItem('designMode', 'custom'); // ✅ 加入這行
-    navigate('/Customize4');
-  };
+const recommendedCrystals = resultCrystalMap[lifePathNumber]?.crystals.slice(0, 3); // 取前3顆
 
-  const handleStartWithRecommend = () => {
-    if (!selectedCrystal) {
-      alert('請先點選一條推薦手鍊！');
-      return;
-    }
+const handleStartWithoutRecommend = () => {
+  // 🔥 統一清掉所有推薦用到的 key
+  sessionStorage.removeItem('selectedCrystalImage');
+  sessionStorage.removeItem('selectedMetalImage');
+  sessionStorage.removeItem('shouldApplyRecommend');
+  sessionStorage.setItem('designMode', 'custom');
 
-    sessionStorage.setItem('recommendedCrystal', JSON.stringify(selectedCrystal));
-    sessionStorage.setItem('shouldApplyRecommend', 'true');
-    sessionStorage.setItem('designMode', 'recommend');
+  navigate('/Customize4');
+};
 
-    // 預設金屬珠為 ball3
-    sessionStorage.setItem('recommendedMetalImage', './images/Custom/ball3.png');
+const handleStartWithRecommend = () => {
+  if (!selectedCrystal) {
+    alert('請先點選一條推薦手鍊！');
+    return;
+  }
 
-    navigate('/Customize4');
-  };
+  // ✅ 只存圖片路徑，不存整顆物件
+  sessionStorage.setItem('selectedCrystalImage', selectedCrystal.image);
+
+  // ✅ 預設金屬珠
+  sessionStorage.setItem('selectedMetalImage', './images/Custom/ball3.png');
+
+  sessionStorage.setItem('shouldApplyRecommend', 'true');
+  sessionStorage.setItem('designMode', 'recommend');
+
+  navigate('/Customize4');
+};
 
 
 
