@@ -463,3 +463,22 @@
         height: 100%;
     }
 }
+
+
+/* 🆕 表單錯誤紅框 */
+    .cart_options_area .error {
+    border: 2px solid #eb7c7c !important;
+    }
+
+/* 🆕 錯誤訊息文字 */
+.cart_options_area .error-msg {
+    color: #eb7c7c;
+    font-family: "Noto Sans TC";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.088rem;
+
+  text-align: left;
+}
