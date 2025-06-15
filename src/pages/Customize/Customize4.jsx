@@ -9,6 +9,10 @@ import { generateBraceletLayout, calculateRadius, calculateBeadAngles } from '..
 
 import { resultCrystalMap } from '../../utils/resultCrystalMap';
 
+// import html2canvas from 'html2canvas'; 
+import { renderBraceletToImage } from '../../utils/renderBraceletToImage'; // 自訂工具
+
+
 export default function Customize4() {
 
 
@@ -701,6 +705,36 @@ export default function Customize4() {
     );
   };
 
+
+  //把手鍊加入購物車
+  const [showCartModal, setShowCartModal] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+  const [previewImage, setPreviewImage] = useState(null); // for 手鍊截圖
+
+  const handleAddToCart = async () => {
+    // 檢查是否排滿
+    const allFilled = braceletBeads.every((bead, index) => {
+      return bead.type === 'metal' || (bead.type === 'crystal' && crystalPlacement[index]);
+    });
+
+    if (!allFilled) {
+      alert("請先完成整條手鍊的設計，才能加入購物車！");
+      return;
+    }
+
+    // 匯出乾淨手鍊圖（非截圖）
+    const imageDataUrl = await renderBraceletToImage({
+      braceletBeads,
+      crystalPlacement,
+      selectedMetalImage,
+      selectedSize,
+      wristSize,
+    });
+
+    setPreviewImage(imageDataUrl);
+    setShowCartModal(true);
+  };
+
   return (
     <>
       <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
@@ -911,10 +945,12 @@ export default function Customize4() {
             </div>
           </div>
 
-          <div className={style.icon2}>
-            <img className={style.icon2_1} src="./images/Custom/btn_cart_tool.svg" alt="" />
-            <p>加購物車</p>
+          <div
+            className={style.icon2}
+            onClick={handleAddToCart}
+          >
           </div>
+
         </div>
 
         {openPanel && (
@@ -1185,6 +1221,66 @@ export default function Customize4() {
             </div>
           </div>
         )}
+
+
+        {showCartModal && (
+          <div className={style.modalOverlay}>
+            <div className={style.modalContentLarge}>
+              <div className=''>
+                <div className={style.previewtopic}><h2>✦ 確認客製化手鍊✦</h2></div>
+              </div>
+              <img src={previewImage} alt="手鍊預覽圖" className={style.previewImg} />
+              <div className={style.infoBox}>
+                <p><strong>名稱 | </strong>{braceletName || '尚未命名'}</p>
+                <p><strong>尺寸 | </strong>手圍 {wristSize}cm / 水晶珠{selectedSize}mm</p>
+                <p><strong>價格 | </strong>NT${braceletPrice}</p>
+              </div>
+              <br />
+              <div className={style.noticeBox}>
+                <p>本商品為純客製化設計，下單後恕不退換。</p>
+                <label className={style.checkboxLabel}>
+                  <input
+                    type="checkbox"
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                  />
+                  我已閱讀並同意客製化購物須知。
+                </label>
+              </div>
+              <div className={style.modalButtons}>
+                <button
+                  className={style.btnConfirm}
+                  onClick={() => {
+                    if (!agreedToTerms) {
+                      alert("請先勾選同意購物須知");
+                      return;
+                    }
+
+                    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+                    existingCart.push({
+                      braceletName,
+                      wristSize,
+                      selectedSize,
+                      crystalPlacement,
+                      selectedMetalImage,
+                      braceletPrice,
+                      previewImage,
+                      createdAt: new Date().toISOString(),
+                    });
+                    localStorage.setItem('cart', JSON.stringify(existingCart));
+                    setShowCartModal(false);
+                    setAgreedToTerms(false);
+                    alert("已成功加入購物車！");
+                  }}
+                >
+                  確認加入購物車
+                </button>
+                <button onClick={() => setShowCartModal(false)}>取消</button>
+              </div>
+            </div>
+          </div>
+        )}
+
       </main>
       <CopyrightNotice />
 
