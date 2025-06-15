@@ -80,11 +80,11 @@ export default function Customize3() {
           <div className="text3-wrap">
             <div className="text3">
               <h2>
-                <img src="/images/Custom/line_left.svg" alt="" />
+                <img src="./images/Custom/line_left.svg" alt="" />
                 {lifePathNumber && (
                   <p className="sub-title">點擊一條推薦手鍊</p>
                 )}
-                <img src="/images/Custom/line_right.svg" alt="" />
+                <img src="./images/Custom/line_right.svg" alt="" />
               </h2>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function Customize3() {
                     <defs>
                       {layout.map((bead, i) => {
                         const isCrystal = bead === 'crystal';
-                        const imgSrc = isCrystal ? crystal.image : "/images/Custom/ball3.png";
+                        const imgSrc = isCrystal ? crystal.image : "./images/Custom/ball3.png";
                         return (
                           <pattern id={`img-${idx}-${i}`} key={i} patternUnits="objectBoundingBox" width="1" height="1" >
                             <image href={imgSrc} width="48" height="48" preserveAspectRatio="xMidYMid slice" />
@@ -135,7 +135,7 @@ export default function Customize3() {
                       return (
                         <image
                           key={i}
-                          href={isCrystal ? crystal.image : "/images/Custom/ball3.png"}
+                          href={isCrystal ? crystal.image : "./images/Custom/ball3.png"}
                           x={cx - size / 2}
                           y={cy - size / 2}
                           width={size}
