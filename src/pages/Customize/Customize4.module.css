@@ -48,24 +48,76 @@
 
 }
 
+/*水晶擺放教學*/
+.crystalGuideOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crystalGuideContent {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Noto Sans TC';
+}
+
+.crystalGuideContent p {
+    margin-top: 1rem;
+    padding: 0 2rem;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #494949;
+}
+
+.guideCloseBtn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background-color: #A67CEB;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.guideCloseBtn:hover {
+    background-color: #9763Ca;
+}
+
+.guideCloseBtn:active {
+    background-color: #6e3bbf;
+}
+
+
+
 .boxs2,
 .iconbox2 {
     width: 100%;
 }
 
-.icon1Box2{
-display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  height: 100%; 
+.icon1Box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    height: 100%;
 }
+
 .iconPanelWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .boxs,
@@ -504,7 +556,7 @@ display: flex;
     border-radius: 0.938rem;
     background: rgb(255, 255, 255, 225);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
-    z-index: 99;
+    z-index: 10;
     position: relative;
 }
 
@@ -704,7 +756,7 @@ display: flex;
     position: fixed;
     top: 0;
     right: 0;
-     width: 15rem;
+    width: 15rem;
     height: 100vh;
     z-index: 2;
     display: flex;
@@ -739,7 +791,7 @@ display: flex;
     width: 18.75rem;
     height: 26.125rem;
     top: 9.5rem;
-    right: 14.9rem;
+    right: 14.7rem;
     max-width: 90vw;
     border-radius: 40px 0px 0px 40px;
     background: rgba(255, 255, 255, 255);
@@ -1042,4 +1094,92 @@ display: flex;
     line-height: 1.6;
     text-align: center;
     margin-bottom: 2rem;
+}
+
+
+
+/*平板尺寸1024*/
+@media screen and (max-width: 1024px) {
+    .index {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        height: auto;
+        padding-top: 5rem;
+        max-width: 100%;
+    }
+
+    .boxs {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .boxs2 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .name {
+        width: 90%;
+        order: 0;
+        margin-bottom: 1rem;
+    }
+
+    .bracelet {
+        order: 1;
+        margin: 0 auto;
+    }
+
+    .iconBox2 {
+        order: 2;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .icon1Box {
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .panelOverlay {
+        right: 0;
+    }
+
+    .sizeBox {
+        order: 3;
+        width: 47%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    #beadWindow {
+        order: 3;
+        width: 47%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .boxs2 {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+
+    .priceBox {
+        order: 4;
+        width: 100%;
+    }
 }

@@ -26,6 +26,22 @@ export default function Customize4() {
   const [recommendedCrystal, setRecommendedCrystal] = useState([]);
   const hasSetDefaultMetal = useRef(false);
 
+
+  //選擇金屬觸發教學彈窗
+  const [selectedMetalImage, setSelectedMetalImage] = useState(null);
+  const [showCrystalGuide, setShowCrystalGuide] = useState(false);
+
+  const handleSelectMetal = (metalImage) => {
+    setSelectedMetalImage(metalImage);
+    console.log("金屬選擇了", metalImage);
+
+    const hasSeenGuide = sessionStorage.getItem('hasSeenCrystalGuide');
+    if (!hasSeenGuide) {
+      setShowCrystalGuide(true);
+      sessionStorage.setItem('hasSeenCrystalGuide', 'true');
+    }
+  };
+
   useEffect(() => {
     const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
     const designMode = sessionStorage.getItem('designMode');
@@ -95,7 +111,6 @@ export default function Customize4() {
     return calculateBeadAngles(braceletBeads, selectedSize);
   }, [braceletBeads, selectedSize]);
 
-  const [selectedMetalImage, setSelectedMetalImage] = useState(null);
   const [openPanel, setOpenPanel] = useState(null); // null 或 "measure", "result", "wiki", "note", "custom"
   const [selectedCategory, setSelectedCategory] = useState("靈性直覺"); // 預設分類
 
@@ -530,6 +545,7 @@ export default function Customize4() {
     ]
   };
 
+
   const [selectedCrystal, setSelectedCrystal] = useState(null); // 選中的水晶圖
   const [selectedBeadIndexes, setSelectedBeadIndexes] = useState([]); // 多個選中的 bead index
   const [crystalPlacement, setCrystalPlacement] = useState({}); // index 對應的水晶圖
@@ -807,7 +823,7 @@ export default function Customize4() {
                     key={i}
                     src={`./images/Custom/${img}.png`}
                     alt=""
-                    onClick={() => setSelectedMetalImage(`./images/Custom/${img}.png`)}
+                    onClick={() => handleSelectMetal(`./images/Custom/${img}.png`)}
                   />
                 ))}
               </div>
@@ -947,6 +963,9 @@ export default function Customize4() {
             </div>
 
 
+
+
+
             {openPanel && (
               <div
                 className={style.panelOverlay}
@@ -960,6 +979,8 @@ export default function Customize4() {
                       setActivePanel(null);
                     }}>✕</button>
                   </div>
+
+
 
                   {openPanel === "measure" && (
                     <div>
@@ -1286,7 +1307,21 @@ export default function Customize4() {
             </div>
           </div>
         )}
-
+        {showCrystalGuide && (
+          <div className={style.crystalGuideOverlay}>
+            <div className={style.crystalGuideContent}>
+              <h3>✧ 怎麼擺水晶？ ✧</h3>
+              <p>點選手鍊上大顆珠珠的位置再點水晶，或是先點水晶再點位置，就能把喜歡的水晶套上去囉！</p>
+              <p style={{ marginTop: '0.5rem' }}>－先點選水晶位置可多選－</p>
+              <button
+                className={style.guideCloseBtn}
+                onClick={() => setShowCrystalGuide(false)}
+              >
+                知道了
+              </button>
+            </div>
+          </div>
+        )}
       </main>
       <CopyrightNotice />
 
