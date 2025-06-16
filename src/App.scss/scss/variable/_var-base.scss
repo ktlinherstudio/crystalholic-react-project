@@ -17,6 +17,10 @@ $media-md: "max-width:820px"; // cover1 iPad Mini/air 768*1024(直向)
 $media-sm-up: "min-width:641px"; //手機板以上
 $media-sm: "max-width:640px"; // i12 Pro /
 
+
+/* 手鍊半徑 */ 
+$rrr: clamp(100px, 20vw, 250px); 
+
 ///lg, md, sm 為主
 
 // // 速率
