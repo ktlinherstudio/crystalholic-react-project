@@ -329,7 +329,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-hawkseye.png`,
             description: "鷹眼石擁有冷靜沉穩的藍灰色光澤，象徵洞察力與行動力，是職場中強化決斷的能量石。",
             effects: "強化觀察力：看清局勢與細節。\n提升理性：幫助冷靜分析與判斷。\n增強信念：協助堅定方向與目標。",
-            suitableFor: "管理者、策略規劃者、需要冷靜判斷的人。",
+            suitableFor: "管管理者、策略規劃者、需要冷靜判斷的人、\n正面對重要抉擇與職涯轉變的人",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-tigerseye.png`,
@@ -357,7 +357,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-tigerseye.png`,
             description: "虎眼石是一顆具有金褐色光澤的水晶，象徵決斷與行動，能幫助你勇敢邁出每一步。",
             effects: "強化意志：提升自信與執行力。\n穩定專注：排除猶豫與分心干擾。\n保護能量：增強內在穩定與目標導向。",
-            suitableFor: "需要強化執行力或常面對決策挑戰的人。",
+            suitableFor: "需要強化執行力或常面對決策挑戰的人、\n在行動與目標上渴望突破自我限制者",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-hawkseye.png`,
@@ -414,7 +414,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-rutile-quartz.png`,
             description: "鈦晶是內含金色針狀物的水晶，被視為聚財與突破瓶頸的行動之石，具有強大的推進能量。",
             effects: "聚財能量：吸引資源與機會流動。\n激發目標：突破遲滯與能量封鎖。\n行動推進：適合進行重大計畫與事業開拓。",
-            suitableFor: "創業者、領導者或正在進行目標衝刺的人。",
+            suitableFor: "創業者、領導者或正在進行目標衝刺的人，\n亦適合在事業轉型期尋求突破與資源整合者。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
@@ -470,7 +470,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-purplefluorite.png`,
             description: "紫螢石具備高度智慧與安定波頻，是強化創意思維與深入專注的絕佳水晶。",
             effects: "創意啟動：激發靈感與抽象思維能力。\n專注穩定：減少腦部雜訊與疲勞。\n靜心清明：有助冥想與靈感釐清。",
-            suitableFor: "從事創作、設計、研究與教學的人。",
+            suitableFor: "從事創作、設計、研究與教學的人，\n或正面臨思緒混亂、需要提升專注與心靈清明的人。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
@@ -498,7 +498,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-sodalite.png`,
             description: "蘇打石是一顆提升邏輯與溝通表達的寶石，協助理性對話與思路清晰，是團隊合作的好幫手。",
             effects: "條理清晰：幫助分析與有系統表達。\n邏輯推演：提升策略規劃與問題拆解力。\n合作溝通：促進理解與協調。",
-            suitableFor: "講師、專案主持人、行銷與溝通相關職務者。",
+            suitableFor: "講師、專案主持人、行銷與溝通相關職務者，\n或常需進行團隊溝通與邏輯思考的人。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-fluorite.png`,
@@ -526,7 +526,7 @@ const crystalsData = {
             image: `${base}images/S-CrystalSingle/crystal-carnelian.png`,
             description: "紅瑪瑙是一顆充滿生命力的水晶，能激發動力與自信，適合需要推進行動與積極面對挑戰的人。",
             effects: "行動力啟動：帶動積極性與執行欲望。\n穩定信念：強化決心與心理韌性。\n情緒轉化：排除拖延與自我懷疑。",
-            suitableFor: "拖延型創作者、行動力不足或意志不穩定者。",
+            suitableFor: "拖延型創作者、行動力不足或意志不穩定者，\n或正處於目標初期階段、需要推進力的人。",
             recommended: [
                 {
                     src: `${base}images/S-CrystalSingle/crystal-citrine.png`,
@@ -785,7 +785,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
             description: "黑銀曜石表面呈現銀色光澤，象徵內在洞察與能量防護，適合需要看清真相與穩固自我界線的人使用。",
             effects: "心靈保護：阻隔情緒干擾與負能量渲染。\n提升洞察：看見潛意識中的模式與真相。\n自我連結：穩定能場，深化內在力量。",
-            suitableFor: "靈性工作者、情緒敏感族群、能量療癒師。",
+            suitableFor: "靈性工作者、情緒敏感族群、能量療癒師，\n或經常處於複雜人際與高壓環境中者。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-goldobsidian.png", alt: "金曜石", category: "能量防護", targetName: "金曜石" },
                 { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
@@ -839,7 +839,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-tridacna.png",
             description: "硨磲石是海洋能量與佛教文化相連的聖石，有著淨化心念與提升正能量的功效，可穩定磁場並驅逐負面思緒。",
             effects: "磁場淨化：清除雜念與心靈混亂。\n心性安定：提升慈悲頻率與內在和平。\n柔性防護：在柔和中形成能量結界。",
-            suitableFor: "靈性修行、冥想或容易心浮氣躁者。",
+            suitableFor: "靈性修行、冥想或容易心浮氣躁者，\n特別適合追求內在平靜與能量淨化的療癒愛好者。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
                 { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
@@ -852,7 +852,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-bloodstone.png",
             description: "龍血石是一種具有綠紅斑紋的保護石，融合了勇氣、耐力與抗壓能量，常被視為戰士之石。",
             effects: "強化氣場：提升生命力與能量耐受度。\n行動保護：在行動與挑戰中穩定自我。\n戰士精神：激發堅持與面對逆境的勇氣。",
-            suitableFor: "面對挑戰、轉變或易消耗能量的環境者。",
+            suitableFor: "面對挑戰、轉變或易消耗能量的環境者，\n特別適合需要持續堅持與承受壓力的工作者或療癒者。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-hematite.png", alt: "黑鐵礦", category: "能量防護", targetName: "黑鐵礦" },
                 { src: "./images/S-CrystalSingle/crystal-carnelian.png", alt: "紅瑪瑙", category: "專注工作", targetName: "紅瑪瑙" },
@@ -993,7 +993,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-celestite.png",
             description: "天青石散發出平靜與祥和的頻率，能協助放鬆神經系統、緩和緊張情緒，是非常適合冥想與睡前放鬆的水晶。",
             effects: "穩定神經：減緩壓力與焦躁情緒。\n靜心入眠：幫助冥想與放鬆入睡。\n靈性共鳴：提升心靈寧靜與和平感。",
-            suitableFor: "睡眠障礙、神經緊繃或能量敏感者。",
+            suitableFor: "睡眠障礙、神經緊繃或能量敏感者，特別適合在身心疲憊、\n入眠困難或需要靜心沉澱時使用，幫助回歸平靜與安穩。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-angelite.png", alt: "天使石", category: "放鬆冥想", targetName: "天使石" },
                 { src: "./images/S-CrystalSingle/crystal-amethyst.png", alt: "紫水晶", category: "放鬆冥想", targetName: "紫水晶" },
@@ -1006,7 +1006,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-greenfluorite.png",
             description: "綠螢石具有淨化思緒與安撫心輪的功效，能協助釋放雜念、整理混亂狀態，非常適合在靜心與放鬆時使用。",
             effects: "釐清雜念：協助從混亂回到安定中心。\n能量整理：穩定思緒與心輪能場。\n靜心作用：支持冥想時的專注與平和。",
-            suitableFor: "容易分心、精神雜亂或情緒低落者。",
+            suitableFor: "容易分心、精神雜亂或情緒低落者，\n特別適合在壓力大、或想重建內在秩序時使用。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
                 { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
@@ -1019,7 +1019,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
             description: "黑銀曜石不僅具有強大的能量防護作用，也能協助內在反思、釐清混亂思緒，是進入深層冥想與自我探索的優秀助手。",
             effects: "能量隔離：避免干擾，讓冥想更安定。\n內省輔助：看見潛意識中的情緒模式。\n心念沉澱：清理思緒並帶來平靜力量。",
-            suitableFor: "靈性探索者與情緒敏感、容易受外界干擾的人。",
+            suitableFor: "靈性探索者與情緒敏感、容易受外界干擾的人，\n亦適合正在進行內在整合、冥想練習的人。",
             recommended: [
                 { src: "./images/S-CrystalSingle/crystal-clearquartz.png", alt: "白水晶", category: "靈性直覺", targetName: "白水晶" },
                 { src: "./images/S-CrystalSingle/crystal-smokyquartz.png", alt: "茶晶", category: "放鬆冥想", targetName: "茶晶" },
@@ -1032,7 +1032,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-hackmanite.png",
             description: "方鈉石是稀有的變色水晶，帶有淡紫或灰紫色調，溫和而神秘，能協助釋放情緒與促進內在清理，有助深度冥想與靜心。",
             effects: "潛意識釋放：幫助釐清壓抑情緒與內在糾結。\n能量清理：提升靈性頻率，帶來內在明晰。\n深度冥想：支援靜心時的情緒療癒與覺察。",
-            suitableFor: "想深入療癒內在、釋放情緒結構與進入靜心狀態的使用者。",
+            suitableFor: "想深入療癒內在與進入靜心狀態的使用者，\n亦適合從事心理諮商、靈性療癒或欲深入潛意識探索的人。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-amethyst.png",
@@ -1060,7 +1060,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-pinkcalcite.png",
             description: "粉方解石是一種溫柔的水晶，具備心輪療癒能量，適用於釋放情感創傷、自我寬容，協助冥想時達到溫柔穩定的狀態。",
             effects: "情緒療癒：撫慰傷痛、建立自我寬容。\n心輪淨化：釋放過去的情緒殘留與創傷。\n放鬆安撫：協助冥想時放鬆並感受到安全感。",
-            suitableFor: "需要內在修復、處於心靈脆弱狀態或渴望被溫柔包覆的人。",
+            suitableFor: "需要內在修復、處於心靈脆弱狀態或渴望被溫柔包覆的人，\n亦適合正經歷轉變、渴望重拾自我愛與平衡的人。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-rosequartz.png",
