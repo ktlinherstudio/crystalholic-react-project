@@ -45,6 +45,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   padding: 6px 14px;
+  margin: 1.2rem;
   border-radius: 20px;
   border: 2px solid transparent;
   background-color: transparent;

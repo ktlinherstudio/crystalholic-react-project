@@ -7,7 +7,7 @@ const crystalsData = {
             englishName: "Kyanite",
             image: `${base}images/S-CrystalSingle/crystal-kyanite.png`,
             description: "藍晶石是一種美麗的藍色水晶，擁有從淺藍到深藍的色澤，並呈現獨特的光澤。它常用於增強溝通、情緒平衡和靈性覺醒。",
-            effects: "促進溝通：幫助開啟喉輪，增強表達與自我溝通。\n情緒平衡：有助於緩解焦慮與情緒不穩，帶來內心的平靜。\n靈性覺醒：提升直覺與靈性成長，增強心靈覺醒。",
+            effects: "促進溝通：幫助開啟喉輪，增強表達與自我溝通。\n情緒平衡：有助緩解焦慮，帶來內心的平靜。\n靈性覺醒：提升直覺與靈性成長，增強心靈覺醒。",
             suitableFor: "追求心靈成長與靈性覺醒的人。\n需要情緒平衡與放鬆的人。",
             recommended: [
                 {
@@ -567,7 +567,7 @@ const crystalsData = {
             name: "粉紫水晶",
             englishName: "Lilac Amethyst",
             image: `${base}images/S-CrystalSingle/crystal-lilac-amethyst.png`,
-            description: "粉紫水晶兼具紫水晶與粉晶的特質，穩定心靈同時溫柔開放情感。",
+            description: "兼具紫水晶的穩定力量與粉晶的溫柔能量，安撫焦慮與雜念，溫柔地敞開內心，吸引真誠的情感連結，讓心靈更平衡自在。",
             effects: "放鬆情緒：穩定情緒波動與內心焦慮。\n溫柔覺察：引導愛與自我接納流動。\n人際平衡：提升共感力與理解他人感受。",
             suitableFor: "敏感而害怕受傷、需要安心關係的人",
             recommended: [
@@ -580,7 +580,7 @@ const crystalsData = {
             name: "紅瑪瑙",
             englishName: "Carnelian",
             image: `${base}images/S-CrystalSingle/crystal-carnelian.png`,
-            description: "紅瑪瑙不僅帶來行動力，也能協助戀愛時的勇氣與自信展現。",
+            description: "紅瑪瑙不僅帶來行動力，也能在戀愛中激發勇氣與自信，真誠表達內心情感，邁出關鍵一步，吸引對等而熱烈的情感連結。",
             effects: "行動力：提升戀愛積極性與自信表現。\n吸引力：展現個人魅力與能量磁場。\n情感穩定：協助面對關係波動與不安。",
             suitableFor: "害羞、戀愛遲疑或自信不足的人",
             recommended: [
@@ -593,7 +593,7 @@ const crystalsData = {
             name: "紅石榴石",
             englishName: "Garnet",
             image: `${base}images/S-CrystalSingle/crystal-garnet.png`,
-            description: "石榴石象徵深沉忠貞的愛，提升情感忠誠與穩定的關係能量。",
+            description: "石榴石象徵深沉且忠貞不渝的愛，能喚醒內在的力量，提升伴侶間的信任與連結，穩固關係，使愛情更加穩定長久。",
             effects: "情感連結：強化伴侶間能量共鳴。\n穩固關係：增加忠誠與承諾能量。\n提升信任：穩定感情互動與情緒回應。",
             suitableFor: "已在感情中、想經營穩定關係的人",
             recommended: [
@@ -606,7 +606,7 @@ const crystalsData = {
             name: "海洋碧玉",
             englishName: "Ocean Jasper",
             image: `${base}images/S-CrystalSingle/crystal-oceanjasper.png`,
-            description: "海洋碧玉帶有歡樂與流動特質，是增進人際與輕鬆交流的能量石。",
+            description: "海洋碧玉帶有歡樂與流動的特質，如海浪般柔和而富有節奏，能釋放緊張情緒、提升親和力，是促進輕鬆交流的療癒之石。",
             effects: "人際流動：營造輕鬆自在的人際環境。\n促進善意：增強溝通與包容互動。\n歡樂能量：帶來愉悅與心情釋放。",
             suitableFor: "想改善人際圈、增強交流順利度的人",
             recommended: [
@@ -645,7 +645,7 @@ const crystalsData = {
             name: "紅紋石",
             englishName: "Rhodochrosite",
             image: "./images/S-CrystalSingle/crystal-rhodochrosite.png",
-            description: "紅紋石帶有玫瑰紅與白紋，是深層情感療癒與內在小孩修復的重要水晶。",
+            description: "紅紋石的玫瑰紅與海浪般的白色流紋，有助於療癒情感與修復內在小孩，給你溫柔的能量，重新喚回愛與被愛的能力。",
             effects: "療癒創傷：釋放過往情感陰影。\n喚醒溫柔：啟動內在小孩與愛的流動。\n開放心輪：幫助重新感受愛與被愛。",
             suitableFor: "情感受過傷、希望重新敞開心房的人",
             recommended: [
@@ -671,7 +671,7 @@ const crystalsData = {
             name: "紅碧璽",
             englishName: "Rubellite",
             image: "./images/S-CrystalSingle/crystal-rubellite.png",
-            description: "紅碧璽是強力的情感激發石，能促進愛情能量流動與情緒表達。",
+            description: "紅碧璽是強力的情感激發石，促進愛情能量的流動，幫助打開心輪，釋放壓抑的愛意與渴望，讓關係更坦誠親密。",
             effects: "激發情感：喚醒愛情熱度與慾望。\n鼓勵表達：幫助說出真實情緒。\n戀愛推進：增強親密與互動意願。",
             suitableFor: "戀愛中感到冷淡或情感表達困難者",
             recommended: [
@@ -743,7 +743,7 @@ const crystalsData = {
             englishName: "Tourmaline",
             image: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
             description: "黑碧璽是最具能量防護力的水晶，能有效吸收與轉化負能量，並穩定自身氣場，是職場與靈性實踐中最受信任的保護石。",
-            effects: "氣場防護：建立能量屏障，防止外界干擾與情緒吸附。\n情緒穩定：減緩緊張、焦慮與能量混亂。\n地氣連結：強化根部穩定感，提升內在安全與行動力。",
+            effects: "氣場防護：建立能量屏障，防止外界干擾與情緒。\n情緒穩定：減緩緊張、焦慮與能量混亂。\n地氣連結：強化根部，提升內在安全與行動力。",
             suitableFor: "長期處於人際壓力或能量混亂環境的人。\n敏感體質、易受影響、情緒容易失衡者。",
             recommended: [
                 {
@@ -952,7 +952,7 @@ const crystalsData = {
             image: "./images/S-CrystalSingle/crystal-smokyquartz.png",
             description: "茶晶是一種灰棕色調的水晶，以穩定與排毒聞名。它能協助排出負面情緒與雜念，穩固內在信念，是高壓生活的守護石。",
             effects: "能量釋放：協助釋放壓力、恐懼與焦慮。\n磁場穩定：穩定身心靈氣場，帶來踏實感。\n負能清理：清除體內累積的情緒毒素與雜亂能量。",
-            suitableFor: "壓力過大、情緒容易累積或經常處於忙碌環境中的人。\n需要地氣與穩定支撐的人。",
+            suitableFor: "壓力過大、情緒易累積或經常處於忙碌環境中的人。\n需要地氣與穩定支撐的人。",
             recommended: [
                 {
                     src: "./images/S-CrystalSingle/crystal-blacktourmaline.png",
@@ -1017,7 +1017,7 @@ const crystalsData = {
             name: "黑銀曜石",
             englishName: "Silver Sheen O.",
             image: "./images/S-CrystalSingle/crystal-silversheenobsidian.png",
-            description: "黑銀曜石不僅具有能量防護作用，也能協助反思與穩定思緒，是進入深層冥想的優秀助手。",
+            description: "黑銀曜石不僅具有強大的能量防護作用，也能協助內在反思、釐清混亂思緒，是進入深層冥想與自我探索的優秀助手。",
             effects: "能量隔離：避免干擾，讓冥想更安定。\n內省輔助：看見潛意識中的情緒模式。\n心念沉澱：清理思緒並帶來平靜力量。",
             suitableFor: "靈性探索者與情緒敏感、容易受外界干擾的人。",
             recommended: [
