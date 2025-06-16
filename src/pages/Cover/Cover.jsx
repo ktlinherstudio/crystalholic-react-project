@@ -33,7 +33,7 @@ const slides = [
                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
             </div>
             {/* 回饋內文 */}
-            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
+            <p>水晶超美又有能量，超級推薦喜愛客製化手鍊的人！</p>
         </div>
     </div>,
     <div className="feedback">
@@ -53,7 +53,7 @@ const slides = [
                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
             </div>
             {/* 回饋內文 */}
-            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
+            <p>朋友推的，買了真的有被療癒到！會想再光顧！</p>
         </div>
     </div>,
     <div className="feedback">
@@ -73,7 +73,7 @@ const slides = [
                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
             </div>
             {/* 回饋內文 */}
-            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+            <p>價格合理又有質感，推薦給也需要放鬆的你！</p>
         </div>
     </div>,
     <div className="feedback">
@@ -93,87 +93,7 @@ const slides = [
                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
             </div>
             {/* 回饋內文 */}
-            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
-
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>手鍊戴起來超美，真的讓我越來越相信水晶的能量！</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
-
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>水晶很美，充滿正能量，闆娘也非常親切，每次收到都覺得好幸福！</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
-
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
-
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
-
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+            <p>收到手鍊當下心情超好的，整個能量滿滿超加分！</p>
         </div>
     </div>,
     <div className="feedback">
@@ -213,69 +133,149 @@ const slides = [
                 <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
             </div>
             {/* 回饋內文 */}
-            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+            <p>水晶超美又有能量，超級推薦喜愛客製化手鍊的人！</p>
         </div>
     </div>,
-    <div className="feedback">
-        <div className="review-pic">
+    // <div className="feedback">
+    //     <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
-        </div>
-    </div>,
-    <div className="feedback">
-        <div className="review-pic">
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
-        </div>
-        <div className="feedback-left">
-            {/* 水晶5星評價 */}
-            <div className="fdstar-box">
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-                <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
-            </div>
-            {/* 回饋內文 */}
-            <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
-        </div>
-    </div>
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>手鍊戴起來超美，真的讓我越來越相信水晶的能量！</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
+
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
+
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
+
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>朋友推薦後嘗試購買，真的被療癒到了，下次還會回購！</p>
+    //     </div>
+    // </div>,
+    // <div className="feedback">
+    //     <div className="review-pic">
+
+    //         <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+
+    //         <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+    //     </div>
+    //     <div className="feedback-left">
+    //         {/* 水晶5星評價 */}
+    //         <div className="fdstar-box">
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //             <img src="./images/HomePage/star.svg" className="fdstar" alt="" />
+    //         </div>
+    //         {/* 回饋內文 */}
+    //         <p>品質很好，價格也實在，強烈推薦給正在尋找心靈慰藉的你。</p>
+    //     </div>
+    // </div>
 ];
 
 
@@ -671,10 +671,10 @@ export default function Cover() {
                                     {idx === 0 && (
                                         <>
                                             <button className="btn-left" onClick={handleUp}>
-                                                <img src="./images/HomePage/icon_btn_up.ico.svg" alt="上一顆" />
+                                                <img src="./images/S-Btn/btn_left.svg" alt="上一顆" />
                                             </button>
                                             <button className="btn-right" onClick={handleDown}>
-                                                <img src="./images/HomePage/icon_btn_down.ico.svg" alt="下一顆" />
+                                                <img src="./images/S-Btn/btn_right.svg" alt="下一顆" />
                                             </button>
                                         </>
                                     )}
