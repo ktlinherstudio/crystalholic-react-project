@@ -773,62 +773,69 @@ export default function Customize4() {
               />
             </div>
           </div>
-          <div className={style.sizeBox}>
-            <div className={style["title-size"]}>
-              <p>尺寸設定</p>
-            </div>
-            <hr className={style.line} />
-            <div className={style.crystalSizeBox}>
-              <div className={style.crystalSize}>
-                <p>水晶大小：</p>
+
+          <div className={style.sizeAndBeads}>
+
+
+
+            <div className={style.sizeBox}>
+              <div className={style["title-size"]}>
+                <p>尺寸設定</p>
               </div>
-              <div className={style.crystalSizeButtons}>
-                {[8, 10].map(size => (
-                  <button
-                    key={size}
-                    className={`${style.button} ${selectedSize === size ? style.active : ''}`}
-                    onClick={() => setSelectedSize(size)}
-                  >
-                    {size}mm
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div className={style.ringSizeBox}>
-              <div className={style.ringSize}>
-                <p>手圍尺寸：</p>
-              </div>
-              <div className={style.ringSizeSlider}>
-                <input
-                  type="range"
-                  className={style.sliderInput}
-                  min="13"
-                  max="18"
-                  step="1"
-                  value={wristSize}
-                  onChange={(e) => setWristSize(Number(e.target.value))}
-                />
-              </div>
-              <div className={style.ringSizeValueBox}>
-                <p className={style.sizeValue}>{wristSize}cm</p>
-              </div>
-            </div>
-            <div className={style.ringJewelryBox}>
-              <div className={style.ringJewelry}>
-                <p>手鍊配飾：</p>
-              </div>
-              <div className={style.imagesBox}>
-                {["ball1", "ball2", "ball3", "ball4", "ball5", "ball6"].map((img, i) => (
-                  <img
-                    key={i}
-                    src={`./images/Custom/${img}.png`}
-                    alt=""
-                    onClick={() => handleSelectMetal(`./images/Custom/${img}.png`)}
+              <hr className={style.line} />
+              <div className={style.crystalSizeBox}>
+                <div className={style.crystalSize}>
+                  <p>水晶大小：</p>
+                </div>
+                <div className={style.crystalSizeButtons}>
+                  {[8, 10].map(size => (
+                    <button
+                      key={size}
+                      className={`${style.button} ${selectedSize === size ? style.active : ''}`}
+                      onClick={() => setSelectedSize(size)}
+                    >
+                      {size}mm
+                    </button>
+                  ))}
+                </div>
+              </div><div className={style.ringSizeBox}>
+                <div className={style.ringSize}>
+                  <p>手圍尺寸：</p>
+                </div>
+                <div className={style.ringSizeSlider}>
+                  <input
+                    type="range"
+                    className={style.sliderInput}
+                    min="13"
+                    max="18"
+                    step="1"
+                    value={wristSize}
+                    onChange={(e) => setWristSize(Number(e.target.value))}
                   />
-                ))}
+                </div>
+                <div className={style.ringSizeValueBox}>
+                  <p className={style.sizeValue}>{wristSize}cm</p>
+                </div>
+              </div>
+              <div className={style.ringJewelryBox}>
+                <div className={style.ringJewelry}>
+                  <p>手鍊配飾：</p>
+                </div>
+                <div className={style.imagesBox}>
+                  {["ball1", "ball2", "ball3", "ball4", "ball5", "ball6"].map((img, i) => (
+                    <img
+                      key={i}
+                      src={`./images/Custom/${img}.png`}
+                      alt=""
+                      onClick={() => handleSelectMetal(`./images/Custom/${img}.png`)}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
+
+
           <div id={style.beadWindow}>
             <nav className={style.tabs}>
               {Object.keys(crystalData).map((category) => (
@@ -855,9 +862,7 @@ export default function Customize4() {
             </div>
           </div>
         </div>
-        <div>
 
-        </div>
         <div className={style.boxs2}>
           <div className={style.bracelet}
             style={{

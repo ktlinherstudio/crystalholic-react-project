@@ -104,6 +104,10 @@
     width: 100%;
 }
 
+.sizeAndBeads {
+    width: 100%;
+}
+
 .icon1Box2 {
     display: flex;
     flex-direction: column;
@@ -400,7 +404,7 @@
 .tabs {
     display: flex;
     justify-content: flex-start;
-    width: 25rem;
+    width: 24rem;
     position: absolute;
     top: -1.15rem;
     left: 50%;
@@ -596,7 +600,7 @@
     width: 6.5rem;
     height: 6.5rem;
     margin-top: 1rem;
-     transform: translateX(8px);
+    transform: translateX(8px);
     background-image: url('/images/Custom/btn_cart_tool.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -1110,74 +1114,138 @@
     margin-bottom: 2rem;
 }
 
+/* 小於 1024px：上下分區 */
 @media screen and (max-width: 1024px) {
     .index {
         flex-direction: column;
         align-items: center;
-        padding-top: 5rem;
-        height: auto;
-    }
-
-    .boxs {
-        width: 100%;
-        align-items: center;
+        padding: 2rem 1rem;
+        gap: 2rem;
     }
 
     .boxs2 {
         width: 100%;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .name {
-        width: 90%;
-        text-align: center;
-    }
-
-    .mainRow {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .bracelet {
-        margin: 0 auto;
-    }
-
-    .iconBox2 {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-        position: relative;
-        z-index: 99;
-        /* 固定右邊就拿掉 position fixed */
     }
 
-    .bottomBoxes {
+    .boxs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sizeAndBeads {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 1.5rem;
         width: 100%;
-        padding: 0 1rem;
+        max-width: 800px;
     }
+
 
     .sizeBox,
     #beadWindow {
-        width: 45%;
-        min-width: 300px;
+        flex: 1;
+        min-width: 280px;
+    }
+
+
+    .bracelet {
+        order: 1;
+    }
+
+    .iconPanelWrapper {
+        order: 2;
+        margin-top: 1rem;
     }
 
     .priceBox {
-        width: 100%;
+        order: 3;
+    }
+
+    /* 珠子頁籤列 */
+    .name {
+        margin-top: 4rem;
+    }
+
+    .tabs {
+        position: static;
+        transform: none;
+        width: 46rem;
+        margin-top: 120px;
         display: flex;
         justify-content: center;
-        margin-top: 1rem;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+   
+
+    .tab.active {
+        color: var(--color-primary1);
+        background: var(--color-white);
+        z-index: 2;
+    }
+
+    /* 水晶列表 */
+    .tabs hr {
+        background: var(--color-primary3);
+        border-style: none;
+        width: 0.063rem;
+        height: 1.469rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* 單一頁籤 */
+    .tab {
+        display: flex;
+        flex-wrap: wrap;
+        /* 👉 讓標籤可以自動換行 */
+        justify-content: center;
+        gap: 20rem;
+        width: 100rem;
+        position: relative;
+        /* ❗不再需要 absolute 定位了 */
+        transform: none;
+        margin: 0 auto;
+         transform: translate(0%, -230%);
+    }
+
+
+    /* 珠子網格 */
+    .beadGrid {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(6, 46px);
+        /* 垂直 */
+        grid-template-rows: repeat(2, 46px);
+        /* 水平 */
+        gap: .5rem;
+        justify-content: space-evenly;
+        align-content: space-around;
+    }
+
+    /* 珠子外觀 */
+    .bead {
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: #e3e3e3;
+        box-shadow: inset 0 4px 8px rgba(0, 0, 0, .10);
+        cursor: pointer;
+    }
+
+    .selectedBead {
+        outline: 2px solid #b28ed5;
+        outline-offset: 0px;
+        border-radius: 50%;
+        z-index: 10;
     }
 }
