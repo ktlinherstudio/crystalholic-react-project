@@ -320,7 +320,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">金魚泡泡</h2>
-            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -328,7 +328,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">沉睡王國的夢幻派對</h2>
-            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -336,7 +336,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">北國雪森</h2>
-            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -344,7 +344,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">薄荷之吻</h2>
-            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
@@ -352,7 +352,7 @@ export default function Cover() {
         </div>,
         <div className="lbcontent">
             <h2 className="lbh2">極圈探險家</h2>
-            <div><img src="./images/HomePage/lbdeco.svg" alt="" className='lbdeco' /></div>
+            <div><img src="./images/HomePage/lightboxdeco.svg" alt="" className='lbdeco' /></div>
             <p className="p1"> 主石：海藍寶 平靜溝通之石</p>
             <p className="p2">結合海藍寶、拉長石、摩根石與橄欖石，如山澗般清澈流動，帶來安撫情緒與穩定能量。<br />
                 海藍寶溫柔卻堅定，幫助釐清思緒、平衡喉輪，在混亂中保持冷靜與洞察。</p>
