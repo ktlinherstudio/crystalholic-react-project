@@ -17,7 +17,6 @@ export default function RegisterForm({ onCloseModal }) {
 
         login();
         setUser({ name, avatar });
-        alert('註冊成功！歡迎加入 ✨');
 
         if (onCloseModal) onCloseModal();
         setIsSubmitting(false);

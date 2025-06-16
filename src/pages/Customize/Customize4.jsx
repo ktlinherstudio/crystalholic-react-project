@@ -13,9 +13,10 @@ import { resultCrystalMap } from '../../utils/resultCrystalMap';
 import { renderBraceletToImage } from '../../utils/renderBraceletToImage'; // 自訂工具
 
 
+
 export default function Customize4() {
 
-
+  const [agreeError, setAgreeError] = useState(false);
 
   const [showInfo, setShowInfo] = useState(true);
 
@@ -1255,35 +1256,50 @@ export default function Customize4() {
         {showCartModal && (
           <div className={style.modalOverlay}>
             <div className={style.modalContentLarge}>
-              <div className=''>
-                <div className={style.previewtopic}><h2>✦ 確認客製化手鍊✦</h2></div>
+              <div className={style.previewtopic}>
+                <h2>✦ 確認客製化手鍊 ✦</h2>
               </div>
+
               <img src={previewImage} alt="手鍊預覽圖" className={style.previewImg} />
+
               <div className={style.infoBox}>
                 <p><strong>名稱 | </strong>{braceletName || '尚未命名'}</p>
                 <p><strong>尺寸 | </strong>手圍 {wristSize}cm  水晶珠{selectedSize}mm</p>
                 <p><strong>價格 | </strong>NT${braceletPrice}</p>
               </div>
-              <br />
+
+              {/* 注意事項區塊 */}
               <div className={style.noticeBox}>
                 <p>＊ 本商品為純客製化設計，下單後恕不退換 ＊</p>
                 <label className={style.checkboxLabel}>
                   <input
                     type="checkbox"
                     checked={agreedToTerms}
-                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    onChange={(e) => {
+                      setAgreedToTerms(e.target.checked);
+                      if (e.target.checked) {
+                        setAgreeError(false); // 勾選後清除錯誤提示
+                      }
+                    }}
                   />
                   我已閱讀並同意注意事項
                 </label>
+                {agreeError && (
+                  <p className={style.errorText}>請勾選 同意購物注意事項</p>
+                )}
               </div>
+
+              {/* 按鈕區塊 */}
               <div className={style.modalButtons}>
                 <button
                   className={style.btnConfirm}
                   onClick={() => {
                     if (!agreedToTerms) {
-                      alert("請先勾選同意購物須知");
+                      setAgreeError(true);
                       return;
                     }
+
+                    setAgreeError(false);
 
                     const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
                     existingCart.push({
@@ -1299,7 +1315,6 @@ export default function Customize4() {
                     localStorage.setItem('cart', JSON.stringify(existingCart));
                     setShowCartModal(false);
                     setAgreedToTerms(false);
-                    alert("已成功加入購物車！");
                   }}
                 >
                   確認加入購物車
@@ -1308,15 +1323,29 @@ export default function Customize4() {
               </div>
             </div>
           </div>
+
         )}
 
 
         {showCrystalGuide && (
           <div className={style.crystalGuideOverlay}>
             <div className={style.crystalGuideContent}>
-              <h3>✧ 怎麼擺水晶？ ✧</h3>
-              <p>點選手鍊上大顆珠珠的位置再點水晶，或是先點水晶再點位置，就能把喜歡的水晶套上去囉！</p>
-              <p style={{ marginTop: '0.5rem' }}>－先點選水晶位置可多選－</p>
+              <h3>✦ 如何設計？ ✦</h3>
+              <img className={style.decorLine} src="./images/ShoppingCart/finshed_deco.svg" alt="裝飾線" />
+              <ul>
+                <li>
+                  <p>1. 點選手鍊上的大顆珠珠再點水晶(可多選)</p>
+                </li>
+
+                <li>
+                  <p>2. 先點水晶再點手鍊上的一個大顆珠珠</p>
+                </li>
+
+                <li>
+                  <p>就能把喜歡的水晶套上去囉！</p>
+                </li>
+              </ul>
+
               <button
                 className={style.guideCloseBtn}
                 onClick={() => setShowCrystalGuide(false)}

@@ -14,7 +14,6 @@ export default function LoginForm({ onCloseModal }) {
         const avatar = "./images/S-NavBar/navicon_member.svg";
         login();
         setUser({ name, avatar });
-        alert('登入成功！歡迎回來 👋');
 
         if (onCloseModal) onCloseModal();
         setIsSubmitting(false);
