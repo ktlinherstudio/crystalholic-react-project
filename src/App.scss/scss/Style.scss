@@ -1202,7 +1202,7 @@ button {
             @media ($media-xxlg-up) {
                 width: calc($rrr * 2.5);
                 height: calc($rrr * 2.5);
-                transform: translate(-85%, -55%) scale(1.2);
+                transform: translate(-60%, -55%) scale(1.2);
             }
 
             /* 1025 */
@@ -1236,7 +1236,7 @@ button {
                     z-index: 3;
                 }
 
-                /* 按鈕 */
+                /* 按鈕(左右) */
                 .btn-left,
                 .btn-right {
                     position: absolute;
@@ -1268,20 +1268,35 @@ button {
                     }
                 }
 
+                /* 按鈕(左) */ 
                 .btn-left {
-                    left: -5rem;
+                    left: -5.5rem;
+                    transform: rotate(90deg);
 
                     @media ($media-md) {
                         left: -4.3rem;
                     }
                 }
 
+                /* 按鈕(右) */ 
                 .btn-right {
-                    right: -5rem;
+                    right: -5.5rem;
+                    transform: rotate(90deg);
 
                     @media ($media-md) {
                         right: -4.3rem;
                     }
+                }
+
+                /* 按鈕(hover) */ 
+                .btn-left img:hover, .btn-right img:hover {
+                    // width: 3.3rem;
+                    // height: 3.3rem;
+                    scale: 1.15;
+                }
+
+                .btn-left img:active, .btn-right img:active {
+                    scale: 1;
                 }
             }
 
@@ -1350,10 +1365,17 @@ button {
         justify-items: center;
         margin: 0 10% 0 8%;
 
+        /* 1680 & 1920 */
+        @media ($media-xxlg-up) {
+            margin: 0 5% 0 8%;
+        } 
+        
+        /* 1025 */ 
         @media ($media-lg) {
             width: 85%;
             margin: 43% auto;
         }
+        
 
         /* 水晶小百科標題 */
         header {
@@ -1791,6 +1813,8 @@ button {
                     z-index: 10;
                     opacity: 1;
                     position: absolute;
+                    display: flex;
+                    align-items: center;
                 }
 
                 /* 按鈕(左) */
@@ -1805,6 +1829,15 @@ button {
                     right: 35px; // 可調整
                 }
 
+                /* 按鈕(hover) */ 
+                .swiper-button-prev:hover, .swiper-button-next:hover {
+                    scale: 1.1;
+                }
+
+                /* 按鈕(active) */ 
+                .swiper-button-prev:active, .swiper-button-next:active {
+                    scale: 1;
+                }
             }
         }
 
