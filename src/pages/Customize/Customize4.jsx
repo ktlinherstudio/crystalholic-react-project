@@ -929,42 +929,8 @@ export default function Customize4() {
             />
           </div>
         </div>
-        <div className={style.iconBox2}>
+        <div className={style.align}>
           <div className={style.iconPanelWrapper}>
-            <div className={style.icon1Box}>
-              <div className={style.icon1} onClick={() => handlePanelClick("measure")}>
-                <div className={`${style.iconBtn1} ${activePanel === "measure" ? style.active : ""}`}></div>
-                <p>手圍測量</p>
-              </div>
-              <hr className={style.line2} />
-
-              <div className={style.icon1} onClick={() => handlePanelClick("result")}>
-                <div className={`${style.iconBtn2} ${activePanel === "result" ? style.active : ""}`}></div>
-                <p>測驗結果</p>
-              </div>
-              <hr className={style.line2} />
-
-              <div className={style.icon1} onClick={() => handlePanelClick("wiki")}>
-                <div className={`${style.iconBtn3} ${activePanel === "wiki" ? style.active : ""}`}></div>
-                <p>水晶百科</p>
-              </div>
-              <hr className={style.line2} />
-
-              <div className={style.icon1} onClick={() => handlePanelClick("note")}>
-                <div className={`${style.iconBtn4} ${activePanel === "note" ? style.active : ""}`}></div>
-                <p>注意事項</p>
-              </div>
-              <hr className={style.line2} />
-
-              <div className={style.icon1} onClick={() => handlePanelClick("custom")}>
-                <div className={`${style.iconBtn5} ${activePanel === "custom" ? style.active : ""}`}></div>
-                <p>特別訂製</p>
-              </div>
-            </div>
-
-
-
-
 
             {openPanel && (
               <div
@@ -1224,32 +1190,63 @@ export default function Customize4() {
 
               </div>
             )}
+            <div className={style.iconBox2}>
 
+              <div className={style.icon1Box}>
+                <div className={style.icon1} onClick={() => handlePanelClick("measure")}>
+                  <div className={`${style.iconBtn1} ${activePanel === "measure" ? style.active : ""}`}></div>
+                  <p>手圍測量</p>
+                </div>
+                <hr className={style.line2} />
+
+                <div className={style.icon1} onClick={() => handlePanelClick("result")}>
+                  <div className={`${style.iconBtn2} ${activePanel === "result" ? style.active : ""}`}></div>
+                  <p>測驗結果</p>
+                </div>
+                <hr className={style.line2} />
+
+                <div className={style.icon1} onClick={() => handlePanelClick("wiki")}>
+                  <div className={`${style.iconBtn3} ${activePanel === "wiki" ? style.active : ""}`}></div>
+                  <p>水晶百科</p>
+                </div>
+                <hr className={style.line2} />
+
+                <div className={style.icon1} onClick={() => handlePanelClick("note")}>
+                  <div className={`${style.iconBtn4} ${activePanel === "note" ? style.active : ""}`}></div>
+                  <p>注意事項</p>
+                </div>
+                <hr className={style.line2} />
+
+                <div className={style.icon1} onClick={() => handlePanelClick("custom")}>
+                  <div className={`${style.iconBtn5} ${activePanel === "custom" ? style.active : ""}`}></div>
+                  <p>特別訂製</p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
+
+
+          {showConfirmModal && (
+            <div className={style.modalOverlay}>
+              <div className={style.modalContent}>
+                <p>確定要清除整條手鍊嗎？</p>
+                <div className={style.modalButtons}>
+                  <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
+                  <button onClick={() => setShowConfirmModal(false)}>取消</button>
+                </div>
+              </div>
+            </div>
+          )}
+
 
           <div
             className={style.icon2}
             onClick={handleAddToCart}
           >
           </div>
-
         </div>
-
-
-
-        {showConfirmModal && (
-          <div className={style.modalOverlay}>
-            <div className={style.modalContent}>
-              <p>確定要清除整條手鍊嗎？</p>
-              <div className={style.modalButtons}>
-                <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
-                <button onClick={() => setShowConfirmModal(false)}>取消</button>
-              </div>
-            </div>
-          </div>
-        )}
-
-
         {showCartModal && (
           <div className={style.modalOverlay}>
             <div className={style.modalContentLarge}>
@@ -1307,6 +1304,8 @@ export default function Customize4() {
             </div>
           </div>
         )}
+
+
         {showCrystalGuide && (
           <div className={style.crystalGuideOverlay}>
             <div className={style.crystalGuideContent}>
@@ -1324,7 +1323,6 @@ export default function Customize4() {
         )}
       </main>
       <CopyrightNotice />
-
     </>
   )
 }

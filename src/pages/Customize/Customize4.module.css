@@ -115,9 +115,23 @@
 
 .iconPanelWrapper {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-end;
+    /* 按鈕靠右 */
     align-items: center;
     gap: 1rem;
+    position: relative;
+    /* 讓 panelOverlay 能絕對定位在這裡面 */
+    height: 100%;
+    /* 確保有空間定位 */
+    z-index: 20;
+}
+
+.align {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    width: auto;
 }
 
 .boxs,
@@ -544,11 +558,15 @@
 
 
 /* 右側欄 */
+
+
 .iconBox2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.875rem;
+    height: 31rem;
+    right: 10%;
 }
 
 .icon1Box {
@@ -577,6 +595,8 @@
 .icon2 {
     width: 6.5rem;
     height: 6.5rem;
+    margin-top: 1rem;
+     transform: translateX(8px);
     background-image: url('/images/Custom/btn_cart_tool.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -586,7 +606,6 @@
     justify-content: flex-end;
     padding-bottom: 0.5rem;
     cursor: pointer;
-    margin-top: -10px;
 }
 
 .icon2:hover {
@@ -683,7 +702,6 @@
     margin-bottom: 1.5rem;
 }
 
-
 /* 字型設定 */
 .titleName,
 .inputName,
@@ -751,18 +769,15 @@
 
 /* 側邊滑入視窗 */
 .panelOverlay {
-    pointer-events: none;
-    /* ← 不攔截點擊*/
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 15rem;
-    height: 100vh;
-    z-index: 2;
+    position: relative;
+    width: auto;
+    /* 由 panelContent 撐開即可 */
     display: flex;
-    justify-content: flex-start;
-    /* 不控制滑出距離，讓 panelContent 自己決定位置 */
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+    /* 讓 panelContent 自己控制互動 */
+    z-index: 10;
 }
 
 .panelInner {
@@ -790,9 +805,9 @@
     position: absolute;
     width: 18.75rem;
     height: 26.125rem;
-    top: 9.5rem;
-    right: 14.7rem;
+    right: -1.5rem;
     max-width: 90vw;
+    z-index: 32;
     border-radius: 40px 0px 0px 40px;
     background: rgba(255, 255, 255, 255);
     box-shadow: 0px 0px 15px 0px rgba(233, 166, 160, 0.25);
@@ -878,9 +893,8 @@
 .closeBtnWrapper {
     position: sticky;
     top: 1rem;
-    left: -1rem;
     z-index: 9999;
-    width: 2.5rem;
+    width: 3rem;
     height: 2.5rem;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
@@ -1096,90 +1110,74 @@
     margin-bottom: 2rem;
 }
 
-
-
-/*平板尺寸1024*/
 @media screen and (max-width: 1024px) {
     .index {
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        gap: 1rem;
-        height: auto;
         padding-top: 5rem;
-        max-width: 100%;
+        height: auto;
     }
 
     .boxs {
         width: 100%;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
     }
 
     .boxs2 {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
+        align-items: center;
+        gap: 1.5rem;
     }
 
     .name {
         width: 90%;
-        order: 0;
-        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .mainRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1.5rem;
+        width: 100%;
     }
 
     .bracelet {
-        order: 1;
         margin: 0 auto;
     }
 
     .iconBox2 {
-        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+        position: relative;
+        z-index: 99;
+        /* 固定右邊就拿掉 position fixed */
+    }
+
+    .bottomBoxes {
+        display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 1.5rem;
-        margin-top: 1rem;
-        width: 100%;
-    }
-
-    .icon1Box {
-        flex-direction: row;
-        height: auto;
-        width: auto;
-        background: transparent;
-        box-shadow: none;
-        padding: 0;
-    }
-
-    .panelOverlay {
-        right: 0;
-    }
-
-    .sizeBox {
-        order: 3;
-        width: 47%;
-        max-width: 480px;
-        margin: 0 auto;
-    }
-
-    #beadWindow {
-        order: 3;
-        width: 47%;
-        max-width: 480px;
-        margin: 0 auto;
-    }
-
-    .boxs2 {
         flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
         gap: 2rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .sizeBox,
+    #beadWindow {
+        width: 45%;
+        min-width: 300px;
     }
 
     .priceBox {
-        order: 4;
         width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
     }
 }
