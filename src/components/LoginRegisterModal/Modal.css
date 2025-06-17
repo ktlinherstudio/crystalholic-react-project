@@ -11,8 +11,13 @@
 
 .modal-wrapper {
   /* 不設定背景/padding，由 LoginRegisterModal 控制 */
-  width: 480px;
-  max-width: 90%;
+  /* width: 480px; */
+  /* max-width: 90%; */
+  width: clamp(480px, 30vw, 580px);
+  height: clamp(590px, 80vh, 750px);
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
   animation: popup 0.3s ease;
 }
 

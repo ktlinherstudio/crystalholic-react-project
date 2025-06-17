@@ -21,12 +21,14 @@ export default function LoginForm({ onCloseModal }) {
 
     return (
         <form className="auth-form login-form" onSubmit={handleLoginSubmit}>
-            <div className="social-login">
-                <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
-                <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
-            </div>
+            <div className="social-login-box">
+                <div className="social-login">
+                    <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
+                    <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
+                </div>
 
-            <div className="divider"><span>或</span></div>
+                <div className="divider"><span>或</span></div>
+            </div>
 
             <input type="email" placeholder="Email" required />
             <div className="password-group">
@@ -44,7 +46,7 @@ export default function LoginForm({ onCloseModal }) {
                 </div>
             </div>
 
-            <div className="checkbox">
+            <div className="checkbox2">
                 <input type="checkbox" id="remember" />
                 <label htmlFor="remember">記住我</label>
             </div>

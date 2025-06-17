@@ -29,12 +29,14 @@ export default function RegisterForm({ onCloseModal }) {
 
     return (
         <form className="auth-form" onSubmit={handleRegisterSubmit}>
-            <div className="social-login">
-                <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
-                <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
-            </div>
+            <div className="social-login-box">
+                <div className="social-login">
+                    <a href="#"><img src="./images/LoginRegister/btn-google.svg" alt="Google" /></a>
+                    <a href="#"><img src="./images/LoginRegister/btn-line.svg" alt="LINE" /></a>
+                </div>
 
-            <div className="divider"><span>或</span></div>
+                <div className="divider"><span>或</span></div>
+            </div>
 
             <input
                 type="text"
@@ -56,12 +58,14 @@ export default function RegisterForm({ onCloseModal }) {
             />
             <span className="hint">至少 8 個字元</span>
 
-            <select required defaultValue="">
-                <option value="" disabled hidden>性別</option>
-                <option value="female">女性</option>
-                <option value="male">男性</option>
-                <option value="others">其他</option>
-            </select>
+            <div className="gender">
+                <select required defaultValue="">
+                    <option value="" disabled hidden>性別</option>
+                    <option value="female">女性</option>
+                    <option value="male">男性</option>
+                    <option value="others">其他</option>
+                </select>
+            </div>
 
             <div className="birthday">
                 <select required defaultValue="">
