@@ -204,8 +204,10 @@
 }
 
 @media screen and (max-width: 820px) {
+
   .about-hero-title {
     font-size: 40px;
+    padding: 30px 20px 30px;
   }
 
   .about-hero-subtitle {
@@ -229,6 +231,10 @@
 }
 
 @media screen and (max-width: 640px) {
+  .about-hero {
+    clip-path: ellipse(120% 100% at 50% 0%);
+  }
+
   .about-hero-title {
     font-size: 32px;
   }
@@ -245,14 +251,15 @@
   .text-content .line {
     max-width: 410px;
   }
-  .beauty-spirituality .content,
-.quality-guarantee .content {
-  padding: 40px 40px;
-}
 
-.life-crystal .content {
-  padding: 40px 40px;
-}
+  .beauty-spirituality .content,
+  .quality-guarantee .content {
+    padding: 40px 40px;
+  }
+
+  .life-crystal .content {
+    padding: 40px 40px;
+  }
 
   .text {
     width: 100%;
