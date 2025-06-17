@@ -86,22 +86,22 @@ export default function MenuOverlay() {
                 </div>
                 <ul>
                   <li>
-                    <Link to="/ProductCollection" className="hover-link">
+                    <Link to="/ProductCollection#blue" className="hover-link" onClick={() => closeMenu(false)}>
                       <p>澄語之藍</p>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ProductCollection" className="hover-link">
+                    <Link to="/ProductCollection#adventure" className="hover-link" onClick={() => closeMenu(false)}>
                       <p>秘境探光</p>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ProductCollection" className="hover-link">
+                    <Link to="/ProductCollection#seasons" className="hover-link" onClick={() => closeMenu(false)}>
                       <p>四季琉波</p>
                     </Link>
                   </li>
                   <li>
-                    <Link to="/ProductCollection" className="hover-link">
+                    <Link to="/ProductCollection#cocktail" className="hover-link" onClick={() => closeMenu(false)}>
                       <p>微醺晶釀</p>
                     </Link>
                   </li>
