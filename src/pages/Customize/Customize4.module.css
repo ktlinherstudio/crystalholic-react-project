@@ -1099,7 +1099,10 @@
     width: 90%;
     max-width: 600px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .previewtopic {
@@ -1123,6 +1126,9 @@
     margin-bottom: 1rem;
     font-weight: 400;
     color: #806b8b;
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; 
 }
 
 .noticeBox {

@@ -40,11 +40,9 @@ export default function Customize4() {
 
   const handleSelectMetal = (metalImage) => {
     setSelectedMetalImage(metalImage);
-    console.log("金屬選擇了", metalImage);
 
-    const hasSeenGuide = sessionStorage.getItem('hasSeenCrystalGuide');
-    if (!hasSeenGuide) {
-      setShowCrystalGuide(true);
+    if (!sessionStorage.getItem('hasSeenCrystalGuide')) {
+      console.log('[DEBUG] showCrystalGuide 變成 true');
       sessionStorage.setItem('hasSeenCrystalGuide', 'true');
     }
   };
@@ -1312,7 +1310,7 @@ export default function Customize4() {
 
               <div className={style.infoBox}>
                 <p><strong>名稱 | </strong>{braceletName || '尚未命名'}</p>
-                <p><strong>尺寸 | </strong>手圍 {wristSize}cm  水晶珠{selectedSize}mm</p>
+                <p><strong>尺寸 | </strong>手圍 {wristSize}cm   串珠{selectedSize}mm</p>
                 <p><strong>價格 | </strong>NT${braceletPrice}</p>
               </div>
 
@@ -1384,7 +1382,7 @@ export default function Customize4() {
 
                     // 2. 放進 CartContext
                     addToCart({
-                      isCustom: true, 
+                      isCustom: true,
                       name: braceletName || '客製化手鍊',
                       size: selectedSize,
                       wrist: wristSize,
