@@ -273,6 +273,7 @@ body {
     gap: 60px;
     font-size: 14px;
     padding: 0 20px;
+    margin-bottom:40px ;
   }
 
   .crystal-k h1 {
@@ -281,7 +282,7 @@ body {
 
   .crystal-k-img {
     gap: 180px;
-    margin-top: 160px;
+    margin-top: 50px;
   }
 
   .part1 {
@@ -405,6 +406,10 @@ hr {
     width: 100px;
     height: 100px;
   }
+  .category-k li {
+  padding: 6px 14px;
+  margin: 1rem 0;
+}
 
   .part1 {
     padding: 20px 12px;
@@ -426,5 +431,9 @@ hr {
     margin: 24px auto 60px;
     font-size: 18px;
   }
+  .arc-k-wrapper {
+  margin-top: 150px;
+  clip-path: ellipse(160% 100% at 50% 100%);
+}
 
 }
