@@ -1,10 +1,10 @@
 .back-to-top-block {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
   display: flex;
-  position: relative;
   justify-content: flex-end;
-  /* 向右對齊 */
-  margin: -80px 60px 40px auto;
-  z-index: 88;
 }
 
 .back-to-top-btn {
@@ -32,9 +32,21 @@
   object-fit: contain;
 }
 
+.back-to-top-block {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.back-to-top-block.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 @media screen and (max-width: 640px) {
   .back-to-top-block {
-    margin: -80px 20px 40px auto;
+    bottom: 20px;
+    right: 20px;
   }
 }

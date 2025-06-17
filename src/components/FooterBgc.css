@@ -10,7 +10,7 @@
         url(../images/S-Background/noise-background.jpg); */
     padding: 35px 0px 0px;
     margin-top: auto;
-    z-index: 1000;
+    z-index: 50;
     background-size: contain;
     background-repeat: repeat;
     min-height: 305px;
