@@ -66,15 +66,16 @@ export default function MenuOverlay() {
                 </div>
                 <ul>
                   <li>
-                    <Link to="/KnowledgeCleanse" className="hover-link">
-                      <p>使用與淨化指南</p>
-                    </Link>
-                  </li>
-                  <li>
                     <Link to="/KnowledgeCrystal" className="hover-link">
                       <p>水晶小百科</p>
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/KnowledgeCleanse" className="hover-link">
+                      <p>使用與淨化指南</p>
+                    </Link>
+                  </li>
+                  
                 </ul>
               </div>
 
