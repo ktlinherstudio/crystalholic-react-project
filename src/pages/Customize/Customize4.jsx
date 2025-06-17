@@ -626,6 +626,7 @@ export default function Customize4() {
   };
 
   //儲存
+  const [showCustomModal, setShowCustomModal] = useState(false);
   const [braceletName, setBraceletName] = useState('');
   const [braceletPrice, setBraceletPrice] = useState('');
   const handleSaveBracelet = () => {
@@ -640,7 +641,7 @@ export default function Customize4() {
     };
 
     localStorage.setItem('customBracelet', JSON.stringify(savedData));
-    alert('手鍊資料已儲存！');
+    setShowCustomModal(true); // 顯示彈窗
   };
 
   useEffect(() => {
@@ -727,7 +728,7 @@ export default function Customize4() {
   const [showCartModal, setShowCartModal] = useState(false);
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [previewImage, setPreviewImage] = useState(null); // for 手鍊截圖
-
+  const [showIncompleteModal, setShowIncompleteModal] = useState(false);
   const handleAddToCart = async () => {
     // 檢查是否排滿
     const allFilled = braceletBeads.every((bead, index) => {
@@ -735,7 +736,7 @@ export default function Customize4() {
     });
 
     if (!allFilled) {
-      alert("請先完成整條手鍊的設計，才能加入購物車！");
+      setShowIncompleteModal(true); // 打開彈窗
       return;
     }
 
@@ -1239,6 +1240,23 @@ export default function Customize4() {
                     <button className={style.btnConfirm} onClick={handleConfirmClear}>確認</button>
                     <button onClick={() => setShowConfirmModal(false)}>取消</button>
                   </div>
+                </div>
+              </div>
+            )}
+            {showCustomModal && (
+              <div className={style.modalOverlay}>
+                <div className={style.modalContent}>
+                  <p>手鍊資料儲存成功！</p>
+                  <button className={style.btnConfirm} onClick={() => setShowCustomModal(false)}>確認</button>
+                </div>
+              </div>
+            )}
+
+            {showIncompleteModal && (
+              <div className={style.modalOverlay}>
+                <div className={style.modalContent}>
+                  <p>請先完成整條手鍊的設計，才能加入購物車！</p>
+                  <button className={style.btnConfirm} onClick={() => setShowIncompleteModal(false)}>確認</button>
                 </div>
               </div>
             )}
