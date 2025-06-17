@@ -37,16 +37,17 @@ export default function Customize4() {
   //選擇金屬觸發教學彈窗
   const [selectedMetalImage, setSelectedMetalImage] = useState(null);
   const [showCrystalGuide, setShowCrystalGuide] = useState(false);
+  const [hasClickedMetal, setHasClickedMetal] = useState(false);
 
   const handleSelectMetal = (metalImage) => {
     setSelectedMetalImage(metalImage);
 
-    if (!sessionStorage.getItem('hasSeenCrystalGuide')) {
-      console.log('[DEBUG] showCrystalGuide 變成 true');
-      sessionStorage.setItem('hasSeenCrystalGuide', 'true');
+    if (!hasClickedMetal) {
       setShowCrystalGuide(true);
+      setHasClickedMetal(true);
     }
   };
+
 
   useEffect(() => {
     const shouldApply = sessionStorage.getItem('shouldApplyRecommend') === 'true';
