@@ -19,7 +19,7 @@ export default function Product() {
   const [beadSize, setBeadSize] = useState('6');
   const [wristSize, setWristSize] = useState('14');
   const { addToCart } = useCart(); // 🛒 呼叫購物車方法
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsFav(false);
@@ -35,9 +35,12 @@ export default function Product() {
     e.stopPropagation();
     setIsFav((prev) => !prev);
   };
-
-  const handleIncreaseQty = () => setQuantity((prev) => prev + 1);
-  const handleDecreaseQty = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
+  
+  const MAX_QTY = 5;   // ➜ 每件商品最多 5 件
+  // 數量遞增：達上限就不再加
+  const handleIncreaseQty = () => setQuantity(prev => (prev < MAX_QTY ? prev + 1 : prev));
+  // 數量遞減：下限仍維持 1
+  const handleDecreaseQty = () => setQuantity(prev => (prev > 1 ? prev - 1 : 1));
 
   // 推薦商品：同系列最多兩個
   const sameSeriesProducts = series.products
@@ -107,6 +110,8 @@ export default function Product() {
     // window.location.href = '/#/ShoppingCart';
     navigate('/ShoppingCart');
   };
+
+
 
   return (
     <>

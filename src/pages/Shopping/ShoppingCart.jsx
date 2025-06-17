@@ -434,7 +434,7 @@ export default function ShoppingCart() {
                       value={item.quantity}
                       onChange={e => updateQuantity(index, Number(e.target.value))}
                     >
-                      {[...Array(10)].map((_, n) =>
+                      {[...Array(5)].map((_, n) =>
                         <option key={n + 1} value={n + 1}>{n + 1}</option>
                       )}
                     </select>
