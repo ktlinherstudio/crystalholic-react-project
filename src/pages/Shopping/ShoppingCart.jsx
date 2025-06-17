@@ -22,12 +22,12 @@ function DeliveryOptions({
   onMethodChange,           // 🆕 讓父層同步獲得配送方式
 }) {
   /* ---------- state ---------- */
-  const [place, setPlace]   = useState('台灣');
+  const [place, setPlace] = useState('台灣');
   const [method, setMethod] = useState('宅配（貨到付款）');
   const [county, setCounty] = useState('');
   const [stores, setStores] = useState([]);
-  const [store, setStore]   = useState('');
-  const [zip, setZip]       = useState('');
+  const [store, setStore] = useState('');
+  const [zip, setZip] = useState('');
   const [address, setAddress] = useState('');
   const [country, setCountry] = useState('');
 
@@ -56,8 +56,8 @@ function DeliveryOptions({
     const brand = method.includes('7-ELEVEN')
       ? '7-11'
       : method.includes('全家')
-      ? 'Family'
-      : '';
+        ? 'Family'
+        : '';
     setStores(brand ? genStores(brand, county) : []);
     setStore('');
   }, [county, method]);
@@ -203,18 +203,18 @@ export default function ShoppingCart() {
   const { showAuthModal, openAuthModal, closeAuthModal } = useUI();
 
   /* 展開控制 */
-  const [showAllItems, setShowAllItems]         = useState(false);
-  const [showSuccessMsg, setShowSuccessMsg]     = useState(false);
-  const [readyToCheckout, setReadyToCheckout]   = useState(false);
+  const [showAllItems, setShowAllItems] = useState(false);
+  const [showSuccessMsg, setShowSuccessMsg] = useState(false);
+  const [readyToCheckout, setReadyToCheckout] = useState(false);
 
   /* 收件人 & 發票 */
-  const [placeState,     setPlaceState]     = useState('台灣');
-  const [invoiceType,    setInvoiceType]    = useState('');
-  const [invoiceValue,   setInvoiceValue]   = useState('');
+  const [placeState, setPlaceState] = useState('台灣');
+  const [invoiceType, setInvoiceType] = useState('');
+  const [invoiceValue, setInvoiceValue] = useState('');
 
   /* 🆕 配送方式 & 優惠碼 */
   const [deliveryMethod, setDeliveryMethod] = useState('宅配（貨到付款）'); // 由 DeliveryOptions 直接更新
-  const [couponCode,     setCouponCode]     = useState('');                // 使用者輸入的代碼
+  const [couponCode, setCouponCode] = useState('');                // 使用者輸入的代碼
 
   const navigate = useNavigate();
 
@@ -314,10 +314,10 @@ export default function ShoppingCart() {
 
   // 🆕 運費費率表
   const SHIPPING_FEE = {
-    '宅配（貨到付款）':       130,
-    '7-ELEVEN（貨到付款）':   60,
-    '全家（貨到付款）':       60,
-    '國際快遞（關稅另計）':   350,
+    '宅配（貨到付款）': 130,
+    '7-ELEVEN（貨到付款）': 60,
+    '全家（貨到付款）': 60,
+    '國際快遞（關稅另計）': 350,
   };
 
   const shipping = subtotal ? (SHIPPING_FEE[deliveryMethod] ?? 0) : 0;    // 🆕
@@ -331,18 +331,18 @@ export default function ShoppingCart() {
     invoiceType === '個人發票'
       ? '例如：/ABCD123'
       : invoiceType === '公司用發票'
-      ? '例如：20250620'
-      : invoiceType === '捐贈發票'
-      ? '例如：09958'
-      : '';
+        ? '例如：20250620'
+        : invoiceType === '捐贈發票'
+          ? '例如：09958'
+          : '';
   const invoiceLabel =
     invoiceType === '個人發票'
       ? '*手機條碼載具'
       : invoiceType === '公司用發票'
-      ? '*統一編號'
-      : invoiceType === '捐贈發票'
-      ? '*捐贈碼'
-      : '*請選擇發票類型';
+        ? '*統一編號'
+        : invoiceType === '捐贈發票'
+          ? '*捐贈碼'
+          : '*請選擇發票類型';
 
   /* ────────── JSX ────────── */
   return (
@@ -384,61 +384,81 @@ export default function ShoppingCart() {
 
               {/* 商品列 */}
               {(showAllItems ? cartItems : cartItems.slice(0, 3)).map(
-                (item, idx) => (
-                  <div className="cart_table_row" key={`${item.name}-${idx}`}>
-                    {/* 商品 Info */}
-                    <Link
-                      to={`/Product/${item.seriesKey}/${item.productIndex}`}
-                      className="cart_product_info"
-                    >
-                      <img src={item.image} alt={item.name} />
-                      <p>{item.name}</p>
-                    </Link>
+                (item, index) => (
 
-                    {/* 尺寸 */}
+                  <div className="cart_table_row" key={index}>
+                    {/* 0. 圖片＋名稱（一般商品可點、客製化不可點） */}
+                    {!item.isCustom ? (
+                      <Link
+                        to={`/Product/${item.seriesKey}/${item.productIndex}`}
+                        className="cart_product_info clickable"
+                        title="查看商品頁"
+                      >
+                        <img src={item.image} alt={item.name} />
+                        <p>{item.name}</p>
+                      </Link>
+                    ) : (
+                      /* ===== 客製化：純 div，沒有 hover、沒有指標 ===== */
+                      <div className="cart_product_info no-hover">
+                        <img src={item.image} alt={item.name} />
+                        <p>{item.name}</p>
+                      </div>
+                    )}
+
+                    {/* 1. 尺寸 */}
                     <div className="cart_product_size">
-                      <p>
-                        串珠 {item.size}
-                        <br />
-                        手圍 {item.wrist}
-                      </p>
+                      {/* 串珠尺寸 */}
+                      串珠&nbsp;
+                      {typeof item.size === 'number'      // 客製化 → 數字
+                        ? `${item.size}mm`
+                        : item.size                       // 其他商品 → 已含 mm
+                      }
+                      <br />
+
+                      {/* 手圍尺寸 */}
+                      手圍&nbsp;
+                      {typeof item.wrist === 'number'
+                        ? `${item.wrist}cm`
+                        : item.wrist
+                      }
                     </div>
 
-                    {/* 價格 */}
+                    {/* 2. 單價 */}
                     <div className="cart_product_price">
-                      <p>{formatCurrency(item.price)}</p>
+                      NT${item.price.toLocaleString()}
                     </div>
 
-                    {/* 數量 */}
+                    {/* 3. 數量 */}
                     <select
                       className="cart_qty_select"
                       value={item.quantity}
-                      onChange={(e) =>
-                        updateQuantity(idx, Number(e.target.value))
-                      }
+                      onChange={e => updateQuantity(index, Number(e.target.value))}
                     >
-                      {[1, 2, 3, 4, 5].map((n) => (
-                        <option key={n}>{n}</option>
-                      ))}
+                      {[...Array(10)].map((_, n) =>
+                        <option key={n + 1} value={n + 1}>{n + 1}</option>
+                      )}
                     </select>
 
-                    {/* 小計 */}
+                    {/* 4. 小計 */}
                     <div className="cart_subtotal">
-                      <p>{formatCurrency(item.price * item.quantity)}</p>
+                      NT${(item.price * item.quantity).toLocaleString()}
                     </div>
 
-                    {/* 刪除 */}
-                    <div className="cart_cross_btn">
-                      <button onClick={() => removeFromCart(idx)}>
-                        <img
-                          src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
-                          alt="刪除"
-                        />
-                      </button>
+                    {/* 5. 刪除 */}
+                    <div
+                      className="cart_cross_btn"
+                      onClick={() => removeFromCart(index)}
+                      title="刪除"
+                    >
+                      <img
+                        src="./images/ShoppingCart/shoppingcart-btn_cross.svg"
+                        alt="刪除"
+                      />
                     </div>
                   </div>
                 )
               )}
+
 
               {/* 空購物車 */}
               {!cartItems.length && (
@@ -628,7 +648,7 @@ export default function ShoppingCart() {
                   </span>
                 </li>
               </ul>
-              
+
               <button
                 className="cart_btn_checkout"
                 onClick={handleCheckout}

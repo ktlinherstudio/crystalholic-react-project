@@ -12,9 +12,15 @@ import { resultCrystalMap } from '../../utils/resultCrystalMap';
 // import html2canvas from 'html2canvas'; 
 import { renderBraceletToImage } from '../../utils/renderBraceletToImage'; // 自訂工具
 
+// 串接購物車
+import { useCart } from '../Shopping/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Customize4() {
+  // 串接購物車
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
   const [agreeError, setAgreeError] = useState(false);
 
@@ -53,6 +59,8 @@ export default function Customize4() {
     console.log('metalImage:', metalImage);
 
     const layout = generateBraceletLayout(selectedSize, wristSize);
+
+
     const oldPlacement = { ...crystalPlacement };
     let filled;
 
@@ -753,6 +761,25 @@ export default function Customize4() {
     setShowCartModal(true);
   };
 
+  // 串接購物車
+  const calcBraceletPrice = () => {
+    let total = 0;
+
+    // 1. 累加每顆水晶單價
+    braceletBeads.forEach((bead, idx) => {
+      if (crystalPlacement[idx]) {
+        total += crystalPrices[crystalPlacement[idx]] || 0;
+      }
+    });
+
+    // 2. 加上金屬珠
+    if (selectedMetalImage) {
+      total += metalPrices[selectedMetalImage] || 0;
+    }
+
+    return total;
+  };
+
   return (
     <>
       <CustomizeInfoModal isOpen={showInfo} onClose={() => setShowInfo(false)} />
@@ -1314,29 +1341,63 @@ export default function Customize4() {
               <div className={style.modalButtons}>
                 <button
                   className={style.btnConfirm}
-                  onClick={() => {
+                  // onClick={() => {
+                  //   if (!agreedToTerms) {
+                  //     setAgreeError(true);
+                  //     return;
+                  //   }
+
+                  //   setAgreeError(false);
+
+                  //   const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
+                  //   existingCart.push({
+                  //     braceletName,
+                  //     wristSize,
+                  //     selectedSize,
+                  //     crystalPlacement,
+                  //     selectedMetalImage,
+                  //     braceletPrice,
+                  //     previewImage,
+                  //     createdAt: new Date().toISOString(),
+                  //   });
+                  //   localStorage.setItem('cart', JSON.stringify(existingCart));
+                  //   setShowCartModal(false);
+                  //   setAgreedToTerms(false);
+                  // }}
+
+                  // 串接購物車
+                  onClick={async () => {
                     if (!agreedToTerms) {
                       setAgreeError(true);
                       return;
                     }
-
                     setAgreeError(false);
 
-                    const existingCart = JSON.parse(localStorage.getItem('cart')) || [];
-                    existingCart.push({
-                      braceletName,
-                      wristSize,
-                      selectedSize,
+                    // 1. 轉出乾淨手鍊圖
+                    const image = await renderBraceletToImage({
+                      braceletBeads,
                       crystalPlacement,
                       selectedMetalImage,
-                      braceletPrice,
-                      previewImage,
-                      createdAt: new Date().toISOString(),
+                      selectedSize,
+                      wristSize,
                     });
-                    localStorage.setItem('cart', JSON.stringify(existingCart));
+
+                    // 2. 放進 CartContext
+                    addToCart({
+                      isCustom: true, 
+                      name: braceletName || '客製化手鍊',
+                      size: selectedSize,
+                      wrist: wristSize,
+                      quantity: 1,
+                      image,
+                      price: braceletPrice,   // 來源：剛剛那個函式
+                    });
+
+                    // 3. 關彈窗並跳轉購物車
                     setShowCartModal(false);
-                    setAgreedToTerms(false);
+                    navigate('/shoppingcart');
                   }}
+
                 >
                   確認加入購物車
                 </button>

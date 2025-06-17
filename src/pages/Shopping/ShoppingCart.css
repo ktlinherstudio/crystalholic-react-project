@@ -144,13 +144,26 @@
 
     color: #585858;
 }
-.cart_product_info>p:hover {
-    color: #8750BF;
+/* 一般商品hover 可點擊 */
+.cart_product_info.clickable:hover p {
+  color:#8750BF;
 }
+/* 客製化 沒有hover狀態 不可點擊 */
+.cart_product_info.no-hover {
+  cursor: default;  /* 不顯示小手 */
+}
+.cart_product_info.no-hover p {
+  transition:none;          /* 移除 hover 動畫 */
+}
+.cart_product_info.no-hover:hover p{
+  color:inherit;            /* 不變色 */
+}
+/* 商品縮圖 */
 .cart_product_info img {
     width: 6.25rem;/* 100px */
     height: 6.25rem;
     object-fit: cover;
+    background-color: #f6f6f6;
 }
 
 /* 數量下拉選單 */
@@ -180,7 +193,7 @@
     cursor: pointer;
 }
 .cart_cross_btn img {
-    width: 100%;
+    width: 16px;
     height: 100%;
 }
 
