@@ -96,10 +96,10 @@ export default function Customize1() {
 
         const cssImageUrls = [
             '../images/noisy-background.jpg',
-            '../images/Custom/btn_del.svg',
-            '../images/Custom/btn_del_hover.svg',
-            '../images/Custom/btn_save.svg',
-            '../images/Custom/btn_save_hover.svg',
+            '../images/Custom/btn_del.png',
+            '../images/Custom/btn_del_hover.png',
+            '../images/Custom/btn_save.png',
+            '../images/Custom/btn_save_hover.png',
             '../images/Custom/btn_size_tool.svg',
             '../images/Custom/btn_size_tool_hover.svg',
             '../images/Custom/btn_ans_tool.svg',

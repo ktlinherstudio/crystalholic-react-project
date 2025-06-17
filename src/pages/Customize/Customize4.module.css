@@ -514,25 +514,26 @@
     width: 3.125rem;
     height: 3.125rem;
     cursor: pointer;
+    background-size:contain ;
 }
 
 
 /* icon按鈕 */
 .btnDel {
-    background-image: url(../images/Custom/btn_del.svg);
+    background-image: url(../images/Custom/btn_del.png);
 }
 
 .btnSave {
-    background-image: url(../images/Custom/btn_save.svg);
+    background-image: url(../images/Custom/btn_save.png);
 }
 
 /* hover */
 .btnDel:hover {
-    background-image: url(../images/Custom/btn_del_hover.svg);
+    background-image: url(../images/Custom/btn_del_hover.png);
 }
 
 .btnSave:hover {
-    background-image: url(../images/Custom/btn_save_hover.svg);
+    background-image: url(../images/Custom/btn_save_hover.png);
 }
 
 /* active */
@@ -541,7 +542,6 @@
     background-repeat: no-repeat;
     background-position: center;
     border: 3px solid var(--color-primary9);
-    padding: 1rem;
     border-radius: 0.94rem;
 }
 
@@ -553,8 +553,8 @@
     width: 0;
     height: 0;
     overflow: hidden;
-    background-image: url(../images/Custom/btn_del_hover.svg),
-        url(../images/Custom/btn_save_hover.svg);
+    background-image: url(../images/Custom/btn_del_hover.png),
+        url(../images/Custom/btn_save_hover.png);
 }
 
 
