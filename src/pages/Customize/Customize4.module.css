@@ -1179,7 +1179,7 @@
 
     .icon2 {
         order: 2;
-    transform: translateX(32px);
+        transform: translateX(32px);
     }
 
     .iconBox2 {
@@ -1190,8 +1190,10 @@
     .align {
         display: flex;
         flex-direction: column;
-        align-items:flex-end;
+        align-items: flex-end;
+        margin-left: -4rem;
     }
+
 
 
     .boxs3 {
