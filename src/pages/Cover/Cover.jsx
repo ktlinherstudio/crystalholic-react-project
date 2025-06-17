@@ -280,10 +280,10 @@ const slides = [
 
 
 export default function Cover() {
+    const [imagesLoaded, setImagesLoaded] = useState(false);
     // 預先載入圖片
     useEffect(() => {
         const preloadImages = [
-            // 首頁封面動畫
             './images/HomePage/deco1-diamond.png',
             './images/HomePage/deco2-diamond.png',
             './images/HomePage/deco3-diamond.png',
@@ -291,8 +291,6 @@ export default function Cover() {
             './images/HomePage/start-test-btn.png',
             './images/HomePage/scroll-line.png',
             './images/HomePage/scroll-diamond.png',
-
-            // 塔羅卡牌（正反面）
             './images/HomePage/tarot-back.png',
             './images/HomePage/lbtc1.png',
             './images/HomePage/lbtc2.png',
@@ -300,21 +298,26 @@ export default function Cover() {
             './images/HomePage/lbtc4.png',
             './images/HomePage/lbtc5.png',
             './images/HomePage/lbtc6.png',
-
-            // lightbox裝飾圖
             './images/HomePage/lightboxdeco.svg',
-
-            // Feedback
             './images/HomePage/img-feedbackmenber.jpg',
             './images/HomePage/img-feedback.jpg',
             './images/HomePage/star.svg',
         ];
 
+        let loadedCount = 0;
+
         preloadImages.forEach((src) => {
             const img = new Image();
             img.src = src;
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === preloadImages.length) {
+                    setImagesLoaded(true); // ✅ 所有圖片載入完成
+                }
+            };
         });
     }, []);
+
 
     /* 封面 1 & 2 動畫狀態 */
     const [pageIndex, setPageIndex] = useState(0); // 0: 第一頁, 1: 第二頁
@@ -324,6 +327,7 @@ export default function Cover() {
 
     /* 進場動畫時間 */
     useEffect(() => {
+        if (!imagesLoaded) return;
         const timer1 = setTimeout(() => {
             setHideFirstCover(true); // 開始淡出第一段
         }, 2500);
@@ -341,7 +345,7 @@ export default function Cover() {
             clearTimeout(timer2);
             clearTimeout(timer3);
         };
-    }, []);
+    }, [imagesLoaded]);
 
     /* 🚫 根據 pageIndex 鎖住或恢復頁面滾動 */
     useEffect(() => {
