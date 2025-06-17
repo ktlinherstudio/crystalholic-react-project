@@ -95,21 +95,21 @@ export default function Customize1() {
         const allCrystalMetalImages = [...new Set([...crystalImages, ...metalImages])];
 
         const cssImageUrls = [
-            './images/noisy-background.jpg',
-            './images/Custom/btn_del.svg',
-            './images/Custom/btn_del_hover.svg',
-            './images/Custom/btn_save.svg',
-            './images/Custom/btn_save_hover.svg',
-            './images/Custom/btn_size_tool.svg',
-            './images/Custom/btn_size_tool_hover.svg',
-            './images/Custom/btn_ans_tool.svg',
-            './images/Custom/btn_ans_tool_hover.svg',
-            './images/Custom/btn_knowl_tool.svg',
-            './images/Custom/btn_knowl_tool_hover.svg',
-            './images/Custom/btn_note_tool.svg',
-            './images/Custom/btn_note_tool_hover.svg',
-            './images/Custom/btn_dum_tool.svg',
-            './images/Custom/btn_dum_tool_hover.svg'
+            '../images/noisy-background.jpg',
+            '../images/Custom/btn_del.svg',
+            '../images/Custom/btn_del_hover.svg',
+            '../images/Custom/btn_save.svg',
+            '../images/Custom/btn_save_hover.svg',
+            '../images/Custom/btn_size_tool.svg',
+            '../images/Custom/btn_size_tool_hover.svg',
+            '../images/Custom/btn_ans_tool.svg',
+            '../images/Custom/btn_ans_tool_hover.svg',
+            '../images/Custom/btn_knowl_tool.svg',
+            '../images/Custom/btn_knowl_tool_hover.svg',
+            '../images/Custom/btn_note_tool.svg',
+            '../images/Custom/btn_note_tool_hover.svg',
+            '../images/Custom/btn_dum_tool.svg',
+            '../images/Custom/btn_dum_tool_hover.svg'
         ];
 
         const allPreloadImages = [...allCrystalMetalImages, ...cssImageUrls];
