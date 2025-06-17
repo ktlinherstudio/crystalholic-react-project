@@ -116,6 +116,12 @@
     width: 100%;
 }
 
+.boxs3 {
+    display: flex;
+    flex-direction: row;
+    width: 85rem;
+}
+
 .sizeAndBeads {
     width: 100%;
 }
@@ -468,7 +474,7 @@
     /* 垂直 */
     grid-template-rows: repeat(2, 46px);
     /* 水平 */
-    gap: .5rem;
+    gap: 1rem;
     justify-content: space-evenly;
     align-content: space-around;
 }
@@ -609,10 +615,9 @@
 }
 
 .icon2 {
-    width: 6.5rem;
-    height: 6.5rem;
-    margin-top: 1rem;
-    transform: translateX(8px);
+    width: 8rem;
+    height: 8rem;
+    transform: translateX(32px);
     background-image: url('/images/Custom/btn_cart_tool.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -620,7 +625,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
     cursor: pointer;
 }
 
@@ -1134,6 +1139,18 @@
     font-weight: 500;
 }
 
+@media screen and (min-width: 1680px) {
+    .index {
+        max-width: 70%;
+    }
+
+    .tabs {
+        gap: 0.3rem;
+        width: 50rem;
+        transform: translate(-27.5%, -51%);
+    }
+}
+
 /* 小於 1024px：上下分區 */
 @media screen and (max-width: 1024px) {
     .index {
@@ -1141,7 +1158,9 @@
         align-items: center;
         padding: 2rem 1rem;
         gap: 2rem;
+        height: 100%;
     }
+
 
     .boxs2 {
         width: 100%;
@@ -1155,6 +1174,29 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .icon2 {
+        order: 2;
+    transform: translateX(12px);
+    }
+
+    .iconBox2 {
+        order: 1;
+        margin-top: -30px;
+    }
+
+    .align {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* ✅ 調整一下置中會比較好看 */
+    }
+
+
+    .boxs3 {
+        width: 85rem;
+        margin-right: -500px;
     }
 
     .sizeAndBeads {
@@ -1174,6 +1216,9 @@
         min-width: 280px;
     }
 
+    .boxs2 {
+        width: 50%;
+    }
 
     .bracelet {
         order: 1;
@@ -1196,7 +1241,7 @@
     .tabs {
         position: static;
         transform: none;
-        width: 46rem;
+        width: 40rem;
         margin-top: 120px;
         display: flex;
         justify-content: center;
@@ -1225,13 +1270,10 @@
     /* 單一頁籤 */
     .tab {
         display: flex;
-        flex-wrap: wrap;
-        /* 👉 讓標籤可以自動換行 */
         justify-content: center;
         gap: 20rem;
         width: 100rem;
         position: relative;
-        /* ❗不再需要 absolute 定位了 */
         transform: none;
         margin: 0 auto;
         transform: translate(0%, -230%);
@@ -1240,16 +1282,8 @@
 
     /* 珠子網格 */
     .beadGrid {
-        width: 100%;
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(6, 46px);
-        /* 垂直 */
-        grid-template-rows: repeat(2, 46px);
-        /* 水平 */
-        gap: .5rem;
-        justify-content: space-evenly;
-        align-content: space-around;
+        margin-top: -3rem;
+        gap: 1.5rem;
     }
 
     /* 珠子外觀 */
@@ -1260,6 +1294,7 @@
         background: #e3e3e3;
         box-shadow: inset 0 4px 8px rgba(0, 0, 0, .10);
         cursor: pointer;
+
     }
 
     .selectedBead {
