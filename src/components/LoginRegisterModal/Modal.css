@@ -5,7 +5,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 70px; /* navbar的空間 */
   z-index: 1001;
   animation: fadeIn 0.3s ease;
 }
