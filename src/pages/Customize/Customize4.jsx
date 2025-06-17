@@ -44,6 +44,7 @@ export default function Customize4() {
     if (!sessionStorage.getItem('hasSeenCrystalGuide')) {
       console.log('[DEBUG] showCrystalGuide 變成 true');
       sessionStorage.setItem('hasSeenCrystalGuide', 'true');
+      setShowCrystalGuide(true);
     }
   };
 
