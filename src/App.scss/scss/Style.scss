@@ -53,6 +53,10 @@ button {
         @media ($media-lg) {
             height: 162.5vh;
         }
+
+        @media ($media-sm) {
+            height: 160.5vh;
+        }
     }
 
     .bgdark2 {
@@ -91,6 +95,12 @@ button {
             height: 72.5vh;
             top: 380.6vh;
         }
+
+        @media ($media-sm) {
+            height: 59.5vh;
+            top: 385.6vh;
+        }
+
 
         // z-index: 1;
 
@@ -276,6 +286,10 @@ button {
 
             margin-bottom: -60px;
 
+            @media ($media-sm) {
+                margin-bottom: -34px;
+            }
+
             .hand-number {
                 width: 66vw; //950px
                 z-index: 1;
@@ -363,6 +377,12 @@ button {
                         letter-spacing: 0.25rem;
                         padding-top: 0.1rem;
                     }
+
+                    @media ($media-sm) {
+                        font-size: 0.75rem;
+                        letter-spacing: 0.09rem;
+                    }
+
                 }
             }
         }
@@ -393,6 +413,11 @@ button {
 
                 @media ($media-md) {
                     font-size: 1rem;
+                }
+
+                @media ($media-sm) {
+                    font-size: 0.75rem;
+
                 }
             }
 
@@ -488,9 +513,22 @@ button {
         //     margin-bottom: 9%;
         // }
 
+        @media ($media-sm) {
+            font-size: 1.25rem;
+            gap: 6%;
+            margin-bottom: 23%;
+            margin-top: 30%;
+
+
+        }
+
         .dimond-left,
         .dimond-right {
             width: 40px;
+
+            @media ($media-sm) {
+                width: 9%;
+            }
         }
     }
 
@@ -532,11 +570,11 @@ button {
         }
 
         @media ($media-sm) {
-            padding-left: 4%;
+            padding-left: 6%;
         }
 
 
-        /*旋轉效果用(還在研究)*/
+        /*旋轉效果用*/
         .Rcard {
             // border: #2fcf3d 2px solid;
             width: 19%;
@@ -690,6 +728,10 @@ button {
         //     margin-top: 25%;
         // }
 
+        @media ($media-sm) {
+            margin-top: 39px;
+        }
+
         #tarotcard-btn {
             width: 280px;
             height: 70px;
@@ -716,12 +758,17 @@ button {
             line-height: 150%;
             letter-spacing: 0.1rem;
 
+            @media ($media-sm) {
+                width: 180px;
+                height: 60px;
+                font-size: 1rem;
+
+            }
+
             &:hover {
                 color: #ffffff;
                 background-color: rgb(135, 80, 191);
             }
-
-
         }
     }
 }
@@ -1037,6 +1084,11 @@ button {
             gap: 1.5rem;
         }
 
+        @media ($media-sm) {
+            gap: 0.75rem;
+
+        }
+
         #custom-titlebox {
             display: flex;
             flex-direction: column;
@@ -1045,6 +1097,10 @@ button {
 
             gap: 1rem;
 
+            @media ($media-sm) {
+                flex-direction: column;
+                gap: 0.625rem;
+            }
 
             .custom-titlebox1 {
                 display: flex;
@@ -1054,6 +1110,7 @@ button {
 
                 @media ($media-sm) {
                     flex-direction: column;
+                    gap: 0;
                 }
 
                 .eh {
@@ -1101,6 +1158,10 @@ button {
                 font-weight: 400;
                 line-height: 150%;
                 letter-spacing: 0.113rem;
+
+                @media ($media-sm) {
+                    font-size: 0.875rem;
+                }
             }
         }
 
@@ -1108,6 +1169,10 @@ button {
         .dimond-right {
             width: 9%;
             max-width: 65px;
+
+            @media ($media-sm) {
+                width: 8%;
+            }
         }
     }
 
@@ -1138,6 +1203,13 @@ button {
         font-weight: 500;
         line-height: 150%;
         letter-spacing: 0.1rem;
+
+        @media ($media-sm) {
+            width: 180px;
+            height: 60px;
+            font-size: 1rem;
+
+        }
 
         &:hover {
             /* 玻璃擬態 */
@@ -1268,7 +1340,7 @@ button {
                     }
                 }
 
-                /* 按鈕(左) */ 
+                /* 按鈕(左) */
                 .btn-left {
                     left: -5.5rem;
                     transform: rotate(90deg);
@@ -1276,9 +1348,13 @@ button {
                     @media ($media-md) {
                         left: -4.3rem;
                     }
+
+                    @media ($media-sm) {
+                        left: -3.3rem;
+                    }
                 }
 
-                /* 按鈕(右) */ 
+                /* 按鈕(右) */
                 .btn-right {
                     right: -5.5rem;
                     transform: rotate(90deg);
@@ -1286,16 +1362,22 @@ button {
                     @media ($media-md) {
                         right: -4.3rem;
                     }
+
+                    @media ($media-sm) {
+                        right: -3.3rem;
+                    }
                 }
 
-                /* 按鈕(hover) */ 
-                .btn-left img:hover, .btn-right img:hover {
+                /* 按鈕(hover) */
+                .btn-left img:hover,
+                .btn-right img:hover {
                     // width: 3.3rem;
                     // height: 3.3rem;
                     scale: 1.15;
                 }
 
-                .btn-left img:active, .btn-right img:active {
+                .btn-left img:active,
+                .btn-right img:active {
                     scale: 1;
                 }
             }
@@ -1368,14 +1450,18 @@ button {
         /* 1680 & 1920 */
         @media ($media-xxlg-up) {
             margin: 0 5% 0 8%;
-        } 
-        
-        /* 1025 */ 
+        }
+
+        /* 1025 */
         @media ($media-lg) {
             width: 85%;
             margin: 43% auto;
         }
-        
+
+        @media ($media-sm) {
+            margin: 59% auto;
+        }
+
 
         /* 水晶小百科標題 */
         header {
@@ -1404,11 +1490,20 @@ button {
                 color: #8750BF;
                 text-align: center;
 
+                @media ($media-sm) {
+                    font-size: 1.25rem;
+                }
+
                 .en {
                     font-size: 1.5rem;
                     font-family: 'Lora', serif;
                     font-style: italic;
                     white-space: nowrap;
+
+                    @media ($media-sm) {
+                        font-size: 1.25rem;
+
+                    }
                 }
             }
 
@@ -1449,6 +1544,15 @@ button {
             width: 100%;
             height: 100%;
 
+            .crystal-line {
+                border: .75px solid #8750BF;
+                margin: 12px 0;
+
+                @media ($media-sm) {
+                    margin: 6px 0;
+                }
+            }
+
             /* 第一欄：水晶名稱＆內容 */
             .covercrystal {
                 display: flex;
@@ -1463,6 +1567,12 @@ button {
                 box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.30);
                 backdrop-filter: blur(2.5px);
 
+                @media ($media-sm) {
+                    flex-direction: column;
+                    padding: 0.75rem 1.313rem;
+                    border-radius: 1.5rem;
+                }
+
                 /* 中英名稱 */
                 .crystal-name {
                     display: flex;
@@ -1472,6 +1582,11 @@ button {
                     white-space: nowrap;
                     color: #8750BF;
 
+                    @media ($media-sm) {
+                        flex-direction: row;
+                        justify-content: flex-start;
+                    }
+
                     /* 英文字 */
                     .en {
                         font-family: 'Lora';
@@ -1479,6 +1594,11 @@ button {
                         font-size: 1.25rem;
                         font-weight: 400;
                         letter-spacing: 0.125rem;
+
+                        @media ($media-sm) {
+                            font-size: 1rem;
+                            margin-right: 2%;
+                        }
                     }
 
                     /* 中文字 */
@@ -1487,6 +1607,11 @@ button {
                         font-size: 1.5rem;
                         font-weight: 400;
                         letter-spacing: 0.0.2625rem;
+
+                        @media ($media-sm) {
+                            font-size: 1.125rem;
+
+                        }
                     }
                 }
 
@@ -1494,6 +1619,10 @@ button {
                 .crystal-line1 {
                     border: .75px solid #8750BF;
                     margin: 4px 16px;
+
+                    @media ($media-sm) {
+                        margin: 6px 0;
+                    }
                 }
 
                 /* 內文 */
@@ -1506,6 +1635,11 @@ button {
                         font-size: 1rem;
                         font-weight: 400;
                         color: #8750BF;
+
+                        @media ($media-sm) {
+                            font-size: 0.875rem;
+
+                        }
                     }
                 }
             }
@@ -1530,26 +1664,38 @@ button {
                 color: #8750BF;
                 font-family: "Noto Sans TC";
 
+                @media ($media-sm) {
+                    padding: 0.75rem 1.313rem;
+                    border-radius: 1.5rem;
+                }
+
                 /* 標題 */
                 h2 {
                     font-size: 1.25rem;
                     font-weight: 500;
                     letter-spacing: 0.0625rem;
+
+                    @media ($media-sm) {
+                        font-size: 1.125rem;
+                    }
                 }
 
                 /* 內文 */
-                .p {
+                p {
                     font-size: 1rem;
                     font-weight: 400;
                     letter-spacing: 0.1rem;
-                }
 
+                    @media ($media-sm) {
+                        font-size: 0.875rem;
+                    }
+                }
 
                 /* 線 */
-                .crystal-line2 {
-                    border: .75px solid #8750BF;
-                    margin: 12px 0;
-                }
+                // .crystal-line2 {
+                //     border: .75px solid #8750BF;
+                //     margin: 12px 0;
+                // }
 
             }
 
@@ -1572,25 +1718,38 @@ button {
                 color: #8750BF;
                 font-family: "Noto Sans TC";
 
+                @media ($media-sm) {
+                    padding: 0.75rem 1.313rem;
+                    border-radius: 1.5rem;
+                }
+
                 /* 標題 */
                 h2 {
                     font-size: 1.25rem;
                     font-weight: 500;
                     letter-spacing: 0.0625rem;
+
+                    @media ($media-sm) {
+                        font-size: 1.125rem;
+                    }
                 }
 
-                .p {
+                p {
                     font-size: 1rem;
                     font-weight: 400;
                     letter-spacing: 0.1rem;
+
+                    @media ($media-sm) {
+                        font-size: 0.875rem;
+                    }
                 }
 
 
                 /* 線 */
-                .crystal-line3 {
-                    border: .75px solid #8750BF;
-                    margin: 12px 0;
-                }
+                // .crystal-line3 {
+                //     border: .75px solid #8750BF;
+                //     margin: 12px 0;
+                // }
 
             }
 
@@ -1609,6 +1768,11 @@ button {
                 box-shadow: 0px 0px 10px 0px rgba(233, 166, 160, 0.30);
                 backdrop-filter: blur(2.5px);
 
+                @media ($media-sm) {
+                    padding: 0.75rem 1.313rem;
+                    border-radius: 1.5rem;
+                }
+
                 /* 標題 */
                 h2 {
                     font-family: "Noto Sans TC";
@@ -1618,6 +1782,11 @@ button {
                     color: #8750BF;
 
                     margin-right: 5%;
+
+                    @media ($media-sm) {
+                        font-size: 1rem;
+
+                    }
                 }
 
                 /* 三顆水晶 */
@@ -1630,10 +1799,24 @@ button {
                         width: 45px;
                         height: 45px;
                         border-radius: 50%;
+
+                        @media ($media-sm) {
+                            width: 35px;
+                            height: 35px;
+
+                        }
                     }
                 }
             }
 
+            .moreinfo {
+                color: #8750BF;
+                text-align: end;
+                font-size: 1rem;
+                font-weight: 400;
+                letter-spacing: 0.0.2625rem;
+                font-family: "LXGW WenKai Mono TC";
+            }
         }
 
 
@@ -1686,11 +1869,20 @@ button {
             align-items: center;
             justify-content: center;
 
+            @media ($media-sm) {
+                font-size: 1.5rem;
+                width: 36%;
+            }
+
             /* 英文字 */
             .en {
                 font-size: 1.5rem;
                 font-family: 'Lora', serif;
                 font-style: italic;
+
+                @media ($media-sm) {
+                    font-size: 1.25rem;
+                }
             }
         }
     }
@@ -1829,13 +2021,15 @@ button {
                     right: 35px; // 可調整
                 }
 
-                /* 按鈕(hover) */ 
-                .swiper-button-prev:hover, .swiper-button-next:hover {
+                /* 按鈕(hover) */
+                .swiper-button-prev:hover,
+                .swiper-button-next:hover {
                     scale: 1.1;
                 }
 
-                /* 按鈕(active) */ 
-                .swiper-button-prev:active, .swiper-button-next:active {
+                /* 按鈕(active) */
+                .swiper-button-prev:active,
+                .swiper-button-next:active {
                     scale: 1;
                 }
             }

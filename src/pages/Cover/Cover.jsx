@@ -19,9 +19,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p1.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb1.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -39,9 +39,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p2.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb2.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -59,9 +59,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p3.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb3.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -79,9 +79,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p4.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb4.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -99,9 +99,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p5.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb5.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -119,9 +119,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/p3.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/fb6.jpg" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -571,7 +571,7 @@ export default function Cover() {
                                                 )}
                                             </div>
                                         </Link>
-                                        <h3 className="startbtn_title"> 開始測驗</h3>
+                                        <h3 className="startbtn_title">開始測驗</h3>
                                     </div>
                                 </div>
 
@@ -661,7 +661,7 @@ export default function Cover() {
                     <Link to="/Customize1" className='custombtn'>立即訂製</Link>
                 </section>
 
-              {/* 水晶小百科  */}
+                {/* 水晶小百科  */}
                 <section id="section-crystaldiscovery">
                     {/* 版2 左邊：水晶區域 */}
                     <div className="crystal-display">
@@ -1042,14 +1042,14 @@ function renderCrystalContent(id) {
             </article>
             <article className="discovery-p1">
                 <h2>主要功效</h2>
-                <hr className="crystal-line2" />
+                <hr className="crystal-line"/>
                 <p className="discovery-p1content">
                     {crystal.benefits.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
             </article>
             <article className="discovery-p2">
                 <h2>適合人群</h2>
-                <hr className="crystal-line3" />
+                <hr className="crystal-line"/>
                 <p className="discovery-p2content">
                     {crystal.people.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
@@ -1062,6 +1062,10 @@ function renderCrystalContent(id) {
                     ))}
                 </div>
             </article>
+            <div>
+                <Link to="/KnowledgeCrystal" className="moreinfo">更多水晶介紹 &gt;</Link>
+            </div >
+
         </>
     );
 }
