@@ -98,7 +98,7 @@ export default function Cover() {
                         <img src="./images/HomePage/covercrystal/crystal-angelite.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-sunstone.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-moonstone.svg" className="circle" alt="" />
-                        <img src="./images/HomePage/covercrystal/crystal-green-phantom-quartz.svg" className="circle" alt="" />
+                        <img src="./images/HomePage/covercrystal/crystal-green-phantom-quartz.png" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-moonstone.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-rose-quartz.svg" className="circle" alt="" />
                         <img src="./images/HomePage/covercrystal/crystal-angelite.svg" className="circle" alt="" />
