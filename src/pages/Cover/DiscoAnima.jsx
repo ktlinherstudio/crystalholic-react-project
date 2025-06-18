@@ -26,7 +26,7 @@ export default function Cover() {
         'disc-angelite': 'crystal-angelite.svg',
         'disc-moonstone': 'crystal-moonstone.svg',
         'disc-rose': 'crystal-rose-quartz.svg',
-        'disc-green': 'crystal-green-phantom-quartz.svg',
+        'disc-green': 'crystal-green-phantom-quartz.png',
         'disc-moonstone1': 'crystal-moonstone.svg',
         'disc-rose1': 'crystal-rose-quartz.svg',
         'disc-angelite1': 'crystal-angelite.svg'

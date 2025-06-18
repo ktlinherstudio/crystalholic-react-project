@@ -39,7 +39,7 @@ export default function Cover() {
                             <img src="./images/HomePage/covercrystal/crystal-rose-quartz.svg" id='disc-rose' alt="" />
                         </div>
                         <div className='circle'>
-                            <img src="./images/HomePage/covercrystal/crystal-green-phantom-quartz.svg" id='disc-green' alt="" />
+                            <img src="./images/HomePage/covercrystal/crystal-green-phantom-quartz.png" id='disc-green' alt="" />
                         </div>
                         <div className='circle'>
                             <img src="./images/HomePage/covercrystal/crystal-moonstone.svg" id='disc-moonstone1' alt="" />

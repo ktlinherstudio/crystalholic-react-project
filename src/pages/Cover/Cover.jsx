@@ -19,7 +19,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p1.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb1.jpg" className="review-img" alt="" /></span>
         </div>
@@ -39,7 +39,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p2.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb2.jpg" className="review-img" alt="" /></span>
         </div>
@@ -59,7 +59,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p3.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/grandma.png" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb3.jpg" className="review-img" alt="" /></span>
         </div>
@@ -79,7 +79,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p4.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/man.png" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb4.jpg" className="review-img" alt="" /></span>
         </div>
@@ -99,7 +99,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p5.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/waiter.png" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb5.jpg" className="review-img" alt="" /></span>
         </div>
@@ -119,7 +119,7 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/p3.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/woman.png" className="member-img" alt="" /></span>
 
             <span><img src="./images//HomePage/fb6.jpg" className="review-img" alt="" /></span>
         </div>
