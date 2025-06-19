@@ -673,10 +673,10 @@ export default function Cover() {
                                     {idx === 0 && (
                                         <>
                                             <button className="btn-left" onClick={handleUp}>
-                                                <img src="./images/S-Btn/btndown.svg" alt="上一顆" />
+                                                <img src="./images/S-Btn/btndown.png" alt="上一顆" />
                                             </button>
                                             <button className="btn-right" onClick={handleDown}>
-                                                <img src="./images/S-Btn/btnup.svg" alt="下一顆" />
+                                                <img src="./images/S-Btn/btnup.png" alt="下一顆" />
                                             </button>
                                         </>
                                     )}
