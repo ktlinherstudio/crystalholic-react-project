@@ -847,6 +847,20 @@ button {
                 align-items: center;
                 position: relative;
 
+                @media ($media-xxlg) {
+                    //1920
+                    width: 98%; //825px;
+                    height: 97%; //525px;
+                    margin: 11px;
+                }
+
+                @media ($media-xxlg-up-h) {
+                    //1680
+                    width: 98%; //825px;
+                    height: 97.5%; //525px;
+                    margin: 9px;
+                }
+
                 @media ($media-xlg-h) {
                     //ipad air/pro 橫向
                     height: 97.6%;
