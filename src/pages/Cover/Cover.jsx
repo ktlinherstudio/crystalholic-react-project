@@ -299,8 +299,6 @@ export default function Cover() {
             './images/HomePage/lbtc5.png',
             './images/HomePage/lbtc6.png',
             './images/HomePage/lightboxdeco.svg',
-            './images/HomePage/img-feedbackmenber.jpg',
-            './images/HomePage/img-feedback.jpg',
             './images/HomePage/star.svg',
         ];
 
