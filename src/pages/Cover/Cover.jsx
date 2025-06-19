@@ -19,9 +19,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/1.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb1.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -41,7 +41,7 @@ const slides = [
 
             <span><img src="./images//HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb2.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_2.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -59,9 +59,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/grandma.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/2.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb3.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_3.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -79,9 +79,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/man.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/3.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb4.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_4.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -99,9 +99,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/waiter.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/p4.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb5.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_5.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -121,7 +121,7 @@ const slides = [
 
             <span><img src="./images//HomePage/avatar/woman.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/fb6.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -673,10 +673,10 @@ export default function Cover() {
                                     {idx === 0 && (
                                         <>
                                             <button className="btn-left" onClick={handleUp}>
-                                                <img src="./images/S-Btn/btn_left.svg" alt="上一顆" />
+                                                <img src="./images/S-Btn/btndown.svg" alt="上一顆" />
                                             </button>
                                             <button className="btn-right" onClick={handleDown}>
-                                                <img src="./images/S-Btn/btn_right.svg" alt="下一顆" />
+                                                <img src="./images/S-Btn/btnup.svg" alt="下一顆" />
                                             </button>
                                         </>
                                     )}

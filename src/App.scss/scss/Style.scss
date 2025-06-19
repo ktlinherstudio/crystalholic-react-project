@@ -98,7 +98,7 @@ button {
 
         @media ($media-sm) {
             height: 59.5vh;
-            top: 385.6vh;
+            top: 400.6vh;
         }
 
 
@@ -1321,9 +1321,14 @@ button {
                     justify-content: center;
                     align-items: center;
 
+                    @media ($media-sm) {
+                        width: 3rem;
+                        height: 3rem;
+                    }
+
                     img {
-                        width: 2.75rem;
-                        height: 2.75rem;
+                        width: 2rem; //2.75rem
+                        height: 2rem;
 
                         /* 1025 */
                         @media ($media-lg) {
@@ -1333,8 +1338,8 @@ button {
 
                         /* 640 */
                         @media ($media-sm) {
-                            width: 2rem;
-                            height: 2rem;
+                            width: 1.5rem;
+                            height: 1.5rem;
                         }
 
                     }
@@ -1343,7 +1348,7 @@ button {
                 /* 按鈕(左) */
                 .btn-left {
                     left: -5.5rem;
-                    transform: rotate(90deg);
+                    transform: rotate(180deg);
 
                     @media ($media-md) {
                         left: -4.3rem;
@@ -1357,7 +1362,7 @@ button {
                 /* 按鈕(右) */
                 .btn-right {
                     right: -5.5rem;
-                    transform: rotate(90deg);
+                    transform: rotate(180deg);
 
                     @media ($media-md) {
                         right: -4.3rem;
@@ -1459,7 +1464,7 @@ button {
         }
 
         @media ($media-sm) {
-            margin: 59% auto;
+            margin: 50% auto;
         }
 
 
@@ -1492,6 +1497,8 @@ button {
 
                 @media ($media-sm) {
                     font-size: 1.25rem;
+                    margin: auto 2%;
+
                 }
 
                 .en {
