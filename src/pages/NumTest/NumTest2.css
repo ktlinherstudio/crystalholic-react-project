@@ -186,10 +186,72 @@
     .num2-date {
         gap: 2rem; 
     }
+
+    .num2-select {
+   width: 200px;
+  }
+
 }
 /* ---------- RWD 斷點：≤ 820px ---------- */
 @media (max-width: 820px) {
-    .num2-title-1 {
-        gap: 1rem;
-    } 
+  .numtest2 {
+    padding-top: 60px; /* 減少 padding */
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .num2-title-1{
+    margin-top: 6rem;
+  }
+
+  .num2-decorate-right,
+  .num2-decorate-left{
+max-width:50px;
+  }
+  
+
+  .num2-title-2 {
+    font-size: 1.5rem; /* 24px */
+    letter-spacing: 0.15rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+
+
+  .num2-date {
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .num2-date-enter {
+    width: 80%; /* 自適應寬度 */
+    max-width: 300px;
+    gap: 1rem;
+  }
+
+  .num2-select {
+    font-size: 1rem; /* 24px */
+    height: 40px;
+   padding-left: 0px;
+   width: 60px;
+  }
+
+  .num2-date-button {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .num2-calendar {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-left: 1rem;
+  }
+
+  .num2-button {
+    font-size: 1.25rem;
+    padding: 0.75rem 4rem;
+    margin-bottom: 2rem;
+  }
 }
