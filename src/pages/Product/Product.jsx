@@ -67,6 +67,10 @@ export default function Product() {
     },
   ];
 
+  //加入購物車
+  const currentIndex = series?.products.findIndex(p => p.name === product.name);
+  const productId = `${seriesKey}-${currentIndex}`;   // ←最簡單用系列＋索引組合
+
   useEffect(() => {
     // 預載推薦商品圖片
     const preloadImages = () => {
@@ -94,8 +98,9 @@ export default function Product() {
     // 將價格轉成數字方便計算
     const priceNum = Number(product.price.replace(/[^\d]/g, '')); // 🆕
     addToCart({
+      productId,
       name: product.name,
-      price: priceNum,      // 🆕 直接存數字
+      price: priceNum,  // 🆕 直接存數字
       image: product.image,
       quantity,
       size: `${beadSize}mm`,

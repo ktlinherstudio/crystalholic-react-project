@@ -700,6 +700,9 @@ export default function Customize4() {
 
   //特殊訂製需求
   const [customRequest, setCustomRequest] = useState('');
+  const [showRequestModal, setShowRequestModal] = useState(false);
+  const [showRequestErrorModal, setShowRequestErrorModal] = useState(false);
+
 
   //右側按鈕點擊效果
   const [activePanel, setActivePanel] = useState(null);
@@ -921,13 +924,6 @@ export default function Customize4() {
                         : ''
                         }`}
                       style={{
-                        backgroundImage: isMetal
-                          ? selectedMetalImage
-                            ? `url(${selectedMetalImage})`
-                            : undefined
-                          : crystalPlacement[index]
-                            ? `url(${crystalPlacement[index]})`
-                            : undefined,
                         width: `${size * scale}px`,
                         height: `${size * scale}px`,
                         position: 'absolute',
@@ -936,11 +932,17 @@ export default function Customize4() {
                         borderRadius: '50%',
                         transform: `rotate(${accumulatedAngle}deg) translate(${braceletRadius * scale}px) rotate(-${accumulatedAngle}deg) translate(-${offset}px, -${offset}px)`,
                         transformOrigin: '0 0',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
                       }}
-                    />
+                    >
+                      <div className={style.pearlBase}></div>
+                      {(isMetal && selectedMetalImage) || (!isMetal && crystalPlacement[index]) ? (
+                        <img
+                          src={isMetal ? selectedMetalImage : crystalPlacement[index]}
+                          className={style.pearlImage}
+                          alt="bead"
+                        />
+                      ) : null}
+                    </span>
                   );
                 });
 
@@ -1191,6 +1193,7 @@ export default function Customize4() {
                           <h2 className={style.panelTitle}>✦ 特別訂製 ✦</h2>
                           <img className={style.decorLine} src="./images/Custom/deco-divider_overlay.png" alt="裝飾線" />
                         </div>
+
                         <div className={style.overlayContent}>
                           <p style={{ marginBottom: "0.5rem" }}>請留下您的特殊訂製需求，我們將盡快聯繫您：</p>
 
@@ -1205,11 +1208,11 @@ export default function Customize4() {
                             className={style.wikiBtn}
                             onClick={() => {
                               if (customRequest.trim()) {
-                                alert("特別訂製需求已送出，我們將於五個工作天內與您聯繫！");
+                                setShowRequestModal(true);
                                 setCustomRequest("");
                                 setOpenPanel(null);
                               } else {
-                                alert("請先填寫您的訂製需求內容！");
+                                setShowRequestErrorModal(true); // 顯示錯誤彈窗
                               }
                             }}
                           >
@@ -1218,10 +1221,29 @@ export default function Customize4() {
                         </div>
                       </div>
                     )}
-
-
                   </div>
 
+                </div>
+              )}
+              {showRequestErrorModal && (
+                <div className={style.modalOverlay}>
+                  <div className={style.modalContent}>
+                    <p>請先填寫您的訂製需求內容！</p>
+                    <button
+                      className={style.btnConfirm}
+                      onClick={() => setShowRequestErrorModal(false)}
+                    >
+                      確認
+                    </button>
+                  </div>
+                </div>
+              )}
+              {showRequestModal && (
+                <div className={style.modalOverlay}>
+                  <div className={style.modalContent}>
+                    <p>特別訂製需求已送出，我們將於五個工作天內與您聯繫！</p>
+                    <button className={style.btnConfirm} onClick={() => setShowRequestModal(false)}>確認</button>
+                  </div>
                 </div>
               )}
               <div className={style.iconBox2}>

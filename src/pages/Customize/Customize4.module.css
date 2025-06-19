@@ -370,24 +370,33 @@
         rotate(calc(360deg / 32 * var(--i))) translateX(calc(404.4px / 2)) translate(-50%, -50%);
 }
 
-/* 大珍珠樣式 */
-.pearlBig {
-    composes: pearl;
-    cursor: pointer;
-    background-color: #F3ECF5;
-    mix-blend-mode: multiply;
-    isolation: isolate;
+.pearlBig,
+.pearlSmall {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
     z-index: 2;
 }
 
-/* 小珍珠樣式 */
-.pearlSmall {
+.pearlBase {
     composes: pearl;
     cursor: pointer;
+    position: absolute;
+    inset: 0;
     background-color: #F3ECF5;
     mix-blend-mode: multiply;
-    isolation: isolate;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.pearlImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: 2;
+    mix-blend-mode: normal;
 }
 
 
@@ -515,7 +524,7 @@
     width: 3.125rem;
     height: 3.125rem;
     cursor: pointer;
-    background-size:contain ;
+    background-size: contain;
 }
 
 
@@ -1127,9 +1136,9 @@
     margin-bottom: 1rem;
     font-weight: 400;
     color: #806b8b;
-    text-align: left; 
-    display: flex; 
-    flex-direction: column; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 }
 
 .noticeBox {
@@ -1161,11 +1170,9 @@
 }
 
 
-
-
 @media screen and (min-width: 1680px) {
     .index {
-        max-width: 70%;
+        max-width: 65%;
     }
 
     .tabs {
@@ -1334,8 +1341,8 @@
     }
 }
 
-@media screen and (max-width: 820px) { 
+@media screen and (max-width: 820px) {
     .boxs {
-    width: 90%;
-}
+        width: 90%;
+    }
 }

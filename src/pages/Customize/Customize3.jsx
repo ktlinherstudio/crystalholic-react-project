@@ -44,16 +44,17 @@ export default function Customize3() {
     navigate('/Customize4');
   };
 
+  const [showRecommendErrorModal, setShowRecommendErrorModal] = useState(false);
+
   const handleStartWithRecommend = () => {
     if (!selectedCrystal) {
-      alert('請先點選一條推薦手鍊！');
+      setShowRecommendErrorModal(true); // 開啟錯誤彈窗
       return;
     }
-
-    // ✅ 只存圖片路徑，不存整顆物件
+    // 只存圖片路徑，不存整顆物件
     sessionStorage.setItem('selectedCrystalImage', selectedCrystal.image);
 
-    // ✅ 預設金屬珠
+    // 預設金屬珠
     sessionStorage.setItem('selectedMetalImage', './images/Custom/ball3.png');
 
     sessionStorage.setItem('shouldApplyRecommend', 'true');
@@ -61,7 +62,7 @@ export default function Customize3() {
 
     navigate('/Customize4');
   };
-
+  
 
 
   const [selectedCrystal, setSelectedCrystal] = useState(null);
@@ -71,6 +72,8 @@ export default function Customize3() {
 
 
   return (
+
+
     <div className="customize3-page">
       <NavBarWrapper variant="dark" />
 
@@ -172,9 +175,24 @@ export default function Customize3() {
               套用推薦
             </button>
           </div>
+          
         </main>
         <CopyrightNotice />
       </div>
-    </div>
+    {showRecommendErrorModal && (
+      <div className="modalOverlay">
+        <div className="modalContent">
+          <p>請先點選一條推薦手鍊！</p>
+          <button
+            className="btnConfirm"
+            onClick={() => setShowRecommendErrorModal(false)}
+          >
+            確認
+          </button>
+        </div>
+      </div>
+    )}
+  </div>
+    
   );
 }

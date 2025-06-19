@@ -19,9 +19,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/img-feedbackmenber.jpg" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/1.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_6.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -41,7 +41,7 @@ const slides = [
 
             <span><img src="./images//HomePage/avatar/coffee.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_2.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -59,9 +59,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/grandma.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/2.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_3.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -79,9 +79,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/man.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/3.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_4.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -99,9 +99,9 @@ const slides = [
     <div className="feedback">
         <div className="review-pic">
 
-            <span><img src="./images//HomePage/avatar/waiter.png" className="member-img" alt="" /></span>
+            <span><img src="./images//HomePage/avatar/p4.jpg" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_5.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -121,7 +121,7 @@ const slides = [
 
             <span><img src="./images//HomePage/avatar/woman.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/img-feedback.jpg" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
@@ -299,8 +299,6 @@ export default function Cover() {
             './images/HomePage/lbtc5.png',
             './images/HomePage/lbtc6.png',
             './images/HomePage/lightboxdeco.svg',
-            './images/HomePage/img-feedbackmenber.jpg',
-            './images/HomePage/img-feedback.jpg',
             './images/HomePage/star.svg',
         ];
 
@@ -571,7 +569,7 @@ export default function Cover() {
                                                 )}
                                             </div>
                                         </Link>
-                                        <h3 className="startbtn_title"> 開始測驗</h3>
+                                        <h3 className="startbtn_title">開始測驗</h3>
                                     </div>
                                 </div>
 
@@ -661,7 +659,7 @@ export default function Cover() {
                     <Link to="/Customize1" className='custombtn'>立即訂製</Link>
                 </section>
 
-              {/* 水晶小百科  */}
+                {/* 水晶小百科  */}
                 <section id="section-crystaldiscovery">
                     {/* 版2 左邊：水晶區域 */}
                     <div className="crystal-display">
@@ -675,10 +673,10 @@ export default function Cover() {
                                     {idx === 0 && (
                                         <>
                                             <button className="btn-left" onClick={handleUp}>
-                                                <img src="./images/S-Btn/btn_left.svg" alt="上一顆" />
+                                                <img src="./images/S-Btn/btndown.png" alt="上一顆" />
                                             </button>
                                             <button className="btn-right" onClick={handleDown}>
-                                                <img src="./images/S-Btn/btn_right.svg" alt="下一顆" />
+                                                <img src="./images/S-Btn/btnup.png" alt="下一顆" />
                                             </button>
                                         </>
                                     )}
@@ -1042,14 +1040,14 @@ function renderCrystalContent(id) {
             </article>
             <article className="discovery-p1">
                 <h2>主要功效</h2>
-                <hr className="crystal-line2" />
+                <hr className="crystal-line"/>
                 <p className="discovery-p1content">
                     {crystal.benefits.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
             </article>
             <article className="discovery-p2">
                 <h2>適合人群</h2>
-                <hr className="crystal-line3" />
+                <hr className="crystal-line"/>
                 <p className="discovery-p2content">
                     {crystal.people.map((item, idx) => <span key={idx}>{item}<br /></span>)}
                 </p>
@@ -1062,6 +1060,10 @@ function renderCrystalContent(id) {
                     ))}
                 </div>
             </article>
+            <div>
+                <Link to="/KnowledgeCrystal" className="moreinfo">更多水晶介紹 &gt;</Link>
+            </div >
+
         </>
     );
 }
