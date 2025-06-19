@@ -1581,8 +1581,11 @@ button {
   text-align: end;
   font-size: 1rem;
   font-weight: 400;
-  letter-spacing: 0 0.2625rem;
-  font-family: "LXGW WenKai Mono TC";
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.1rem;
+}
+#section-crystaldiscovery .section-crystaldiscovery .crystaldiscovery .moreinfo:hover {
+  text-decoration: underline;
 }
 
 /*礦迷回饋*/
@@ -1598,7 +1601,7 @@ button {
   /* 輪播 */
 }
 #section-feedback .feedback-displaytitle {
-  z-index: 99;
+  z-index: 1;
   width: 100%;
   margin: 6.25rem auto 5.625rem;
   display: flex;
