@@ -921,13 +921,6 @@ export default function Customize4() {
                         : ''
                         }`}
                       style={{
-                        backgroundImage: isMetal
-                          ? selectedMetalImage
-                            ? `url(${selectedMetalImage})`
-                            : undefined
-                          : crystalPlacement[index]
-                            ? `url(${crystalPlacement[index]})`
-                            : undefined,
                         width: `${size * scale}px`,
                         height: `${size * scale}px`,
                         position: 'absolute',
@@ -936,11 +929,17 @@ export default function Customize4() {
                         borderRadius: '50%',
                         transform: `rotate(${accumulatedAngle}deg) translate(${braceletRadius * scale}px) rotate(-${accumulatedAngle}deg) translate(-${offset}px, -${offset}px)`,
                         transformOrigin: '0 0',
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
                       }}
-                    />
+                    >
+                      <div className={style.pearlBase}></div>
+                      {(isMetal && selectedMetalImage) || (!isMetal && crystalPlacement[index]) ? (
+                        <img
+                          src={isMetal ? selectedMetalImage : crystalPlacement[index]}
+                          className={style.pearlImage}
+                          alt="bead"
+                        />
+                      ) : null}
+                    </span>
                   );
                 });
 
