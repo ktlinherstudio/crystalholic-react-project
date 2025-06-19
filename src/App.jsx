@@ -16,7 +16,6 @@ import NumTest1 from './pages/NumTest/NumTest1';
 import NumTest2 from './pages/NumTest/NumTest2';
 import NumTest3 from './pages/NumTest/NumTest3';
 import Customize1 from './pages/Customize/Customize1';
-// import Customize2 from './pages/Customize/Customize2_刪除';
 import Customize3 from './pages/Customize/Customize3';
 import Customize4 from './pages/Customize/Customize4';
 import ShoppingCart from './pages/Shopping/ShoppingCart';
