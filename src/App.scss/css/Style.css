@@ -319,6 +319,11 @@ button {
   width: 66vw;
   z-index: 1;
 }
+@media (min-width:1919px) {
+  .cover-stack .second-cover .startbox1 .hand-number {
+    width: 60vw;
+  }
+}
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 .hand-number {
     width: 85vw;
@@ -339,6 +344,11 @@ button {
   width: 17.5vw;
   max-width: 350px;
   height: auto;
+}
+@media (min-width:1919px) {
+  .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
+    width: 16.5vw;
+  }
 }
 @media (max-width:1025px) {
   .cover-stack .second-cover .startbox1 .startbtn .startbtn_imgwrap {
@@ -517,6 +527,11 @@ button {
   /*旋轉效果用*/
   /*最原始沒有翻牌效果*/
 }
+@media (min-width:1919px) {
+  #section-tarotcard #tarotcard-box {
+    margin-bottom: 7%;
+  }
+}
 @media ((max-width:1367px) and (min-height:1024px)) {
   #section-tarotcard #tarotcard-box {
     height: 36%;
@@ -588,6 +603,11 @@ button {
 #section-tarotcard #tcbtn {
   z-index: 2;
   margin-top: 60px;
+}
+@media (min-width:1919px) {
+  #section-tarotcard #tcbtn {
+    margin-top: 8px;
+  }
 }
 @media (max-width:1025px) {
   #section-tarotcard #tcbtn {
@@ -1609,6 +1629,11 @@ button {
   justify-content: center;
   /* 裝飾線 */
   /* 文字 */
+}
+@media (min-width:1919px) {
+  #section-feedback .feedback-displaytitle {
+    margin-top: 9.25rem;
+  }
 }
 #section-feedback .feedback-displaytitle img {
   width: 5.183rem;

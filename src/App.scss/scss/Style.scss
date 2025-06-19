@@ -294,6 +294,9 @@ button {
                 width: 66vw; //950px
                 z-index: 1;
 
+                @media ($media-xxlg) {
+                    width: 60vw;
+                }
                 @media ($media-lg) {
                     width: 85vw;
                 }
@@ -316,6 +319,10 @@ button {
                     width: 17.5vw;
                     max-width: 350px;
                     height: auto;
+
+                    @media ($media-xxlg) {
+                        width: 16.5vw;
+                    }
 
                     @media ($media-lg) {
                         width: 20vw;
@@ -544,6 +551,10 @@ button {
         padding-left: 4%;
         // margin-bottom: 4.2%;
 
+        @media ($media-xxlg) {
+            margin-bottom: 7%;
+        }
+
         @media ($media-xlg-h-pro) {
             // pro 橫向
             height: 36%;
@@ -717,7 +728,9 @@ button {
         //     //pro 橫向
         //     margin-top: 42%;
         // }
-
+        @media ($media-xxlg) {
+            margin-top: 8px;
+        }
         @media ($media-lg) {
             //pro /air /mini 直
             margin-top: 100px;
@@ -1869,6 +1882,10 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media ($media-xxlg) {
+            margin-top: 9.25rem;
+        }
 
         /* 裝飾線 */
         img {
