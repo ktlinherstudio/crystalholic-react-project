@@ -7,38 +7,16 @@ export default function ScrollToTop() {
   useEffect(() => {
     const id = hash?.replace('#', '');
 
-    const smoothScrollTo = (targetY, duration = 500) => {
-      const startY = window.scrollY;
-      const diff = targetY - startY;
-      const startTime = performance.now();
+    // Step 1：直接瞬間跳到頂部（不平滑）
+    window.scrollTo(0, 0);
 
-      const easeInOutCubic = t =>
-        t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
-      const animate = now => {
-        const elapsed = now - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = easeInOutCubic(progress);
-        window.scrollTo(0, startY + diff * eased);
-        if (elapsed < duration) {
-          requestAnimationFrame(animate);
-        }
-      };
-
-      requestAnimationFrame(animate);
-    };
-
-    // 第一步：立刻先滾到頂部（smooth）
-    smoothScrollTo(0, 400);
-
-    // 第二步：如有 hash，延遲補滾一次（讓畫面已經開始滑動了）
+    // Step 2：如有 hash，再補滾去對應區塊（這裡可以用 smooth）
     if (id) {
       let attempts = 0;
       const interval = setInterval(() => {
         const el = document.getElementById(id) || document.querySelector(hash);
         if (el) {
-          const top = el.getBoundingClientRect().top + window.scrollY;
-          smoothScrollTo(top, 500);
+          el.scrollIntoView({ behavior: 'smooth' });
           clearInterval(interval);
         } else if (attempts > 20) {
           clearInterval(interval);
