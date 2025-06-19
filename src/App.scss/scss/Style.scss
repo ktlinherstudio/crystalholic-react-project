@@ -79,6 +79,10 @@ button {
         top: 382vh;
         // left: 0;
 
+        @media ($media-xxlg) {
+            height: 111vh;
+        }
+
         @media ($media-xlg-h) {
             //pro / air 橫向
             height: 71vh;

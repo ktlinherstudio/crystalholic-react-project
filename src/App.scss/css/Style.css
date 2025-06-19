@@ -133,6 +133,11 @@ button {
   height: 115vh;
   top: 382vh;
 }
+@media (min-width:1919px) {
+  .coverbg .bgdark2 {
+    height: 111vh;
+  }
+}
 @media ((max-width:1367px) and (min-height:820px)) {
   .coverbg .bgdark2 {
     height: 71vh;
