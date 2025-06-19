@@ -211,6 +211,7 @@ header ul {
 .search-inner-btn img {
   width: 34px;
   height: 34px;
+  margin-right: 9px;
 }
 
 /* RWD：小螢幕不顯示 */
