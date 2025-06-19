@@ -1170,11 +1170,9 @@
 }
 
 
-
-
 @media screen and (min-width: 1680px) {
     .index {
-        max-width: 70%;
+        max-width: 65%;
     }
 
     .tabs {
