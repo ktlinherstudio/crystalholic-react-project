@@ -135,7 +135,8 @@ button {
 }
 @media (min-width:1919px) {
   .coverbg .bgdark2 {
-    height: 111vh;
+    height: 108vh;
+    margin-top: 170px;
   }
 }
 @media ((max-width:1367px) and (min-height:820px)) {
