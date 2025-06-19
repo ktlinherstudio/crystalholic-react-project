@@ -1598,7 +1598,7 @@ button {
   /* 輪播 */
 }
 #section-feedback .feedback-displaytitle {
-  z-index: 99;
+  z-index: 1;
   width: 100%;
   margin: 6.25rem auto 5.625rem;
   display: flex;
