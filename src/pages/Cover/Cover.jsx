@@ -21,7 +21,7 @@ const slides = [
 
             <span><img src="./images//HomePage/avatar/1.png" className="member-img" alt="" /></span>
 
-            <span><img src="./images//HomePage/feedback/feedback_1.png" className="review-img" alt="" /></span>
+            <span><img src="./images//HomePage/feedback/feedback_6.png" className="review-img" alt="" /></span>
         </div>
         <div className="feedback-left">
             {/* 水晶5星評價 */}
